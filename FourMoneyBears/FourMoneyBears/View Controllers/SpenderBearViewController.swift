@@ -62,4 +62,47 @@ class SpenderBearViewController: UIViewController {
         
     }
     
+    
+    
+    @IBAction func answerView1Tapped(_ sender: Any) {
+        // Presnet Alert - correct
+         showCorrectAlert()
+        
+    }
+    
+    //MARK: - ALERT
+       func showCorrectAlert(){
+           
+           
+           
+       let alert = UIAlertController(title: "That's Correct!", message: "You should only spend 20 percent of your savings.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Next", style: .destructive, handler: nil))
+           present(alert, animated: true)
+        let subview = (alert.view.subviews.first?.subviews.first?.subviews.first!)! as UIView
+        subview.layer.cornerRadius = 1
+        subview.backgroundColor = UIColor.green
+           
+       }
+    
+    
+    func showWrongAlert(){
+          
+          
+          
+      let alert = UIAlertController(title: "That's Inorrect!", message: "You should only spend 20 percent of your savings.", preferredStyle: .alert)
+        
+       alert.addAction(UIAlertAction(title: "Next", style: .destructive, handler: nil))
+          present(alert, animated: true)
+       let subview = (alert.view.subviews.first?.subviews.first?.subviews.first!)! as UIView
+       subview.layer.cornerRadius = 1
+       subview.backgroundColor = UIColor.red
+          
+      }
+    
+    @IBAction func answerView2Tapped(_ sender: Any) {
+         showWrongAlert()
+       
+    }
+    
+    
 }
