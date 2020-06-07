@@ -126,6 +126,9 @@
                                             <constraint firstAttribute="height" constant="37" id="X4x-0a-wSa"/>
                                         </constraints>
                                         <state key="normal" image="camera.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="cameraButtonTapped:" destination="a6l-YL-mmf" eventType="touchUpInside" id="XHj-ih-dme"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.26274509800000001" green="0.74509803919999995" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -185,6 +188,7 @@
                                 </state>
                                 <connections>
                                     <action selector="loginTapped:" destination="xnP-8w-6Q4" eventType="touchUpInside" id="v6P-Ii-tcS"/>
+                                    <action selector="registerTapped:" destination="a6l-YL-mmf" eventType="touchUpInside" id="0Vk-t6-yMf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8jn-Zd-uwQ">
