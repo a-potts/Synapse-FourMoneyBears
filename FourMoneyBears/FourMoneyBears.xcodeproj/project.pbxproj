@@ -15,9 +15,12 @@
 		450CA098243EB53800EEA40F /* GameSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450CA097243EB53800EEA40F /* GameSelectionViewController.swift */; };
 		450CA09A2440E1D100EEA40F /* SpenderBearViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450CA0992440E1D100EEA40F /* SpenderBearViewController.swift */; };
 		45619E80248C701900E7D980 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45619E7F248C701900E7D980 /* LoginViewController.swift */; };
+		45619E82248C87FE00E7D980 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 45619E81248C87FE00E7D980 /* GoogleService-Info.plist */; };
+		F0AC63C2A0610F6BA8F0BBD4 /* Pods_FourMoneyBears.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A2999CBA1AAD52A1380E182 /* Pods_FourMoneyBears.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A2999CBA1AAD52A1380E182 /* Pods_FourMoneyBears.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FourMoneyBears.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		450CA07F243EB12900EEA40F /* FourMoneyBears.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FourMoneyBears.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		450CA082243EB12900EEA40F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		450CA084243EB12900EEA40F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +31,9 @@
 		450CA097243EB53800EEA40F /* GameSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSelectionViewController.swift; sourceTree = "<group>"; };
 		450CA0992440E1D100EEA40F /* SpenderBearViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpenderBearViewController.swift; sourceTree = "<group>"; };
 		45619E7F248C701900E7D980 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		45619E81248C87FE00E7D980 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		51FD56432829A48BA4EE01F6 /* Pods-FourMoneyBears.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FourMoneyBears.debug.xcconfig"; path = "Target Support Files/Pods-FourMoneyBears/Pods-FourMoneyBears.debug.xcconfig"; sourceTree = "<group>"; };
+		E6FBAEDE335D1964F5A3A393 /* Pods-FourMoneyBears.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FourMoneyBears.release.xcconfig"; path = "Target Support Files/Pods-FourMoneyBears/Pods-FourMoneyBears.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +41,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0AC63C2A0610F6BA8F0BBD4 /* Pods_FourMoneyBears.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D29473858D0EE7C607CD32C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2A2999CBA1AAD52A1380E182 /* Pods_FourMoneyBears.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		450CA076243EB12900EEA40F = {
 			isa = PBXGroup;
 			children = (
 				450CA081243EB12900EEA40F /* FourMoneyBears */,
 				450CA080243EB12900EEA40F /* Products */,
+				7F808DBBADCDDC48DAB9D25C /* Pods */,
+				0D29473858D0EE7C607CD32C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +84,7 @@
 				450CA08B243EB12C00EEA40F /* Assets.xcassets */,
 				450CA08D243EB12C00EEA40F /* LaunchScreen.storyboard */,
 				450CA090243EB12C00EEA40F /* Info.plist */,
+				45619E81248C87FE00E7D980 /* GoogleService-Info.plist */,
 			);
 			path = FourMoneyBears;
 			sourceTree = "<group>";
@@ -81,6 +99,16 @@
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
+		7F808DBBADCDDC48DAB9D25C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				51FD56432829A48BA4EE01F6 /* Pods-FourMoneyBears.debug.xcconfig */,
+				E6FBAEDE335D1964F5A3A393 /* Pods-FourMoneyBears.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -88,9 +116,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 450CA093243EB12C00EEA40F /* Build configuration list for PBXNativeTarget "FourMoneyBears" */;
 			buildPhases = (
+				786EFBF4ED0C8731A49A1180 /* [CP] Check Pods Manifest.lock */,
 				450CA07B243EB12900EEA40F /* Sources */,
 				450CA07C243EB12900EEA40F /* Frameworks */,
 				450CA07D243EB12900EEA40F /* Resources */,
+				E2017134648DA7526C7EC0A4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -140,12 +170,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				450CA08F243EB12C00EEA40F /* LaunchScreen.storyboard in Resources */,
+				45619E82248C87FE00E7D980 /* GoogleService-Info.plist in Resources */,
 				450CA08C243EB12C00EEA40F /* Assets.xcassets in Resources */,
 				450CA08A243EB12900EEA40F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		786EFBF4ED0C8731A49A1180 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FourMoneyBears-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2017134648DA7526C7EC0A4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FourMoneyBears/Pods-FourMoneyBears-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FourMoneyBears/Pods-FourMoneyBears-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FourMoneyBears/Pods-FourMoneyBears-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		450CA07B243EB12900EEA40F /* Sources */ = {
@@ -298,6 +371,7 @@
 		};
 		450CA094243EB12C00EEA40F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51FD56432829A48BA4EE01F6 /* Pods-FourMoneyBears.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -316,6 +390,7 @@
 		};
 		450CA095243EB12C00EEA40F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6FBAEDE335D1964F5A3A393 /* Pods-FourMoneyBears.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
