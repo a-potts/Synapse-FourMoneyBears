@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,7 @@
 		450CA09A2440E1D100EEA40F /* SpenderBearViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450CA0992440E1D100EEA40F /* SpenderBearViewController.swift */; };
 		45619E80248C701900E7D980 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45619E7F248C701900E7D980 /* LoginViewController.swift */; };
 		45619E82248C87FE00E7D980 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 45619E81248C87FE00E7D980 /* GoogleService-Info.plist */; };
+		45619E84248C96DE00E7D980 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45619E83248C96DE00E7D980 /* RegisterViewController.swift */; };
 		F0AC63C2A0610F6BA8F0BBD4 /* Pods_FourMoneyBears.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A2999CBA1AAD52A1380E182 /* Pods_FourMoneyBears.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		450CA0992440E1D100EEA40F /* SpenderBearViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpenderBearViewController.swift; sourceTree = "<group>"; };
 		45619E7F248C701900E7D980 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		45619E81248C87FE00E7D980 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		45619E83248C96DE00E7D980 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		51FD56432829A48BA4EE01F6 /* Pods-FourMoneyBears.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FourMoneyBears.debug.xcconfig"; path = "Target Support Files/Pods-FourMoneyBears/Pods-FourMoneyBears.debug.xcconfig"; sourceTree = "<group>"; };
 		E6FBAEDE335D1964F5A3A393 /* Pods-FourMoneyBears.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FourMoneyBears.release.xcconfig"; path = "Target Support Files/Pods-FourMoneyBears/Pods-FourMoneyBears.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,6 +97,7 @@
 				450CA097243EB53800EEA40F /* GameSelectionViewController.swift */,
 				450CA0992440E1D100EEA40F /* SpenderBearViewController.swift */,
 				45619E7F248C701900E7D980 /* LoginViewController.swift */,
+				45619E83248C96DE00E7D980 /* RegisterViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -105,7 +108,6 @@
 				51FD56432829A48BA4EE01F6 /* Pods-FourMoneyBears.debug.xcconfig */,
 				E6FBAEDE335D1964F5A3A393 /* Pods-FourMoneyBears.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -228,6 +230,7 @@
 				450CA09A2440E1D100EEA40F /* SpenderBearViewController.swift in Sources */,
 				450CA083243EB12900EEA40F /* AppDelegate.swift in Sources */,
 				450CA085243EB12900EEA40F /* SceneDelegate.swift in Sources */,
+				45619E84248C96DE00E7D980 /* RegisterViewController.swift in Sources */,
 				45619E80248C701900E7D980 /* LoginViewController.swift in Sources */,
 				450CA098243EB53800EEA40F /* GameSelectionViewController.swift in Sources */,
 			);
