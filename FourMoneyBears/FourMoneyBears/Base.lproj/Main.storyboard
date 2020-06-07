@@ -335,6 +335,7 @@
                                 </state>
                                 <connections>
                                     <action selector="loginTapped:" destination="xnP-8w-6Q4" eventType="touchUpInside" id="qyu-Cw-4fJ"/>
+                                    <segue destination="g7S-IU-U5O" kind="show" id="DDa-q4-Dzn"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F1a-Fd-Uh7">
@@ -390,7 +391,7 @@
         <!--Game Selection View Controller-->
         <scene sceneID="Pmq-eF-X88">
             <objects>
-                <viewController id="g7S-IU-U5O" customClass="GameSelectionViewController" customModule="FourMoneyBears" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="g7S-IU-U5O" customClass="GameSelectionViewController" customModule="FourMoneyBears" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rwg-ny-Oyl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

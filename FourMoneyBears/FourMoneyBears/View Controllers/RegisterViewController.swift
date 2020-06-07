@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class RegisterViewController: UIViewController {
 
@@ -30,6 +31,56 @@ class RegisterViewController: UIViewController {
         credView.layer.cornerRadius = 15
         registerButton.layer.cornerRadius = 15
     }
+    
+    
+    
+    func handleRegister() {
+           
+           guard let email = emailText.text, let password = passwordText.text, let name = usernameText.text else { return }
+           
+           Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
+               if let error = error {
+                   print("Error: \(error)")
+                   return
+               }
+               
+               guard let uid = user?.user.uid else { return }
+               
+               let imageName = NSUUID().uuidString
+               
+               let storageRef = Storage.storage().reference().child("\(imageName).png")
+               
+               
+               
+               if let uploadData = self.imager.image?.pngData() {
+                   
+                   storageRef.putData(uploadData, metadata: nil) { (metadata, error) in
+                       if let error = error {
+                           print("Error uploading image data: \(error)")
+                           return
+                       }
+                       
+                       storageRef.downloadURL { (url, error) in
+                           if let error = error {
+                               print("Error downloading URL: \(error)")
+                               return
+                           }
+                           
+                           if let profileImageUrl = url?.absoluteString {
+                               let values = ["name": name, "email": email, "profileImageURL": profileImageUrl ]
+                               
+                               self.registerUserIntoDatabaseWithUID(uid: uid, values: values as [String : AnyObject])
+                           }
+                           
+                       }
+                      // print(metadata)
+                   }
+                   
+               }
+               
+           }
+       }
+    
     
 
 }
