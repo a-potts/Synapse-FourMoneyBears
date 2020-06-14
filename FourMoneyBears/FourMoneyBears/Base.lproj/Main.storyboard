@@ -339,7 +339,6 @@
                                 </state>
                                 <connections>
                                     <action selector="loginTapped:" destination="xnP-8w-6Q4" eventType="touchUpInside" id="qyu-Cw-4fJ"/>
-                                    <segue destination="g7S-IU-U5O" kind="show" id="DDa-q4-Dzn"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F1a-Fd-Uh7">
@@ -386,6 +385,7 @@
                         <outlet property="loginButton" destination="Dek-Ks-X3V" id="Iq1-sj-b84"/>
                         <outlet property="passwordText" destination="m2z-Rj-RfJ" id="opa-QU-Ty8"/>
                         <outlet property="usernameText" destination="sOT-RE-3tX" id="UfG-yF-4d6"/>
+                        <segue destination="g7S-IU-U5O" kind="show" identifier="LogInSegue" id="PJU-lU-Mej"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9K3-Lh-X4A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -524,6 +524,16 @@
                                     <segue destination="mMQ-Re-waJ" kind="show" id="7ps-m2-jPv"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RGp-FB-m6M">
+                                <rect key="frame" x="18" y="54" width="52" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="logoutTapped:" destination="g7S-IU-U5O" eventType="touchUpInside" id="mde-Og-iDZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -551,6 +561,7 @@
                             <constraint firstItem="Epc-Pu-YRy" firstAttribute="trailing" secondItem="Uq7-aI-GvU" secondAttribute="trailing" id="bbl-9N-W30"/>
                             <constraint firstItem="3oH-xA-eHV" firstAttribute="top" secondItem="JhZ-32-yCH" secondAttribute="bottom" constant="100" id="byD-Rc-Z9L"/>
                             <constraint firstItem="IB6-tw-3Od" firstAttribute="leading" secondItem="Uq7-aI-GvU" secondAttribute="leading" constant="25" id="hMh-MW-bHQ"/>
+                            <constraint firstItem="RGp-FB-m6M" firstAttribute="top" secondItem="Uq7-aI-GvU" secondAttribute="top" constant="10" id="hu9-gC-bvL"/>
                             <constraint firstItem="zv8-ZO-Ihj" firstAttribute="top" secondItem="Grc-jn-LRo" secondAttribute="bottom" constant="8" id="irE-bt-3G1"/>
                             <constraint firstItem="rvJ-RG-IQ5" firstAttribute="top" secondItem="Uq7-aI-GvU" secondAttribute="top" constant="70" id="k18-WI-B77"/>
                             <constraint firstItem="Grc-jn-LRo" firstAttribute="top" secondItem="hvB-qt-dKf" secondAttribute="bottom" constant="59" id="k4Z-SH-AGg"/>
@@ -565,6 +576,7 @@
                             <constraint firstItem="vIG-t8-5VH" firstAttribute="top" secondItem="Uq7-aI-GvU" secondAttribute="top" constant="52" id="wux-KE-E4W"/>
                             <constraint firstItem="hvB-qt-dKf" firstAttribute="top" secondItem="rvJ-RG-IQ5" secondAttribute="bottom" constant="8" id="xjz-ab-cgG"/>
                             <constraint firstItem="zv8-ZO-Ihj" firstAttribute="top" secondItem="hvB-qt-dKf" secondAttribute="bottom" constant="207" id="ypV-NY-EWt"/>
+                            <constraint firstItem="RGp-FB-m6M" firstAttribute="leading" secondItem="Uq7-aI-GvU" secondAttribute="leading" constant="18" id="zHZ-GE-dlt"/>
                             <constraint firstItem="Uq7-aI-GvU" firstAttribute="trailing" secondItem="rvJ-RG-IQ5" secondAttribute="trailing" constant="132" id="zNo-Hk-Ne9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Uq7-aI-GvU"/>
