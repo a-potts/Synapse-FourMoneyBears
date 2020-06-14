@@ -236,11 +236,12 @@
                         <outlet property="registerButton" destination="9QL-Lf-aT9" id="j03-S7-Sgr"/>
                         <outlet property="userImage" destination="Iic-dp-Soh" id="XC3-kW-YQl"/>
                         <outlet property="usernameText" destination="qU9-yn-xWY" id="kuZ-sp-3lc"/>
+                        <segue destination="xnP-8w-6Q4" kind="show" identifier="RegisterSegue" id="sz6-rD-XAG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZC2-DS-4E0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="612" y="-494"/>
+            <point key="canvasLocation" x="587" y="-505"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="DOO-RE-bk1">
@@ -826,6 +827,9 @@
             <point key="canvasLocation" x="1960.8695652173915" y="-494.19642857142856"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="sz6-rD-XAG"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="42.circle.fill" catalog="system" width="128" height="121"/>
         <image name="GiverBear" width="273" height="266"/>

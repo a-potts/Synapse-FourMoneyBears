@@ -100,15 +100,25 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
                 return
             }
             
+            self.performSegue(withIdentifier: "RegisterSegue", sender: self)
             print("Saved user successfully into firebase db")
         }
     }
+    
+    func showAlert(){
+               
+           let alert = UIAlertController(title: "Your Account has been created!", message: "Plase Sign In", preferredStyle: .alert)
+           alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+               present(alert, animated: true)
+               
+           }
     
     
     //MARK: - Actions
     
     
     @IBAction func registerTapped(_ sender: Any) {
+        showAlert()
         handleRegister()
     }
     

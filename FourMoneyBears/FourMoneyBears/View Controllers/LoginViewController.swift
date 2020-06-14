@@ -39,6 +39,7 @@ class LoginViewController: UIViewController {
          Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
              if let error = error {
                  // MARK: - TODO Add Notification to user that the login failed
+                self.showAlert()
                  print("Error signing in: \(error)")
                  return
              }
@@ -47,6 +48,14 @@ class LoginViewController: UIViewController {
          }
          
      }
+    
+    func showAlert(){
+            
+        let alert = UIAlertController(title: "Your password or username is incorrect!", message: "Plase Try Again", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(alert, animated: true)
+            
+        }
     
     
     
