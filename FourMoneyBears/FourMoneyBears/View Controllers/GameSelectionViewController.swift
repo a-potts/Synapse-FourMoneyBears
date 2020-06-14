@@ -68,5 +68,24 @@ class GameSelectionViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+// MARK: - Log Out Function (FIXME: Create Hamburger Menu to Hide)
+//    @IBAction func logoutTapped(_ sender: Any) {
+//            do {
+//                  try Auth.auth().signOut()
+//              } catch let logoutError{
+//                  print(logoutError)
+//              }
+//
+//            //  let loginController = LoginViewController()
+//
+//
+//    self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+//
+//
+//
+//    }
+
 
 }
