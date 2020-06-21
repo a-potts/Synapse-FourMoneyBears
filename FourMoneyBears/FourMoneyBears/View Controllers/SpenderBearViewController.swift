@@ -19,6 +19,8 @@ class SpenderBearViewController: UIViewController {
     @IBOutlet var answerView2: UIView!
     @IBOutlet var answerView3: UIView!
     @IBOutlet var answerView4: UIView!
+    @IBOutlet var statusBar: UIView!
+    @IBOutlet var orangeStatus: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +45,9 @@ class SpenderBearViewController: UIViewController {
         answerView3.layer.borderColor = UIColor.gray.cgColor
         answerView4.layer.borderWidth = 5
         answerView4.layer.borderColor = UIColor.gray.cgColor
+        
+        statusBar.layer.cornerRadius = 8
+        orangeStatus.layer.cornerRadius = 8
         
         
     }
