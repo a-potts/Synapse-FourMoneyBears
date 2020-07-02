@@ -1,32 +1,20 @@
 //
-//  SpenderBearGameOneViewController.swift
+//  SpenderBearGameTwoViewController.swift
 //  FourMoneyBears
 //
-//  Created by Austin Potts on 6/21/20.
+//  Created by Austin Potts on 7/2/20.
 //  Copyright © 2020 Lambda School. All rights reserved.
 //
 
 import UIKit
 
-class SpenderBearGameOneViewController: UIViewController {
-    
-    @IBOutlet var statusBar: UIView!
-    @IBOutlet var orangeStatus: UIView!
+class SpenderBearGameTwoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        statusBar.layer.cornerRadius = 8
-        orangeStatus.layer.cornerRadius = 8
     }
-    
-    @IBAction func xTapped(_ sender: Any) {
-           
-           self.dismiss(animated: true, completion: nil)
-           
-       }
-    
     
 
     /*
