@@ -52,15 +52,18 @@ class SpenderBearViewController: UIViewController {
         
     }
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "CorrectAnswerOneSegue" {
+//            if let detailVC = segue.destination as? SpenderBearGameOneViewController {
+//
+//            }
+//        }
+//    }
+    
     @IBAction func xTapped(_ sender: Any) {
         
         self.dismiss(animated: true, completion: nil)
@@ -71,7 +74,9 @@ class SpenderBearViewController: UIViewController {
     
     @IBAction func answerView1Tapped(_ sender: Any) {
         // Presnet Alert - correct
-         showCorrectAlert()
+        //showCorrectAlert()
+        performSegue(withIdentifier: "CorrectAnswerOneSegue", sender: nil)
+        
         
     }
     
@@ -86,6 +91,8 @@ class SpenderBearViewController: UIViewController {
         let subview = (alert.view.subviews.first?.subviews.first?.subviews.first!)! as UIView
         subview.layer.cornerRadius = 1
         subview.backgroundColor = UIColor.green
+        
+        
            
        }
     

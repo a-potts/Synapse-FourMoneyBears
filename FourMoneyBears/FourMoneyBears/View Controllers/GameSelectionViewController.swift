@@ -41,26 +41,39 @@ class GameSelectionViewController: UIViewController {
         basicsView.layer.cornerRadius = basicsView.frame.height / 2
         basicsView.layer.masksToBounds = false
         basicsView.clipsToBounds = true
+        basicsView.layer.borderWidth = 1
+        basicsView.layer.borderColor = UIColor.black.cgColor
         
+        
+        //Bears
         spenderBear.contentMode = .scaleAspectFill
         spenderBear.layer.cornerRadius = spenderBear.frame.height / 2
         spenderBear.layer.masksToBounds = false
         spenderBear.clipsToBounds = true
+        spenderBear.layer.borderWidth = 1
+        spenderBear.layer.borderColor = UIColor.black.cgColor
         
         saverBear.contentMode = .scaleAspectFill
         saverBear.layer.cornerRadius = saverBear.frame.height / 2
         saverBear.layer.masksToBounds = false
         saverBear.clipsToBounds = true
+        saverBear.layer.borderWidth = 1
+        saverBear.layer.borderColor = UIColor.black.cgColor
         
         investorBear.contentMode = .scaleAspectFill
         investorBear.layer.cornerRadius = investorBear.frame.height / 2
         investorBear.layer.masksToBounds = false
         investorBear.clipsToBounds = true
+        investorBear.layer.borderWidth = 1
+        investorBear.layer.borderColor = UIColor.black.cgColor
         
         giverBear.contentMode = .scaleAspectFill
         giverBear.layer.cornerRadius = basicsView.frame.height / 2
         giverBear.layer.masksToBounds = false
         giverBear.clipsToBounds = true
+        giverBear.layer.borderWidth = 1
+        giverBear.layer.borderColor = UIColor.black.cgColor
+        
         
         
         
