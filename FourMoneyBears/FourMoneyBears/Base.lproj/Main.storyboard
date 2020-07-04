@@ -894,23 +894,23 @@
                                 <rect key="frame" x="73" y="66" width="264" height="14"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tGe-oR-4QD">
-                                        <rect key="frame" x="0.0" y="0.0" width="100" height="14"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="116" height="14"/>
                                         <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="14" id="2mt-hr-4MV"/>
-                                            <constraint firstAttribute="width" constant="100" id="sIU-0x-MYN"/>
+                                            <constraint firstAttribute="height" constant="14" id="CH8-bw-yey"/>
+                                            <constraint firstAttribute="width" constant="116" id="uqe-FE-IFy"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstItem="tGe-oR-4QD" firstAttribute="leading" secondItem="L5I-UI-peb" secondAttribute="leading" id="2Gh-3m-0VU"/>
                                     <constraint firstAttribute="width" constant="264" id="I1K-en-e4S"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="264" id="Itc-tg-4Xf"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="14" id="OcY-pF-F38"/>
-                                    <constraint firstAttribute="bottom" secondItem="tGe-oR-4QD" secondAttribute="bottom" id="Rtj-As-lvj"/>
-                                    <constraint firstItem="tGe-oR-4QD" firstAttribute="top" secondItem="L5I-UI-peb" secondAttribute="top" id="cju-cg-IdV"/>
+                                    <constraint firstAttribute="bottom" secondItem="tGe-oR-4QD" secondAttribute="bottom" id="UaX-rU-Lxz"/>
                                     <constraint firstAttribute="height" constant="14" id="jig-Ae-cnt"/>
+                                    <constraint firstItem="tGe-oR-4QD" firstAttribute="top" secondItem="L5I-UI-peb" secondAttribute="top" id="mkS-aO-bCc"/>
+                                    <constraint firstItem="tGe-oR-4QD" firstAttribute="leading" secondItem="L5I-UI-peb" secondAttribute="leading" id="sdx-OA-9IP"/>
                                 </constraints>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Decide how much the the four bears should spend out of $100.00" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5sW-J4-gXo">

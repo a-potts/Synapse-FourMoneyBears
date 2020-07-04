@@ -19,12 +19,19 @@ class SpenderBearGameOneViewController: UIViewController {
     @IBOutlet var choiceViewFour: UIView!
     @IBOutlet var checkAnswerButton: UIButton!
     
+    var viewOrigin: CGPoint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         setUpMiscViews()
         setUpAnswerViews()
+        viewOrigin = choiceViewOne.frame.origin
+        viewOrigin = choiceViewTwo.frame.origin
+        viewOrigin = choiceViewThree.frame.origin
+        viewOrigin = choiceViewFour.frame.origin
+        
     }
     
     @IBAction func xTapped(_ sender: Any) {
@@ -57,13 +64,66 @@ class SpenderBearGameOneViewController: UIViewController {
             viewToDrag.center = CGPoint(x: viewToDrag.center.x + translation.x,
                 y: viewToDrag.center.y + translation.y)
             sender.setTranslation(CGPoint(x: 0, y: 0), in: viewToDrag)
+            
+//            switch sender.state {
+//            case .began, .changed:
+//                choiceViewOne.center = CGPoint(x: choiceViewOne.center.x + translation.x, y: choiceViewOne.center.y + translation.y)
+//                sender.setTranslation(CGPoint.zero, in: view)
+//                break
+//            case .ended:
+//                if choiceViewOne.frame.intersects(answerView.frame) {
+//
+//                    UIView.animate(withDuration: 0.3) {
+//
+//                    }
+//                }
+//
+//            default:
+//                break
+//            }
         }
     }
     
     
     @IBAction func checkAnswerTapped(_ sender: Any) {
-        
+        // Need to find out if viewFour is the view selected
+        // If so, correct answer else wrong
+        if choiceViewOne.frame.intersects(answerView.frame){
+            showCorrectAlert()
+        } else {
+            showWrongAlert()
+        }
     }
+    
+    //MARK: - ALERT
+          func showCorrectAlert(){
+              
+              
+              
+          let alert = UIAlertController(title: "That's Correct!", message: "You should only spend 20 percent of your savings.", preferredStyle: .alert)
+           alert.addAction(UIAlertAction(title: "Next", style: .destructive, handler: nil))
+              present(alert, animated: true)
+           let subview = (alert.view.subviews.first?.subviews.first?.subviews.first!)! as UIView
+           subview.layer.cornerRadius = 1
+           subview.backgroundColor = UIColor.green
+           
+           
+              
+          }
+    
+    func showWrongAlert(){
+             
+             
+             
+         let alert = UIAlertController(title: "That's Inorrect!", message: "You should only spend 20 percent of your savings.", preferredStyle: .alert)
+           
+          alert.addAction(UIAlertAction(title: "Next", style: .destructive, handler: nil))
+             present(alert, animated: true)
+          let subview = (alert.view.subviews.first?.subviews.first?.subviews.first!)! as UIView
+          subview.layer.cornerRadius = 1
+          subview.backgroundColor = UIColor.red
+             
+         }
     
 
     /*
