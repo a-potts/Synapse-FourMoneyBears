@@ -75,7 +75,7 @@ class SpenderBearViewController: UIViewController {
     @IBAction func answerView1Tapped(_ sender: Any) {
         // Presnet Alert - correct
         //showCorrectAlert()
-        performSegue(withIdentifier: "CorrectAnswerOneSegue", sender: nil)
+       showCorrectAlert()
         
         
     }
@@ -86,8 +86,13 @@ class SpenderBearViewController: UIViewController {
            
            
        let alert = UIAlertController(title: "That's Correct!", message: "You should only spend 20 percent of your savings.", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Next", style: .destructive, handler: nil))
-           present(alert, animated: true)
+        
+        alert.addAction(UIAlertAction(title: "Yay", style: .default, handler: { (action) in
+            self.performSegue(withIdentifier: "CorrectAnswerOneSegue", sender: self)
+        }))
+        
+        present(alert, animated: true)
+        
         let subview = (alert.view.subviews.first?.subviews.first?.subviews.first!)! as UIView
         subview.layer.cornerRadius = 1
         subview.backgroundColor = UIColor.green

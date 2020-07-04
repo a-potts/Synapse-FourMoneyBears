@@ -1127,6 +1127,7 @@
                         <outlet property="choiceViewTwo" destination="1WX-aS-br6" id="IHq-fs-Kd9"/>
                         <outlet property="orangeStatus" destination="tGe-oR-4QD" id="xzO-rH-4RO"/>
                         <outlet property="statusBar" destination="L5I-UI-peb" id="BGp-VU-2do"/>
+                        <segue destination="rpq-sH-IvY" kind="show" identifier="CorrectAnswerSegue" id="kDB-DZ-csc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SXa-4b-FR3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1152,6 +1153,22 @@
                 </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2821.739130434783" y="-493.52678571428567"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="3Xl-aD-vAL">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="rpq-sH-IvY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HBw-8C-gPS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="4MQ-q5-waC"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="B4I-Hn-dBS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X3V-Wm-0Zm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3648" y="-497"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

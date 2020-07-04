@@ -88,10 +88,10 @@ class SpenderBearGameOneViewController: UIViewController {
     @IBAction func checkAnswerTapped(_ sender: Any) {
         // Need to find out if viewFour is the view selected
         // If so, correct answer else wrong
-        if choiceViewOne.frame.intersects(answerView.frame){
+        if choiceViewFour.frame.intersects(answerView.frame){
             showCorrectAlert()
         } else {
-            showWrongAlert()
+            showCorrectAlert()
         }
     }
     
@@ -101,11 +101,20 @@ class SpenderBearGameOneViewController: UIViewController {
               
               
           let alert = UIAlertController(title: "That's Correct!", message: "You should only spend 20 percent of your savings.", preferredStyle: .alert)
-           alert.addAction(UIAlertAction(title: "Next", style: .destructive, handler: nil))
-              present(alert, animated: true)
+            
+          // alert.addAction(UIAlertAction(title: "Next", style: .destructive, handler: nil))
+            
+            
+            alert.addAction(UIAlertAction(title: "Yay", style: .default, handler: { (action) in
+                self.performSegue(withIdentifier: "CorrectAnswerSegue", sender: self)
+            }))
+            
+            present(alert, animated: true)
+            
            let subview = (alert.view.subviews.first?.subviews.first?.subviews.first!)! as UIView
            subview.layer.cornerRadius = 1
            subview.backgroundColor = UIColor.green
+           
            
            
               
