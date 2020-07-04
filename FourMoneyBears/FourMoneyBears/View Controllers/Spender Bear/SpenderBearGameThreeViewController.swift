@@ -16,6 +16,8 @@ class SpenderBearGameThreeViewController: UIViewController {
     @IBOutlet var answerViewTwo: UIView!
     @IBOutlet var answerViewThree: UIView!
     @IBOutlet var answerViewFour: UIView!
+    @IBOutlet var statusBar: UIView!
+     @IBOutlet var orangeStatus: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +29,8 @@ class SpenderBearGameThreeViewController: UIViewController {
     
     func setUpMiscViews(){
         checkAnswer.layer.cornerRadius = 15
+        statusBar.layer.cornerRadius = 9
+        orangeStatus.layer.cornerRadius = 9
     }
     
     func setUpAnswerViews(){

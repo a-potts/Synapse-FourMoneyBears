@@ -46,8 +46,8 @@ class SpenderBearViewController: UIViewController {
         answerView4.layer.borderWidth = 5
         answerView4.layer.borderColor = UIColor.gray.cgColor
         
-        statusBar.layer.cornerRadius = 8
-        orangeStatus.layer.cornerRadius = 8
+        statusBar.layer.cornerRadius = 9
+        orangeStatus.layer.cornerRadius = 9
         
         
     }
