@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SCLAlertView
 
 class SpenderBearViewController: UIViewController {
 
@@ -75,7 +76,14 @@ class SpenderBearViewController: UIViewController {
     @IBAction func answerView1Tapped(_ sender: Any) {
         // Presnet Alert - correct
         //showCorrectAlert()
-       showCorrectAlert()
+       //showCorrectAlert()
+        SCLAlertView().showSuccess("Good Job!", subTitle: "Next")
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            self.performSegue(withIdentifier: "CorrectAnswerOneSegue", sender: self)
+        }
+        
+        
+        
         
         
     }
@@ -117,7 +125,7 @@ class SpenderBearViewController: UIViewController {
       }
     
     @IBAction func answerView2Tapped(_ sender: Any) {
-         showWrongAlert()
+        SCLAlertView().showError("Wrong Answer", subTitle: "Try Again!")
        
     }
     

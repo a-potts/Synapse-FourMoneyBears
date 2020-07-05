@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SCLAlertView
 
 class SpenderBearGameOneViewController: UIViewController {
     
@@ -88,10 +89,13 @@ class SpenderBearGameOneViewController: UIViewController {
     @IBAction func checkAnswerTapped(_ sender: Any) {
         // Need to find out if viewFour is the view selected
         // If so, correct answer else wrong
-        if choiceViewFour.frame.intersects(answerView.frame){
-            showCorrectAlert()
+        if choiceViewThree.frame.intersects(answerView.frame){
+              SCLAlertView().showSuccess("Good Job!", subTitle: "Next")
+                  DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                      self.performSegue(withIdentifier: "CorrectAnswerSegue", sender: self)
+                  }
         } else {
-            showCorrectAlert()
+            SCLAlertView().showError("Wrong Answer", subTitle: "Try Again!")
         }
     }
     

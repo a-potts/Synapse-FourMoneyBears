@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SCLAlertView
 
 class SpenderBearGameThreeViewController: UIViewController {
     
@@ -99,7 +100,10 @@ class SpenderBearGameThreeViewController: UIViewController {
     
     
     @IBAction func answerViewTwoTapped(_ sender: Any) {
-        showCorrectAlert()
+          SCLAlertView().showSuccess("Good Job!", subTitle: "Next")
+              DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                  self.performSegue(withIdentifier: "CorrectAnswerThreeSegue", sender: self)
+              }
     }
     
 }

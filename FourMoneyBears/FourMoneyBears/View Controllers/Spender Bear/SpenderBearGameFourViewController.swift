@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SCLAlertView
 
 class SpenderBearGameFourViewController: UIViewController {
     
