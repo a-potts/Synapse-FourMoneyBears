@@ -85,6 +85,16 @@ class SpenderBearGameOneViewController: UIViewController {
         }
     }
     
+    func animateStatusBar(){
+          UIView.animate(withDuration: 2, animations: {
+               // self.orangeStatus.frame.origin.x -= 70
+              self.orangeStatus.translatesAutoresizingMaskIntoConstraints = false
+              self.orangeStatus.layer.frame.size.width += 67
+              
+             
+            })
+      }
+    
     
     @IBAction func checkAnswerTapped(_ sender: Any) {
         // Need to find out if viewFour is the view selected
@@ -94,6 +104,7 @@ class SpenderBearGameOneViewController: UIViewController {
                   DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
                       self.performSegue(withIdentifier: "CorrectAnswerSegue", sender: self)
                   }
+                 animateStatusBar()
         } else {
             SCLAlertView().showError("Wrong Answer", subTitle: "Try Again!")
         }

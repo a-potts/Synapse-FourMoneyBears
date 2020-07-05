@@ -71,6 +71,15 @@ class SpenderBearViewController: UIViewController {
         
     }
     
+    func animateStatusBar(){
+        UIView.animate(withDuration: 2, animations: {
+             // self.orangeStatus.frame.origin.x -= 70
+            self.orangeStatus.translatesAutoresizingMaskIntoConstraints = false
+            self.orangeStatus.layer.frame.size.width += 46
+            
+           
+          })
+    }
     
     
     @IBAction func answerView1Tapped(_ sender: Any) {
@@ -81,6 +90,7 @@ class SpenderBearViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
             self.performSegue(withIdentifier: "CorrectAnswerOneSegue", sender: self)
         }
+        animateStatusBar()
         
         
         

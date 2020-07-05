@@ -41,6 +41,16 @@ class SpenderBearGameThreeViewController: UIViewController {
         answerViewFour.layer.cornerRadius = 15
     }
     
+    func animateStatusBar(){
+          UIView.animate(withDuration: 2, animations: {
+               // self.orangeStatus.frame.origin.x -= 70
+              self.orangeStatus.translatesAutoresizingMaskIntoConstraints = false
+              self.orangeStatus.layer.frame.size.width += 73
+              
+             
+            })
+      }
+    
     //MARK: - ALERT
     func showCorrectAlert(){
         
@@ -104,6 +114,7 @@ class SpenderBearGameThreeViewController: UIViewController {
               DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
                   self.performSegue(withIdentifier: "CorrectAnswerThreeSegue", sender: self)
               }
+           animateStatusBar()
     }
     
 }
