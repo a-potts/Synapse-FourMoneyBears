@@ -99,9 +99,9 @@ class SpenderBearGameOneViewController: UIViewController {
     @IBAction func checkAnswerTapped(_ sender: Any) {
         // Need to find out if viewFour is the view selected
         // If so, correct answer else wrong
-        if choiceViewThree.frame.intersects(answerView.frame){
+        if choiceViewOne.frame.intersects(answerView.frame){
               SCLAlertView().showSuccess("Good Job!", subTitle: "Next")
-                  DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                  DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                       self.performSegue(withIdentifier: "CorrectAnswerSegue", sender: self)
                   }
                  animateStatusBar()

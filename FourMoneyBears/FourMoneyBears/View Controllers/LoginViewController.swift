@@ -30,6 +30,7 @@ class LoginViewController: UIViewController {
     func setUpViews(){
         loginButton.layer.cornerRadius = 15
         credentialView.layer.cornerRadius = 15
+        passwordText.isSecureTextEntry = true
     }
     
     func handleLogIn() {

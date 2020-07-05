@@ -111,10 +111,21 @@ class SpenderBearGameThreeViewController: UIViewController {
     
     @IBAction func answerViewTwoTapped(_ sender: Any) {
           SCLAlertView().showSuccess("Good Job!", subTitle: "Next")
-              DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+              DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                   self.performSegue(withIdentifier: "CorrectAnswerThreeSegue", sender: self)
               }
            animateStatusBar()
     }
     
+    
+    @IBAction func answerViewOneTapped(_ sender: Any) {
+        SCLAlertView().showError("Wrong Answer", subTitle: "Try Again!")
+    }
+    @IBAction func answerViewThreeTapped(_ sender: Any) {
+        SCLAlertView().showError("Wrong Answer", subTitle: "Try Again!")
+    }
+    
+    @IBAction func answerViewFourTapped(_ sender: Any) {
+        SCLAlertView().showError("Wrong Answer", subTitle: "Try Again!")
+    }
 }

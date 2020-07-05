@@ -87,7 +87,7 @@ class SpenderBearViewController: UIViewController {
         //showCorrectAlert()
        //showCorrectAlert()
         SCLAlertView().showSuccess("Good Job!", subTitle: "Next")
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             self.performSegue(withIdentifier: "CorrectAnswerOneSegue", sender: self)
         }
         animateStatusBar()
@@ -137,6 +137,16 @@ class SpenderBearViewController: UIViewController {
     @IBAction func answerView2Tapped(_ sender: Any) {
         SCLAlertView().showError("Wrong Answer", subTitle: "Try Again!")
        
+    }
+    
+    
+    @IBAction func answerView3Tapped(_ sender: Any) {
+        SCLAlertView().showError("Wrong Answer", subTitle: "Try Again!")
+    }
+    
+    
+    @IBAction func answerView4Tapped(_ sender: Any) {
+        SCLAlertView().showError("Wrong Answer", subTitle: "Try Again!")
     }
     
     

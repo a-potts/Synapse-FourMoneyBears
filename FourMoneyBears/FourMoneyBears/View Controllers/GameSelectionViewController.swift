@@ -79,7 +79,28 @@ class GameSelectionViewController: UIViewController {
         
     }
     
+    func animateSpenderBear() {
+        UIView.animate(withDuration: 1, animations: {               //45 degree rotation. USE RADIANS
+            self.spenderBear.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 0.1).concatenating(CGAffineTransform(scaleX: 1.2, y: 1.2))
+                
+            }) { (_) in //Is finished
+                
+                
+                UIView.animate(withDuration: 1, animations: {
+                    self.spenderBear.transform = .identity
+                })
+                
+                
+            }
+    }
     
+    
+    @IBAction func spenderBearTapped(_ sender: Any) {
+        animateSpenderBear()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.performSegue(withIdentifier: "SpenderBearSegue", sender: nil)
+        }
+    }
     
     
 // MARK: - Log Out Function (FIXME: Create Hamburger Menu to Hide)
