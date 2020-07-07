@@ -27,10 +27,10 @@ class GameSelectionViewController: UIViewController {
         super.viewDidLoad()
         
         //MARK: - Check if user is singed in FIXME
-        if Auth.auth().currentUser?.uid == nil {
-            handleLogout()
-           // self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
-        }
+//        if Auth.auth().currentUser?.uid == nil {
+//            handleLogout()
+//           // self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+//        }
 
        setUpViews()
     }
@@ -104,22 +104,22 @@ class GameSelectionViewController: UIViewController {
     
     
 // MARK: - Log Out Function (FIXME: Create Hamburger Menu to Hide)
-    @IBAction func logoutTapped(_ sender: Any) {
-        handleLogout()
-        
-    }
+//    @IBAction func logoutTapped(_ sender: Any) {
+//        handleLogout()
+//
+//    }
     
-    func handleLogout(){
-        do {
-            try Auth.auth().signOut()
-        } catch let logoutError{
-            print(logoutError)
-        }
-        
-        //  let loginController = LoginViewController()
-        
-        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
-    }
+//    func handleLogout(){
+//        do {
+//            try Auth.auth().signOut()
+//        } catch let logoutError{
+//            print(logoutError)
+//        }
+//
+//        //  let loginController = LoginViewController()
+//
+//        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+//    }
 
 
 }
