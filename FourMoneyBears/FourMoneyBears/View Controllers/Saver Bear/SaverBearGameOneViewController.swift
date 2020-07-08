@@ -53,9 +53,38 @@ class SaverBearGameOneViewController: UIViewController {
  //Actions
     
     @IBAction func xTapped(_ sender: Any) {
-        
+        self.dismiss(animated: true, completion: nil)
     }
+    
+    
     @IBAction func checkAnswerTapped(_ sender: Any) {
     }
+    
+        @IBAction func panView(_ sender: UIPanGestureRecognizer) {
+            let translation = sender.translation(in: self.view)
+
+            if let viewToDrag = sender.view {
+                viewToDrag.center = CGPoint(x: viewToDrag.center.x + translation.x,
+                    y: viewToDrag.center.y + translation.y)
+                sender.setTranslation(CGPoint(x: 0, y: 0), in: viewToDrag)
+                
+    //            switch sender.state {
+    //            case .began, .changed:
+    //                choiceViewOne.center = CGPoint(x: choiceViewOne.center.x + translation.x, y: choiceViewOne.center.y + translation.y)
+    //                sender.setTranslation(CGPoint.zero, in: view)
+    //                break
+    //            case .ended:
+    //                if choiceViewOne.frame.intersects(answerView.frame) {
+    //
+    //                    UIView.animate(withDuration: 0.3) {
+    //
+    //                    }
+    //                }
+    //
+    //            default:
+    //                break
+    //            }
+            }
+        }
     
 }

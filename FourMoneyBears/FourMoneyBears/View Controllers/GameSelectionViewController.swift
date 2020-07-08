@@ -79,31 +79,48 @@ class GameSelectionViewController: UIViewController {
         
     }
     
-    func animateBear() {
+    //MARK: - Bear Animations
+    func animateSpenderBear() {
         UIView.animate(withDuration: 1, animations: {               //45 degree rotation. USE RADIANS
             self.spenderBear.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 0.1).concatenating(CGAffineTransform(scaleX: 1.2, y: 1.2))
-                
-            }) { (_) in //Is finished
-                
-                
-                UIView.animate(withDuration: 1, animations: {
-                    self.spenderBear.transform = .identity
-                })
-                
-                
-            }
+            
+        }) { (_) in //Is finished
+            
+            
+            UIView.animate(withDuration: 1, animations: {
+                self.spenderBear.transform = .identity
+            })
+            
+            
+        }
     }
+    
+    func animateSaverBear() {
+        UIView.animate(withDuration: 1, animations: {               //45 degree rotation. USE RADIANS
+            self.saverBear.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 0.1).concatenating(CGAffineTransform(scaleX: 1.2, y: 1.2))
+            
+        }) { (_) in //Is finished
+            
+            
+            UIView.animate(withDuration: 1, animations: {
+                self.saverBear.transform = .identity
+            })
+            
+            
+        }
+    }
+
     
     
     @IBAction func spenderBearTapped(_ sender: Any) {
-        animateBear()
+        animateSpenderBear()
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             self.performSegue(withIdentifier: "SpenderBearSegue", sender: nil)
         }
     }
     
     @IBAction func saverBearTapped(_ sender: Any) {
-        animateBear()
+        animateSaverBear()
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             self.performSegue(withIdentifier: "SaverBearSegue", sender: nil)
         }

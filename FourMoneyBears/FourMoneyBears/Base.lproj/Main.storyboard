@@ -533,7 +533,6 @@
                                 </constraints>
                                 <connections>
                                     <action selector="saverBearTapped:" destination="g7S-IU-U5O" eventType="touchUpInside" id="wfG-Vn-POc"/>
-                                    <segue destination="SbP-xv-kmp" kind="show" identifier="SaverBearSegue" id="g6H-Xe-Pvy"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -603,6 +602,7 @@
                         <outlet property="saverBear" destination="JhZ-32-yCH" id="Gkq-B5-N28"/>
                         <outlet property="spenderBear" destination="muQ-zV-kE3" id="5aP-pH-MwX"/>
                         <segue destination="mMQ-Re-waJ" kind="show" identifier="SpenderBearSegue" id="c8p-SF-hVr"/>
+                        <segue destination="SbP-xv-kmp" kind="show" identifier="SaverBearSegue" id="ScL-P7-WbV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FA9-VK-JlR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -619,6 +619,7 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lake_mountain-2" translatesAutoresizingMaskIntoConstraints="NO" id="3eM-WC-meC">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <gestureRecognizers/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MNv-3Y-T3P">
                                 <rect key="frame" x="20" y="48" width="32" height="51"/>
@@ -724,34 +725,50 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ieg-8U-Lll">
                                 <rect key="frame" x="15" y="729" width="61" height="38"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="61" id="LbU-pQ-fDH"/>
                                     <constraint firstAttribute="height" constant="38" id="u7z-eQ-pX8"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="efV-WJ-sRq" appends="YES" id="KJg-WJ-rbb"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N0Y-BH-hL8">
                                 <rect key="frame" x="96" y="729" width="61" height="38"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="61" id="V9W-N2-1MZ"/>
                                     <constraint firstAttribute="height" constant="38" id="jWA-yT-klf"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Ath-rb-Z4K" appends="YES" id="LOa-mz-c5y"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="peM-2h-TR6">
                                 <rect key="frame" x="177" y="729" width="61" height="38"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="EBf-3S-9l3"/>
                                     <constraint firstAttribute="width" constant="61" id="YcO-1Z-430"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="ujf-zg-rEm" appends="YES" id="Wcv-JH-sQW"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="heb-CM-nRI">
                                 <rect key="frame" x="338" y="729" width="61" height="38"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="fIP-xH-bbd"/>
                                     <constraint firstAttribute="width" constant="61" id="oZf-QK-FcO"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="nXE-BA-9JC" appends="YES" id="C6Y-Ip-ZqJ"/>
+                                </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tvv-MQ-YIP">
                                 <rect key="frame" x="54" y="804" width="306" height="58"/>
@@ -772,10 +789,14 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5st-Xd-jb7">
                                 <rect key="frame" x="258" y="729" width="61" height="38"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="Bv9-Tp-GNg"/>
                                     <constraint firstAttribute="width" constant="61" id="sSx-yV-llh"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="iHa-Vi-Z2f" appends="YES" id="nVq-d9-xWy"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -840,6 +861,31 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M1o-27-Sm8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="efV-WJ-sRq">
+                    <connections>
+                        <action selector="panView:" destination="SbP-xv-kmp" id="DmS-ml-Uv9"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="Ath-rb-Z4K">
+                    <connections>
+                        <action selector="panView:" destination="SbP-xv-kmp" id="tpN-DK-Zlp"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="ujf-zg-rEm">
+                    <connections>
+                        <action selector="panView:" destination="SbP-xv-kmp" id="3Iv-qW-en4"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="iHa-Vi-Z2f">
+                    <connections>
+                        <action selector="panView:" destination="SbP-xv-kmp" id="dXK-Zl-QIS"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="nXE-BA-9JC">
+                    <connections>
+                        <action selector="panView:" destination="SbP-xv-kmp" id="Kf8-h4-ERL"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1960.8695652173915" y="243.75"/>
         </scene>
