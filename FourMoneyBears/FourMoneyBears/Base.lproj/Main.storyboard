@@ -727,7 +727,7 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$20.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D0r-k9-IqT">
                                         <rect key="frame" x="3" y="8" width="55" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -749,8 +749,8 @@
                                 <rect key="frame" x="96" y="729" width="61" height="38"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UgI-x7-14z">
-                                        <rect key="frame" x="3" y="8" width="55" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="3" y="8" width="55" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -772,8 +772,8 @@
                                 <rect key="frame" x="177" y="729" width="61" height="38"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$2.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Si-1R-Bd3">
-                                        <rect key="frame" x="3" y="8" width="55" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="3" y="8" width="55" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -795,8 +795,8 @@
                                 <rect key="frame" x="338" y="729" width="61" height="38"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T3S-IP-FIC">
-                                        <rect key="frame" x="3" y="8" width="55" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="3" y="8" width="55" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -834,8 +834,8 @@
                                 <rect key="frame" x="258" y="729" width="61" height="38"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pot-y6-V6x">
-                                        <rect key="frame" x="3" y="8" width="55" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="3" y="8" width="55" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -1238,11 +1238,6 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lake_mountain-2" translatesAutoresizingMaskIntoConstraints="NO" id="6Ol-s2-pw7">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="Dpk-iv-FZD" appends="YES" id="m65-zh-yHc"/>
-                                    <outletCollection property="gestureRecognizers" destination="ix5-b3-SSU" appends="YES" id="lON-VO-fye"/>
-                                    <outletCollection property="gestureRecognizers" destination="Vsd-o7-rjj" appends="YES" id="Icb-Cg-Xw8"/>
-                                </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZLm-dP-CzQ">
                                 <rect key="frame" x="20" y="48" width="32" height="51"/>
@@ -1340,13 +1335,14 @@
                                 <rect key="frame" x="20" y="695" width="70" height="36"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$20.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sfh-jX-Rgm">
-                                        <rect key="frame" x="6" y="7" width="58" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <rect key="frame" x="6" y="7" width="58" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="2cR-8v-EYn"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="LsS-Fx-6x2"/>
@@ -1357,20 +1353,21 @@
                                     <constraint firstAttribute="trailing" secondItem="sfh-jX-Rgm" secondAttribute="trailing" constant="6" id="tPn-nA-slp"/>
                                 </constraints>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="3cC-AM-Pwy" appends="YES" id="WO6-KK-QRG"/>
+                                    <outletCollection property="gestureRecognizers" destination="BUj-Na-naG" appends="YES" id="SrW-dP-LTj"/>
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eq2-MG-ZEf">
                                 <rect key="frame" x="224" y="695" width="70" height="36"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$40.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4Y-Rp-ZWB">
-                                        <rect key="frame" x="6" y="7" width="58" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <rect key="frame" x="6" y="7" width="58" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="a4Y-Rp-ZWB" firstAttribute="leading" secondItem="eq2-MG-ZEf" secondAttribute="leading" constant="6" id="AJq-ju-qBp"/>
                                     <constraint firstAttribute="trailing" secondItem="a4Y-Rp-ZWB" secondAttribute="trailing" constant="6" id="HJq-Xu-7W0"/>
@@ -1381,20 +1378,21 @@
                                     <constraint firstAttribute="width" constant="70" id="tox-ue-K7r"/>
                                 </constraints>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="ix5-b3-SSU" appends="YES" id="qiJ-4N-XTW"/>
+                                    <outletCollection property="gestureRecognizers" destination="dCM-Pe-cfr" appends="YES" id="Bh7-2i-SJ2"/>
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Bn-xk-YwZ">
                                 <rect key="frame" x="326" y="695" width="70" height="36"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$2.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bvj-96-t2Z">
-                                        <rect key="frame" x="6" y="7" width="58" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <rect key="frame" x="6" y="7" width="58" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="bvj-96-t2Z" secondAttribute="trailing" constant="6" id="Q41-f9-N6h"/>
                                     <constraint firstAttribute="height" constant="36" id="UxL-wQ-WQo"/>
@@ -1405,20 +1403,21 @@
                                     <constraint firstAttribute="width" constant="70" id="ydG-T0-yXs"/>
                                 </constraints>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="Vsd-o7-rjj" appends="YES" id="RTa-fx-O6V"/>
+                                    <outletCollection property="gestureRecognizers" destination="QOG-Aa-jMQ" appends="YES" id="gV1-G2-G4W"/>
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1WX-aS-br6">
                                 <rect key="frame" x="122" y="695" width="70" height="36"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$8.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oDt-6y-eaP">
-                                        <rect key="frame" x="6" y="7" width="58" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <rect key="frame" x="6" y="7" width="58" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="36" id="Ldd-EQ-3wH"/>
                                     <constraint firstItem="oDt-6y-eaP" firstAttribute="leading" secondItem="1WX-aS-br6" secondAttribute="leading" constant="6" id="P50-AF-IXV"/>
@@ -1429,7 +1428,7 @@
                                     <constraint firstItem="oDt-6y-eaP" firstAttribute="top" secondItem="1WX-aS-br6" secondAttribute="top" constant="7" id="ymw-Uh-vWb"/>
                                 </constraints>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="Dpk-iv-FZD" appends="YES" id="HOC-gU-WJl"/>
+                                    <outletCollection property="gestureRecognizers" destination="srh-Fz-hK9" appends="YES" id="d6p-Of-pp5"/>
                                 </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NAx-eC-Ku7">
@@ -1505,24 +1504,24 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SXa-4b-FR3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="3cC-AM-Pwy">
+                <panGestureRecognizer minimumNumberOfTouches="1" id="BUj-Na-naG">
                     <connections>
-                        <action selector="panView:" destination="cDW-GV-GC4" id="W77-Cd-DE5"/>
+                        <action selector="panView:" destination="cDW-GV-GC4" id="8aw-Ua-vBh"/>
                     </connections>
                 </panGestureRecognizer>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="Dpk-iv-FZD">
+                <panGestureRecognizer minimumNumberOfTouches="1" id="srh-Fz-hK9">
                     <connections>
-                        <action selector="panView:" destination="cDW-GV-GC4" id="sOW-8k-W4U"/>
+                        <action selector="panView:" destination="cDW-GV-GC4" id="qFi-AE-9YX"/>
                     </connections>
                 </panGestureRecognizer>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="ix5-b3-SSU">
+                <panGestureRecognizer minimumNumberOfTouches="1" id="dCM-Pe-cfr">
                     <connections>
-                        <action selector="panView:" destination="cDW-GV-GC4" id="Doy-ej-eve"/>
+                        <action selector="panView:" destination="cDW-GV-GC4" id="vqp-nr-e39"/>
                     </connections>
                 </panGestureRecognizer>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="Vsd-o7-rjj">
+                <panGestureRecognizer minimumNumberOfTouches="1" id="QOG-Aa-jMQ">
                     <connections>
-                        <action selector="panView:" destination="cDW-GV-GC4" id="x1F-RM-apf"/>
+                        <action selector="panView:" destination="cDW-GV-GC4" id="Gyy-aY-z9L"/>
                     </connections>
                 </panGestureRecognizer>
             </objects>
@@ -1607,8 +1606,8 @@
                                 <rect key="frame" x="20" y="316" width="374" height="61"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spend everything besides $20.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ckP-EA-cot">
-                                        <rect key="frame" x="20" y="20" width="334" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <rect key="frame" x="20" y="20" width="334" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -1636,8 +1635,8 @@
                                 <rect key="frame" x="20" y="417" width="374" height="61"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save 80% of every dollar you earn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2kf-SU-sjP">
-                                        <rect key="frame" x="20" y="20" width="334" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <rect key="frame" x="20" y="20" width="334" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -1665,8 +1664,8 @@
                                 <rect key="frame" x="20" y="518" width="374" height="61"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spend whatever, as long as you have fun" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccT-fZ-eyl">
-                                        <rect key="frame" x="20" y="20" width="334" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <rect key="frame" x="20" y="20" width="334" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -1694,8 +1693,8 @@
                                 <rect key="frame" x="20" y="619" width="374" height="61"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save 20% of every dollar you earn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2he-mC-aCK">
-                                        <rect key="frame" x="20" y="20" width="334" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <rect key="frame" x="20" y="20" width="334" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
