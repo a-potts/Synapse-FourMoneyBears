@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SCLAlertView
 
 class SaverBearGameOneViewController: UIViewController {
     
@@ -47,6 +48,15 @@ class SaverBearGameOneViewController: UIViewController {
         choiceViewFive.layer.cornerRadius = 5
     }
     
+    func animateStatusBar(){
+          UIView.animate(withDuration: 2, animations: {
+               // self.orangeStatus.frame.origin.x -= 70
+              self.orangeStatus.translatesAutoresizingMaskIntoConstraints = false
+              self.orangeStatus.layer.frame.size.width += 46
+              
+             
+            })
+      }
     
     
 
@@ -58,6 +68,15 @@ class SaverBearGameOneViewController: UIViewController {
     
     
     @IBAction func checkAnswerTapped(_ sender: Any) {
+        if choiceViewTwo.frame.intersects(answerView.frame){
+                  SCLAlertView().showSuccess("Good Job!", subTitle: "Next")
+                      DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                          self.performSegue(withIdentifier: "CorrectAnswerSegue", sender: self)
+                      }
+                     animateStatusBar()
+            } else {
+                SCLAlertView().showError("Wrong Answer", subTitle: "Try Again!")
+            }
     }
     
         @IBAction func panView(_ sender: UIPanGestureRecognizer) {
