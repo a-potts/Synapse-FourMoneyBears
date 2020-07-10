@@ -12,4 +12,5 @@ target 'FourMoneyBears' do
   pod 'Firebase/Auth'
   pod 'Firebase/Storage'
   pod 'SCLAlertView'
+  pod 'EMTNeumorphicView'
 end

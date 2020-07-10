@@ -1,4 +1,5 @@
 PODS:
+  - EMTNeumorphicView (1.0.4)
   - Firebase/Analytics (6.18.0):
     - Firebase/Core
   - Firebase/Auth (6.18.0):
@@ -94,6 +95,7 @@ PODS:
   - SCLAlertView (0.8)
 
 DEPENDENCIES:
+  - EMTNeumorphicView
   - Firebase/Analytics
   - Firebase/Auth
   - Firebase/Database
@@ -102,6 +104,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - EMTNeumorphicView
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuth
@@ -123,6 +126,7 @@ SPEC REPOS:
     - SCLAlertView
 
 SPEC CHECKSUMS:
+  EMTNeumorphicView: cb5e92953e43b1872ab47fefd451a9ce0c16fc77
   Firebase: 0490eca762a72e4f1582319539153897f1508dee
   FirebaseAnalytics: 058d71e714a1a6804d9e0f25e3bb18e377a51579
   FirebaseAuth: 5ce2b03a3d7fe56b7a6e4c5ec7ff1522890b1d6f
@@ -143,6 +147,6 @@ SPEC CHECKSUMS:
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
 
-PODFILE CHECKSUM: 95cdb79aa148c8c94010aa11040526fc0ee9471b
+PODFILE CHECKSUM: a153b997415dd34fb6c37903856647188f5f63ac
 
 COCOAPODS: 1.9.0

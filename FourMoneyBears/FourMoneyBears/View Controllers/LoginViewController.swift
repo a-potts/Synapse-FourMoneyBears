@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import EMTNeumorphicView
 
 class LoginViewController: UIViewController {
 
@@ -15,7 +16,8 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
 
         setUpViews()
-        
+        neumorhpicButton()
+      
     
         
     }
@@ -31,6 +33,31 @@ class LoginViewController: UIViewController {
         loginButton.layer.cornerRadius = 15
         credentialView.layer.cornerRadius = 15
         passwordText.isSecureTextEntry = true
+        
+    }
+    
+   
+    
+    // MARK: - FIXME: 
+    func neumorhpicButton() {
+        //let button = EMTNeumorphicButton(type: .custom)
+        let button = EMTNeumorphicButton(type: loginButton.buttonType)
+        //loginButton.addSubview(button)
+           button.setImage(UIImage(named: "heart-outline"), for: .normal)
+           button.setImage(UIImage(named: "heart-solid"), for: .selected)
+           button.contentVerticalAlignment = .fill
+           button.contentHorizontalAlignment = .fill
+           button.imageEdgeInsets = UIEdgeInsets(top: 126, left: 124, bottom: 122, right: 124)
+           button.addTarget(self, action: #selector(tapped(_:)), for: .touchUpInside)
+           button.translatesAutoresizingMaskIntoConstraints = false
+           
+           button.neumorphicLayer?.elementBackgroundColor = view.backgroundColor?.cgColor as! CGColor
+        
+        
+    }
+    @objc func tapped(_ button: EMTNeumorphicButton) {
+        // isSelected property changes neumorphicLayer?.depthType automatically
+        button.isSelected = !button.isSelected
     }
     
     func handleLogIn() {
