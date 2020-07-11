@@ -23,6 +23,10 @@
 		45799DE924B80FBF0042440E /* SaverBearGameTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45799DE824B80FBF0042440E /* SaverBearGameTwoViewController.swift */; };
 		45799DEB24B8145F0042440E /* SaverBearGameThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45799DEA24B8145F0042440E /* SaverBearGameThreeViewController.swift */; };
 		45799DEF24B907FD0042440E /* SaverBearFourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45799DEE24B907FD0042440E /* SaverBearFourViewController.swift */; };
+		45799DF224B96A9E0042440E /* InvestorBearGameOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45799DF124B96A9E0042440E /* InvestorBearGameOneViewController.swift */; };
+		45799DF424B96ABB0042440E /* InvestorBearGameTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45799DF324B96ABB0042440E /* InvestorBearGameTwoViewController.swift */; };
+		45799DF624B96AD00042440E /* InvestorBearGameThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45799DF524B96AD00042440E /* InvestorBearGameThreeViewController.swift */; };
+		45799DF824B96AE00042440E /* InvestorBearGameFourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45799DF724B96AE00042440E /* InvestorBearGameFourViewController.swift */; };
 		45F5726824B5580400DA9179 /* SaverBearGameOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F5726724B5580400DA9179 /* SaverBearGameOneViewController.swift */; };
 		F0AC63C2A0610F6BA8F0BBD4 /* Pods_FourMoneyBears.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A2999CBA1AAD52A1380E182 /* Pods_FourMoneyBears.framework */; };
 /* End PBXBuildFile section */
@@ -47,6 +51,10 @@
 		45799DE824B80FBF0042440E /* SaverBearGameTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaverBearGameTwoViewController.swift; sourceTree = "<group>"; };
 		45799DEA24B8145F0042440E /* SaverBearGameThreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaverBearGameThreeViewController.swift; sourceTree = "<group>"; };
 		45799DEE24B907FD0042440E /* SaverBearFourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaverBearFourViewController.swift; sourceTree = "<group>"; };
+		45799DF124B96A9E0042440E /* InvestorBearGameOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestorBearGameOneViewController.swift; sourceTree = "<group>"; };
+		45799DF324B96ABB0042440E /* InvestorBearGameTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestorBearGameTwoViewController.swift; sourceTree = "<group>"; };
+		45799DF524B96AD00042440E /* InvestorBearGameThreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestorBearGameThreeViewController.swift; sourceTree = "<group>"; };
+		45799DF724B96AE00042440E /* InvestorBearGameFourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestorBearGameFourViewController.swift; sourceTree = "<group>"; };
 		45F5726724B5580400DA9179 /* SaverBearGameOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaverBearGameOneViewController.swift; sourceTree = "<group>"; };
 		51FD56432829A48BA4EE01F6 /* Pods-FourMoneyBears.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FourMoneyBears.debug.xcconfig"; path = "Target Support Files/Pods-FourMoneyBears/Pods-FourMoneyBears.debug.xcconfig"; sourceTree = "<group>"; };
 		E6FBAEDE335D1964F5A3A393 /* Pods-FourMoneyBears.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FourMoneyBears.release.xcconfig"; path = "Target Support Files/Pods-FourMoneyBears/Pods-FourMoneyBears.release.xcconfig"; sourceTree = "<group>"; };
@@ -108,6 +116,7 @@
 		450CA096243EB51B00EEA40F /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				45799DF024B96A820042440E /* Investor Bear */,
 				45F5726624B557E400DA9179 /* Saver Bear */,
 				454266BC24AE216100A6BA5E /* Spender Bear */,
 				450CA097243EB53800EEA40F /* GameSelectionViewController.swift */,
@@ -126,6 +135,17 @@
 				454266DF24B118DD00A6BA5E /* SpenderBearGameFourViewController.swift */,
 			);
 			path = "Spender Bear";
+			sourceTree = "<group>";
+		};
+		45799DF024B96A820042440E /* Investor Bear */ = {
+			isa = PBXGroup;
+			children = (
+				45799DF124B96A9E0042440E /* InvestorBearGameOneViewController.swift */,
+				45799DF324B96ABB0042440E /* InvestorBearGameTwoViewController.swift */,
+				45799DF524B96AD00042440E /* InvestorBearGameThreeViewController.swift */,
+				45799DF724B96AE00042440E /* InvestorBearGameFourViewController.swift */,
+			);
+			path = "Investor Bear";
 			sourceTree = "<group>";
 		};
 		45F5726624B557E400DA9179 /* Saver Bear */ = {
@@ -268,15 +288,19 @@
 				450CA083243EB12900EEA40F /* AppDelegate.swift in Sources */,
 				450CA085243EB12900EEA40F /* SceneDelegate.swift in Sources */,
 				45619E84248C96DE00E7D980 /* RegisterViewController.swift in Sources */,
+				45799DF824B96AE00042440E /* InvestorBearGameFourViewController.swift in Sources */,
 				45619E80248C701900E7D980 /* LoginViewController.swift in Sources */,
+				45799DF424B96ABB0042440E /* InvestorBearGameTwoViewController.swift in Sources */,
 				45799DEB24B8145F0042440E /* SaverBearGameThreeViewController.swift in Sources */,
 				4547DD75249FDDE800DEBBF8 /* SpenderBearGameOneViewController.swift in Sources */,
 				450CA098243EB53800EEA40F /* GameSelectionViewController.swift in Sources */,
+				45799DF624B96AD00042440E /* InvestorBearGameThreeViewController.swift in Sources */,
 				454266E024B118DD00A6BA5E /* SpenderBearGameFourViewController.swift in Sources */,
 				45799DE924B80FBF0042440E /* SaverBearGameTwoViewController.swift in Sources */,
 				454266BE24AE219E00A6BA5E /* SpenderBearGameThreeViewController.swift in Sources */,
 				45799DEF24B907FD0042440E /* SaverBearFourViewController.swift in Sources */,
 				45F5726824B5580400DA9179 /* SaverBearGameOneViewController.swift in Sources */,
+				45799DF224B96A9E0042440E /* InvestorBearGameOneViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

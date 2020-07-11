@@ -62,7 +62,7 @@ class SaverBearFourViewController: UIViewController {
         
         @IBAction func xTapped(_ sender: Any) {
             
-            self.dismiss(animated: true, completion: nil)
+            self.performSegue(withIdentifier: "unwindSegue", sender: nil)
             
         }
         
@@ -84,14 +84,15 @@ class SaverBearFourViewController: UIViewController {
 //                self.performSegue(withIdentifier: "CorrectAnswerOneSegue", sender: self)
 //            }
 //            animateStatusBar()
-            let appearance = SCLAlertView.SCLAppearance(
-            showCloseButton: true
-            )
-            
-            let alertView = SCLAlertView(appearance: appearance)
+//            let appearance = SCLAlertView.SCLAppearance(
+//            showCloseButton: true
+//            )
+//
+//            let alertView = SCLAlertView(appearance: appearance)
             //alertView.showCustom("Congrats!", subTitle: "You won!", color: UIColor.white, icon: UIImage(systemName: "flame.fill")!)
             
             let alertViewResponder: SCLAlertViewResponder = SCLAlertView().showCustom("Good job, You won!", subTitle: "Reward: 10xp", color: UIColor.white, icon: UIImage(systemName: "flame.fill")!)
+            
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 4){
                 alertViewResponder.close()

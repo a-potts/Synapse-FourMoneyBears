@@ -63,7 +63,7 @@ class SaverBearGameThreeViewController: UIViewController {
     }
     
     @IBAction func xTapped(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.performSegue(withIdentifier: "unwindSegue", sender: nil)
     }
     
     

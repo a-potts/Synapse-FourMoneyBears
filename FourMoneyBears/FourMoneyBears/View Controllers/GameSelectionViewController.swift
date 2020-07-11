@@ -109,6 +109,21 @@ class GameSelectionViewController: UIViewController {
             
         }
     }
+    
+    func animateInvestorBear(){
+        UIView.animate(withDuration: 1, animations: {               //45 degree rotation. USE RADIANS
+            self.investorBear.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 0.1).concatenating(CGAffineTransform(scaleX: 1.2, y: 1.2))
+            
+        }) { (_) in //Is finished
+            
+            
+            UIView.animate(withDuration: 0.5, animations: {
+                self.investorBear.transform = .identity
+            })
+            
+            
+        }
+    }
 
     @IBAction func unwind( _ seg: UIStoryboardSegue) {
         
@@ -129,6 +144,12 @@ class GameSelectionViewController: UIViewController {
         
     }
     
+    @IBAction func investorBearTapped(_ sender: Any) {
+        animateInvestorBear()
+               DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                   self.performSegue(withIdentifier: "investorBearSegue", sender: nil)
+               }
+    }
     
     
     
