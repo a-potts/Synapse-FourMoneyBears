@@ -2377,7 +2377,7 @@
         <!--Saver Bear Four View Controller-->
         <scene sceneID="U1e-YM-p6r">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="kLs-EH-s1h" customClass="SaverBearFourViewController" customModule="FourMoneyBears" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="kLs-EH-s1h" customClass="SaverBearFourViewController" customModule="FourMoneyBears" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3fc-Yq-5Bf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2404,7 +2404,7 @@
                                 <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="heart.fill" catalog="system"/>
                             </button>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kzj-qw-zQ7">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kzj-qw-zQ7">
                                 <rect key="frame" x="20" y="297" width="173" height="229"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yv5-Dh-e3G">
@@ -2442,7 +2442,7 @@
                                     <constraint firstItem="oGy-FF-7gT" firstAttribute="leading" secondItem="Kzj-qw-zQ7" secondAttribute="leading" constant="20" symbolic="YES" id="snz-VG-YlW"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qSp-Bi-dIW">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qSp-Bi-dIW">
                                 <rect key="frame" x="221" y="297" width="173" height="229"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cp7-VX-g5N">
@@ -2480,7 +2480,7 @@
                                     <constraint firstItem="cp7-VX-g5N" firstAttribute="top" secondItem="qSp-Bi-dIW" secondAttribute="top" constant="50" id="zCI-dF-IKK"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6bW-FS-Iik">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6bW-FS-Iik">
                                 <rect key="frame" x="20" y="558" width="173" height="229"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="35%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfh-DD-xAW">
@@ -2527,7 +2527,7 @@
                                     <constraint firstAttribute="trailing" secondItem="SwB-Cx-h0l" secondAttribute="trailing" constant="2" id="xkJ-xh-gpz"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HLL-3K-zUB">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HLL-3K-zUB">
                                 <rect key="frame" x="221" y="558" width="173" height="229"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="40%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g7U-U3-Mgg">
@@ -2599,9 +2599,11 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="qSp-Bi-dIW" firstAttribute="top" secondItem="4MC-js-ky2" secondAttribute="bottom" constant="206" id="2H3-CE-oI5"/>
                             <constraint firstItem="Zgr-ck-sqX" firstAttribute="top" secondItem="Vau-ms-puB" secondAttribute="top" constant="22" id="3tj-JW-eZO"/>
                             <constraint firstItem="nEQ-44-w20" firstAttribute="top" secondItem="nRy-s9-IEz" secondAttribute="bottom" constant="8" id="9Oe-SR-h76"/>
                             <constraint firstItem="eCU-Ok-fkC" firstAttribute="trailing" secondItem="Vau-ms-puB" secondAttribute="trailing" id="9pM-51-Jp8"/>
+                            <constraint firstItem="Kzj-qw-zQ7" firstAttribute="top" secondItem="nRy-s9-IEz" secondAttribute="bottom" constant="198" id="CfD-ra-Xce"/>
                             <constraint firstItem="6bW-FS-Iik" firstAttribute="leading" secondItem="Vau-ms-puB" secondAttribute="leading" constant="20" id="Pv9-Ll-NWt"/>
                             <constraint firstItem="HLL-3K-zUB" firstAttribute="top" secondItem="qSp-Bi-dIW" secondAttribute="bottom" constant="32" id="RZZ-F3-ucK"/>
                             <constraint firstItem="4MC-js-ky2" firstAttribute="top" secondItem="Vau-ms-puB" secondAttribute="top" constant="11" id="Vhb-Ua-lUF"/>

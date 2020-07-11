@@ -86,17 +86,20 @@ class SaverBearFourViewController: UIViewController {
 //            animateStatusBar()
             let appearance = SCLAlertView.SCLAppearance(
             showCloseButton: true
-            
             )
             
             let alertView = SCLAlertView(appearance: appearance)
-            alertView.showCustom("Congrats!", subTitle: "You won!", color: UIColor.white, icon: UIImage(systemName: "flame.fill")!)
-           alertView.addButton("Yay!") {
-               self.dismiss(animated: true, completion: nil)
-           }
+            //alertView.showCustom("Congrats!", subTitle: "You won!", color: UIColor.white, icon: UIImage(systemName: "flame.fill")!)
+            
+            let alertViewResponder: SCLAlertViewResponder = SCLAlertView().showCustom("Good job, You won!", subTitle: "Reward: 10xp", color: UIColor.white, icon: UIImage(systemName: "flame.fill")!)
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 4){
+                alertViewResponder.close()
+            }
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
                            self.performSegue(withIdentifier: "unwindSegue", sender: self)
+                           
                         }
                        animateStatusBar()
             
