@@ -87,7 +87,7 @@ class GameSelectionViewController: UIViewController {
         }) { (_) in //Is finished
             
             
-            UIView.animate(withDuration: 1, animations: {
+            UIView.animate(withDuration: 0.5, animations: {
                 self.spenderBear.transform = .identity
             })
             
@@ -102,7 +102,7 @@ class GameSelectionViewController: UIViewController {
         }) { (_) in //Is finished
             
             
-            UIView.animate(withDuration: 1, animations: {
+            UIView.animate(withDuration: 0.5, animations: {
                 self.saverBear.transform = .identity
             })
             
@@ -110,7 +110,9 @@ class GameSelectionViewController: UIViewController {
         }
     }
 
-    
+    @IBAction func unwind( _ seg: UIStoryboardSegue) {
+        
+    }
     
     @IBAction func spenderBearTapped(_ sender: Any) {
         animateSpenderBear()

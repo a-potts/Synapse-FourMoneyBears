@@ -49,6 +49,10 @@ class SaverBearGameTwoViewController: UIViewController {
           })
     }
     
+    @IBAction func xTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func answerViewTwoTapped(_ sender: Any) {
          SCLAlertView().showError("Wrong Answer", subTitle: "Try Again!")
     }
@@ -64,7 +68,7 @@ class SaverBearGameTwoViewController: UIViewController {
     @IBAction func answerViewFourTapped(_ sender: Any) {
         SCLAlertView().showSuccess("Good Job!", subTitle: "Next")
                      DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                         self.performSegue(withIdentifier: "CorrectAnswerThreeSegue", sender: self)
+                         self.performSegue(withIdentifier: "CorrectAnswerTwo", sender: self)
                      }
                   animateStatusBar()
     }

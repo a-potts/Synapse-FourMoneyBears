@@ -36,7 +36,7 @@ class SpenderBearGameFourViewController: UIViewController {
           UIView.animate(withDuration: 2, animations: {
                // self.orangeStatus.frame.origin.x -= 70
               self.orangeStatus.translatesAutoresizingMaskIntoConstraints = false
-              self.orangeStatus.layer.frame.size.width += 5
+              self.orangeStatus.layer.frame.size.width += 15
               
              
             })
@@ -52,7 +52,7 @@ class SpenderBearGameFourViewController: UIViewController {
     }
     */
     @IBAction func xTapped(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.performSegue(withIdentifier: "unwindSegue", sender: nil)
     }
     
     
@@ -61,9 +61,20 @@ class SpenderBearGameFourViewController: UIViewController {
     }
     
     @IBAction func yesTapped(_ sender: Any) {
+       SCLAlertView().showError("Wrong Answer", subTitle: "Try Again!")
     }
     
     @IBAction func noTapped(_ sender: Any) {
+         SCLAlertView().showCustom("Congrats!", subTitle: "You won!", color: UIColor.white, icon: UIImage(systemName: "flame.fill")!)
+        
+        
+        
+        animateStatusBar()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            self.performSegue(withIdentifier: "unwindSegue", sender: self)
+            
+        }
+        
     }
     
 }
