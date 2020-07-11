@@ -81,13 +81,13 @@ class GameSelectionViewController: UIViewController {
     
     //MARK: - Bear Animations
     func animateSpenderBear() {
-        UIView.animate(withDuration: 1, animations: {               //45 degree rotation. USE RADIANS
+        UIView.animate(withDuration:0.5, animations: {               //45 degree rotation. USE RADIANS
             self.spenderBear.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 0.1).concatenating(CGAffineTransform(scaleX: 1.2, y: 1.2))
             
         }) { (_) in //Is finished
             
             
-            UIView.animate(withDuration: 0.5, animations: {
+            UIView.animate(withDuration: 0.3, animations: {
                 self.spenderBear.transform = .identity
             })
             
@@ -96,13 +96,13 @@ class GameSelectionViewController: UIViewController {
     }
     
     func animateSaverBear() {
-        UIView.animate(withDuration: 1, animations: {               //45 degree rotation. USE RADIANS
+        UIView.animate(withDuration: 0.5, animations: {               //45 degree rotation. USE RADIANS
             self.saverBear.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 0.1).concatenating(CGAffineTransform(scaleX: 1.2, y: 1.2))
             
         }) { (_) in //Is finished
             
             
-            UIView.animate(withDuration: 0.5, animations: {
+            UIView.animate(withDuration: 0.3, animations: {
                 self.saverBear.transform = .identity
             })
             
@@ -111,13 +111,13 @@ class GameSelectionViewController: UIViewController {
     }
     
     func animateInvestorBear(){
-        UIView.animate(withDuration: 1, animations: {               //45 degree rotation. USE RADIANS
+        UIView.animate(withDuration: 0.5, animations: {               //45 degree rotation. USE RADIANS
             self.investorBear.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 0.1).concatenating(CGAffineTransform(scaleX: 1.2, y: 1.2))
             
         }) { (_) in //Is finished
             
             
-            UIView.animate(withDuration: 0.5, animations: {
+            UIView.animate(withDuration: 0.3, animations: {
                 self.investorBear.transform = .identity
             })
             
@@ -131,14 +131,14 @@ class GameSelectionViewController: UIViewController {
     
     @IBAction func spenderBearTapped(_ sender: Any) {
         animateSpenderBear()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.performSegue(withIdentifier: "SpenderBearSegue", sender: nil)
         }
     }
     
     @IBAction func saverBearTapped(_ sender: Any) {
         animateSaverBear()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.performSegue(withIdentifier: "SaverBearSegue", sender: nil)
         }
         
@@ -146,7 +146,7 @@ class GameSelectionViewController: UIViewController {
     
     @IBAction func investorBearTapped(_ sender: Any) {
         animateInvestorBear()
-               DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+               DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                    self.performSegue(withIdentifier: "investorBearSegue", sender: nil)
                }
     }

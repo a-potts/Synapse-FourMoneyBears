@@ -131,7 +131,10 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
      }
     
     
-
+    @IBAction func alreadyHaveAccountTapped(_ sender: Any) {
+        self.performSegue(withIdentifier: "unwindRegSegue", sender: nil)
+    }
+    
 }
 
 
