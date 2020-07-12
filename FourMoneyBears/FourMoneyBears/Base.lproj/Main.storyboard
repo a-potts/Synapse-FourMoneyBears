@@ -4009,7 +4009,7 @@
                                     <action selector="checkAnswerTapped:" destination="B4J-O6-b3G" eventType="touchUpInside" id="tyO-Lk-gvU"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Is this statement by Investor Bear, correct?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Fl7-aC-Loo">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Is this statement by Giver Bear, correct?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Fl7-aC-Loo">
                                 <rect key="frame" x="20" y="120" width="374" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="aDq-Qn-CZZ"/>
@@ -4157,11 +4157,11 @@
                                 <rect key="frame" x="73" y="69" width="264" height="14"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hdj-1Q-FBZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="256" height="14"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="183" height="14"/>
                                         <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="14" id="YAZ-t0-VY9"/>
-                                            <constraint firstAttribute="width" constant="256" id="ieR-gq-uC3"/>
+                                            <constraint firstAttribute="width" constant="183" id="ieR-gq-uC3"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -4183,7 +4183,7 @@
                                 <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="heart.fill" catalog="system"/>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="The group just earned $90.00, but Investor Bear wants to save all of it, is that correct?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tvL-qS-sGj">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="The group earned $40.00, but Giver Bear wants to give it away, is that correct?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tvL-qS-sGj">
                                 <rect key="frame" x="20" y="120" width="374" height="210"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="374" id="HZR-S3-N6T"/>
@@ -4224,7 +4224,7 @@
                                     <constraint firstAttribute="height" constant="254" id="WyO-2N-EPD"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Select how much the group should invest." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rjL-SM-AgF">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Select how much the group should give." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rjL-SM-AgF">
                                 <rect key="frame" x="8" y="632" width="398" height="71"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="71" id="Lua-6G-DxS"/>
@@ -4434,6 +4434,7 @@
                         <outlet property="orangeStatus" destination="hdj-1Q-FBZ" id="Wfe-8L-B7u"/>
                         <outlet property="whiteStatus" destination="7j4-rX-icI" id="Kn0-w4-R6S"/>
                         <segue destination="pb5-6D-ApF" kind="unwind" identifier="unwindSegue" unwindAction="unwind:" id="phZ-1p-r5R"/>
+                        <segue destination="Dgp-lD-omU" kind="show" identifier="correctAnswerThreeSegue" id="NEe-os-0Zf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jEw-f6-9vB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -4537,13 +4538,13 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qd4-HI-kpV">
                                 <rect key="frame" x="221" y="297" width="173" height="229"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUg-Z3-d7Z">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUg-Z3-d7Z">
                                         <rect key="frame" x="9" y="50" width="155" height="78"/>
                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="60"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thirty Dollars" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v3S-13-QM3">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Three Dollars" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v3S-13-QM3">
                                         <rect key="frame" x="2" y="146" width="169" height="26"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -4575,20 +4576,14 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c0I-gR-Dy2">
                                 <rect key="frame" x="20" y="558" width="173" height="229"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$35" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQg-3V-bLZ">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQg-3V-bLZ">
                                         <rect key="frame" x="9" y="50" width="155" height="78"/>
                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="60"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thirty Five" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p7l-kQ-orh">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Five Dollars" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p7l-kQ-orh">
                                         <rect key="frame" x="2" y="151" width="169" height="26"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
-                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dollars" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7F-An-Sfa">
-                                        <rect key="frame" x="2" y="175" width="169" height="26"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -4609,26 +4604,23 @@
                                     <constraint firstItem="VQg-3V-bLZ" firstAttribute="top" secondItem="c0I-gR-Dy2" secondAttribute="top" constant="50" id="DIh-5k-T1d"/>
                                     <constraint firstItem="FRl-G4-3DC" firstAttribute="leading" secondItem="c0I-gR-Dy2" secondAttribute="leading" constant="9" id="FEd-wt-bXD"/>
                                     <constraint firstAttribute="trailing" secondItem="p7l-kQ-orh" secondAttribute="trailing" constant="2" id="Fht-Co-yQc"/>
-                                    <constraint firstItem="D7F-An-Sfa" firstAttribute="leading" secondItem="c0I-gR-Dy2" secondAttribute="leading" constant="2" id="I7w-lZ-U1z"/>
                                     <constraint firstItem="FRl-G4-3DC" firstAttribute="top" secondItem="c0I-gR-Dy2" secondAttribute="top" constant="8" id="LRp-pD-aT1"/>
                                     <constraint firstItem="p7l-kQ-orh" firstAttribute="top" secondItem="VQg-3V-bLZ" secondAttribute="bottom" constant="23" id="Ov9-vU-ur3"/>
                                     <constraint firstAttribute="trailing" secondItem="FRl-G4-3DC" secondAttribute="trailing" constant="9" id="SaF-4F-mnK"/>
                                     <constraint firstAttribute="width" constant="173" id="Vf1-gS-c6W"/>
-                                    <constraint firstAttribute="trailing" secondItem="D7F-An-Sfa" secondAttribute="trailing" constant="2" id="aS3-IA-dAF"/>
                                     <constraint firstAttribute="bottom" secondItem="FRl-G4-3DC" secondAttribute="bottom" constant="8" id="gB6-hr-Z5V"/>
-                                    <constraint firstItem="D7F-An-Sfa" firstAttribute="top" secondItem="VQg-3V-bLZ" secondAttribute="bottom" constant="47" id="rhu-eL-j23"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HnX-Ze-0se">
                                 <rect key="frame" x="221" y="558" width="173" height="229"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$40" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hw3-TV-gfJ">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hw3-TV-gfJ">
                                         <rect key="frame" x="9" y="50" width="155" height="78"/>
                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="60"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forty Dollars" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="byc-Dq-wRV">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ten Dollars" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="byc-Dq-wRV">
                                         <rect key="frame" x="2" y="150" width="169" height="26"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -4661,11 +4653,11 @@
                                 <rect key="frame" x="73" y="66" width="264" height="14"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VKH-Lw-akU">
-                                        <rect key="frame" x="0.0" y="0.0" width="116" height="14"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="256" height="14"/>
                                         <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="14" id="Yin-Ni-hBc"/>
-                                            <constraint firstAttribute="width" constant="116" id="xzN-Bv-4xP"/>
+                                            <constraint firstAttribute="width" constant="256" id="xzN-Bv-4xP"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -4678,7 +4670,7 @@
                                     <constraint firstItem="VKH-Lw-akU" firstAttribute="leading" secondItem="bOX-3Y-Uwm" secondAttribute="leading" id="n5g-v2-Nfk"/>
                                 </constraints>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Investor Bear has $50.00, how much should he set aside to invest?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ukp-4x-JFf">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Giver Bear has $20.00, how much should she give away?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ukp-4x-JFf">
                                 <rect key="frame" x="20" y="107" width="374" height="205"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="205" id="08a-G3-PrK"/>
