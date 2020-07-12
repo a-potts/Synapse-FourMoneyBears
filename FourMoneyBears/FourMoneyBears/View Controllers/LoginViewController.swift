@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import EMTNeumorphicView
+import SCLAlertView
 
 class LoginViewController: UIViewController {
 
@@ -96,9 +97,7 @@ class LoginViewController: UIViewController {
     
     func showAlert(){
             
-        let alert = UIAlertController(title: "Your password or username is incorrect!", message: "Plase Try Again", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            present(alert, animated: true)
+        SCLAlertView().showError("Wrong Email or Password", subTitle: "Try Again!")
             
         }
     
