@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import SCLAlertView
 
 class RegisterViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -81,6 +82,20 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
         }
     }
     
+    func animateRegister() {
+           UIView.animate(withDuration: 0.5, animations: {               //45 degree rotation. USE RADIANS
+                   self.registerButton.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 0.1).concatenating(CGAffineTransform(scaleX: 1.2, y: 1.2))
+                   
+               }) { (_) in //Is finished
+                   
+                   
+                   UIView.animate(withDuration: 0.3, animations: {
+                       self.registerButton.transform = .identity
+                   })
+                   
+                   
+               }
+       }
     
     
     
@@ -99,8 +114,11 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
                 print("ERROR CHILD values: \(error)")
                 return
             }
-            
-            self.performSegue(withIdentifier: "RegisterSegue", sender: self)
+            SCLAlertView().showSuccess("Success!", subTitle: "Your Acount Has Been Created")
+                 DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                     self.performSegue(withIdentifier: "RegisterSegue", sender: self)
+                 }
+           // self.performSegue(withIdentifier: "RegisterSegue", sender: self)
             print("Saved user successfully into firebase db")
         }
     }
@@ -118,7 +136,7 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
     
     
     @IBAction func registerTapped(_ sender: Any) {
-        showAlert()
+        animateRegister()
         handleRegister()
     }
     

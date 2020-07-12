@@ -37,7 +37,7 @@ class InvestorBearGameOneViewController: UIViewController {
                UIView.animate(withDuration: 2, animations: {
                     // self.orangeStatus.frame.origin.x -= 70
                    self.orangeStatus.translatesAutoresizingMaskIntoConstraints = false
-                   self.orangeStatus.layer.frame.size.width += 73
+                   self.orangeStatus.layer.frame.size.width += 46
                    
                   
                  })

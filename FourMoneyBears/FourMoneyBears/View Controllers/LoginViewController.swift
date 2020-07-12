@@ -40,6 +40,21 @@ class LoginViewController: UIViewController {
        
    }
     
+    func animateLogin() {
+        UIView.animate(withDuration: 0.5, animations: {               //45 degree rotation. USE RADIANS
+                self.loginButton.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 0.1).concatenating(CGAffineTransform(scaleX: 1.2, y: 1.2))
+                
+            }) { (_) in //Is finished
+                
+                
+                UIView.animate(withDuration: 0.3, animations: {
+                    self.loginButton.transform = .identity
+                })
+                
+                
+            }
+    }
+    
     // MARK: - FIXME: 
     func neumorhpicButton() {
         //let button = EMTNeumorphicButton(type: .custom)
@@ -97,6 +112,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginTapped(_ sender: Any) {
+        animateLogin()
         handleLogIn()
     }
     
