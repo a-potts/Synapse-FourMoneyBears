@@ -33,6 +33,21 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
         registerButton.layer.cornerRadius = 15
     }
     
+    //MARK: Verification Email
+    private var authUser : User? {
+        return Auth.auth().currentUser
+    }
+    
+    public func sendVerificationMail() {
+        if self.authUser != nil && !self.authUser!.isEmailVerified {
+            self.authUser!.sendEmailVerification(completion: { (error) in
+                // Notify the user that the mail has sent or couldn't because of an error.
+            })
+        }
+        else {
+            // Either the user is not available, or the user is already verified.
+        }
+    }
     
     
     func handleRegister() {
@@ -44,6 +59,9 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
                 print("Error: \(error)")
                 return
             }
+            //MARK: Verification Email Test
+            self.sendVerificationMail()
+            
             
             guard let uid = user?.user.uid else { return }
             

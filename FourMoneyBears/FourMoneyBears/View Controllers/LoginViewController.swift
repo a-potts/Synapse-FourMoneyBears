@@ -84,7 +84,7 @@ class LoginViewController: UIViewController {
          
          Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
              if let error = error {
-                 // MARK: - TODO Add Notification to user that the login failed
+                 
                 self.showAlert()
                  print("Error signing in: \(error)")
                  return
