@@ -67,18 +67,6 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
             
             let imageName = NSUUID().uuidString
             
-            //MARK: - Rank System - Putting new child references
-            var rank: Int = 1
-            var myIntData = Data(bytes: &rank,
-            count: MemoryLayout.size(ofValue: rank))
-            
-            var intString = String(rank)
-            var intStringData = intString.data(using: .utf8)
-            
-            var intData = myIntData.base64EncodedData()
-            let rankRef = Storage.storage().reference().child("\(rank)")
-            
-            
             
             let storageRef = Storage.storage().reference().child("\(imageName).png")
             
@@ -93,13 +81,7 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
                     }
                     
                     
-                    rankRef.putData(intStringData!, metadata: nil) { (metadata, error) in
-                        if let error = error {
-                            print("Error uploading rank data: \(error)")
-                            return
-                        }
-                        
-                    
+                   
                     
                     
                     storageRef.downloadURL { (url, error) in
@@ -111,16 +93,23 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
                         
                         if let profileImageUrl = url?.absoluteString {
                             
+                            // MARK: - This seems to work for the Users Rank
+                            var userRank = 1
                             
+                            var userHealth = 3
                             
-                            let values = ["name": name, "email": email, "profileImageURL": profileImageUrl, "rank": "\(intStringData!)"]
+                            var userStreak = 0
+                            
+                            let values = ["name": name, "email": email, "profileImageURL": profileImageUrl, "rank": "\(userRank)",
+                                "health": "\(userHealth)", "streak": "\(userStreak)"]
                             
                             self.registerUserIntoDatabaseWithUID(uid: uid, values: values as [String : AnyObject])
                         }
                         
                     }
+                        
                     // print(metadata)
-                }
+                
                 }
                 
             }

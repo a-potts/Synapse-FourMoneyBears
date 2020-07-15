@@ -25,6 +25,11 @@ class GameSelectionViewController: UIViewController {
     
     @IBOutlet var userRankLabel: UILabel!
     
+    @IBOutlet var userRankImage: UIImageView!
+    
+    @IBOutlet var userHealthLabel: UILabel!
+    
+    @IBOutlet var streakLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +46,8 @@ class GameSelectionViewController: UIViewController {
             
             if let dictionary = snapshot.value as? [String: AnyObject] {
                 self.userRankLabel.text = dictionary["rank"] as? String
+                self.streakLabel.text = dictionary["streak"] as? String
+                self.userHealthLabel.text = dictionary["health"] as? String
             }
             print(snapshot)
         }, withCancel: nil)
