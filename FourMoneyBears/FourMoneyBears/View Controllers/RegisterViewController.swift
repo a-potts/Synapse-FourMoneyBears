@@ -67,6 +67,19 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
             
             let imageName = NSUUID().uuidString
             
+            //MARK: - Rank System - Putting new child references
+            var rank: Int = 1
+            var myIntData = Data(bytes: &rank,
+            count: MemoryLayout.size(ofValue: rank))
+            
+            var intString = String(rank)
+            var intStringData = intString.data(using: .utf8)
+            
+            var intData = myIntData.base64EncodedData()
+            let rankRef = Storage.storage().reference().child("\(rank)")
+            
+            
+            
             let storageRef = Storage.storage().reference().child("\(imageName).png")
             
             
@@ -79,20 +92,35 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
                         return
                     }
                     
+                    
+                    rankRef.putData(intStringData!, metadata: nil) { (metadata, error) in
+                        if let error = error {
+                            print("Error uploading rank data: \(error)")
+                            return
+                        }
+                        
+                    
+                    
+                    
                     storageRef.downloadURL { (url, error) in
                         if let error = error {
                             print("Error downloading URL: \(error)")
                             return
                         }
                         
+                        
                         if let profileImageUrl = url?.absoluteString {
-                            let values = ["name": name, "email": email, "profileImageURL": profileImageUrl ]
+                            
+                            
+                            
+                            let values = ["name": name, "email": email, "profileImageURL": profileImageUrl, "rank": "\(intStringData!)"]
                             
                             self.registerUserIntoDatabaseWithUID(uid: uid, values: values as [String : AnyObject])
                         }
                         
                     }
                     // print(metadata)
+                }
                 }
                 
             }
@@ -125,14 +153,14 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
         
         let userRef = ref.child("users").child(uid)
         
-        //             let values = ["name": name, "email": email, "profileImageURL": metadata.downloadURL()]
+       
         
         userRef.updateChildValues(values) { (error, refer) in
             if let error = error {
                 print("ERROR CHILD values: \(error)")
                 return
             }
-            SCLAlertView().showSuccess("Success!", subTitle: "Your Acount Has Been Created")
+            SCLAlertView().showSuccess("Your Account has been created!", subTitle: "An Email Verification has been sent.")
                  DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
                      self.performSegue(withIdentifier: "RegisterSegue", sender: self)
                  }
@@ -218,4 +246,18 @@ extension RegisterViewController {
     
     
     
+}
+
+extension Data {
+
+    init<T>(from value: T) {
+        self = Swift.withUnsafeBytes(of: value) { Data($0) }
+    }
+
+    func to<T>(type: T.Type) -> T? where T: ExpressibleByIntegerLiteral {
+        var value: T = 0
+        guard count >= MemoryLayout.size(ofValue: value) else { return nil }
+        _ = Swift.withUnsafeMutableBytes(of: &value, { copyBytes(to: $0)} )
+        return value
+    }
 }

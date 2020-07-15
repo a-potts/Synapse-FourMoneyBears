@@ -23,6 +23,9 @@ class GameSelectionViewController: UIViewController {
     
     @IBOutlet var giverBear: UIImageView!
     
+    @IBOutlet var userRankLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,8 +35,32 @@ class GameSelectionViewController: UIViewController {
 //           // self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
 //        }
 
+        let uid = Auth.auth().currentUser?.uid
+       
+        Database.database().reference().child("users").child(uid!).observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            if let dictionary = snapshot.value as? [String: AnyObject] {
+                self.userRankLabel.text = dictionary["rank"] as? String
+            }
+            print(snapshot)
+        }, withCancel: nil)
+        
        setUpViews()
     }
+    
+    //MARK: - Rank Set Up -
+    // Step 1. We need to fetch the Current User. (CHECK)
+    // Step 2. Fetch Current User Rank (CHECK)
+    // Step 3. Diplay Rank in Rank Label (CHECK)
+    // Step 4. On the last Game, after winning, Rank += 10
+    private var authUser : User? {
+           return Auth.auth().currentUser
+       }
+    
+      
+    
+    
+    
     
     
     func setUpViews() {
@@ -143,6 +170,13 @@ class GameSelectionViewController: UIViewController {
 
     @IBAction func unwind( _ seg: UIStoryboardSegue) {
         
+    }
+    
+   
+    @IBAction func basicsTapped(_ sender: Any) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.performSegue(withIdentifier: "BasicsSegue", sender: nil)
+        }
     }
     
     @IBAction func spenderBearTapped(_ sender: Any) {
