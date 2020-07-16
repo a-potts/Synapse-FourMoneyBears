@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 import SCLAlertView
 
 class InvestorBearGameFourViewController: UIViewController {
@@ -20,7 +21,8 @@ class InvestorBearGameFourViewController: UIViewController {
         @IBOutlet var choiceViewFour: UIView!
         @IBOutlet var choiceViewFive: UIView!
         @IBOutlet var checkAnswerButton: UIButton!
-        
+    @IBOutlet var userHealthLabel: UILabel!
+    
         @IBOutlet var whiteStatus: UIView!
         
         //MARK: - Life Cycle
@@ -29,6 +31,15 @@ class InvestorBearGameFourViewController: UIViewController {
             
             setUpMiscViews()
             setUpAnswerViews()
+            let uid = Auth.auth().currentUser?.uid
+            
+            Database.database().reference().child("users").child(uid!).observeSingleEvent(of: .value, with: { (snapshot) in
+                
+                if let dictionary = snapshot.value as? [String: AnyObject] {
+                    self.userHealthLabel.text = dictionary["health"] as? String
+                }
+                print(snapshot)
+            }, withCancel: nil)
 
         }
         

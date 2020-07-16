@@ -8,20 +8,31 @@
 
 import UIKit
 import SCLAlertView
+import Firebase
 
 class GiverBearGameFourViewController: UIViewController {
 
     
-        @IBOutlet var answerView1: UIView!
-        @IBOutlet var answerView2: UIView!
-        @IBOutlet var answerView3: UIView!
-        @IBOutlet var answerView4: UIView!
-        @IBOutlet var statusBar: UIView!
-        @IBOutlet var orangeStatus: UIView!
-        
+    @IBOutlet var answerView1: UIView!
+    @IBOutlet var answerView2: UIView!
+    @IBOutlet var answerView3: UIView!
+    @IBOutlet var answerView4: UIView!
+    @IBOutlet var statusBar: UIView!
+    @IBOutlet var orangeStatus: UIView!
+    @IBOutlet var userHealthLabel: UILabel!
+    
         override func viewDidLoad() {
             super.viewDidLoad()
             updateAnswerViews()
+            let uid = Auth.auth().currentUser?.uid
+            
+            Database.database().reference().child("users").child(uid!).observeSingleEvent(of: .value, with: { (snapshot) in
+                
+                if let dictionary = snapshot.value as? [String: AnyObject] {
+                    self.userHealthLabel.text = dictionary["health"] as? String
+                }
+                print(snapshot)
+            }, withCancel: nil)
         }
         
         

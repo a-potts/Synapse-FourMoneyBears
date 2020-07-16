@@ -8,6 +8,7 @@
 
 import UIKit
 import SCLAlertView
+import Firebase
 
 class SpenderBearGameThreeViewController: UIViewController {
     
@@ -19,6 +20,7 @@ class SpenderBearGameThreeViewController: UIViewController {
     @IBOutlet var answerViewFour: UIView!
     @IBOutlet var statusBar: UIView!
      @IBOutlet var orangeStatus: UIView!
+    @IBOutlet var userHealthLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +28,15 @@ class SpenderBearGameThreeViewController: UIViewController {
         // Do any additional setup after loading the view.
         setUpMiscViews()
         setUpAnswerViews()
+        let uid = Auth.auth().currentUser?.uid
+        
+        Database.database().reference().child("users").child(uid!).observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            if let dictionary = snapshot.value as? [String: AnyObject] {
+                self.userHealthLabel.text = dictionary["health"] as? String
+            }
+            print(snapshot)
+        }, withCancel: nil)
     }
     
     func setUpMiscViews(){

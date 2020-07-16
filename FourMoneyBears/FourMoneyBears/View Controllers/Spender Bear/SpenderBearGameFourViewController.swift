@@ -8,6 +8,7 @@
 
 import UIKit
 import SCLAlertView
+import Firebase
 
 class SpenderBearGameFourViewController: UIViewController {
     
@@ -16,13 +17,28 @@ class SpenderBearGameFourViewController: UIViewController {
     @IBOutlet var yesButton: UIButton!
     @IBOutlet var noButton: UIButton!
     @IBOutlet var checkAnswerButton: UIButton!
+    @IBOutlet var userHealthLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         setUpMiscViews()
+        let uid = Auth.auth().currentUser?.uid
+        
+        Database.database().reference().child("users").child(uid!).observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            if let dictionary = snapshot.value as? [String: AnyObject] {
+                self.userHealthLabel.text = dictionary["health"] as? String
+            }
+            print(snapshot)
+        }, withCancel: nil)
     }
+    
+    
+    //MARK: TASK: Increase Users Rank by 10 when they get the final correct answer
+    // Step 1. Fetch the users Data
+    // Step 2. Increment Rank 
     
     func setUpMiscViews() {
         statusBar.layer.cornerRadius = 9

@@ -8,6 +8,7 @@
 
 import UIKit
 import SCLAlertView
+import Firebase
 
 class SpenderBearGameOneViewController: UIViewController {
     
@@ -19,6 +20,7 @@ class SpenderBearGameOneViewController: UIViewController {
     @IBOutlet var choiceViewThree: UIView!
     @IBOutlet var choiceViewFour: UIView!
     @IBOutlet var checkAnswerButton: UIButton!
+    @IBOutlet var userHealthLabel: UILabel!
     
     var viewOrigin: CGPoint!
     
@@ -32,6 +34,15 @@ class SpenderBearGameOneViewController: UIViewController {
         viewOrigin = choiceViewTwo.frame.origin
         viewOrigin = choiceViewThree.frame.origin
         viewOrigin = choiceViewFour.frame.origin
+        let uid = Auth.auth().currentUser?.uid
+        
+        Database.database().reference().child("users").child(uid!).observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            if let dictionary = snapshot.value as? [String: AnyObject] {
+                self.userHealthLabel.text = dictionary["health"] as? String
+            }
+            print(snapshot)
+        }, withCancel: nil)
         
     }
     

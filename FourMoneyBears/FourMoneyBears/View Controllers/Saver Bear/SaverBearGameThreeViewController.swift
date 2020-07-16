@@ -8,12 +8,23 @@
 
 import UIKit
 import SCLAlertView
+import Firebase
 
 class SaverBearGameThreeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpMiscViews()
+        let uid = Auth.auth().currentUser?.uid
+        
+        Database.database().reference().child("users").child(uid!).observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            if let dictionary = snapshot.value as? [String: AnyObject] {
+                self.userHealthLabel.text = dictionary["health"] as? String
+            }
+            print(snapshot)
+                     }, withCancel: nil)
+        
 
     }
     
@@ -23,6 +34,7 @@ class SaverBearGameThreeViewController: UIViewController {
     @IBOutlet var yesButton: UIButton!
     @IBOutlet var noButton: UIButton!
 
+    @IBOutlet var userHealthLabel: UILabel!
     
     
     func setUpMiscViews() {

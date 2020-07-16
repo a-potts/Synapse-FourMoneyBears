@@ -8,27 +8,38 @@
 
 import UIKit
 import SCLAlertView
+import Firebase
 
 class GiverBearGameThreeViewController: UIViewController {
 
       //Outlets
-         @IBOutlet var orangeStatus: UIView!
-         @IBOutlet var answerView: UIView!
-         @IBOutlet var choiceViewOne: UIView!
-         @IBOutlet var choiceViewTwo: UIView!
-         @IBOutlet var choiceViewThree: UIView!
-         @IBOutlet var choiceViewFour: UIView!
-         @IBOutlet var choiceViewFive: UIView!
-         @IBOutlet var checkAnswerButton: UIButton!
-         
-         @IBOutlet var whiteStatus: UIView!
-         
-         //MARK: - Life Cycle
-         override func viewDidLoad() {
-             super.viewDidLoad()
-             
-             setUpMiscViews()
-             setUpAnswerViews()
+    @IBOutlet var orangeStatus: UIView!
+    @IBOutlet var answerView: UIView!
+    @IBOutlet var choiceViewOne: UIView!
+    @IBOutlet var choiceViewTwo: UIView!
+    @IBOutlet var choiceViewThree: UIView!
+    @IBOutlet var choiceViewFour: UIView!
+    @IBOutlet var choiceViewFive: UIView!
+    @IBOutlet var checkAnswerButton: UIButton!
+    @IBOutlet var userHealthLabel: UILabel!
+    
+    @IBOutlet var whiteStatus: UIView!
+    
+    //MARK: - Life Cycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setUpMiscViews()
+        setUpAnswerViews()
+        let uid = Auth.auth().currentUser?.uid
+        
+        Database.database().reference().child("users").child(uid!).observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            if let dictionary = snapshot.value as? [String: AnyObject] {
+                self.userHealthLabel.text = dictionary["health"] as? String
+            }
+            print(snapshot)
+        }, withCancel: nil)
 
          }
          

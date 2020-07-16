@@ -8,6 +8,7 @@
 
 import UIKit
 import SCLAlertView
+import Firebase
 
 class SaverBearGameTwoViewController: UIViewController {
     
@@ -18,12 +19,22 @@ class SaverBearGameTwoViewController: UIViewController {
     @IBOutlet var choiceViewTwo: UIView!
     @IBOutlet var choiceViewThree: UIView!
     @IBOutlet var choiceViewFour: UIView!
-
+    @IBOutlet var userHealthLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setUpMiscViews()
         setUpAnswerViews()
+        let uid = Auth.auth().currentUser?.uid
+        
+        Database.database().reference().child("users").child(uid!).observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            if let dictionary = snapshot.value as? [String: AnyObject] {
+                self.userHealthLabel.text = dictionary["health"] as? String
+            }
+            print(snapshot)
+        }, withCancel: nil)
     }
     
     func setUpMiscViews(){
