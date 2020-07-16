@@ -13,22 +13,16 @@ class GameSelectionViewController: UIViewController {
 
     @IBOutlet var basicsView: UIView!
     
-    // Money Bears
-    
+    // Four Money Bears
     @IBOutlet var spenderBear: UIImageView!
-    
     @IBOutlet var saverBear: UIImageView!
-    
     @IBOutlet var investorBear: UIImageView!
-    
     @IBOutlet var giverBear: UIImageView!
     
+    //User Attributes
     @IBOutlet var userRankLabel: UILabel!
-    
     @IBOutlet var userRankImage: UIImageView!
-    
     @IBOutlet var userHealthLabel: UILabel!
-    
     @IBOutlet var streakLabel: UILabel!
     
     // Bear Check Marks if Game Completed
@@ -36,6 +30,13 @@ class GameSelectionViewController: UIViewController {
     @IBOutlet var saverBearCheckMark: UIImageView!
     @IBOutlet var investorBearCheckMark: UIImageView!
     @IBOutlet var giverBearCheckMark: UIImageView!
+    
+    // Bear Buttons To Hide
+    @IBOutlet var spenderBearButton: UIButton!
+    
+    @IBOutlet var saverBearButton: UIButton!
+    @IBOutlet var investorBearButton: UIButton!
+    @IBOutlet var giverBearButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,20 +72,25 @@ class GameSelectionViewController: UIViewController {
     @objc func onDidReceiveData(_ notification:Notification) {
         spenderBear.layer.opacity = 0.5
         spenderBearCheckMark.isHidden = false
+        spenderBearButton.isHidden = true
+        
     }
     @objc func onDidReceiveDataSaver(_ notification:Notification) {
         saverBear.layer.opacity = 0.5
         saverBearCheckMark.isHidden = false
+        saverBearButton.isHidden = true
     }
 
     @objc func onDidReceiveDataGiver(_ notification:Notification) {
         giverBear.layer.opacity = 0.5
         giverBearCheckMark.isHidden = false
+        giverBearButton.isHidden = true
     }
 
     @objc func onDidReceiveDataInvestor(_ notification:Notification) {
         investorBear.layer.opacity = 0.5
         investorBearCheckMark.isHidden = false
+        investorBearButton.isHidden = true
     }
 
     

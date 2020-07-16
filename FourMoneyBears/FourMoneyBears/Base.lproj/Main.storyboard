@@ -712,12 +712,16 @@
                     <connections>
                         <outlet property="basicsView" destination="rvJ-RG-IQ5" id="hel-J7-xvW"/>
                         <outlet property="giverBear" destination="3oH-xA-eHV" id="8eK-Sa-qmm"/>
+                        <outlet property="giverBearButton" destination="2KA-za-bkX" id="vm4-UT-6ao"/>
                         <outlet property="giverBearCheckMark" destination="1qE-df-bBJ" id="cq6-Oh-ngb"/>
                         <outlet property="investorBear" destination="IB6-tw-3Od" id="3cE-rg-LPT"/>
+                        <outlet property="investorBearButton" destination="O2C-46-dAg" id="7oa-pv-Hzt"/>
                         <outlet property="investorBearCheckMark" destination="mUH-ZM-M4t" id="HtK-dZ-o0t"/>
                         <outlet property="saverBear" destination="JhZ-32-yCH" id="Gkq-B5-N28"/>
-                        <outlet property="saverBearCheckMark" destination="yEl-xU-naw" id="u6k-s4-FSx"/>
+                        <outlet property="saverBearButton" destination="82y-dP-bvR" id="LGb-nN-yZW"/>
+                        <outlet property="saverBearCheckMark" destination="yEl-xU-naw" id="KEQ-CO-Jfk"/>
                         <outlet property="spenderBear" destination="muQ-zV-kE3" id="5aP-pH-MwX"/>
+                        <outlet property="spenderBearButton" destination="Grc-jn-LRo" id="hP2-Ri-yBl"/>
                         <outlet property="spenderBearCheckMark" destination="e9M-8l-nac" id="4ls-TX-blp"/>
                         <outlet property="streakLabel" destination="mvB-uw-pJH" id="vpx-KB-PvN"/>
                         <outlet property="userHealthLabel" destination="aIl-pi-5Qs" id="oYA-NN-7db"/>
