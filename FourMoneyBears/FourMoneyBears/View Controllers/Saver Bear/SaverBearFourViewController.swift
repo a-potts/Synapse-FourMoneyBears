@@ -142,7 +142,7 @@ class SaverBearFourViewController: UIViewController {
             DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
                            self.performSegue(withIdentifier: "unwindSegue", sender: self)
                            self.updateData()
-                           
+                            NotificationCenter.default.post(name: .onDidReceiveDataSaver, object: nil)
                         }
                        animateStatusBar()
             

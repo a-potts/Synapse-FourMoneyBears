@@ -133,6 +133,7 @@ class SpenderBearGameFourViewController: UIViewController {
 
 extension Notification.Name {
     static let didReceiveData = Notification.Name("didReceiveData")
-    static let didCompleteTask = Notification.Name("didCompleteTask")
-    static let completedLengthyDownload = Notification.Name("completedLengthyDownload")
+    static let onDidReceiveDataSaver = Notification.Name("onDidReceiveDataSaver")
+    static let onDidReceiveDataGiver = Notification.Name("onDidReceiveDataGiver")
+    static let onDidReceiveDataInvestor = Notification.Name("onDidReceiveDataInvestor")
 }

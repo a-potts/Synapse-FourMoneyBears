@@ -31,7 +31,11 @@ class GameSelectionViewController: UIViewController {
     
     @IBOutlet var streakLabel: UILabel!
     
-    
+    // Bear Check Marks if Game Completed
+    @IBOutlet var spenderBearCheckMark: UIImageView!
+    @IBOutlet var saverBearCheckMark: UIImageView!
+    @IBOutlet var investorBearCheckMark: UIImageView!
+    @IBOutlet var giverBearCheckMark: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,8 +45,12 @@ class GameSelectionViewController: UIViewController {
 //            handleLogout()
 //           // self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
 //        }
-
-       NotificationCenter.default.addObserver(self, selector: #selector(onDidReceiveData(_:)), name: .didReceiveData, object: nil)
+         
+    // Bear Check Marks Notifications
+        NotificationCenter.default.addObserver(self, selector: #selector(onDidReceiveData(_:)), name: .didReceiveData, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(onDidReceiveDataSaver(_:)), name: .onDidReceiveDataSaver, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(onDidReceiveDataGiver(_:)), name: .onDidReceiveDataGiver, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(onDidReceiveDataInvestor(_:)), name: .onDidReceiveDataInvestor, object: nil)
         
         let uid = Auth.auth().currentUser?.uid
        
@@ -59,10 +67,26 @@ class GameSelectionViewController: UIViewController {
        setUpViews()
     }
     
-    // Action for Notification Observer
+    //MARK:- Actions for Notification Observer
     @objc func onDidReceiveData(_ notification:Notification) {
         spenderBear.layer.opacity = 0.5
+        spenderBearCheckMark.isHidden = false
     }
+    @objc func onDidReceiveDataSaver(_ notification:Notification) {
+        saverBear.layer.opacity = 0.5
+        saverBearCheckMark.isHidden = false
+    }
+
+    @objc func onDidReceiveDataGiver(_ notification:Notification) {
+        giverBear.layer.opacity = 0.5
+        giverBearCheckMark.isHidden = false
+    }
+
+    @objc func onDidReceiveDataInvestor(_ notification:Notification) {
+        investorBear.layer.opacity = 0.5
+        investorBearCheckMark.isHidden = false
+    }
+
     
    
     
