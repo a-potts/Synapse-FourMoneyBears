@@ -41,6 +41,7 @@ class SpenderBearGameFourViewController: UIViewController {
     // Step 2. Increment Rank
     // Step 3. Put new Rank to Database
     
+    //MARK:- Update Users Rank by 10
     func updateData(){
         guard let uid = Auth.auth().currentUser?.uid else { return }
         
@@ -122,9 +123,16 @@ class SpenderBearGameFourViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
             self.performSegue(withIdentifier: "unwindSegue", sender: self)
             self.updateData()
+            NotificationCenter.default.post(name: .didReceiveData, object: nil)
             
         }
         
     }
     
+}
+
+extension Notification.Name {
+    static let didReceiveData = Notification.Name("didReceiveData")
+    static let didCompleteTask = Notification.Name("didCompleteTask")
+    static let completedLengthyDownload = Notification.Name("completedLengthyDownload")
 }

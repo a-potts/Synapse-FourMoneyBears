@@ -35,7 +35,7 @@ class SaverBearFourViewController: UIViewController {
         }, withCancel: nil)
         }
         
-    
+    //MARK:- Update Users Rank by 10
     func updateData(){
          guard let uid = Auth.auth().currentUser?.uid else { return }
          

@@ -39,6 +39,7 @@ class SpenderBearViewController: UIViewController {
         }, withCancel: nil)
     }
     
+    //MARK: - TODO: Decrement the Users Health by 1
     
     func updateAnswerViews() {
         

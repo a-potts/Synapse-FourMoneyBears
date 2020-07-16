@@ -31,6 +31,8 @@ class GameSelectionViewController: UIViewController {
     
     @IBOutlet var streakLabel: UILabel!
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,6 +42,8 @@ class GameSelectionViewController: UIViewController {
 //           // self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
 //        }
 
+       NotificationCenter.default.addObserver(self, selector: #selector(onDidReceiveData(_:)), name: .didReceiveData, object: nil)
+        
         let uid = Auth.auth().currentUser?.uid
        
         Database.database().reference().child("users").child(uid!).observeSingleEvent(of: .value, with: { (snapshot) in
@@ -55,6 +59,14 @@ class GameSelectionViewController: UIViewController {
        setUpViews()
     }
     
+    // Action for Notification Observer
+    @objc func onDidReceiveData(_ notification:Notification) {
+        spenderBear.layer.opacity = 0.5
+    }
+    
+   
+    
+    //MARK: - View Will Appear needed to Refresh Current Users State
     override func viewWillAppear(_ animated: Bool) {
           let uid = Auth.auth().currentUser?.uid
              
@@ -253,3 +265,4 @@ class GameSelectionViewController: UIViewController {
 
 
 }
+
