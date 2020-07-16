@@ -35,6 +35,34 @@ class GiverBearGameFourViewController: UIViewController {
             }, withCancel: nil)
         }
         
+    
+    func updateData(){
+         guard let uid = Auth.auth().currentUser?.uid else { return }
+         
+         var userRank = 40
+         
+         let values = ["rank": "\(userRank)"]
+         
+         self.createCopyForUserRank(uid: uid,values: values as [String : AnyObject])
+     }
+     
+     func createCopyForUserRank(uid: String, values: [String: AnyObject]) {
+         var ref: DatabaseReference!
+             
+             ref = Database.database().reference(fromURL: "https://fourbears-63cd1.firebaseio.com/")
+             
+             let userRef = ref.child("users").child(uid)
+             
+            
+             
+             userRef.updateChildValues(values) { (error, refer) in
+                 if let error = error {
+                     print("ERROR CHILD values: \(error)")
+                     return
+                 }
+          }
+     }
+    
         
         func updateAnswerViews() {
             
@@ -142,6 +170,7 @@ class GiverBearGameFourViewController: UIViewController {
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
                 self.performSegue(withIdentifier: "unwindSegue", sender: self)
+                self.updateData()
                 
             }
             animateStatusBar()

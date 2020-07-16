@@ -38,7 +38,38 @@ class SpenderBearGameFourViewController: UIViewController {
     
     //MARK: TASK: Increase Users Rank by 10 when they get the final correct answer
     // Step 1. Fetch the users Data
-    // Step 2. Increment Rank 
+    // Step 2. Increment Rank
+    // Step 3. Put new Rank to Database
+    
+    func updateData(){
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        
+        var userRank = 10
+        
+        let values = ["rank": "\(userRank)"]
+        
+        self.createCopyForUserRank(uid: uid,values: values as [String : AnyObject])
+    }
+    
+    func createCopyForUserRank(uid: String, values: [String: AnyObject]) {
+        var ref: DatabaseReference!
+            
+            ref = Database.database().reference(fromURL: "https://fourbears-63cd1.firebaseio.com/")
+            
+            let userRef = ref.child("users").child(uid)
+            
+           
+            
+            userRef.updateChildValues(values) { (error, refer) in
+                if let error = error {
+                    print("ERROR CHILD values: \(error)")
+                    return
+                }
+         }
+    }
+        
+    
+    
     
     func setUpMiscViews() {
         statusBar.layer.cornerRadius = 9
@@ -90,6 +121,7 @@ class SpenderBearGameFourViewController: UIViewController {
         animateStatusBar()
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
             self.performSegue(withIdentifier: "unwindSegue", sender: self)
+            self.updateData()
             
         }
         

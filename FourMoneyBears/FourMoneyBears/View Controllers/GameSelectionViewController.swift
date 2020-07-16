@@ -55,6 +55,21 @@ class GameSelectionViewController: UIViewController {
        setUpViews()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+          let uid = Auth.auth().currentUser?.uid
+             
+              Database.database().reference().child("users").child(uid!).observeSingleEvent(of: .value, with: { (snapshot) in
+                  
+                  if let dictionary = snapshot.value as? [String: AnyObject] {
+                      self.userRankLabel.text = dictionary["rank"] as? String
+                      self.streakLabel.text = dictionary["streak"] as? String
+                      self.userHealthLabel.text = dictionary["health"] as? String
+                  }
+                  print(snapshot)
+              }, withCancel: nil)
+    }
+    
+    
     //MARK: - Rank Set Up -
     // Step 1. We need to fetch the Current User. (CHECK)
     // Step 2. Fetch Current User Rank (CHECK)
