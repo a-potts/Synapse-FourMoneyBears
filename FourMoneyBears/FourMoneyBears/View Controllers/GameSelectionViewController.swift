@@ -38,14 +38,20 @@ class GameSelectionViewController: UIViewController {
     @IBOutlet var investorBearButton: UIButton!
     @IBOutlet var giverBearButton: UIButton!
     
+    //Bear Locks
+    @IBOutlet var saverBearLock: UIImageView!
+    
+    @IBOutlet var giverBearLock: UIImageView!
+    @IBOutlet var investorBearLock: UIImageView!
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //MARK: - Check if user is singed in FIXME
-//        if Auth.auth().currentUser?.uid == nil {
-//            handleLogout()
-//           // self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
-//        }
+            //Check Bear Locks
+        checkSaverBearLocks()
          
     // Bear Check Marks Notifications
         NotificationCenter.default.addObserver(self, selector: #selector(onDidReceiveData(_:)), name: .didReceiveData, object: nil)
@@ -66,6 +72,20 @@ class GameSelectionViewController: UIViewController {
         }, withCancel: nil)
         
        setUpViews()
+    }
+    
+    
+    
+    func checkSaverBearLocks() {
+        if spenderBearCheckMark.isHidden == true {
+            saverBearLock.isHidden = false
+            saverBear.layer.opacity = 0.5
+            saverBearButton.isHidden = true
+        } else if spenderBearCheckMark.isHidden == false {
+            saverBearLock.isHidden = true
+            saverBear.layer.opacity = 1
+            saverBearButton.isHidden = false
+            }
     }
     
     //MARK:- Actions for Notification Observer
@@ -109,6 +129,8 @@ class GameSelectionViewController: UIViewController {
                   }
                   print(snapshot)
               }, withCancel: nil)
+        
+        checkSaverBearLocks()
     }
     
     

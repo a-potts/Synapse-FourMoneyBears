@@ -40,6 +40,52 @@ class SpenderBearViewController: UIViewController {
     }
     
     //MARK: - TODO: Decrement the Users Health by 1
+    // Step 1. Fetch Health
+    // Step 2. Decrement Health
+    // Step 3. Put new value back
+    
+    func updateHealthSnapShot(){
+        let uid = Auth.auth().currentUser?.uid
+              
+               Database.database().reference().child("users").child(uid!).observeSingleEvent(of: .value, with: { (snapshot) in
+                   
+                   if let dictionary = snapshot.value as? [String: AnyObject] {
+                       self.userHealthLabel.text = dictionary["health"] as? String
+                   }
+                   print(snapshot)
+               }, withCancel: nil)
+    }
+    
+     func updateHealthData(){
+         guard let uid = Auth.auth().currentUser?.uid else { return }
+         
+         var userHealth = 3
+        
+        let fetchHealth = Database.database().reference().child("users").child(uid).child("health")
+        print(fetchHealth)
+       
+         
+         let values = ["health": "\(userHealth)"]
+         
+         self.createCopyForUserHealth(uid: uid,values: values as [String : AnyObject])
+     }
+     
+     func createCopyForUserHealth(uid: String, values: [String: AnyObject]) {
+         var ref: DatabaseReference!
+             
+             ref = Database.database().reference(fromURL: "https://fourbears-63cd1.firebaseio.com/")
+             
+             let userRef = ref.child("users").child(uid)
+             
+            
+             
+             userRef.updateChildValues(values) { (error, refer) in
+                 if let error = error {
+                     print("ERROR CHILD values: \(error)")
+                     return
+                 }
+          }
+     }
     
     func updateAnswerViews() {
         
@@ -148,7 +194,7 @@ class SpenderBearViewController: UIViewController {
     
     @IBAction func answerView2Tapped(_ sender: Any) {
         SCLAlertView().showError("Wrong Answer", subTitle: "Try Again!")
-       
+       // updateHealthData()
     }
     
     
