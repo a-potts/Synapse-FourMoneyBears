@@ -81,12 +81,52 @@ class GameSelectionViewController: UIViewController {
             saverBearLock.isHidden = false
             saverBear.layer.opacity = 0.5
             saverBearButton.isHidden = true
+            
+            investorBearLock.isHidden = false
+            investorBear.layer.opacity = 0.5
+            investorBearButton.isHidden = true
+            
+            giverBearLock.isHidden = false
+            giverBear.layer.opacity = 0.5
+            giverBearButton.isHidden = true
         } else if spenderBearCheckMark.isHidden == false {
             saverBearLock.isHidden = true
             saverBear.layer.opacity = 1
             saverBearButton.isHidden = false
-            }
+            
+            investorBearLock.isHidden = false
+            investorBear.layer.opacity = 0.5
+            investorBearButton.isHidden = true
+            
+            giverBearLock.isHidden = false
+            giverBear.layer.opacity = 0.5
+            giverBearButton.isHidden = true
+        }
     }
+    
+    func checkInvestorBearLock(){
+        if saverBearCheckMark.isHidden == false {
+            investorBearLock.isHidden = true
+            investorBear.layer.opacity = 1
+            investorBearButton.isHidden = false
+            
+            saverBearButton.isHidden = true
+            saverBear.layer.opacity = 0.5
+        }
+    }
+    
+    func checkGiverBearLock(){
+          if investorBearCheckMark.isHidden == false {
+              giverBearLock.isHidden = true
+              giverBear.layer.opacity = 1
+              giverBearButton.isHidden = false
+              
+              investorBearButton.isHidden = true
+              investorBear.layer.opacity = 0.5
+          }
+      }
+    
+    
     
     //MARK:- Actions for Notification Observer
     @objc func onDidReceiveData(_ notification:Notification) {
@@ -131,6 +171,8 @@ class GameSelectionViewController: UIViewController {
               }, withCancel: nil)
         
         checkSaverBearLocks()
+        checkInvestorBearLock()
+        checkGiverBearLock()
     }
     
     
