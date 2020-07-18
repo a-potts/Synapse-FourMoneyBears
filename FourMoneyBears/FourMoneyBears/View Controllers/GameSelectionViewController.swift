@@ -126,6 +126,13 @@ class GameSelectionViewController: UIViewController {
           }
       }
     
+    func finalLockCheck() {
+        if giverBearCheckMark.isHidden == false {
+            giverBearButton.isHidden = true
+            giverBear.layer.opacity = 0.5
+        }
+    }
+    
     
     
     //MARK:- Actions for Notification Observer
@@ -173,6 +180,7 @@ class GameSelectionViewController: UIViewController {
         checkSaverBearLocks()
         checkInvestorBearLock()
         checkGiverBearLock()
+        finalLockCheck()
     }
     
     
