@@ -44,6 +44,11 @@ class GameSelectionViewController: UIViewController {
     @IBOutlet var giverBearLock: UIImageView!
     @IBOutlet var investorBearLock: UIImageView!
     
+    // Custom Tab Bar
+    
+    @IBOutlet var usersProfileButton: UIButton!
+    
+    @IBOutlet var leaderboardButton: UIButton!
     
     
     
@@ -302,8 +307,15 @@ class GameSelectionViewController: UIViewController {
              
          }
      }
+    //MARK: - Custom Tab Bar
     
-
+    @IBAction func leaderboardsButtonTapped(_ sender: Any) {
+        performSegue(withIdentifier: "LeaderboardsSegue", sender: nil)
+    }
+    
+    @IBAction func usersProfileTapped(_ sender: Any) {
+        performSegue(withIdentifier: "UserProfileSegue", sender: nil)
+    }
     @IBAction func unwind( _ seg: UIStoryboardSegue) {
         
     }

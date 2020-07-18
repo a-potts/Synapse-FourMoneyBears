@@ -32,6 +32,8 @@
 		45799DFF24BB787B0042440E /* GiverBearGameThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45799DFE24BB787B0042440E /* GiverBearGameThreeViewController.swift */; };
 		45799E0124BB788C0042440E /* GiverBearGameFourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45799E0024BB788C0042440E /* GiverBearGameFourViewController.swift */; };
 		45799E0324BD41E50042440E /* BasicsGameOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45799E0224BD41E50042440E /* BasicsGameOneViewController.swift */; };
+		45D0E26324C37A7500405671 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D0E26224C37A7500405671 /* UserProfileViewController.swift */; };
+		45D0E26624C37A9900405671 /* LeaderboardsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D0E26524C37A9900405671 /* LeaderboardsTableViewController.swift */; };
 		45F5726824B5580400DA9179 /* SaverBearGameOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F5726724B5580400DA9179 /* SaverBearGameOneViewController.swift */; };
 		F0AC63C2A0610F6BA8F0BBD4 /* Pods_FourMoneyBears.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A2999CBA1AAD52A1380E182 /* Pods_FourMoneyBears.framework */; };
 /* End PBXBuildFile section */
@@ -65,6 +67,8 @@
 		45799DFE24BB787B0042440E /* GiverBearGameThreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiverBearGameThreeViewController.swift; sourceTree = "<group>"; };
 		45799E0024BB788C0042440E /* GiverBearGameFourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiverBearGameFourViewController.swift; sourceTree = "<group>"; };
 		45799E0224BD41E50042440E /* BasicsGameOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicsGameOneViewController.swift; sourceTree = "<group>"; };
+		45D0E26224C37A7500405671 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		45D0E26524C37A9900405671 /* LeaderboardsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardsTableViewController.swift; sourceTree = "<group>"; };
 		45F5726724B5580400DA9179 /* SaverBearGameOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaverBearGameOneViewController.swift; sourceTree = "<group>"; };
 		51FD56432829A48BA4EE01F6 /* Pods-FourMoneyBears.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FourMoneyBears.debug.xcconfig"; path = "Target Support Files/Pods-FourMoneyBears/Pods-FourMoneyBears.debug.xcconfig"; sourceTree = "<group>"; };
 		E6FBAEDE335D1964F5A3A393 /* Pods-FourMoneyBears.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FourMoneyBears.release.xcconfig"; path = "Target Support Files/Pods-FourMoneyBears/Pods-FourMoneyBears.release.xcconfig"; sourceTree = "<group>"; };
@@ -127,6 +131,8 @@
 		450CA096243EB51B00EEA40F /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				45D0E26424C37A7D00405671 /* Leaderboards */,
+				45D0E26124C37A5400405671 /* User Profile */,
 				45799DF924BB78230042440E /* Giver Bear */,
 				45799DF024B96A820042440E /* Investor Bear */,
 				45F5726624B557E400DA9179 /* Saver Bear */,
@@ -177,6 +183,22 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		45D0E26124C37A5400405671 /* User Profile */ = {
+			isa = PBXGroup;
+			children = (
+				45D0E26224C37A7500405671 /* UserProfileViewController.swift */,
+			);
+			path = "User Profile";
+			sourceTree = "<group>";
+		};
+		45D0E26424C37A7D00405671 /* Leaderboards */ = {
+			isa = PBXGroup;
+			children = (
+				45D0E26524C37A9900405671 /* LeaderboardsTableViewController.swift */,
+			);
+			path = Leaderboards;
 			sourceTree = "<group>";
 		};
 		45F5726624B557E400DA9179 /* Saver Bear */ = {
@@ -319,6 +341,7 @@
 				45799DFB24BB78510042440E /* GiverBearGameOneViewController.swift in Sources */,
 				450CA083243EB12900EEA40F /* AppDelegate.swift in Sources */,
 				450CA085243EB12900EEA40F /* SceneDelegate.swift in Sources */,
+				45D0E26324C37A7500405671 /* UserProfileViewController.swift in Sources */,
 				45799E0124BB788C0042440E /* GiverBearGameFourViewController.swift in Sources */,
 				45619E84248C96DE00E7D980 /* RegisterViewController.swift in Sources */,
 				45799E0324BD41E50042440E /* BasicsGameOneViewController.swift in Sources */,
@@ -329,6 +352,7 @@
 				4547DD75249FDDE800DEBBF8 /* SpenderBearGameOneViewController.swift in Sources */,
 				45799DFD24BB786A0042440E /* GiverBearGameTwoViewController.swift in Sources */,
 				450CA098243EB53800EEA40F /* GameSelectionViewController.swift in Sources */,
+				45D0E26624C37A9900405671 /* LeaderboardsTableViewController.swift in Sources */,
 				45799DF624B96AD00042440E /* InvestorBearGameThreeViewController.swift in Sources */,
 				45799DFF24BB787B0042440E /* GiverBearGameThreeViewController.swift in Sources */,
 				454266E024B118DD00A6BA5E /* SpenderBearGameFourViewController.swift in Sources */,
