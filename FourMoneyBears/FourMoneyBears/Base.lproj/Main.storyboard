@@ -2264,11 +2264,37 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bNU-oO-mKQ">
+                                <rect key="frame" x="73" y="279" width="264" height="160"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNP-it-dCO">
+                                        <rect key="frame" x="104" y="52" width="56" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="56" id="1eq-JB-1D5"/>
+                                            <constraint firstAttribute="height" constant="56" id="ruT-pe-Xfe"/>
+                                        </constraints>
+                                        <color key="tintColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="play.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="playButtonTapped:" destination="q8F-g5-xsq" eventType="touchUpInside" id="bLe-HC-LRV"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="hNP-it-dCO" firstAttribute="leading" secondItem="bNU-oO-mKQ" secondAttribute="leading" constant="104" id="Ak5-w3-8aC"/>
+                                    <constraint firstAttribute="height" constant="160" id="Avo-OC-ciA"/>
+                                    <constraint firstItem="hNP-it-dCO" firstAttribute="top" secondItem="bNU-oO-mKQ" secondAttribute="top" constant="52" id="EHm-yw-Nho"/>
+                                    <constraint firstAttribute="trailing" secondItem="hNP-it-dCO" secondAttribute="trailing" constant="104" id="cx3-xE-cWk"/>
+                                    <constraint firstAttribute="width" constant="264" id="lgV-8H-FUF"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="NQf-dq-DUB" firstAttribute="leading" secondItem="czo-95-f47" secondAttribute="trailing" constant="21" id="08W-yY-S5b"/>
                             <constraint firstItem="czo-95-f47" firstAttribute="top" secondItem="nwG-4j-KJ6" secondAttribute="top" constant="4" id="2Is-cm-nGx"/>
+                            <constraint firstItem="bNU-oO-mKQ" firstAttribute="top" secondItem="6dC-5o-1YF" secondAttribute="bottom" constant="31" id="5WY-Zv-L5C"/>
                             <constraint firstItem="NQf-dq-DUB" firstAttribute="top" secondItem="nwG-4j-KJ6" secondAttribute="top" constant="22" id="7BQ-oS-Qk4"/>
                             <constraint firstItem="1uA-p7-caV" firstAttribute="leading" secondItem="nwG-4j-KJ6" secondAttribute="leading" id="AG9-h0-jED"/>
                             <constraint firstItem="nwG-4j-KJ6" firstAttribute="trailing" secondItem="6dC-5o-1YF" secondAttribute="trailing" constant="20" id="BFw-TX-BAu"/>
@@ -2286,7 +2312,9 @@
                             <constraint firstItem="nwG-4j-KJ6" firstAttribute="trailing" secondItem="5ur-Rh-jSn" secondAttribute="trailing" constant="25" id="cFw-RJ-iPJ"/>
                             <constraint firstItem="MCf-eD-cqn" firstAttribute="leading" secondItem="5ur-Rh-jSn" secondAttribute="trailing" constant="1" id="g5t-Mb-8g6"/>
                             <constraint firstAttribute="bottom" secondItem="1uA-p7-caV" secondAttribute="bottom" id="gjf-xu-5Iu"/>
+                            <constraint firstItem="nwG-4j-KJ6" firstAttribute="trailing" secondItem="bNU-oO-mKQ" secondAttribute="trailing" constant="77" id="hwx-BU-W22"/>
                             <constraint firstItem="2JI-TD-BAq" firstAttribute="top" secondItem="fBv-DX-6bA" secondAttribute="bottom" constant="8" id="i8w-0o-V1A"/>
+                            <constraint firstItem="bNU-oO-mKQ" firstAttribute="leading" secondItem="nwG-4j-KJ6" secondAttribute="leading" constant="73" id="j9W-fU-dv0"/>
                             <constraint firstItem="2JI-TD-BAq" firstAttribute="leading" secondItem="nwG-4j-KJ6" secondAttribute="leading" constant="20" id="jk8-Id-Yeo"/>
                             <constraint firstItem="MCf-eD-cqn" firstAttribute="top" secondItem="nwG-4j-KJ6" secondAttribute="top" constant="19" id="mjo-Ya-JGe"/>
                             <constraint firstAttribute="trailing" secondItem="CXJ-OM-VOn" secondAttribute="trailing" constant="20" id="pYy-HV-2Zm"/>
@@ -2302,6 +2330,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="H8p-Zb-XTS"/>
                     <connections>
+                        <outlet property="audioPlayerView" destination="bNU-oO-mKQ" id="35y-hS-O6t"/>
                         <outlet property="noButton" destination="fBv-DX-6bA" id="D2X-Xs-CgH"/>
                         <outlet property="orangeStatus" destination="YIi-0X-8qu" id="6W4-vs-sOQ"/>
                         <outlet property="statusBar" destination="NQf-dq-DUB" id="fgV-9u-na0"/>
@@ -2674,6 +2703,31 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yjk-6h-aZU">
+                                <rect key="frame" x="75" y="285" width="264" height="160"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EfJ-r2-UKI">
+                                        <rect key="frame" x="104" y="52" width="56" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="baQ-2f-8JN"/>
+                                            <constraint firstAttribute="width" constant="56" id="h5K-9W-Dju"/>
+                                        </constraints>
+                                        <color key="tintColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="play.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="playButtonTapped:" destination="H0z-LX-U4q" eventType="touchUpInside" id="rKC-jY-89G"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="EfJ-r2-UKI" firstAttribute="leading" secondItem="Yjk-6h-aZU" secondAttribute="leading" constant="104" id="Caq-sW-G9a"/>
+                                    <constraint firstAttribute="width" constant="264" id="f7s-yP-fgZ"/>
+                                    <constraint firstItem="EfJ-r2-UKI" firstAttribute="top" secondItem="Yjk-6h-aZU" secondAttribute="top" constant="52" id="gAD-hs-Zk2"/>
+                                    <constraint firstAttribute="trailing" secondItem="EfJ-r2-UKI" secondAttribute="trailing" constant="104" id="i82-6Z-87G"/>
+                                    <constraint firstAttribute="height" constant="160" id="ziZ-KT-xjX"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -2681,8 +2735,11 @@
                             <constraint firstItem="D5z-e6-caB" firstAttribute="top" secondItem="37b-mW-pgE" secondAttribute="bottom" constant="83" id="9dy-29-Emi"/>
                             <constraint firstItem="DSs-XV-Ahb" firstAttribute="trailing" secondItem="Kh5-CM-hUj" secondAttribute="trailing" id="AwR-sz-aZd"/>
                             <constraint firstItem="9VA-1z-hld" firstAttribute="trailing" secondItem="Kh5-CM-hUj" secondAttribute="trailing" constant="1" id="BV4-fd-Org"/>
+                            <constraint firstItem="Kh5-CM-hUj" firstAttribute="trailing" secondItem="Yjk-6h-aZU" secondAttribute="trailing" constant="75" id="Du1-AW-6U0"/>
+                            <constraint firstItem="Yjk-6h-aZU" firstAttribute="leading" secondItem="Kh5-CM-hUj" secondAttribute="leading" constant="75" id="DzT-dO-CRf"/>
                             <constraint firstItem="nwc-ND-0w5" firstAttribute="leading" secondItem="gRB-0b-m9r" secondAttribute="trailing" constant="16" id="Fg5-qa-73V"/>
                             <constraint firstItem="D5z-e6-caB" firstAttribute="leading" secondItem="Kh5-CM-hUj" secondAttribute="leading" constant="20" id="Hbw-mn-FjT"/>
+                            <constraint firstItem="Yjk-6h-aZU" firstAttribute="top" secondItem="2W1-Be-DpG" secondAttribute="bottom" constant="37" id="OlC-Db-XPr"/>
                             <constraint firstItem="DSs-XV-Ahb" firstAttribute="top" secondItem="RqK-w1-6EW" secondAttribute="top" id="PSB-PJ-6Sc"/>
                             <constraint firstItem="D5z-e6-caB" firstAttribute="top" secondItem="koG-l9-1bY" secondAttribute="bottom" constant="8" id="SIa-Lo-wnZ"/>
                             <constraint firstItem="2W1-Be-DpG" firstAttribute="leading" secondItem="Kh5-CM-hUj" secondAttribute="leading" constant="20" id="W2H-LO-HBn"/>
@@ -2712,6 +2769,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="QvQ-7m-oms"/>
                     <connections>
+                        <outlet property="audioPlayerView" destination="Yjk-6h-aZU" id="LWe-6a-rPu"/>
                         <outlet property="noButton" destination="koG-l9-1bY" id="JdP-ct-NBR"/>
                         <outlet property="orangeStatus" destination="Lle-ZN-pxA" id="Vdu-tC-NfC"/>
                         <outlet property="statusBar" destination="gRB-0b-m9r" id="2wM-9Y-5hH"/>
@@ -3129,6 +3187,31 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nWT-av-vOV">
+                                <rect key="frame" x="75" y="283" width="264" height="160"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nZC-2h-ORj">
+                                        <rect key="frame" x="104" y="52" width="56" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="56" id="eLq-0C-09c"/>
+                                            <constraint firstAttribute="height" constant="56" id="nRO-jU-L3Q"/>
+                                        </constraints>
+                                        <color key="tintColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="play.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="playButtonTapped:" destination="BHg-LS-VA5" eventType="touchUpInside" id="bNT-dv-W8s"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="BGZ-uW-RpS"/>
+                                    <constraint firstItem="nZC-2h-ORj" firstAttribute="top" secondItem="nWT-av-vOV" secondAttribute="top" constant="52" id="Jhq-1r-ejo"/>
+                                    <constraint firstAttribute="trailing" secondItem="nZC-2h-ORj" secondAttribute="trailing" constant="104" id="PIt-Ct-7GI"/>
+                                    <constraint firstItem="nZC-2h-ORj" firstAttribute="leading" secondItem="nWT-av-vOV" secondAttribute="leading" constant="104" id="VR2-Jx-bXP"/>
+                                    <constraint firstAttribute="width" constant="264" id="vqo-LT-lyO"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -3138,12 +3221,14 @@
                             <constraint firstItem="Hay-oV-drg" firstAttribute="trailing" secondItem="fws-7t-Swr" secondAttribute="trailing" constant="20" id="Dxa-qk-kGG"/>
                             <constraint firstItem="Hay-oV-drg" firstAttribute="trailing" secondItem="4hu-DM-lDA" secondAttribute="trailing" constant="20" id="E0V-eu-IQc"/>
                             <constraint firstItem="jRo-4k-rw0" firstAttribute="top" secondItem="fws-7t-Swr" secondAttribute="bottom" constant="83" id="EsG-QG-lZa"/>
+                            <constraint firstItem="nWT-av-vOV" firstAttribute="top" secondItem="2zP-Vg-Mr8" secondAttribute="bottom" constant="35" id="Fkr-JE-vqa"/>
                             <constraint firstItem="Hay-oV-drg" firstAttribute="trailing" secondItem="2zP-Vg-Mr8" secondAttribute="trailing" constant="20" id="G68-4G-CWw"/>
                             <constraint firstItem="fws-7t-Swr" firstAttribute="top" secondItem="2zP-Vg-Mr8" secondAttribute="bottom" constant="167" id="HRM-gK-H5U"/>
                             <constraint firstItem="zvO-gh-cEJ" firstAttribute="top" secondItem="Hay-oV-drg" secondAttribute="top" constant="11" id="KiL-0L-KcC"/>
                             <constraint firstItem="bU5-Tp-KGv" firstAttribute="leading" secondItem="Hay-oV-drg" secondAttribute="leading" constant="20" id="KlL-G0-21p"/>
                             <constraint firstItem="zvO-gh-cEJ" firstAttribute="leading" secondItem="aUf-U6-HNH" secondAttribute="trailing" constant="16" id="MSf-7g-Bx0"/>
                             <constraint firstItem="9Xu-2C-E8u" firstAttribute="trailing" secondItem="Hay-oV-drg" secondAttribute="trailing" constant="1" id="NSk-7P-vVH"/>
+                            <constraint firstItem="Hay-oV-drg" firstAttribute="trailing" secondItem="nWT-av-vOV" secondAttribute="trailing" constant="75" id="PhQ-2e-494"/>
                             <constraint firstItem="9Xu-2C-E8u" firstAttribute="top" secondItem="Hay-oV-drg" secondAttribute="top" constant="19" id="UpX-c7-iid"/>
                             <constraint firstItem="jRo-4k-rw0" firstAttribute="leading" secondItem="ILG-wk-pbd" secondAttribute="leading" constant="20" id="VW6-S7-h5n"/>
                             <constraint firstItem="2zP-Vg-Mr8" firstAttribute="top" secondItem="bU5-Tp-KGv" secondAttribute="bottom" constant="21" id="Vnj-LL-x2y"/>
@@ -3158,6 +3243,7 @@
                             <constraint firstItem="Hay-oV-drg" firstAttribute="trailing" secondItem="w9Z-8z-dg5" secondAttribute="trailing" constant="54" id="lW2-3X-l7C"/>
                             <constraint firstItem="4hu-DM-lDA" firstAttribute="leading" secondItem="Hay-oV-drg" secondAttribute="leading" constant="20" id="nsW-T9-m81"/>
                             <constraint firstItem="4hu-DM-lDA" firstAttribute="top" secondItem="jRo-4k-rw0" secondAttribute="bottom" constant="83" id="qGj-QZ-IeB"/>
+                            <constraint firstItem="nWT-av-vOV" firstAttribute="leading" secondItem="Hay-oV-drg" secondAttribute="leading" constant="75" id="rwu-KL-IyW"/>
                             <constraint firstItem="4hu-DM-lDA" firstAttribute="top" secondItem="5Rt-Wc-uyj" secondAttribute="bottom" constant="8" id="vax-Nt-dm0"/>
                             <constraint firstItem="2zP-Vg-Mr8" firstAttribute="leading" secondItem="Hay-oV-drg" secondAttribute="leading" constant="20" id="vpq-lI-tFe"/>
                             <constraint firstAttribute="bottom" secondItem="LRn-8O-nzB" secondAttribute="bottom" id="zSE-Bc-4f0"/>
@@ -3167,6 +3253,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="2hS-wl-mNy"/>
                     <connections>
+                        <outlet property="audioPlayerView" destination="nWT-av-vOV" id="Pwy-Cn-FeM"/>
                         <outlet property="noButton" destination="w9Z-8z-dg5" id="ZHg-t1-hfM"/>
                         <outlet property="orangeStatus" destination="GsT-yn-4RT" id="3kX-69-EBb"/>
                         <outlet property="statusBar" destination="aUf-U6-HNH" id="eJI-he-mNl"/>
@@ -4612,6 +4699,31 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="So6-DX-NIX">
+                                <rect key="frame" x="75" y="293" width="264" height="160"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nLr-nI-PcY">
+                                        <rect key="frame" x="104" y="52" width="56" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="56" id="VOR-aU-tXc"/>
+                                            <constraint firstAttribute="height" constant="56" id="gJO-xU-meG"/>
+                                        </constraints>
+                                        <color key="tintColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="play.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="playButtonTapped:" destination="B4J-O6-b3G" eventType="touchUpInside" id="jDq-Be-rCP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="264" id="Aj4-zh-3tn"/>
+                                    <constraint firstAttribute="trailing" secondItem="nLr-nI-PcY" secondAttribute="trailing" constant="104" id="IYs-rK-niJ"/>
+                                    <constraint firstItem="nLr-nI-PcY" firstAttribute="leading" secondItem="So6-DX-NIX" secondAttribute="leading" constant="104" id="f5e-Wq-gqh"/>
+                                    <constraint firstAttribute="height" constant="160" id="yi8-vI-oCX"/>
+                                    <constraint firstItem="nLr-nI-PcY" firstAttribute="top" secondItem="So6-DX-NIX" secondAttribute="top" constant="52" id="zrO-rP-QXT"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -4640,16 +4752,20 @@
                             <constraint firstAttribute="bottom" secondItem="gKG-0z-RrC" secondAttribute="bottom" id="hMC-Ob-RDS"/>
                             <constraint firstItem="DbI-mj-M8J" firstAttribute="top" secondItem="SNN-kV-ZsM" secondAttribute="top" constant="22" id="hwV-gC-Xhy"/>
                             <constraint firstItem="ysz-Vh-aHG" firstAttribute="top" secondItem="KGn-MT-F4p" secondAttribute="bottom" constant="83" id="jxC-Tp-czK"/>
+                            <constraint firstItem="So6-DX-NIX" firstAttribute="top" secondItem="Fl7-aC-Loo" secondAttribute="bottom" constant="45" id="kMg-g5-9gY"/>
                             <constraint firstItem="SNN-kV-ZsM" firstAttribute="trailing" secondItem="Fl7-aC-Loo" secondAttribute="trailing" constant="20" id="sLH-9Y-QiV"/>
                             <constraint firstItem="SNN-kV-ZsM" firstAttribute="trailing" secondItem="sUR-Eo-Ux1" secondAttribute="trailing" constant="25" id="st0-tc-tvX"/>
                             <constraint firstItem="Fl7-aC-Loo" firstAttribute="top" secondItem="YJw-Jy-NXN" secondAttribute="bottom" constant="21" id="uSV-sT-Iwf"/>
                             <constraint firstItem="SNN-kV-ZsM" firstAttribute="trailing" secondItem="KGn-MT-F4p" secondAttribute="trailing" constant="20" id="wde-AK-7jX"/>
+                            <constraint firstItem="SNN-kV-ZsM" firstAttribute="trailing" secondItem="So6-DX-NIX" secondAttribute="trailing" constant="75" id="xxA-ra-Mug"/>
                             <constraint firstItem="3R8-CY-enA" firstAttribute="top" secondItem="rfc-Xh-fxg" secondAttribute="bottom" constant="8" id="yRZ-sr-7dz"/>
+                            <constraint firstItem="So6-DX-NIX" firstAttribute="leading" secondItem="SNN-kV-ZsM" secondAttribute="leading" constant="75" id="zjx-pN-w90"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SNN-kV-ZsM"/>
                     </view>
                     <navigationItem key="navigationItem" id="Mut-3O-17F"/>
                     <connections>
+                        <outlet property="audioPlayerView" destination="So6-DX-NIX" id="JlP-g2-q5t"/>
                         <outlet property="noButton" destination="Qtl-dh-8Qn" id="Wlq-V8-fI6"/>
                         <outlet property="orangeStatus" destination="Y9V-Gb-Szj" id="fv5-mq-G9Q"/>
                         <outlet property="statusBar" destination="DbI-mj-M8J" id="z6G-ZK-7v8"/>
@@ -5296,6 +5412,7 @@
         <image name="lake_mountain-2" width="1440" height="1080"/>
         <image name="lock.fill" catalog="system" width="128" height="128"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="play.fill" catalog="system" width="116" height="128"/>
         <image name="rank" width="512" height="512"/>
         <image name="saverBear" width="247" height="223"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>

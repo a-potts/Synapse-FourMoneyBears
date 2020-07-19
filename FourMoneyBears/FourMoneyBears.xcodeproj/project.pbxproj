@@ -37,6 +37,7 @@
 		45D0E26924C38B5F00405671 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D0E26824C38B5F00405671 /* Extensions.swift */; };
 		45D0E26B24C3E56F00405671 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D0E26A24C3E56F00405671 /* User.swift */; };
 		45D0E26D24C3F73000405671 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D0E26C24C3F73000405671 /* UserTableViewCell.swift */; };
+		45D0E26F24C4C6BA00405671 /* sniper.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 45D0E26E24C4C6BA00405671 /* sniper.mp3 */; };
 		45F5726824B5580400DA9179 /* SaverBearGameOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F5726724B5580400DA9179 /* SaverBearGameOneViewController.swift */; };
 		F0AC63C2A0610F6BA8F0BBD4 /* Pods_FourMoneyBears.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A2999CBA1AAD52A1380E182 /* Pods_FourMoneyBears.framework */; };
 /* End PBXBuildFile section */
@@ -75,6 +76,7 @@
 		45D0E26824C38B5F00405671 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		45D0E26A24C3E56F00405671 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		45D0E26C24C3F73000405671 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		45D0E26E24C4C6BA00405671 /* sniper.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sniper.mp3; sourceTree = "<group>"; };
 		45F5726724B5580400DA9179 /* SaverBearGameOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaverBearGameOneViewController.swift; sourceTree = "<group>"; };
 		51FD56432829A48BA4EE01F6 /* Pods-FourMoneyBears.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FourMoneyBears.debug.xcconfig"; path = "Target Support Files/Pods-FourMoneyBears/Pods-FourMoneyBears.debug.xcconfig"; sourceTree = "<group>"; };
 		E6FBAEDE335D1964F5A3A393 /* Pods-FourMoneyBears.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FourMoneyBears.release.xcconfig"; path = "Target Support Files/Pods-FourMoneyBears/Pods-FourMoneyBears.release.xcconfig"; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				450CA096243EB51B00EEA40F /* View Controllers */,
 				450CA082243EB12900EEA40F /* AppDelegate.swift */,
 				450CA084243EB12900EEA40F /* SceneDelegate.swift */,
+				45D0E26E24C4C6BA00405671 /* sniper.mp3 */,
 				450CA088243EB12900EEA40F /* Main.storyboard */,
 				450CA08B243EB12C00EEA40F /* Assets.xcassets */,
 				450CA08D243EB12C00EEA40F /* LaunchScreen.storyboard */,
@@ -300,6 +303,7 @@
 			files = (
 				450CA08F243EB12C00EEA40F /* LaunchScreen.storyboard in Resources */,
 				45619E82248C87FE00E7D980 /* GoogleService-Info.plist in Resources */,
+				45D0E26F24C4C6BA00405671 /* sniper.mp3 in Resources */,
 				450CA08C243EB12C00EEA40F /* Assets.xcassets in Resources */,
 				450CA08A243EB12900EEA40F /* Main.storyboard in Resources */,
 			);

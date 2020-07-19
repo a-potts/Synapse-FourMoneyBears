@@ -9,15 +9,23 @@
 import UIKit
 import SCLAlertView
 import Firebase
+import AVFoundation
+
 
 class SpenderBearGameFourViewController: UIViewController {
+    
+    
     
     @IBOutlet var statusBar: UIView!
     @IBOutlet var orangeStatus: UIView!
     @IBOutlet var yesButton: UIButton!
     @IBOutlet var noButton: UIButton!
    
+    @IBOutlet var audioPlayerView: UIView!
     @IBOutlet var userHealthLabel: UILabel!
+    
+    
+    var player: AVAudioPlayer = AVAudioPlayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,8 +41,20 @@ class SpenderBearGameFourViewController: UIViewController {
             }
             print(snapshot)
         }, withCancel: nil)
+        
+        audioPlayer()
     }
     
+    func audioPlayer(){
+        
+        do {
+            let audioPath = Bundle.main.path(forResource: "sniper", ofType: "mp3")
+            try player = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
+        } catch {
+            
+        }
+        
+    }
     
     //MARK: TASK: Increase Users Rank by 10 when they get the final correct answer
     // Step 1. Fetch the users Data
@@ -77,6 +97,7 @@ class SpenderBearGameFourViewController: UIViewController {
         orangeStatus.layer.cornerRadius = 9
         yesButton.layer.cornerRadius = 20
         noButton.layer.cornerRadius = 20
+        audioPlayerView.layer.cornerRadius = 20
         
     }
     
@@ -89,7 +110,12 @@ class SpenderBearGameFourViewController: UIViewController {
              
             })
       }
-
+    
+    
+    @IBAction func playButtonTapped(_ sender: Any) {
+        player.play()
+    }
+    
     /*
     // MARK: - Navigation
 

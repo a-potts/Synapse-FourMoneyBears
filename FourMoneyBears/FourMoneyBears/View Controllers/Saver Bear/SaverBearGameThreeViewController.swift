@@ -9,6 +9,7 @@
 import UIKit
 import SCLAlertView
 import Firebase
+import AVFoundation
 
 class SaverBearGameThreeViewController: UIViewController {
 
@@ -25,23 +26,28 @@ class SaverBearGameThreeViewController: UIViewController {
             print(snapshot)
                      }, withCancel: nil)
         
+        audioPlayer()
 
     }
     
     @IBOutlet var orangeStatus: UIView!
     @IBOutlet var statusBar: UIView!
   
+    @IBOutlet var audioPlayerView: UIView!
     @IBOutlet var yesButton: UIButton!
     @IBOutlet var noButton: UIButton!
 
     @IBOutlet var userHealthLabel: UILabel!
     
     
+    var player: AVAudioPlayer = AVAudioPlayer()
+    
     func setUpMiscViews() {
           statusBar.layer.cornerRadius = 9
           orangeStatus.layer.cornerRadius = 9
           yesButton.layer.cornerRadius = 20
           noButton.layer.cornerRadius = 20
+        audioPlayerView.layer.cornerRadius = 20
           
       }
       
@@ -54,6 +60,22 @@ class SaverBearGameThreeViewController: UIViewController {
                
               })
         }
+    
+    func audioPlayer(){
+          
+          do {
+              let audioPath = Bundle.main.path(forResource: "sniper", ofType: "mp3")
+              try player = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
+          } catch {
+              
+          }
+          
+      }
+    
+    @IBAction func playButtonTapped(_ sender: Any) {
+        player.play()
+    }
+    
     
     @IBAction func yesTapped(_ sender: Any) {
         SCLAlertView().showSuccess("Good Job!", subTitle: "Next")
