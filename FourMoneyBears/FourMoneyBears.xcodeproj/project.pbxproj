@@ -34,6 +34,7 @@
 		45799E0324BD41E50042440E /* BasicsGameOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45799E0224BD41E50042440E /* BasicsGameOneViewController.swift */; };
 		45D0E26324C37A7500405671 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D0E26224C37A7500405671 /* UserProfileViewController.swift */; };
 		45D0E26624C37A9900405671 /* LeaderboardsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D0E26524C37A9900405671 /* LeaderboardsTableViewController.swift */; };
+		45D0E26924C38B5F00405671 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D0E26824C38B5F00405671 /* Extensions.swift */; };
 		45F5726824B5580400DA9179 /* SaverBearGameOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F5726724B5580400DA9179 /* SaverBearGameOneViewController.swift */; };
 		F0AC63C2A0610F6BA8F0BBD4 /* Pods_FourMoneyBears.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A2999CBA1AAD52A1380E182 /* Pods_FourMoneyBears.framework */; };
 /* End PBXBuildFile section */
@@ -69,6 +70,7 @@
 		45799E0224BD41E50042440E /* BasicsGameOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicsGameOneViewController.swift; sourceTree = "<group>"; };
 		45D0E26224C37A7500405671 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		45D0E26524C37A9900405671 /* LeaderboardsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardsTableViewController.swift; sourceTree = "<group>"; };
+		45D0E26824C38B5F00405671 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		45F5726724B5580400DA9179 /* SaverBearGameOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaverBearGameOneViewController.swift; sourceTree = "<group>"; };
 		51FD56432829A48BA4EE01F6 /* Pods-FourMoneyBears.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FourMoneyBears.debug.xcconfig"; path = "Target Support Files/Pods-FourMoneyBears/Pods-FourMoneyBears.debug.xcconfig"; sourceTree = "<group>"; };
 		E6FBAEDE335D1964F5A3A393 /* Pods-FourMoneyBears.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FourMoneyBears.release.xcconfig"; path = "Target Support Files/Pods-FourMoneyBears/Pods-FourMoneyBears.release.xcconfig"; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 		450CA081243EB12900EEA40F /* FourMoneyBears */ = {
 			isa = PBXGroup;
 			children = (
+				45D0E26724C38B1C00405671 /* Helpers */,
 				45D0E26024BE4E1E00405671 /* Model */,
 				450CA096243EB51B00EEA40F /* View Controllers */,
 				450CA082243EB12900EEA40F /* AppDelegate.swift */,
@@ -199,6 +202,14 @@
 				45D0E26524C37A9900405671 /* LeaderboardsTableViewController.swift */,
 			);
 			path = Leaderboards;
+			sourceTree = "<group>";
+		};
+		45D0E26724C38B1C00405671 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				45D0E26824C38B5F00405671 /* Extensions.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		45F5726624B557E400DA9179 /* Saver Bear */ = {
@@ -357,6 +368,7 @@
 				45799DFF24BB787B0042440E /* GiverBearGameThreeViewController.swift in Sources */,
 				454266E024B118DD00A6BA5E /* SpenderBearGameFourViewController.swift in Sources */,
 				45799DE924B80FBF0042440E /* SaverBearGameTwoViewController.swift in Sources */,
+				45D0E26924C38B5F00405671 /* Extensions.swift in Sources */,
 				454266BE24AE219E00A6BA5E /* SpenderBearGameThreeViewController.swift in Sources */,
 				45799DEF24B907FD0042440E /* SaverBearFourViewController.swift in Sources */,
 				45F5726824B5580400DA9179 /* SaverBearGameOneViewController.swift in Sources */,
