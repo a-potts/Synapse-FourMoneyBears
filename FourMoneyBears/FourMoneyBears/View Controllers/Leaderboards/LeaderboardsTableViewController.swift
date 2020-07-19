@@ -17,7 +17,10 @@ class LeaderboardsTableViewController: UITableViewController {
         super.viewDidLoad()
 
       fetchUsers()
+        
     }
+    
+
     
         func fetchUsers() {
             Database.database().reference().child("users").observe(.childAdded, with: { (snapshot) in
@@ -58,43 +61,12 @@ class LeaderboardsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
 
-        let cell = tableView.dequeueReusableCell(withIdentifier: "UsersCell", for: indexPath)
-        
-        let user = users[indexPath.row]
-        
-        cell.textLabel?.text = user.name
-        cell.detailTextLabel?.text = user.rank
-        
-        cell.imageView?.image = UIImage(named: "User")
-        
-        
-        cell.imageView?.layer.masksToBounds = true
-        cell.imageView?.layer.cornerRadius = 50.0
-        
-        
-        
-        if let profileImageUrl = user.profileImageURL {
-            
-            cell.imageView?.loadImageUsingCacheWithUrlString(urlString: profileImageUrl)
-            
-            //            let url = URL(string: profileImageUrl)
-            //
-            //            URLSession.shared.dataTask(with: url!) { (data, response, error) in
-            //
-            //                if let error = error {
-            //                    print("Error getting image: \(error)")
-            //                    return
-            //                }
-            //
-            //                DispatchQueue.main.async {
-            //                     cell.imageView?.image = UIImage(data: data!)
-            //                }
-            //
-            //
-            //            }.resume()
-            
-        }
-        
+       guard let cell = tableView.dequeueReusableCell(withIdentifier: "UsersCell", for: indexPath) as? UserTableViewCell else {return UITableViewCell()}
+             
+        cell.users = users[indexPath.row]
+        cell.usersImage.layer.cornerRadius = cell.usersImage.frame.height / 2
+        cell.usersImage.layer.masksToBounds = false
+        cell.usersImage.clipsToBounds = true
         return cell
     }
     
