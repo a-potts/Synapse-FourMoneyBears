@@ -194,9 +194,9 @@ class GameSelectionViewController: UIViewController {
     // Step 2. Fetch Current User Rank (CHECK)
     // Step 3. Diplay Rank in Rank Label (CHECK)
     // Step 4. On the last Game, after winning, Rank += 10
-    private var authUser : User? {
-           return Auth.auth().currentUser
-       }
+//    private var authUser : User? {
+//           return Auth.auth().currentUser
+//       }
     
       
     

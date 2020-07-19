@@ -10,44 +10,94 @@ import UIKit
 import Firebase
 
 class LeaderboardsTableViewController: UITableViewController {
+    
+    var users = [Users]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //let uid = Auth.auth().currentUser?.uid
-        
-//         Database.database().reference().child("users").observeSingleEvent(of: .value, with: { (snapshot) in
-//             
-//             if let dictionary = snapshot.value as? [String: AnyObject] {
-//                 self.userRankLabel.text = dictionary["rank"] as? String
-//                
-//             }
-//             print(snapshot)
-//         }, withCancel: nil)
+      fetchUsers()
     }
+    
+        func fetchUsers() {
+            Database.database().reference().child("users").observe(.childAdded, with: { (snapshot) in
+                
+                if let dictionary = snapshot.value as? [String: AnyObject] {
+                    let user = Users()
+                    
+                    //App will crash if Class properties don't exactly match up with the Firebase Dictionary Keys
+                    user.setValuesForKeys(dictionary)
+                    self.users.append(user)
+                   // print(user.name!, user.email!)
+                    
+                    DispatchQueue.main.async {
+                         self.tableView.reloadData()
+                    }
+                   
+                    
+                }
+                
+                
+                print(snapshot)
+                
+            }, withCancel: nil)
+        }
+    
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         
-        return 0
+        //print("User Counter: \(users.count)")
+        return users.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        
 
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "UsersCell", for: indexPath)
+        
+        let user = users[indexPath.row]
+        
+        cell.textLabel?.text = user.name
+        cell.detailTextLabel?.text = user.rank
+        
+        cell.imageView?.image = UIImage(named: "User")
+        
+        
+        cell.imageView?.layer.masksToBounds = true
+        cell.imageView?.layer.cornerRadius = 50.0
+        
+        
+        
+        if let profileImageUrl = user.profileImageURL {
+            
+            cell.imageView?.loadImageUsingCacheWithUrlString(urlString: profileImageUrl)
+            
+            //            let url = URL(string: profileImageUrl)
+            //
+            //            URLSession.shared.dataTask(with: url!) { (data, response, error) in
+            //
+            //                if let error = error {
+            //                    print("Error getting image: \(error)")
+            //                    return
+            //                }
+            //
+            //                DispatchQueue.main.async {
+            //                     cell.imageView?.image = UIImage(data: data!)
+            //                }
+            //
+            //
+            //            }.resume()
+            
+        }
+        
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -93,5 +143,10 @@ class LeaderboardsTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    
+    @IBAction func xTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }
