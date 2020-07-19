@@ -32,6 +32,8 @@ class UserTableViewCell: UITableViewCell {
         usersName.text = users?.name
         usersRank.text = users?.rank
         
+    
+        
         if let profileImageUrl = users!.profileImageURL {
                  
                  usersImage.loadImageViewUsingCacheWithUrlString(urlString: profileImageUrl)

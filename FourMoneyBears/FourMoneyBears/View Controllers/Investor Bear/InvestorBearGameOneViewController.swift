@@ -29,7 +29,6 @@ class InvestorBearGameOneViewController: UIViewController {
        
        @IBOutlet var orangeStatus: UIView!
        @IBOutlet var statusBar: UIView!
-       @IBOutlet var checkAnswerButton: UIButton!
        @IBOutlet var yesButton: UIButton!
        @IBOutlet var noButton: UIButton!
 
@@ -41,7 +40,7 @@ class InvestorBearGameOneViewController: UIViewController {
              orangeStatus.layer.cornerRadius = 9
              yesButton.layer.cornerRadius = 20
              noButton.layer.cornerRadius = 20
-             checkAnswerButton.layer.cornerRadius = 15
+             
          }
          
          func animateStatusBar(){
@@ -68,10 +67,7 @@ class InvestorBearGameOneViewController: UIViewController {
        
        
 
-       @IBAction func checkAnswerTapped(_ sender: Any) {
-           
-          
-       }
+    
        
        @IBAction func xTapped(_ sender: Any) {
            self.performSegue(withIdentifier: "unwindSegue", sender: nil)

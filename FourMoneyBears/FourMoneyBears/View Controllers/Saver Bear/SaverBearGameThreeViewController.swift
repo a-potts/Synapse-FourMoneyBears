@@ -30,7 +30,7 @@ class SaverBearGameThreeViewController: UIViewController {
     
     @IBOutlet var orangeStatus: UIView!
     @IBOutlet var statusBar: UIView!
-    @IBOutlet var checkAnswerButton: UIButton!
+  
     @IBOutlet var yesButton: UIButton!
     @IBOutlet var noButton: UIButton!
 
@@ -42,7 +42,7 @@ class SaverBearGameThreeViewController: UIViewController {
           orangeStatus.layer.cornerRadius = 9
           yesButton.layer.cornerRadius = 20
           noButton.layer.cornerRadius = 20
-          checkAnswerButton.layer.cornerRadius = 15
+          
       }
       
       func animateStatusBar(){
@@ -69,10 +69,7 @@ class SaverBearGameThreeViewController: UIViewController {
     
     
 
-    @IBAction func checkAnswerTapped(_ sender: Any) {
-        
-       
-    }
+   
     
     @IBAction func xTapped(_ sender: Any) {
         self.performSegue(withIdentifier: "unwindSegue", sender: nil)

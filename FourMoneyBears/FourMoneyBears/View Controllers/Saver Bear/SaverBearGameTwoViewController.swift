@@ -14,7 +14,7 @@ class SaverBearGameTwoViewController: UIViewController {
     
     @IBOutlet var orangeStatus: UIView!
     @IBOutlet var statusBar: UIView!
-    @IBOutlet var checkAnswerButton: UIButton!
+  
     @IBOutlet var choiceViewOne: UIView!
     @IBOutlet var choiceViewTwo: UIView!
     @IBOutlet var choiceViewThree: UIView!
@@ -38,7 +38,7 @@ class SaverBearGameTwoViewController: UIViewController {
     }
     
     func setUpMiscViews(){
-           checkAnswerButton.layer.cornerRadius = 15
+           
            statusBar.layer.cornerRadius = 9
            orangeStatus.layer.cornerRadius = 9
        }

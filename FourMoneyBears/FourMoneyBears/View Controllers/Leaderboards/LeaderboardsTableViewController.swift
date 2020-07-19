@@ -54,6 +54,7 @@ class LeaderboardsTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         
         //print("User Counter: \(users.count)")
+
         return users.count
     }
 

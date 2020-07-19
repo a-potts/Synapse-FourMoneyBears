@@ -16,7 +16,7 @@ class SpenderBearGameFourViewController: UIViewController {
     @IBOutlet var orangeStatus: UIView!
     @IBOutlet var yesButton: UIButton!
     @IBOutlet var noButton: UIButton!
-    @IBOutlet var checkAnswerButton: UIButton!
+   
     @IBOutlet var userHealthLabel: UILabel!
     
     override func viewDidLoad() {
@@ -77,7 +77,7 @@ class SpenderBearGameFourViewController: UIViewController {
         orangeStatus.layer.cornerRadius = 9
         yesButton.layer.cornerRadius = 20
         noButton.layer.cornerRadius = 20
-        checkAnswerButton.layer.cornerRadius = 15
+        
     }
     
     func animateStatusBar(){
@@ -104,9 +104,7 @@ class SpenderBearGameFourViewController: UIViewController {
     }
     
     
-    @IBAction func checkAnswerTapped(_ sender: Any) {
-        
-    }
+   
     
     @IBAction func yesTapped(_ sender: Any) {
        SCLAlertView().showError("Wrong Answer", subTitle: "Try Again!")

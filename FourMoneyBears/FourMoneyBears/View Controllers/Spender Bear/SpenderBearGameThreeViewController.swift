@@ -13,7 +13,7 @@ import Firebase
 class SpenderBearGameThreeViewController: UIViewController {
     
     
-    @IBOutlet var checkAnswer: UIButton!
+   
     @IBOutlet var answerViewOne: UIView!
     @IBOutlet var answerViewTwo: UIView!
     @IBOutlet var answerViewThree: UIView!
@@ -40,7 +40,7 @@ class SpenderBearGameThreeViewController: UIViewController {
     }
     
     func setUpMiscViews(){
-        checkAnswer.layer.cornerRadius = 15
+       
         statusBar.layer.cornerRadius = 9
         orangeStatus.layer.cornerRadius = 9
     }
@@ -116,8 +116,7 @@ class SpenderBearGameThreeViewController: UIViewController {
         self.performSegue(withIdentifier: "unwindSegue", sender: nil)
     }
     
-    @IBAction func checkAnswerTapped(_ sender: Any) {
-    }
+  
     
     
     @IBAction func answerViewTwoTapped(_ sender: Any) {
