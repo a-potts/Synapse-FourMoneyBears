@@ -31,6 +31,11 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
     func setUpViews(){
         credView.layer.cornerRadius = 15
         registerButton.layer.cornerRadius = 15
+        
+        registerButton.layer.shadowColor = UIColor.black.cgColor
+        registerButton.layer.shadowOffset = CGSize(width: 5, height: 5)
+        registerButton.layer.shadowRadius = 5
+        registerButton.layer.shadowOpacity = 1.0
     }
     
     //MARK: Verification Email

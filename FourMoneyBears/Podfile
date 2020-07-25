@@ -13,4 +13,5 @@ target 'FourMoneyBears' do
   pod 'Firebase/Storage'
   pod 'SCLAlertView'
   pod 'EMTNeumorphicView'
+  pod 'Macaw', '0.9.6'
 end

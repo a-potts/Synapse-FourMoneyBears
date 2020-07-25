@@ -44,6 +44,10 @@ class SpenderBearPrepThreeViewController: UIViewController {
             blueBearText.layer.cornerRadius = 20
             spenderBearText.layer.cornerRadius = 20
             readyButton.layer.cornerRadius = 20
+            readyButton.layer.shadowColor = UIColor.black.cgColor
+            readyButton.layer.shadowOffset = CGSize(width: 5, height: 5)
+            readyButton.layer.shadowRadius = 5
+            readyButton.layer.shadowOpacity = 1.0
         }
 
         func setUpBubbleViews(){
@@ -69,22 +73,22 @@ class SpenderBearPrepThreeViewController: UIViewController {
         
         
         func animateText() {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.9) {
                 self.blueBearBubble1.isHidden = false
             }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.9) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
                 self.blueBearBubble2.isHidden = false
             }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2.7) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.9) {
                 self.spenderBubble1.isHidden = false
             }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2.9) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.7) {
                 self.spenderBubble2.isHidden = false
             }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2){
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1){
                 self.blueBearText.isHidden = false
             }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                 self.spenderBearText.isHidden = false
             }
         }

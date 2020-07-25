@@ -35,6 +35,11 @@ class LoginViewController: UIViewController {
         credentialView.layer.cornerRadius = 15
         passwordText.isSecureTextEntry = true
         
+        loginButton.layer.shadowColor = UIColor.black.cgColor
+        loginButton.layer.shadowOffset = CGSize(width: 5, height: 5)
+        loginButton.layer.shadowRadius = 5
+        loginButton.layer.shadowOpacity = 1.0
+        
     }
     
    @IBAction func unwind( _ seg: UIStoryboardSegue) {

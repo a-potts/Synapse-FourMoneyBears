@@ -20,10 +20,15 @@ class SpenderPrepOneViewController: UIViewController {
         super.viewDidLoad()
 
         setUpMiscViews()
+        animateText()
     }
     
     func setUpMiscViews() {
         seeExampleButton.layer.cornerRadius = 20
+        seeExampleButton.layer.shadowColor = UIColor.black.cgColor
+        seeExampleButton.layer.shadowOffset = CGSize(width: 5, height: 5)
+        seeExampleButton.layer.shadowRadius = 5
+        seeExampleButton.layer.shadowOpacity = 1.0
     }
     
 

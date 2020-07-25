@@ -10,6 +10,8 @@
 		450B788F24CBFED800206827 /* SpenderPrepOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450B788E24CBFED800206827 /* SpenderPrepOneViewController.swift */; };
 		450B789124CBFEFA00206827 /* SpenderBearPrepTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450B789024CBFEFA00206827 /* SpenderBearPrepTwoViewController.swift */; };
 		450B789324CBFF2200206827 /* SpenderBearPrepThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450B789224CBFF2200206827 /* SpenderBearPrepThreeViewController.swift */; };
+		450B789524CCB8F200206827 /* MacawChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450B789424CCB8F200206827 /* MacawChartView.swift */; };
+		450B789724CCB94C00206827 /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450B789624CCB94C00206827 /* DummyData.swift */; };
 		450CA083243EB12900EEA40F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450CA082243EB12900EEA40F /* AppDelegate.swift */; };
 		450CA085243EB12900EEA40F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450CA084243EB12900EEA40F /* SceneDelegate.swift */; };
 		450CA08A243EB12900EEA40F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 450CA088243EB12900EEA40F /* Main.storyboard */; };
@@ -50,6 +52,8 @@
 		450B788E24CBFED800206827 /* SpenderPrepOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpenderPrepOneViewController.swift; sourceTree = "<group>"; };
 		450B789024CBFEFA00206827 /* SpenderBearPrepTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpenderBearPrepTwoViewController.swift; sourceTree = "<group>"; };
 		450B789224CBFF2200206827 /* SpenderBearPrepThreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpenderBearPrepThreeViewController.swift; sourceTree = "<group>"; };
+		450B789424CCB8F200206827 /* MacawChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacawChartView.swift; sourceTree = "<group>"; };
+		450B789624CCB94C00206827 /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
 		450CA07F243EB12900EEA40F /* FourMoneyBears.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FourMoneyBears.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		450CA082243EB12900EEA40F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		450CA084243EB12900EEA40F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -217,6 +221,8 @@
 			isa = PBXGroup;
 			children = (
 				45D0E26224C37A7500405671 /* UserProfileViewController.swift */,
+				450B789424CCB8F200206827 /* MacawChartView.swift */,
+				450B789624CCB94C00206827 /* DummyData.swift */,
 			);
 			path = "User Profile";
 			sourceTree = "<group>";
@@ -391,6 +397,7 @@
 				45799DEB24B8145F0042440E /* SaverBearGameThreeViewController.swift in Sources */,
 				4547DD75249FDDE800DEBBF8 /* SpenderBearGameOneViewController.swift in Sources */,
 				45799DFD24BB786A0042440E /* GiverBearGameTwoViewController.swift in Sources */,
+				450B789724CCB94C00206827 /* DummyData.swift in Sources */,
 				450CA098243EB53800EEA40F /* GameSelectionViewController.swift in Sources */,
 				45D0E26624C37A9900405671 /* LeaderboardsTableViewController.swift in Sources */,
 				45799DF624B96AD00042440E /* InvestorBearGameThreeViewController.swift in Sources */,
@@ -399,6 +406,7 @@
 				45799DFF24BB787B0042440E /* GiverBearGameThreeViewController.swift in Sources */,
 				454266E024B118DD00A6BA5E /* SpenderBearGameFourViewController.swift in Sources */,
 				45799DE924B80FBF0042440E /* SaverBearGameTwoViewController.swift in Sources */,
+				450B789524CCB8F200206827 /* MacawChartView.swift in Sources */,
 				450B788F24CBFED800206827 /* SpenderPrepOneViewController.swift in Sources */,
 				45D0E26924C38B5F00405671 /* Extensions.swift in Sources */,
 				454266BE24AE219E00A6BA5E /* SpenderBearGameThreeViewController.swift in Sources */,
