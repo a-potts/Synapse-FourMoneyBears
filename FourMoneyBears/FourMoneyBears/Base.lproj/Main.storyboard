@@ -269,7 +269,7 @@
                                         <color key="textColor" red="0.39174923299999997" green="0.16361555459999999" blue="0.056376084690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="When spending your money, you should only spend 20% of every dollar you ear &amp; save the rest" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kWn-sf-mPI">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="When spending your money, you should only spend 20% of every dollar you ear &amp; save the rest" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kWn-sf-mPI">
                                         <rect key="frame" x="0.0" y="55" width="414" height="122"/>
                                         <color key="backgroundColor" red="0.94163507219999998" green="0.91545259950000002" blue="0.7167791724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -367,7 +367,7 @@
                                     <segue destination="wsK-qS-fqu" kind="show" id="gpz-89-C01"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="When spending your money, you should only spend 20% of every dollar you ear &amp; save the rest" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ggn-pG-ypd">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="When spending your money, you should only spend 20% of every dollar you ear &amp; save the rest" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ggn-pG-ypd">
                                 <rect key="frame" x="122" y="112" width="272" height="87"/>
                                 <color key="backgroundColor" red="0.39174923299999997" green="0.16361555459999999" blue="0.056376084690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -378,7 +378,7 @@
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="We should spend $5 on Toys &amp; save the rest!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2nq-Ma-nq3">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="We should spend $5 on Toys &amp; save the rest!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2nq-Ma-nq3">
                                 <rect key="frame" x="20" y="645" width="256" height="68"/>
                                 <color key="backgroundColor" red="0.39174923299999997" green="0.16361555459999999" blue="0.056376084690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -1543,7 +1543,7 @@
                                     <constraint firstAttribute="width" constant="573" id="afO-h5-tT0"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Did you spend all of your money on the new bike?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rEK-Hl-7Jc">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Did you spend all of your money on the new bike?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rEK-Hl-7Jc">
                                 <rect key="frame" x="55" y="264" width="272" height="67"/>
                                 <color key="backgroundColor" red="0.39174923299999997" green="0.16361555459999999" blue="0.056376084690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -1554,7 +1554,7 @@
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="I should have only spent 5% of the money I earned, so I could afford repairs" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="E6I-UM-EzS">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="I should have only spent 5% of the money I earned, so I could afford repairs" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="E6I-UM-EzS">
                                 <rect key="frame" x="38" y="627" width="272" height="83"/>
                                 <color key="backgroundColor" red="0.39174923299999997" green="0.16361555459999999" blue="0.056376084690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
