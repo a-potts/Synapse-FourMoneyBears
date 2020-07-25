@@ -245,6 +245,168 @@
             </objects>
             <point key="canvasLocation" x="587" y="-505"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="XdW-cg-DNh">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="tff-Ji-8ws" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5k8-MG-vlG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StoryPrepSpender1" translatesAutoresizingMaskIntoConstraints="NO" id="lll-09-VBq">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="513"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="513" id="IfA-kW-WbU"/>
+                                    <constraint firstAttribute="width" constant="414" id="r3e-VY-Cy9"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ssv-Nw-Jr2">
+                                <rect key="frame" x="0.0" y="506" width="414" height="390"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Helpful Hint:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pOz-mJ-2Ch">
+                                        <rect key="frame" x="20" y="8" width="374" height="39"/>
+                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
+                                        <color key="textColor" red="0.39174923299999997" green="0.16361555459999999" blue="0.056376084690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="When spending your money, you should only spend 20% of every dollar you ear &amp; save the rest" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kWn-sf-mPI">
+                                        <rect key="frame" x="0.0" y="55" width="414" height="122"/>
+                                        <color key="backgroundColor" red="0.94163507219999998" green="0.91545259950000002" blue="0.7167791724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="414" id="2dN-vL-vc4"/>
+                                            <constraint firstAttribute="height" constant="122" id="C5a-La-G1v"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.39174923299999997" green="0.16361555459999999" blue="0.056376084690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XkI-QB-i4h">
+                                        <rect key="frame" x="54" y="290" width="306" height="58"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="58" id="1ah-G1-3hB"/>
+                                            <constraint firstAttribute="width" constant="306" id="Alj-UV-Oc8"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <state key="normal" title="SEE EXAMPLE">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="checkAnswerTapped:" destination="SbP-xv-kmp" eventType="touchUpInside" id="Apd-Wq-4lT"/>
+                                            <action selector="checkAnswerTapped:" destination="cDW-GV-GC4" eventType="touchUpInside" id="y5d-sm-vtE"/>
+                                            <segue destination="J3f-Ym-9BV" kind="show" id="VBZ-8r-CDV"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94163507219999998" green="0.91545259950000002" blue="0.7167791724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="8Ez-be-cQd"/>
+                                    <constraint firstAttribute="height" constant="390" id="9al-oP-PmC"/>
+                                    <constraint firstItem="kWn-sf-mPI" firstAttribute="leading" secondItem="Ssv-Nw-Jr2" secondAttribute="leading" id="D2q-2z-urm"/>
+                                    <constraint firstAttribute="trailing" secondItem="XkI-QB-i4h" secondAttribute="trailing" constant="54" id="MFE-q2-VAL"/>
+                                    <constraint firstItem="kWn-sf-mPI" firstAttribute="top" secondItem="pOz-mJ-2Ch" secondAttribute="bottom" constant="8" id="eVj-TW-bJg"/>
+                                    <constraint firstItem="XkI-QB-i4h" firstAttribute="leading" secondItem="Ssv-Nw-Jr2" secondAttribute="leading" constant="54" id="ftq-2e-a3a"/>
+                                    <constraint firstItem="pOz-mJ-2Ch" firstAttribute="top" secondItem="Ssv-Nw-Jr2" secondAttribute="top" constant="8" id="hwf-CC-kiT"/>
+                                    <constraint firstItem="XkI-QB-i4h" firstAttribute="top" secondItem="kWn-sf-mPI" secondAttribute="bottom" constant="113" id="kQZ-Kq-eSZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="kWn-sf-mPI" secondAttribute="trailing" id="lYw-n1-7HB"/>
+                                    <constraint firstAttribute="trailing" secondItem="pOz-mJ-2Ch" secondAttribute="trailing" constant="20" id="sfh-H5-Eo7"/>
+                                    <constraint firstItem="pOz-mJ-2Ch" firstAttribute="leading" secondItem="Ssv-Nw-Jr2" secondAttribute="leading" constant="20" id="vqF-SW-KTm"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="lll-09-VBq" firstAttribute="top" secondItem="5k8-MG-vlG" secondAttribute="top" id="D3d-IO-qRI"/>
+                            <constraint firstItem="lll-09-VBq" firstAttribute="leading" secondItem="LlF-yX-2SZ" secondAttribute="leading" id="Eiy-ZO-5Bv"/>
+                            <constraint firstItem="lll-09-VBq" firstAttribute="trailing" secondItem="LlF-yX-2SZ" secondAttribute="trailing" id="bmn-HR-bXp"/>
+                            <constraint firstItem="Ssv-Nw-Jr2" firstAttribute="trailing" secondItem="LlF-yX-2SZ" secondAttribute="trailing" id="lrh-PP-sdd"/>
+                            <constraint firstItem="Ssv-Nw-Jr2" firstAttribute="leading" secondItem="LlF-yX-2SZ" secondAttribute="leading" id="rH6-hm-D0P"/>
+                            <constraint firstAttribute="bottom" secondItem="Ssv-Nw-Jr2" secondAttribute="bottom" id="sEO-Yq-9lj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LlF-yX-2SZ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="OY1-AK-5Bd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NHz-TG-y5O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1937.68115942029" y="-458.03571428571428"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Vz4-6s-xcF">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="J3f-Ym-9BV" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HC9-YM-fch">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StoryPrepSpender2" translatesAutoresizingMaskIntoConstraints="NO" id="Ulw-B0-ylc">
+                                <rect key="frame" x="-208" y="-135" width="831" height="1128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1128" id="Psd-Nw-ib0"/>
+                                    <constraint firstAttribute="width" constant="831" id="WjA-Vf-YLd"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3U-bG-CoT">
+                                <rect key="frame" x="54" y="804" width="306" height="58"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="306" id="L8F-Wz-vyy"/>
+                                    <constraint firstAttribute="height" constant="58" id="t0s-ss-xgg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="SEE NEXT EXAMPLE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="checkAnswerTapped:" destination="SbP-xv-kmp" eventType="touchUpInside" id="KhK-fn-f0F"/>
+                                    <action selector="checkAnswerTapped:" destination="cDW-GV-GC4" eventType="touchUpInside" id="hdT-xe-OqW"/>
+                                    <segue destination="wsK-qS-fqu" kind="show" id="gpz-89-C01"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="When spending your money, you should only spend 20% of every dollar you ear &amp; save the rest" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ggn-pG-ypd">
+                                <rect key="frame" x="122" y="120" width="272" height="87"/>
+                                <color key="backgroundColor" red="0.39174923299999997" green="0.16361555459999999" blue="0.056376084690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="87" id="5HL-dy-oeX"/>
+                                    <constraint firstAttribute="width" constant="272" id="HTU-KC-V7u"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="We should spend $5 on Toys &amp; save the rest!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2nq-Ma-nq3">
+                                <rect key="frame" x="20" y="653" width="256" height="68"/>
+                                <color key="backgroundColor" red="0.39174923299999997" green="0.16361555459999999" blue="0.056376084690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="1se-cf-dgW"/>
+                                    <constraint firstAttribute="width" constant="256" id="jGS-xI-H3C"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94163507219999998" green="0.91545259950000002" blue="0.7167791724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ggn-pG-ypd" firstAttribute="top" secondItem="eeB-G9-G74" secondAttribute="top" constant="76" id="4Ny-6l-ufE"/>
+                            <constraint firstItem="eeB-G9-G74" firstAttribute="trailing" secondItem="Ggn-pG-ypd" secondAttribute="trailing" constant="20" id="7DE-mZ-v6e"/>
+                            <constraint firstItem="eeB-G9-G74" firstAttribute="trailing" secondItem="t3U-bG-CoT" secondAttribute="trailing" constant="54" id="DmO-z9-TWq"/>
+                            <constraint firstItem="Ulw-B0-ylc" firstAttribute="leading" secondItem="HC9-YM-fch" secondAttribute="leading" constant="-208" id="HBa-2K-jR9"/>
+                            <constraint firstItem="t3U-bG-CoT" firstAttribute="leading" secondItem="eeB-G9-G74" secondAttribute="leading" constant="54" id="HS2-kf-8gX"/>
+                            <constraint firstItem="t3U-bG-CoT" firstAttribute="bottom" secondItem="eeB-G9-G74" secondAttribute="bottom" id="UGQ-Io-5KD"/>
+                            <constraint firstItem="2nq-Ma-nq3" firstAttribute="leading" secondItem="eeB-G9-G74" secondAttribute="leading" constant="20" id="VZ1-GB-71n"/>
+                            <constraint firstItem="Ulw-B0-ylc" firstAttribute="top" secondItem="HC9-YM-fch" secondAttribute="top" constant="-135" id="kCZ-kf-Onf"/>
+                            <constraint firstAttribute="trailing" secondItem="Ulw-B0-ylc" secondAttribute="trailing" constant="-209" id="ncv-oc-mdj"/>
+                            <constraint firstItem="2nq-Ma-nq3" firstAttribute="top" secondItem="Ggn-pG-ypd" secondAttribute="bottom" constant="446" id="taw-QS-7b8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eeB-G9-G74"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8Yf-X3-wOS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ofR-nx-NGH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2794.202898550725" y="-465.40178571428567"/>
+        </scene>
         <!--Login View Controller-->
         <scene sceneID="DOO-RE-bk1">
             <objects>
@@ -815,13 +977,13 @@
                         <outlet property="userRankImage" destination="EI9-9b-70F" id="Qoh-fG-W6i"/>
                         <outlet property="userRankLabel" destination="2h4-WA-lNi" id="qq8-Vs-dL5"/>
                         <outlet property="usersProfileButton" destination="rCA-MJ-LNW" id="OES-Pa-P9h"/>
-                        <segue destination="mMQ-Re-waJ" kind="show" identifier="SpenderBearSegue" id="c8p-SF-hVr"/>
                         <segue destination="SbP-xv-kmp" kind="show" identifier="SaverBearSegue" id="ScL-P7-WbV"/>
                         <segue destination="BHg-LS-VA5" kind="show" identifier="investorBearSegue" id="PC3-Ww-zZT"/>
                         <segue destination="D8g-eb-xQh" kind="show" identifier="GiverBearSegue" id="GR3-Fx-RYe"/>
                         <segue destination="1F9-3V-gNX" kind="show" identifier="BasicsSegue" id="nDa-Kl-4Bl"/>
                         <segue destination="Xd5-S2-U28" kind="show" identifier="LeaderboardsSegue" id="ydF-aC-Nv2"/>
                         <segue destination="ZVr-Yf-d26" kind="show" identifier="UserProfileSegue" id="u76-2c-8lf"/>
+                        <segue destination="tff-Ji-8ws" kind="show" identifier="SpenderBearSegue" id="Bx9-Jh-dDi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FA9-VK-JlR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -882,7 +1044,7 @@
                                 <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="heart.fill" catalog="system"/>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="The group just earned $20.00, but Saver Bear wants to save all of it, is that correct?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YXp-Bz-79b">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="The group just earned $20.00, but Saver Bear wants to save all of it, is that correct?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YXp-Bz-79b">
                                 <rect key="frame" x="20" y="120" width="374" height="210"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="210" id="ZkV-lU-xic"/>
@@ -1309,6 +1471,82 @@
             </objects>
             <point key="canvasLocation" x="1944.9275362318842" y="-1200"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Ogb-xh-kuf">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="wsK-qS-fqu" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xV9-MX-qaB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StoryPrepSpender3" translatesAutoresizingMaskIntoConstraints="NO" id="wpl-lD-qj5">
+                                <rect key="frame" x="-79" y="174" width="573" height="520"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="520" id="83s-9p-L2h"/>
+                                    <constraint firstAttribute="width" constant="573" id="afO-h5-tT0"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Did you spend all of your money on the new bike?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rEK-Hl-7Jc">
+                                <rect key="frame" x="55" y="264" width="272" height="67"/>
+                                <color key="backgroundColor" red="0.39174923299999997" green="0.16361555459999999" blue="0.056376084690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="272" id="bYX-7D-RAf"/>
+                                    <constraint firstAttribute="height" constant="67" id="x4E-z5-Avr"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Did you spend all of your money on the new bike?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="E6I-UM-EzS">
+                                <rect key="frame" x="38" y="627" width="272" height="67"/>
+                                <color key="backgroundColor" red="0.39174923299999997" green="0.16361555459999999" blue="0.056376084690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="Ca3-hP-jQm"/>
+                                    <constraint firstAttribute="width" constant="272" id="NZ7-Cd-gXV"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XhY-7c-BzC">
+                                <rect key="frame" x="54" y="804" width="306" height="58"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="306" id="Qto-bM-8yA"/>
+                                    <constraint firstAttribute="height" constant="58" id="rcb-wu-qbR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="I'm Ready!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="checkAnswerTapped:" destination="SbP-xv-kmp" eventType="touchUpInside" id="e0B-hU-O8e"/>
+                                    <action selector="checkAnswerTapped:" destination="cDW-GV-GC4" eventType="touchUpInside" id="k4r-ra-fht"/>
+                                    <segue destination="mMQ-Re-waJ" kind="show" id="l91-LU-Jjy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94163507219999998" green="0.91545259950000002" blue="0.7167791724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="E6I-UM-EzS" firstAttribute="top" secondItem="rEK-Hl-7Jc" secondAttribute="bottom" constant="296" id="9aJ-Rp-wBh"/>
+                            <constraint firstItem="l33-HL-bpR" firstAttribute="trailing" secondItem="XhY-7c-BzC" secondAttribute="trailing" constant="54" id="EAJ-03-B3L"/>
+                            <constraint firstItem="wpl-lD-qj5" firstAttribute="leading" secondItem="xV9-MX-qaB" secondAttribute="leading" constant="-79" id="Fkf-3Y-b0M"/>
+                            <constraint firstItem="wpl-lD-qj5" firstAttribute="top" secondItem="l33-HL-bpR" secondAttribute="top" constant="130" id="Its-OE-j3i"/>
+                            <constraint firstItem="rEK-Hl-7Jc" firstAttribute="leading" secondItem="l33-HL-bpR" secondAttribute="leading" constant="55" id="NUh-4J-SvH"/>
+                            <constraint firstItem="rEK-Hl-7Jc" firstAttribute="top" secondItem="l33-HL-bpR" secondAttribute="top" constant="220" id="XEN-9P-OQh"/>
+                            <constraint firstItem="XhY-7c-BzC" firstAttribute="bottom" secondItem="l33-HL-bpR" secondAttribute="bottom" id="hit-ne-Nkn"/>
+                            <constraint firstItem="E6I-UM-EzS" firstAttribute="leading" secondItem="l33-HL-bpR" secondAttribute="leading" constant="38" id="iDH-oJ-UAP"/>
+                            <constraint firstItem="XhY-7c-BzC" firstAttribute="leading" secondItem="l33-HL-bpR" secondAttribute="leading" constant="54" id="uNT-dD-Gsh"/>
+                            <constraint firstAttribute="trailing" secondItem="wpl-lD-qj5" secondAttribute="trailing" constant="-80" id="wZ8-zW-yoD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="l33-HL-bpR"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="fVh-W0-uvC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wN7-XG-szV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3610.144927536232" y="-461.38392857142856"/>
+        </scene>
         <!--Spender Bear View Controller-->
         <scene sceneID="sCr-2Q-9NM">
             <objects>
@@ -1339,7 +1577,7 @@
                                 <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="heart.fill" catalog="system"/>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="How much of my Piggy Bank should I spend on clothes?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tfR-7m-TfS">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="How much of my Piggy Bank should I spend on clothes?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tfR-7m-TfS">
                                 <rect key="frame" x="20" y="120" width="374" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="374" id="cII-fX-YaG"/>
@@ -1585,7 +1823,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="coG-0F-Xt1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="qnS-k1-bIw" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1960.8695652173915" y="-494.19642857142856"/>
+            <point key="canvasLocation" x="4391" y="-506"/>
         </scene>
         <!--Spender Bear Game One View Controller-->
         <scene sceneID="lfi-uA-7ke">
@@ -1642,7 +1880,7 @@
                                     <constraint firstItem="tGe-oR-4QD" firstAttribute="leading" secondItem="L5I-UI-peb" secondAttribute="leading" id="sdx-OA-9IP"/>
                                 </constraints>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Decide how much the the four bears should spend out of $100.00" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5sW-J4-gXo">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Decide how much the the four bears should spend out of $100.00" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5sW-J4-gXo">
                                 <rect key="frame" x="20" y="120" width="374" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="374" id="kvd-at-IMV"/>
@@ -1897,7 +2135,7 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2821.739130434783" y="-493.52678571428567"/>
+            <point key="canvasLocation" x="5171" y="-506"/>
         </scene>
         <!--Spender Bear Game Three View Controller-->
         <scene sceneID="3Xl-aD-vAL">
@@ -1948,7 +2186,7 @@
                                 <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="heart.fill" catalog="system"/>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="To help spend your money more carefully, you first should.." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="AXk-9o-cQH">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="To help spend your money more carefully, you first should.." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="AXk-9o-cQH">
                                 <rect key="frame" x="20" y="120" width="374" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="bZj-Cx-EAK"/>
@@ -2131,7 +2369,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X3V-Wm-0Zm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="AvG-WL-qAe" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3647.826086956522" y="-497.54464285714283"/>
+            <point key="canvasLocation" x="5945" y="-506"/>
         </scene>
         <!--Spender Bear Game Four View Controller-->
         <scene sceneID="jtR-dG-YoV">
@@ -2190,7 +2428,7 @@
                                 <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="heart.fill" catalog="system"/>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Is this statement by Spender Bear, correct?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6dC-5o-1YF">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Is this statement by Spender Bear, correct?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6dC-5o-1YF">
                                 <rect key="frame" x="20" y="120" width="374" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="374" id="3rp-eB-vYL"/>
@@ -2342,7 +2580,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P9s-hN-Pgj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="WxZ-jx-rii" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4460.8695652173919" y="-492.1875"/>
+            <point key="canvasLocation" x="6759" y="-506"/>
         </scene>
         <!--Saver Bear Game Two View Controller-->
         <scene sceneID="Z1t-bH-eb8">
@@ -2391,7 +2629,7 @@
                                 <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="heart.fill" catalog="system"/>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="When saving money, what rule is important to follow?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zA8-Q7-KeS">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="When saving money, what rule is important to follow?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zA8-Q7-KeS">
                                 <rect key="frame" x="20" y="120" width="374" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="H4X-6T-eq2"/>
@@ -2629,7 +2867,7 @@
                                 <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="heart.fill" catalog="system"/>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Is this statement by Spender Bear, correct?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2W1-Be-DpG">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Is this statement by Saver Bear, correct?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2W1-Be-DpG">
                                 <rect key="frame" x="20" y="120" width="374" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="374" id="B8S-PI-GEX"/>
@@ -2996,7 +3234,7 @@
                                     <constraint firstItem="2OQ-kr-HRP" firstAttribute="top" secondItem="Zgr-ck-sqX" secondAttribute="top" id="scD-AZ-t9c"/>
                                 </constraints>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Saver Bear wants to throw a party, how much should she spend?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nEQ-44-w20">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Saver Bear wants to throw a party, how much should she spend?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nEQ-44-w20">
                                 <rect key="frame" x="20" y="107" width="374" height="205"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="374" id="4gi-yy-zqd"/>
@@ -3113,7 +3351,7 @@
                                 <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="heart.fill" catalog="system"/>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Is this statement by Investor Bear, correct?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2zP-Vg-Mr8">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Is this statement by Investor Bear, correct?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2zP-Vg-Mr8">
                                 <rect key="frame" x="20" y="120" width="374" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="6Xj-p4-9iK"/>
@@ -3480,7 +3718,7 @@
                                     <constraint firstItem="b4j-W6-bid" firstAttribute="leading" secondItem="xm1-0s-2yf" secondAttribute="leading" id="cyJ-aJ-2uM"/>
                                 </constraints>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Investor Bear has $50.00, how much should he set aside to invest?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BVD-G2-48b">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Investor Bear has $50.00, how much should he set aside to invest?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BVD-G2-48b">
                                 <rect key="frame" x="20" y="107" width="374" height="205"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="374" id="OKX-f3-msi"/>
@@ -3592,7 +3830,7 @@
                                 <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="heart.fill" catalog="system"/>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="When investing your money, what rule is important to follow?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="B7U-4A-AbL">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="When investing your money, what rule is important to follow?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="B7U-4A-AbL">
                                 <rect key="frame" x="20" y="120" width="374" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="374" id="FrP-PX-YfF"/>
@@ -3831,7 +4069,7 @@
                                 <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="heart.fill" catalog="system"/>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="The group just earned $90.00, but Investor Bear wants to save all of it, is that correct?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="lo6-k9-g5n">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="The group just earned $90.00, but Investor Bear wants to save all of it, is that correct?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="lo6-k9-g5n">
                                 <rect key="frame" x="20" y="120" width="374" height="210"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="210" id="sSJ-7h-xZH"/>
@@ -4171,7 +4409,7 @@
                                 <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="heart.fill" catalog="system"/>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="When giving your money, what rule is important to follow?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1um-oi-hfc">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="When giving your money, what rule is important to follow?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1um-oi-hfc">
                                 <rect key="frame" x="20" y="120" width="374" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="374" id="FWy-a4-jzV"/>
@@ -4625,7 +4863,7 @@
                                 <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="heart.fill" catalog="system"/>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Is this statement by Giver Bear, correct?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Fl7-aC-Loo">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Is this statement by Giver Bear, correct?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Fl7-aC-Loo">
                                 <rect key="frame" x="20" y="120" width="374" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="aDq-Qn-CZZ"/>
@@ -4834,7 +5072,7 @@
                                 <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="heart.fill" catalog="system"/>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="The group earned $40.00, but Giver Bear wants to give it away, is that correct?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tvL-qS-sGj">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="The group earned $40.00, but Giver Bear wants to give it away, is that correct?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tvL-qS-sGj">
                                 <rect key="frame" x="20" y="120" width="374" height="210"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="374" id="HZR-S3-N6T"/>
@@ -5331,7 +5569,7 @@
                                     <constraint firstItem="VKH-Lw-akU" firstAttribute="leading" secondItem="bOX-3Y-Uwm" secondAttribute="leading" id="n5g-v2-Nfk"/>
                                 </constraints>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Giver Bear has $20.00, how much should she give away?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ukp-4x-JFf">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Giver Bear has $20.00, how much should she give away?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ukp-4x-JFf">
                                 <rect key="frame" x="20" y="107" width="374" height="205"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="205" id="08a-G3-PrK"/>
@@ -5402,6 +5640,9 @@
         <image name="Group" width="1912" height="1530"/>
         <image name="Money" width="261" height="171"/>
         <image name="SpenderBear" width="279" height="243"/>
+        <image name="StoryPrepSpender1" width="628" height="630"/>
+        <image name="StoryPrepSpender2" width="631" height="476"/>
+        <image name="StoryPrepSpender3" width="630" height="490"/>
         <image name="basicEgg" width="630" height="630"/>
         <image name="camera.fill" catalog="system" width="128" height="96"/>
         <image name="checkmark.seal.fill" catalog="system" width="128" height="122"/>
