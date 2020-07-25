@@ -367,7 +367,7 @@
                                     <segue destination="wsK-qS-fqu" kind="show" id="gpz-89-C01"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="When spending your money, you should only spend 20% of every dollar you ear &amp; save the rest" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ggn-pG-ypd">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Mama &amp; Papa Bear are giving you both $25, what should you do with it?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ggn-pG-ypd">
                                 <rect key="frame" x="122" y="112" width="272" height="87"/>
                                 <color key="backgroundColor" red="0.39174923299999997" green="0.16361555459999999" blue="0.056376084690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -1651,7 +1651,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wN7-XG-szV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3610.144927536232" y="-461.38392857142856"/>
+            <point key="canvasLocation" x="3672" y="-465"/>
         </scene>
         <!--Spender Bear View Controller-->
         <scene sceneID="sCr-2Q-9NM">
@@ -1929,7 +1929,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="coG-0F-Xt1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="qnS-k1-bIw" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4391" y="-506"/>
+            <point key="canvasLocation" x="4438" y="-465"/>
         </scene>
         <!--Spender Bear Game One View Controller-->
         <scene sceneID="lfi-uA-7ke">
@@ -2241,7 +2241,7 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="5171" y="-506"/>
+            <point key="canvasLocation" x="5254" y="-465"/>
         </scene>
         <!--Spender Bear Game Three View Controller-->
         <scene sceneID="3Xl-aD-vAL">
@@ -2475,7 +2475,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X3V-Wm-0Zm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="AvG-WL-qAe" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="5945" y="-506"/>
+            <point key="canvasLocation" x="6107" y="-465"/>
         </scene>
         <!--Spender Bear Game Four View Controller-->
         <scene sceneID="jtR-dG-YoV">
@@ -2686,7 +2686,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P9s-hN-Pgj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="WxZ-jx-rii" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="6759" y="-506"/>
+            <point key="canvasLocation" x="6962" y="-465"/>
         </scene>
         <!--Saver Bear Game Two View Controller-->
         <scene sceneID="Z1t-bH-eb8">
