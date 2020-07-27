@@ -63,8 +63,20 @@ class MacawChartView: MacawView {
     }
     
     private static func addXaxisItem() -> [Node]{
+        let chartBaseY: Double  = 200
+        var newNodes: [Node] = []
         
-        return []
+        for i in 1...adjustedData.count {
+            let x = (Double(i) * 50)
+            let valueText = Text(text: lastFiveShows[i - 1].showNumber, align: .max, baseline: .mid, place: .move(dx: x, dy: chartBaseY + 15) )
+            valueText.fill = Color.white
+            newNodes.append(valueText)
+        }
+        
+        let xAxis = Line(x1: 0, y1: chartBaseY, x2: lineWidth, y2: chartBaseY).stroke(fill: Color.white.with(a: 0.25))
+        newNodes.append(xAxis)
+        
+        return newNodes
     }
     
     private static func createBars() -> Group {
