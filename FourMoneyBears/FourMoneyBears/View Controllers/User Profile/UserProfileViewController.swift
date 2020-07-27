@@ -18,6 +18,7 @@ class UserProfileViewController: UIViewController {
     @IBOutlet var userRankLabel: UILabel!
     @IBOutlet var userStreakLabel: UILabel!
     @IBOutlet var usersHealthLabel: UILabel!
+    @IBOutlet var macawChart: MacawChartView!
     
      var users: Users? {
            didSet {
@@ -28,6 +29,10 @@ class UserProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateViews()
+        macawChart.contentMode = .scaleAspectFit
+        macawChart.layer.borderWidth = 2
+        macawChart.layer.borderColor = UIColor.gray.cgColor
+        macawChart.layer.cornerRadius = 20
           
     }
     
