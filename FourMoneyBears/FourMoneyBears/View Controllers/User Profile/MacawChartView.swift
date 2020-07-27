@@ -81,18 +81,36 @@ class MacawChartView: MacawView {
     
     private static func createBars() -> Group {
         
-        return Group()
+        let fill = LinearGradient(degree: 90, from: Color(val: 0xff4704), to: Color(val: 0xff4705).with(a: 0.33))
+        
+        let items = adjustedData.map {_ in Group()}
+        
+        // Creating array of animations
+        // Enumerate = Get int in item
+        animations = items.enumerated().map {(i: Int, item: Group) in
+            item.contentsVar.animation(delay: Double(i) * 0.1) { t in
+                let height = adjustedData[i] * t
+                let rect = Rect(x: Double(i) * 50 + 25, y: 200 - height, w: 30, h: height)
+                return [rect.fill(with: fill)]
+            }
+        }
+        
+        return items.group()
+    }
+    
+    static func playAnimations(){
+        animations.combine().play()
     }
     
     
     
     // Return array of dummy data
     private static func createDummyData() -> [DummyData] {
-        let one = DummyData(showNumber: "55", viewCount: 123456)
-        let two = DummyData(showNumber: "56", viewCount: 234567)
-        let three = DummyData(showNumber: "57", viewCount: 345678)
-        let four = DummyData(showNumber: "58", viewCount: 456789)
-        let five = DummyData(showNumber: "59", viewCount: 123457)
+        let one = DummyData(showNumber: "M", viewCount: 123456)
+        let two = DummyData(showNumber: "T", viewCount: 234567)
+        let three = DummyData(showNumber: "W", viewCount: 345678)
+        let four = DummyData(showNumber: "T", viewCount: 456789)
+        let five = DummyData(showNumber: "F", viewCount: 123457)
         
         return [one, two, three, four, five]
         

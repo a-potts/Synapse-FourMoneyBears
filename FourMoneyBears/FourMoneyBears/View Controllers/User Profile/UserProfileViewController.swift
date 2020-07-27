@@ -33,6 +33,7 @@ class UserProfileViewController: UIViewController {
         macawChart.layer.borderWidth = 2
         macawChart.layer.borderColor = UIColor.gray.cgColor
         macawChart.layer.cornerRadius = 20
+        MacawChartView.playAnimations()
           
     }
     
