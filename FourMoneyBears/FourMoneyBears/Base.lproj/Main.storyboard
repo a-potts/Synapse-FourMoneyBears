@@ -1040,22 +1040,22 @@
                         <segue destination="Xd5-S2-U28" kind="show" identifier="LeaderboardsSegue" id="ydF-aC-Nv2"/>
                         <segue destination="tff-Ji-8ws" kind="show" identifier="SpenderBearSegue" id="Bx9-Jh-dDi"/>
                         <segue destination="aaY-E5-bNM" kind="show" identifier="UserProfileSegue" id="Llr-nd-v99"/>
-                        <segue destination="oah-UW-Vg6" kind="show" identifier="SaverBearSegue" id="5yl-Ff-id0"/>
+                        <segue destination="Ulp-6G-Ck0" kind="show" identifier="SaverBearSegue" id="I69-Z6-Hlx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FA9-VK-JlR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="928.98550724637687" y="228.34821428571428"/>
         </scene>
-        <!--Saver Bear Prep One View Controller-->
+        <!--Saver Bear Prep Two View Controller-->
         <scene sceneID="xmh-8P-lno">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="oah-UW-Vg6" customClass="SaverBearPrepOneViewController" customModule="FourMoneyBears" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="oah-UW-Vg6" customClass="SaverBearPrepTwoViewController" customModule="FourMoneyBears" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6L3-o7-1L2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SaverBearStoryPrep3" translatesAutoresizingMaskIntoConstraints="NO" id="hVV-lL-25R">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SaverBearStoryPrep2" translatesAutoresizingMaskIntoConstraints="NO" id="hVV-lL-25R">
                                 <rect key="frame" x="-208" y="102" width="831" height="693"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="hVV-lL-25R" secondAttribute="height" multiplier="277:231" id="V1U-TR-e3t"/>
@@ -1070,7 +1070,7 @@
                                         <color key="textColor" red="0.39174923299999997" green="0.16361555459999999" blue="0.056376084690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="When saving your money, you should save 80% of every dollar you earn &amp; save what is left over after." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5cJ-UR-Jzm">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="It’s okay to spend some of your money to have fun, as long as you save most of it or 80%." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5cJ-UR-Jzm">
                                         <rect key="frame" x="20" y="84" width="374" height="102"/>
                                         <color key="backgroundColor" red="0.94163507219999998" green="0.91545259950000002" blue="0.7167791724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -1120,15 +1120,13 @@
                                     <constraint firstAttribute="trailing" secondItem="KKE-DQ-cTE" secondAttribute="trailing" constant="54" id="qti-G1-jcH"/>
                                 </constraints>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fcI-gb-Rws">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="I want to play with my friends, but I decided to save every dollar I earn instead of 80%" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fcI-gb-Rws">
                                 <rect key="frame" x="33" y="215" width="245" height="108"/>
                                 <color key="backgroundColor" red="0.39174923299999997" green="0.16361555459999999" blue="0.056376084690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="108" id="ihy-DG-Rgm"/>
                                     <constraint firstAttribute="width" constant="245" id="qu2-7N-nZ9"/>
                                 </constraints>
-                                <string key="text">I always save 80% of every dollar I earn, that’s how I have so much money in my piggy bank!
-</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1172,15 +1170,15 @@
                     </view>
                     <navigationItem key="navigationItem" id="DnO-Yz-J4J"/>
                     <connections>
-                        <outlet property="saveBearText" destination="fcI-gb-Rws" id="Ik9-1e-5ba"/>
-                        <outlet property="seeExampleButton" destination="KKE-DQ-cTE" id="ZK1-gA-X1L"/>
-                        <outlet property="textBubbleOne" destination="GUv-Ea-umu" id="5tq-hK-NLa"/>
-                        <outlet property="textBubbleTwo" destination="RLO-tz-frr" id="809-oj-U0F"/>
+                        <outlet property="saveBearText" destination="fcI-gb-Rws" id="bR6-Md-bXv"/>
+                        <outlet property="seeExampleButton" destination="KKE-DQ-cTE" id="a0p-2u-KVt"/>
+                        <outlet property="textBubbleOne" destination="GUv-Ea-umu" id="H8S-I9-XCe"/>
+                        <outlet property="textBubbleTwo" destination="RLO-tz-frr" id="8ns-Bn-0DI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qpT-8c-ULQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1933.3333333333335" y="221.65178571428569"/>
+            <point key="canvasLocation" x="2794" y="231"/>
         </scene>
         <!--Saver Bear Game One View Controller-->
         <scene sceneID="ekd-aR-jTr">
@@ -5876,12 +5874,149 @@
             </objects>
             <point key="canvasLocation" x="4461" y="1677"/>
         </scene>
+        <!--Saver Bear Prep One View Controller-->
+        <scene sceneID="g9Q-1B-krI">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="Ulp-6G-Ck0" customClass="SaverBearPrepOneViewController" customModule="FourMoneyBears" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="r5t-jt-nsu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SaverBearStoryPrep3" translatesAutoresizingMaskIntoConstraints="NO" id="2Na-Wn-rJa">
+                                <rect key="frame" x="-208" y="102" width="831" height="693"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="2Na-Wn-rJa" secondAttribute="height" multiplier="277:231" id="U1r-0Y-yEB"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DgZ-Y7-Tw8">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="174"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Helpful Hint:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j6f-u3-u9r">
+                                        <rect key="frame" x="20" y="52" width="374" height="39"/>
+                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
+                                        <color key="textColor" red="0.39174923299999997" green="0.16361555459999999" blue="0.056376084690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="When saving your money, you should save 80% of every dollar you earn &amp; save what is left over after." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="D9p-h4-scl">
+                                        <rect key="frame" x="20" y="84" width="374" height="102"/>
+                                        <color key="backgroundColor" red="0.94163507219999998" green="0.91545259950000002" blue="0.7167791724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="D9p-h4-scl" secondAttribute="height" multiplier="11:3" id="JBZ-Mq-TZt"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.39174923299999997" green="0.16361555459999999" blue="0.056376084690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94163507219999998" green="0.91545259950000002" blue="0.7167791724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="j6f-u3-u9r" secondAttribute="trailing" constant="20" id="8OO-T7-RqO"/>
+                                    <constraint firstAttribute="width" secondItem="DgZ-Y7-Tw8" secondAttribute="height" multiplier="69:29" id="JN0-lN-HgW"/>
+                                    <constraint firstItem="D9p-h4-scl" firstAttribute="top" secondItem="DgZ-Y7-Tw8" secondAttribute="top" constant="84" id="KKq-Xd-k5R"/>
+                                    <constraint firstItem="j6f-u3-u9r" firstAttribute="top" secondItem="DgZ-Y7-Tw8" secondAttribute="top" constant="52" id="LLf-yR-hdc"/>
+                                    <constraint firstAttribute="trailing" secondItem="D9p-h4-scl" secondAttribute="trailing" constant="20" id="cOK-GJ-jj4"/>
+                                    <constraint firstItem="j6f-u3-u9r" firstAttribute="leading" secondItem="DgZ-Y7-Tw8" secondAttribute="leading" constant="20" id="m4O-5i-wB5"/>
+                                    <constraint firstItem="D9p-h4-scl" firstAttribute="leading" secondItem="DgZ-Y7-Tw8" secondAttribute="leading" constant="20" id="oeb-Cg-lY1"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DYF-3H-dhq">
+                                <rect key="frame" x="0.0" y="725" width="414" height="171"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W40-Dj-UlT">
+                                        <rect key="frame" x="54" y="71" width="306" height="58"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="58" id="Bdj-4l-fWK"/>
+                                            <constraint firstAttribute="width" constant="306" id="buY-JT-Rzk"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <state key="normal" title="SEE NEXT EXAMPLE">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="checkAnswerTapped:" destination="SbP-xv-kmp" eventType="touchUpInside" id="Mdb-Pn-TC6"/>
+                                            <action selector="checkAnswerTapped:" destination="cDW-GV-GC4" eventType="touchUpInside" id="aCb-7l-OCf"/>
+                                            <segue destination="oah-UW-Vg6" kind="show" id="tBI-x0-oxw"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94163507219999998" green="0.91545259950000002" blue="0.7167791724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="DYF-3H-dhq" secondAttribute="height" multiplier="46:19" id="Hfy-Cl-RD0"/>
+                                    <constraint firstAttribute="bottom" secondItem="W40-Dj-UlT" secondAttribute="bottom" constant="42" id="cKy-y3-3Lh"/>
+                                    <constraint firstItem="W40-Dj-UlT" firstAttribute="leading" secondItem="DYF-3H-dhq" secondAttribute="leading" constant="54" id="fWh-ax-bra"/>
+                                    <constraint firstAttribute="trailing" secondItem="W40-Dj-UlT" secondAttribute="trailing" constant="54" id="ubt-jd-AG1"/>
+                                </constraints>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="VQR-Ja-NbC">
+                                <rect key="frame" x="33" y="215" width="245" height="108"/>
+                                <color key="backgroundColor" red="0.39174923299999997" green="0.16361555459999999" blue="0.056376084690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="245" id="dih-HQ-ZBa"/>
+                                    <constraint firstAttribute="height" constant="108" id="r8X-fz-9SF"/>
+                                </constraints>
+                                <string key="text">I always save 80% of every dollar I earn, that’s how I have so much money in my piggy bank!
+</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oeJ-hK-mYy">
+                                <rect key="frame" x="55" y="345" width="29" height="29"/>
+                                <color key="backgroundColor" red="0.39174923299999997" green="0.16361555459999999" blue="0.056376084690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="gS9-sq-8uN"/>
+                                    <constraint firstAttribute="width" constant="29" id="zii-k8-mHN"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E03-jA-HQg">
+                                <rect key="frame" x="95" y="393" width="18" height="18"/>
+                                <color key="backgroundColor" red="0.39174923299999997" green="0.16361555459999999" blue="0.056376084690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="18" id="DuZ-Gc-IZZ"/>
+                                    <constraint firstAttribute="height" constant="18" id="Y0p-p8-vtf"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="2Na-Wn-rJa" secondAttribute="trailing" constant="-209" id="0q2-3w-JFD"/>
+                            <constraint firstItem="VQR-Ja-NbC" firstAttribute="leading" secondItem="XQY-wt-9Vg" secondAttribute="leading" constant="33" id="5Mh-6U-BGO"/>
+                            <constraint firstItem="VQR-Ja-NbC" firstAttribute="top" secondItem="DgZ-Y7-Tw8" secondAttribute="bottom" constant="41" id="5xG-ab-NEa"/>
+                            <constraint firstAttribute="bottom" secondItem="DYF-3H-dhq" secondAttribute="bottom" id="EN9-09-4Hp"/>
+                            <constraint firstItem="E03-jA-HQg" firstAttribute="leading" secondItem="XQY-wt-9Vg" secondAttribute="leading" constant="95" id="It1-CF-rSh"/>
+                            <constraint firstItem="2Na-Wn-rJa" firstAttribute="leading" secondItem="r5t-jt-nsu" secondAttribute="leading" constant="-208" id="Jlk-sT-ekc"/>
+                            <constraint firstItem="oeJ-hK-mYy" firstAttribute="leading" secondItem="XQY-wt-9Vg" secondAttribute="leading" constant="55" id="Lf3-mS-ft8"/>
+                            <constraint firstItem="DYF-3H-dhq" firstAttribute="trailing" secondItem="XQY-wt-9Vg" secondAttribute="trailing" id="MHg-tD-Cl5"/>
+                            <constraint firstItem="E03-jA-HQg" firstAttribute="top" secondItem="VQR-Ja-NbC" secondAttribute="bottom" constant="70" id="RDS-D0-GoU"/>
+                            <constraint firstItem="2Na-Wn-rJa" firstAttribute="top" secondItem="XQY-wt-9Vg" secondAttribute="top" constant="58" id="T6K-dP-eyt"/>
+                            <constraint firstItem="DgZ-Y7-Tw8" firstAttribute="trailing" secondItem="XQY-wt-9Vg" secondAttribute="trailing" id="UkZ-x6-KP1"/>
+                            <constraint firstItem="DYF-3H-dhq" firstAttribute="leading" secondItem="XQY-wt-9Vg" secondAttribute="leading" id="Urn-Jv-yj9"/>
+                            <constraint firstItem="DgZ-Y7-Tw8" firstAttribute="leading" secondItem="XQY-wt-9Vg" secondAttribute="leading" id="dX9-ep-C6p"/>
+                            <constraint firstItem="oeJ-hK-mYy" firstAttribute="top" secondItem="VQR-Ja-NbC" secondAttribute="bottom" constant="22" id="fg4-4M-TJs"/>
+                            <constraint firstItem="DgZ-Y7-Tw8" firstAttribute="top" secondItem="r5t-jt-nsu" secondAttribute="top" id="gs4-k7-5Aa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XQY-wt-9Vg"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="GgB-Kp-90z"/>
+                    <connections>
+                        <outlet property="saveBearText" destination="VQR-Ja-NbC" id="4Df-VG-ZWf"/>
+                        <outlet property="seeExampleButton" destination="W40-Dj-UlT" id="17s-by-bQg"/>
+                        <outlet property="textBubbleOne" destination="oeJ-hK-mYy" id="JFg-mh-mag"/>
+                        <outlet property="textBubbleTwo" destination="E03-jA-HQg" id="qjS-Vr-khF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o01-kf-2do" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1943.3333333333335" y="231.65178571428569"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Crown-fill" width="48" height="48"/>
         <image name="GiverBear" width="273" height="266"/>
         <image name="Group" width="1912" height="1530"/>
         <image name="Money" width="261" height="171"/>
+        <image name="SaverBearStoryPrep2" width="635" height="431"/>
         <image name="SaverBearStoryPrep3" width="633" height="436"/>
         <image name="SpenderBear" width="279" height="243"/>
         <image name="StoryPrepSpender1" width="628" height="630"/>
