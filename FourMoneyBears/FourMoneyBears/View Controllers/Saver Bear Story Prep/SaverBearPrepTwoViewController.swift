@@ -32,6 +32,9 @@ class SaverBearPrepTwoViewController: UIViewController {
     func setUpMiscViews(){
         seeExampleButton.layer.cornerRadius = 20
         saveBearText.layer.cornerRadius = 20
+        seeExampleButton.layer.shadowOffset = CGSize(width: 5, height: 5)
+        seeExampleButton.layer.shadowRadius = 5
+        seeExampleButton.layer.shadowOpacity = 1.0
         
     }
     
