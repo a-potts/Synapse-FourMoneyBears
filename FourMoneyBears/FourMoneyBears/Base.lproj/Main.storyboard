@@ -6342,6 +6342,7 @@
                                         <connections>
                                             <action selector="checkAnswerTapped:" destination="cDW-GV-GC4" eventType="touchUpInside" id="Udd-b2-PhM"/>
                                             <action selector="checkAnswerTapped:" destination="SbP-xv-kmp" eventType="touchUpInside" id="XkE-Zh-IUC"/>
+                                            <segue destination="sYj-nq-4ym" kind="show" id="wbW-MH-F68"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -6400,11 +6401,161 @@
             </objects>
             <point key="canvasLocation" x="2765" y="955"/>
         </scene>
+        <!--Investor Bear Story Prep Three View Controller-->
+        <scene sceneID="9Ws-SI-XMw">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="sYj-nq-4ym" customClass="InvestorBearStoryPrepThreeViewController" customModule="FourMoneyBears" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="R4P-x6-rCR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="InvestorBearPrep" translatesAutoresizingMaskIntoConstraints="NO" id="IEj-zj-OFt">
+                                <rect key="frame" x="-47" y="274" width="508" height="388"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="508" id="g5L-CA-hz9"/>
+                                    <constraint firstAttribute="height" constant="388" id="vN6-wv-GEl"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uI0-y2-QgD">
+                                <rect key="frame" x="0.0" y="672" width="414" height="224"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="We look for companies with promising futures!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="GhU-x3-eiu">
+                                        <rect key="frame" x="17" y="0.0" width="240" height="86"/>
+                                        <color key="backgroundColor" red="0.39174923299999997" green="0.16361555459999999" blue="0.056376084690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="240" id="HZX-uI-9hq"/>
+                                            <constraint firstAttribute="height" constant="86" id="wzJ-dj-jup"/>
+                                        </constraints>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lDb-Z3-qXs">
+                                        <rect key="frame" x="54" y="124" width="306" height="58"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="306" id="e60-w0-1BD"/>
+                                            <constraint firstAttribute="height" constant="58" id="yBI-NX-DgK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <state key="normal" title="I'm Ready!">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="checkAnswerTapped:" destination="cDW-GV-GC4" eventType="touchUpInside" id="7Qp-hG-ndu"/>
+                                            <action selector="checkAnswerTapped:" destination="SbP-xv-kmp" eventType="touchUpInside" id="NFv-3j-rBh"/>
+                                            <segue destination="BHg-LS-VA5" kind="show" id="wUN-D8-Jgm"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94163507219999998" green="0.91545259950000002" blue="0.7167791724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="GhU-x3-eiu" firstAttribute="leading" secondItem="uI0-y2-QgD" secondAttribute="leading" constant="17" id="COM-Oa-onK"/>
+                                    <constraint firstAttribute="width" secondItem="uI0-y2-QgD" secondAttribute="height" multiplier="207:112" id="G4O-E7-d5m"/>
+                                    <constraint firstItem="lDb-Z3-qXs" firstAttribute="leading" secondItem="uI0-y2-QgD" secondAttribute="leading" constant="54" id="itt-5p-ifF"/>
+                                    <constraint firstItem="GhU-x3-eiu" firstAttribute="top" secondItem="uI0-y2-QgD" secondAttribute="top" id="kKd-nD-3HZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="lDb-Z3-qXs" secondAttribute="bottom" constant="42" id="yuo-oQ-ArY"/>
+                                    <constraint firstAttribute="trailing" secondItem="lDb-Z3-qXs" secondAttribute="trailing" constant="54" id="ziB-nC-cKB"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nKW-wE-sWp">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="240"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="We are researching what stocks are best to invest in!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hDt-uy-0mV">
+                                        <rect key="frame" x="166" y="172" width="240" height="100"/>
+                                        <color key="backgroundColor" red="0.39174923299999997" green="0.16361555459999999" blue="0.056376084690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="240" id="CaH-PV-fKH"/>
+                                            <constraint firstAttribute="height" constant="100" id="eIG-ko-Oam"/>
+                                        </constraints>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94163507219999998" green="0.91545259950000002" blue="0.7167791724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="hDt-uy-0mV" secondAttribute="trailing" constant="8" id="E6H-U2-88P"/>
+                                    <constraint firstItem="hDt-uy-0mV" firstAttribute="top" secondItem="nKW-wE-sWp" secondAttribute="top" constant="172" id="FRq-fS-mrr"/>
+                                    <constraint firstAttribute="width" secondItem="nKW-wE-sWp" secondAttribute="height" multiplier="69:40" id="MjE-Po-Ajj"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HqF-cq-bcG">
+                                <rect key="frame" x="337" y="282" width="29" height="29"/>
+                                <color key="backgroundColor" red="0.39174923299999997" green="0.16361555459999999" blue="0.056376084690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="MTk-ws-1hS"/>
+                                    <constraint firstAttribute="width" constant="29" id="RaZ-5l-Xxd"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JH3-eK-wNG">
+                                <rect key="frame" x="44" y="635" width="29" height="29"/>
+                                <color key="backgroundColor" red="0.39174923299999997" green="0.16361555459999999" blue="0.056376084690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="Py4-48-Yvu"/>
+                                    <constraint firstAttribute="width" constant="29" id="Y4t-6Q-Rcm"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eiK-Qr-fDL">
+                                <rect key="frame" x="304" y="312" width="18" height="18"/>
+                                <color key="backgroundColor" red="0.39174923299999997" green="0.16361555459999999" blue="0.056376084690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="18" id="kRv-Ph-EkE"/>
+                                    <constraint firstAttribute="height" constant="18" id="n7O-Zb-5td"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IV1-mJ-DS3">
+                                <rect key="frame" x="88" y="620" width="18" height="18"/>
+                                <color key="backgroundColor" red="0.39174923299999997" green="0.16361555459999999" blue="0.056376084690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="nfU-HV-4OW"/>
+                                    <constraint firstAttribute="width" constant="18" id="ssi-BH-EvH"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94163507219999998" green="0.91545259950000002" blue="0.7167791724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="JH3-eK-wNG" firstAttribute="leading" secondItem="KVR-S2-dSo" secondAttribute="leading" constant="44" id="2QY-MH-Dca"/>
+                            <constraint firstItem="HqF-cq-bcG" firstAttribute="top" secondItem="nKW-wE-sWp" secondAttribute="bottom" constant="42" id="3g8-tp-g9U"/>
+                            <constraint firstItem="uI0-y2-QgD" firstAttribute="trailing" secondItem="KVR-S2-dSo" secondAttribute="trailing" id="4Dv-Tt-UO2"/>
+                            <constraint firstItem="uI0-y2-QgD" firstAttribute="leading" secondItem="KVR-S2-dSo" secondAttribute="leading" id="7Qo-cD-RhP"/>
+                            <constraint firstAttribute="trailing" secondItem="IEj-zj-OFt" secondAttribute="trailing" constant="-47" id="Kkx-eP-zrn"/>
+                            <constraint firstAttribute="bottom" secondItem="uI0-y2-QgD" secondAttribute="bottom" id="Q1x-SW-WWo"/>
+                            <constraint firstItem="JH3-eK-wNG" firstAttribute="top" secondItem="nKW-wE-sWp" secondAttribute="bottom" constant="395" id="Sxe-fP-HGF"/>
+                            <constraint firstItem="KVR-S2-dSo" firstAttribute="trailing" secondItem="eiK-Qr-fDL" secondAttribute="trailing" constant="92" id="W2X-l4-hlB"/>
+                            <constraint firstItem="nKW-wE-sWp" firstAttribute="leading" secondItem="KVR-S2-dSo" secondAttribute="leading" id="ZG8-jF-Fjg"/>
+                            <constraint firstItem="nKW-wE-sWp" firstAttribute="trailing" secondItem="KVR-S2-dSo" secondAttribute="trailing" id="bAb-S6-XZZ"/>
+                            <constraint firstItem="nKW-wE-sWp" firstAttribute="top" secondItem="R4P-x6-rCR" secondAttribute="top" id="hLs-fR-Yd5"/>
+                            <constraint firstItem="KVR-S2-dSo" firstAttribute="trailing" secondItem="HqF-cq-bcG" secondAttribute="trailing" constant="48" id="lHD-dS-pE2"/>
+                            <constraint firstItem="eiK-Qr-fDL" firstAttribute="top" secondItem="nKW-wE-sWp" secondAttribute="bottom" constant="72" id="naF-dc-mHS"/>
+                            <constraint firstItem="IV1-mJ-DS3" firstAttribute="leading" secondItem="KVR-S2-dSo" secondAttribute="leading" constant="88" id="s09-nh-1OI"/>
+                            <constraint firstItem="IV1-mJ-DS3" firstAttribute="top" secondItem="nKW-wE-sWp" secondAttribute="bottom" constant="380" id="spl-nT-gzs"/>
+                            <constraint firstItem="IEj-zj-OFt" firstAttribute="top" secondItem="KVR-S2-dSo" secondAttribute="top" constant="230" id="taf-Gi-Wyq"/>
+                            <constraint firstItem="IEj-zj-OFt" firstAttribute="leading" secondItem="R4P-x6-rCR" secondAttribute="leading" constant="-47" id="zR3-eu-zIA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KVR-S2-dSo"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2qz-GP-UYb"/>
+                    <connections>
+                        <outlet property="kidBearBubble1" destination="JH3-eK-wNG" id="A7A-Qg-PL7"/>
+                        <outlet property="kidBearBubble2" destination="IV1-mJ-DS3" id="Ukc-RG-QwV"/>
+                        <outlet property="kidBearText" destination="GhU-x3-eiu" id="b46-Fi-UTV"/>
+                        <outlet property="mamaBearBubble1" destination="HqF-cq-bcG" id="FRe-2O-XFH"/>
+                        <outlet property="mamaBearBubble2" destination="eiK-Qr-fDL" id="nYX-1I-qJd"/>
+                        <outlet property="mamaBearText" destination="hDt-uy-0mV" id="yGW-eS-x7J"/>
+                        <outlet property="seeNextExampleButton" destination="lDb-Z3-qXs" id="Y5D-BW-dXq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LEc-df-NtE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3669.5652173913045" y="954.91071428571422"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Crown-fill" width="48" height="48"/>
         <image name="GiverBear" width="273" height="266"/>
         <image name="Group" width="1912" height="1530"/>
+        <image name="InvestorBearPrep" width="338" height="173"/>
         <image name="InvestorBearStoryPrep" width="480" height="334"/>
         <image name="InvestorBearStoryPrep2" width="480" height="327"/>
         <image name="Money" width="261" height="171"/>

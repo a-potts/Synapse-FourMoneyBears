@@ -17,6 +17,7 @@
 		450B789E24D3B8AF00206827 /* SaverBearStoryPrepThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450B789D24D3B8AF00206827 /* SaverBearStoryPrepThreeViewController.swift */; };
 		450B78A124D3BF7900206827 /* InvestorBearStoryPrepOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450B78A024D3BF7900206827 /* InvestorBearStoryPrepOneViewController.swift */; };
 		450B78A324D3C7C100206827 /* InvestorBearStoryPrepTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450B78A224D3C7C100206827 /* InvestorBearStoryPrepTwoViewController.swift */; };
+		450B78A524D3CA8300206827 /* InvestorBearStoryPrepThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450B78A424D3CA8300206827 /* InvestorBearStoryPrepThreeViewController.swift */; };
 		450CA083243EB12900EEA40F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450CA082243EB12900EEA40F /* AppDelegate.swift */; };
 		450CA085243EB12900EEA40F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450CA084243EB12900EEA40F /* SceneDelegate.swift */; };
 		450CA08A243EB12900EEA40F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 450CA088243EB12900EEA40F /* Main.storyboard */; };
@@ -64,6 +65,7 @@
 		450B789D24D3B8AF00206827 /* SaverBearStoryPrepThreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaverBearStoryPrepThreeViewController.swift; sourceTree = "<group>"; };
 		450B78A024D3BF7900206827 /* InvestorBearStoryPrepOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestorBearStoryPrepOneViewController.swift; sourceTree = "<group>"; };
 		450B78A224D3C7C100206827 /* InvestorBearStoryPrepTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestorBearStoryPrepTwoViewController.swift; sourceTree = "<group>"; };
+		450B78A424D3CA8300206827 /* InvestorBearStoryPrepThreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestorBearStoryPrepThreeViewController.swift; sourceTree = "<group>"; };
 		450CA07F243EB12900EEA40F /* FourMoneyBears.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FourMoneyBears.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		450CA082243EB12900EEA40F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		450CA084243EB12900EEA40F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 			children = (
 				450B78A024D3BF7900206827 /* InvestorBearStoryPrepOneViewController.swift */,
 				450B78A224D3C7C100206827 /* InvestorBearStoryPrepTwoViewController.swift */,
+				450B78A424D3CA8300206827 /* InvestorBearStoryPrepThreeViewController.swift */,
 			);
 			path = "Investor Bear Story Prep";
 			sourceTree = "<group>";
@@ -442,6 +445,7 @@
 				454266E024B118DD00A6BA5E /* SpenderBearGameFourViewController.swift in Sources */,
 				45799DE924B80FBF0042440E /* SaverBearGameTwoViewController.swift in Sources */,
 				450B789524CCB8F200206827 /* MacawChartView.swift in Sources */,
+				450B78A524D3CA8300206827 /* InvestorBearStoryPrepThreeViewController.swift in Sources */,
 				450B788F24CBFED800206827 /* SpenderPrepOneViewController.swift in Sources */,
 				45D0E26924C38B5F00405671 /* Extensions.swift in Sources */,
 				454266BE24AE219E00A6BA5E /* SpenderBearGameThreeViewController.swift in Sources */,
