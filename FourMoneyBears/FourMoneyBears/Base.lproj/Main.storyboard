@@ -4811,6 +4811,7 @@
                                         <connections>
                                             <action selector="checkAnswerTapped:" destination="cDW-GV-GC4" eventType="touchUpInside" id="Nmn-hB-kd0"/>
                                             <action selector="checkAnswerTapped:" destination="SbP-xv-kmp" eventType="touchUpInside" id="zpC-d3-seU"/>
+                                            <segue destination="L9q-M7-chS" kind="show" id="eT9-xc-LF2"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -6278,12 +6279,134 @@
             </objects>
             <point key="canvasLocation" x="1943.3333333333335" y="231.65178571428569"/>
         </scene>
+        <!--Investor Bear Story Prep Two View Controller-->
+        <scene sceneID="K6n-30-okR">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="L9q-M7-chS" customClass="InvestorBearStoryPrepTwoViewController" customModule="FourMoneyBears" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4BB-Qh-hHg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="InvestorBearStoryPrep2" translatesAutoresizingMaskIntoConstraints="NO" id="XFx-4g-eT7">
+                                <rect key="frame" x="-151" y="98" width="738" height="700"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="XFx-4g-eT7" secondAttribute="height" multiplier="369:350" id="qaT-Dl-tlj"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VQY-d6-8L7">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="207"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Helpful Hint:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X3o-Sv-tzk">
+                                        <rect key="frame" x="20" y="52" width="374" height="39"/>
+                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
+                                        <color key="textColor" red="0.39174923299999997" green="0.16361555459999999" blue="0.056376084690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="You must ALWAYS research what you invest in!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eQ1-xE-Urc">
+                                        <rect key="frame" x="51" y="91" width="312" height="60"/>
+                                        <color key="backgroundColor" red="0.94163507219999998" green="0.91545259950000002" blue="0.7167791724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="312" id="dQe-zC-XXa"/>
+                                            <constraint firstAttribute="height" constant="60" id="ihs-Ka-OSF"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.39174923299999997" green="0.16361555459999999" blue="0.056376084690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94163507219999998" green="0.91545259950000002" blue="0.7167791724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="X3o-Sv-tzk" firstAttribute="top" secondItem="VQY-d6-8L7" secondAttribute="top" constant="52" id="OTh-UA-KuQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="eQ1-xE-Urc" secondAttribute="bottom" constant="56" id="ZXx-uZ-OqT"/>
+                                    <constraint firstAttribute="width" secondItem="VQY-d6-8L7" secondAttribute="height" multiplier="2:1" id="b2m-k1-2LI"/>
+                                    <constraint firstAttribute="trailing" secondItem="X3o-Sv-tzk" secondAttribute="trailing" constant="20" id="dg6-kD-CZh"/>
+                                    <constraint firstItem="X3o-Sv-tzk" firstAttribute="leading" secondItem="VQY-d6-8L7" secondAttribute="leading" constant="20" id="iUg-R8-n2H"/>
+                                    <constraint firstAttribute="trailing" secondItem="eQ1-xE-Urc" secondAttribute="trailing" constant="51" id="ipM-nl-7AS"/>
+                                    <constraint firstItem="eQ1-xE-Urc" firstAttribute="leading" secondItem="VQY-d6-8L7" secondAttribute="leading" constant="51" id="see-Op-f4a"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ncd-qn-7D3">
+                                <rect key="frame" x="0.0" y="686" width="414" height="210"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e22-0R-THd">
+                                        <rect key="frame" x="54" y="110" width="306" height="58"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="58" id="9NI-83-ens"/>
+                                            <constraint firstAttribute="width" constant="306" id="GXM-oh-BCB"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <state key="normal" title="SEE NEXT EXAMPLE">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="checkAnswerTapped:" destination="cDW-GV-GC4" eventType="touchUpInside" id="Udd-b2-PhM"/>
+                                            <action selector="checkAnswerTapped:" destination="SbP-xv-kmp" eventType="touchUpInside" id="XkE-Zh-IUC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94163507219999998" green="0.91545259950000002" blue="0.7167791724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ncd-qn-7D3" secondAttribute="height" multiplier="69:35" id="h7U-RY-4v9"/>
+                                    <constraint firstAttribute="bottom" secondItem="e22-0R-THd" secondAttribute="bottom" constant="42" id="iwG-Be-7rl"/>
+                                    <constraint firstItem="e22-0R-THd" firstAttribute="leading" secondItem="Ncd-qn-7D3" secondAttribute="leading" constant="54" id="knH-zD-aUu"/>
+                                    <constraint firstAttribute="trailing" secondItem="e22-0R-THd" secondAttribute="trailing" constant="54" id="tuS-NX-N2k"/>
+                                </constraints>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gJW-UD-OsK">
+                                <rect key="frame" x="106" y="188" width="240" height="95"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.39174923299999997" green="0.16361555459999999" blue="0.056376084690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <string key="text">Investing only pays off if you research where you are investing your money!
+</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JMi-50-qWq">
+                                <rect key="frame" x="91" y="291" width="29" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.39174923299999997" green="0.16361555459999999" blue="0.056376084690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qRX-RE-5uA">
+                                <rect key="frame" x="85" y="334" width="18" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.39174923299999997" green="0.16361555459999999" blue="0.056376084690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="XFx-4g-eT7" secondAttribute="trailing" constant="-173" id="2lu-Ic-3YJ"/>
+                            <constraint firstItem="VQY-d6-8L7" firstAttribute="top" secondItem="4BB-Qh-hHg" secondAttribute="top" id="Ww2-66-6Ih"/>
+                            <constraint firstItem="Ncd-qn-7D3" firstAttribute="leading" secondItem="I7G-tL-ma5" secondAttribute="leading" id="fJ1-gI-RdB"/>
+                            <constraint firstItem="XFx-4g-eT7" firstAttribute="top" secondItem="I7G-tL-ma5" secondAttribute="top" constant="54" id="gd2-4j-JKR"/>
+                            <constraint firstItem="Ncd-qn-7D3" firstAttribute="trailing" secondItem="I7G-tL-ma5" secondAttribute="trailing" id="ibA-cQ-3iY"/>
+                            <constraint firstItem="VQY-d6-8L7" firstAttribute="leading" secondItem="I7G-tL-ma5" secondAttribute="leading" id="jfR-dl-GNL"/>
+                            <constraint firstAttribute="bottom" secondItem="Ncd-qn-7D3" secondAttribute="bottom" id="kwc-BV-789"/>
+                            <constraint firstItem="VQY-d6-8L7" firstAttribute="trailing" secondItem="I7G-tL-ma5" secondAttribute="trailing" id="tzc-zC-cZT"/>
+                            <constraint firstItem="XFx-4g-eT7" firstAttribute="leading" secondItem="4BB-Qh-hHg" secondAttribute="leading" constant="-151" id="vxa-Fm-nVW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="I7G-tL-ma5"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7tR-R9-mVM"/>
+                    <connections>
+                        <outlet property="investorBearText" destination="gJW-UD-OsK" id="i6M-f3-JHg"/>
+                        <outlet property="seeExampleButton" destination="e22-0R-THd" id="411-Sh-atZ"/>
+                        <outlet property="textBubbleOne" destination="JMi-50-qWq" id="S9a-T8-f08"/>
+                        <outlet property="textBubbleTwo" destination="qRX-RE-5uA" id="J9E-QF-WvW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S9P-oz-Mf7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2765" y="955"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Crown-fill" width="48" height="48"/>
         <image name="GiverBear" width="273" height="266"/>
         <image name="Group" width="1912" height="1530"/>
         <image name="InvestorBearStoryPrep" width="480" height="334"/>
+        <image name="InvestorBearStoryPrep2" width="480" height="327"/>
         <image name="Money" width="261" height="171"/>
         <image name="SaverBearStoryPrep" width="631" height="406"/>
         <image name="SaverBearStoryPrep2" width="635" height="431"/>
