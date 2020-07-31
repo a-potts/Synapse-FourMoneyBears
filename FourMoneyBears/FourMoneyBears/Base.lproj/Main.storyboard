@@ -1034,13 +1034,13 @@
                         <outlet property="userRankImage" destination="EI9-9b-70F" id="Qoh-fG-W6i"/>
                         <outlet property="userRankLabel" destination="2h4-WA-lNi" id="qq8-Vs-dL5"/>
                         <outlet property="usersProfileButton" destination="rCA-MJ-LNW" id="OES-Pa-P9h"/>
-                        <segue destination="BHg-LS-VA5" kind="show" identifier="investorBearSegue" id="PC3-Ww-zZT"/>
                         <segue destination="D8g-eb-xQh" kind="show" identifier="GiverBearSegue" id="GR3-Fx-RYe"/>
                         <segue destination="1F9-3V-gNX" kind="show" identifier="BasicsSegue" id="nDa-Kl-4Bl"/>
                         <segue destination="Xd5-S2-U28" kind="show" identifier="LeaderboardsSegue" id="ydF-aC-Nv2"/>
                         <segue destination="tff-Ji-8ws" kind="show" identifier="SpenderBearSegue" id="Bx9-Jh-dDi"/>
                         <segue destination="aaY-E5-bNM" kind="show" identifier="UserProfileSegue" id="Llr-nd-v99"/>
                         <segue destination="Ulp-6G-Ck0" kind="show" identifier="SaverBearSegue" id="I69-Z6-Hlx"/>
+                        <segue destination="dZ8-L4-J4f" kind="show" identifier="investorBearSegue" id="Di9-HJ-Gxf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FA9-VK-JlR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1349,8 +1349,6 @@
                                 </state>
                                 <connections>
                                     <action selector="xTapped:" destination="SbP-xv-kmp" eventType="touchUpInside" id="A9B-7L-IB4"/>
-                                    <action selector="xTapped:" destination="cDW-GV-GC4" eventType="touchUpInside" id="Blq-UE-z76"/>
-                                    <action selector="xTapped:" destination="mMQ-Re-waJ" eventType="touchUpInside" id="Tor-3Y-CaF"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bae-jn-iv9">
@@ -3892,7 +3890,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wqr-r3-h4P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="dd7-Ie-N7V" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1961" y="954"/>
+            <point key="canvasLocation" x="4438" y="954"/>
         </scene>
         <!--Investor Bear Game Two View Controller-->
         <scene sceneID="Gnx-Bk-mPO">
@@ -4169,7 +4167,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pBK-i2-4pN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="YtM-At-QbV" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2822" y="954"/>
+            <point key="canvasLocation" x="5254" y="954"/>
         </scene>
         <!--Investor Bear Game Three View Controller-->
         <scene sceneID="hFg-Sw-Q2S">
@@ -4401,7 +4399,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Fm-xY-78O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="jXv-4s-eXa" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3648" y="954"/>
+            <point key="canvasLocation" x="6106" y="954"/>
         </scene>
         <!--Investor Bear Game Four View Controller-->
         <scene sceneID="NjX-y6-OQd">
@@ -4748,7 +4746,128 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="4461" y="954"/>
+            <point key="canvasLocation" x="6961" y="954"/>
+        </scene>
+        <!--Investor Bear Story Prep One View Controller-->
+        <scene sceneID="ufc-ra-7Lf">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="dZ8-L4-J4f" customClass="InvestorBearStoryPrepOneViewController" customModule="FourMoneyBears" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gvO-Z0-WVO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="InvestorBearStoryPrep" translatesAutoresizingMaskIntoConstraints="NO" id="693-8D-uZT">
+                                <rect key="frame" x="-151" y="98" width="738" height="700"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="693-8D-uZT" secondAttribute="height" multiplier="369:350" id="GYF-v1-AJI"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oGY-sP-RCb">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="207"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Helpful Hint:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ihm-Ff-Az6">
+                                        <rect key="frame" x="20" y="52" width="374" height="39"/>
+                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
+                                        <color key="textColor" red="0.39174923299999997" green="0.16361555459999999" blue="0.056376084690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Using a portion of your money to invest is a great way to earn more!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="uT0-3Q-g6h">
+                                        <rect key="frame" x="51" y="91" width="312" height="60"/>
+                                        <color key="backgroundColor" red="0.94163507219999998" green="0.91545259950000002" blue="0.7167791724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="HMr-k8-wEQ"/>
+                                            <constraint firstAttribute="width" constant="312" id="ZK3-uS-5s0"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.39174923299999997" green="0.16361555459999999" blue="0.056376084690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94163507219999998" green="0.91545259950000002" blue="0.7167791724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="oGY-sP-RCb" secondAttribute="height" multiplier="2:1" id="CkN-QC-Isr"/>
+                                    <constraint firstAttribute="bottom" secondItem="uT0-3Q-g6h" secondAttribute="bottom" constant="56" id="ROj-tT-8pi"/>
+                                    <constraint firstItem="ihm-Ff-Az6" firstAttribute="top" secondItem="oGY-sP-RCb" secondAttribute="top" constant="52" id="jUL-Vx-88H"/>
+                                    <constraint firstAttribute="trailing" secondItem="uT0-3Q-g6h" secondAttribute="trailing" constant="51" id="jlf-m1-cpW"/>
+                                    <constraint firstItem="ihm-Ff-Az6" firstAttribute="leading" secondItem="oGY-sP-RCb" secondAttribute="leading" constant="20" id="nae-e6-fEq"/>
+                                    <constraint firstAttribute="trailing" secondItem="ihm-Ff-Az6" secondAttribute="trailing" constant="20" id="nn5-Am-CLs"/>
+                                    <constraint firstItem="uT0-3Q-g6h" firstAttribute="leading" secondItem="oGY-sP-RCb" secondAttribute="leading" constant="51" id="yku-ur-HYh"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kjj-kN-ozz">
+                                <rect key="frame" x="0.0" y="686" width="414" height="210"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZJ-xD-jPw">
+                                        <rect key="frame" x="54" y="110" width="306" height="58"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="58" id="V8r-F9-o7U"/>
+                                            <constraint firstAttribute="width" constant="306" id="jgC-mR-oH7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <state key="normal" title="SEE NEXT EXAMPLE">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="checkAnswerTapped:" destination="cDW-GV-GC4" eventType="touchUpInside" id="Nmn-hB-kd0"/>
+                                            <action selector="checkAnswerTapped:" destination="SbP-xv-kmp" eventType="touchUpInside" id="zpC-d3-seU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94163507219999998" green="0.91545259950000002" blue="0.7167791724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="fZJ-xD-jPw" secondAttribute="bottom" constant="42" id="6Gu-tG-6Bu"/>
+                                    <constraint firstItem="fZJ-xD-jPw" firstAttribute="leading" secondItem="kjj-kN-ozz" secondAttribute="leading" constant="54" id="OUN-kt-rIt"/>
+                                    <constraint firstAttribute="width" secondItem="kjj-kN-ozz" secondAttribute="height" multiplier="69:35" id="pwi-ZP-JXX"/>
+                                    <constraint firstAttribute="trailing" secondItem="fZJ-xD-jPw" secondAttribute="trailing" constant="54" id="usV-11-abL"/>
+                                </constraints>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qfp-dS-F5o">
+                                <rect key="frame" x="106" y="188" width="240" height="95"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.39174923299999997" green="0.16361555459999999" blue="0.056376084690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <string key="text">Investing in the Stock Market means that my money makes money while I sleep!
+</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3aq-JY-RlL">
+                                <rect key="frame" x="91" y="291" width="29" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.39174923299999997" green="0.16361555459999999" blue="0.056376084690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V0V-nr-Xo6">
+                                <rect key="frame" x="85" y="334" width="18" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.39174923299999997" green="0.16361555459999999" blue="0.056376084690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="kjj-kN-ozz" firstAttribute="leading" secondItem="V0f-Jt-Bcw" secondAttribute="leading" id="8q0-L9-4L5"/>
+                            <constraint firstAttribute="trailing" secondItem="693-8D-uZT" secondAttribute="trailing" constant="-173" id="9nN-JV-biV"/>
+                            <constraint firstAttribute="bottom" secondItem="kjj-kN-ozz" secondAttribute="bottom" id="Adw-nF-hf3"/>
+                            <constraint firstItem="oGY-sP-RCb" firstAttribute="leading" secondItem="V0f-Jt-Bcw" secondAttribute="leading" id="JWd-mC-GBG"/>
+                            <constraint firstItem="oGY-sP-RCb" firstAttribute="trailing" secondItem="V0f-Jt-Bcw" secondAttribute="trailing" id="MF7-WP-rSB"/>
+                            <constraint firstItem="693-8D-uZT" firstAttribute="leading" secondItem="gvO-Z0-WVO" secondAttribute="leading" constant="-151" id="Mhb-u1-tW4"/>
+                            <constraint firstItem="693-8D-uZT" firstAttribute="top" secondItem="V0f-Jt-Bcw" secondAttribute="top" constant="54" id="cCc-1X-tcz"/>
+                            <constraint firstItem="kjj-kN-ozz" firstAttribute="trailing" secondItem="V0f-Jt-Bcw" secondAttribute="trailing" id="ex2-Wq-AVv"/>
+                            <constraint firstItem="oGY-sP-RCb" firstAttribute="top" secondItem="gvO-Z0-WVO" secondAttribute="top" id="o8t-0t-lXl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="V0f-Jt-Bcw"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="uPV-F6-ma4"/>
+                    <connections>
+                        <outlet property="investorBearText" destination="qfp-dS-F5o" id="B6i-Mz-EgQ"/>
+                        <outlet property="seeExampleButton" destination="fZJ-xD-jPw" id="Jo0-ij-y6d"/>
+                        <outlet property="textBubbleOne" destination="3aq-JY-RlL" id="orK-R7-3Im"/>
+                        <outlet property="textBubbleTwo" destination="V0V-nr-Xo6" id="fEf-rg-5T9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="75l-DX-hiP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1915.9420289855075" y="954.91071428571422"/>
         </scene>
         <!--Giver Bear Game One View Controller-->
         <scene sceneID="O8P-fp-wZ6">
@@ -6164,6 +6283,7 @@
         <image name="Crown-fill" width="48" height="48"/>
         <image name="GiverBear" width="273" height="266"/>
         <image name="Group" width="1912" height="1530"/>
+        <image name="InvestorBearStoryPrep" width="480" height="334"/>
         <image name="Money" width="261" height="171"/>
         <image name="SaverBearStoryPrep" width="631" height="406"/>
         <image name="SaverBearStoryPrep2" width="635" height="431"/>
