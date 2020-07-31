@@ -12,6 +12,7 @@
 		450B789324CBFF2200206827 /* SpenderBearPrepThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450B789224CBFF2200206827 /* SpenderBearPrepThreeViewController.swift */; };
 		450B789524CCB8F200206827 /* MacawChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450B789424CCB8F200206827 /* MacawChartView.swift */; };
 		450B789724CCB94C00206827 /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450B789624CCB94C00206827 /* DummyData.swift */; };
+		450B789A24D3AFA800206827 /* SaverBearPrepOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450B789924D3AFA800206827 /* SaverBearPrepOneViewController.swift */; };
 		450CA083243EB12900EEA40F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450CA082243EB12900EEA40F /* AppDelegate.swift */; };
 		450CA085243EB12900EEA40F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450CA084243EB12900EEA40F /* SceneDelegate.swift */; };
 		450CA08A243EB12900EEA40F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 450CA088243EB12900EEA40F /* Main.storyboard */; };
@@ -54,6 +55,7 @@
 		450B789224CBFF2200206827 /* SpenderBearPrepThreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpenderBearPrepThreeViewController.swift; sourceTree = "<group>"; };
 		450B789424CCB8F200206827 /* MacawChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacawChartView.swift; sourceTree = "<group>"; };
 		450B789624CCB94C00206827 /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
+		450B789924D3AFA800206827 /* SaverBearPrepOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaverBearPrepOneViewController.swift; sourceTree = "<group>"; };
 		450CA07F243EB12900EEA40F /* FourMoneyBears.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FourMoneyBears.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		450CA082243EB12900EEA40F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		450CA084243EB12900EEA40F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +124,14 @@
 			path = "Spender Bear Story Prep";
 			sourceTree = "<group>";
 		};
+		450B789824D3ACD300206827 /* Saver Bear Story Prep */ = {
+			isa = PBXGroup;
+			children = (
+				450B789924D3AFA800206827 /* SaverBearPrepOneViewController.swift */,
+			);
+			path = "Saver Bear Story Prep";
+			sourceTree = "<group>";
+		};
 		450CA076243EB12900EEA40F = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +171,7 @@
 		450CA096243EB51B00EEA40F /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				450B789824D3ACD300206827 /* Saver Bear Story Prep */,
 				450B788D24CBFEA100206827 /* Spender Bear Story Prep */,
 				45D0E26424C37A7D00405671 /* Leaderboards */,
 				45D0E26124C37A5400405671 /* User Profile */,
@@ -403,6 +414,7 @@
 				45799DF624B96AD00042440E /* InvestorBearGameThreeViewController.swift in Sources */,
 				450B789124CBFEFA00206827 /* SpenderBearPrepTwoViewController.swift in Sources */,
 				450B789324CBFF2200206827 /* SpenderBearPrepThreeViewController.swift in Sources */,
+				450B789A24D3AFA800206827 /* SaverBearPrepOneViewController.swift in Sources */,
 				45799DFF24BB787B0042440E /* GiverBearGameThreeViewController.swift in Sources */,
 				454266E024B118DD00A6BA5E /* SpenderBearGameFourViewController.swift in Sources */,
 				45799DE924B80FBF0042440E /* SaverBearGameTwoViewController.swift in Sources */,
