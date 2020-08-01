@@ -19,6 +19,9 @@ class UserProfileViewController: UIViewController {
     @IBOutlet var userStreakLabel: UILabel!
     @IBOutlet var usersHealthLabel: UILabel!
     @IBOutlet var macawChart: MacawChartView!
+    @IBOutlet var rankView: UIView!
+    @IBOutlet var healthView: UIView!
+    @IBOutlet var streakView: UIView!
     
      var users: Users? {
            didSet {
@@ -34,6 +37,28 @@ class UserProfileViewController: UIViewController {
         macawChart.layer.borderColor = UIColor.gray.cgColor
         macawChart.layer.cornerRadius = 20
         MacawChartView.playAnimations()
+        
+        rankView.layer.cornerRadius = 20
+        healthView.layer.cornerRadius = 20
+        streakView.layer.cornerRadius = 20
+        
+        rankView.layer.shadowOffset = CGSize(width: 3, height: 3)
+        rankView.layer.shadowRadius = 3
+        rankView.layer.shadowOpacity = 1.0
+        
+        healthView.layer.shadowOffset = CGSize(width: 3, height: 3)
+        healthView.layer.shadowRadius = 3
+        healthView.layer.shadowOpacity = 1.0
+        
+        streakView.layer.shadowOffset = CGSize(width: 3, height: 3)
+        streakView.layer.shadowRadius = 3
+        streakView.layer.shadowOpacity = 1.0
+        
+        
+
+
+        
+        
           
     }
     
