@@ -38,6 +38,7 @@ class InvestorBearGameOneViewController: UIViewController {
 
     @IBOutlet var audioPlayerView: UIView!
     
+    @IBOutlet var investorBearImage: UIImageView!
     @IBOutlet var userHealthLabel: UILabel!
     
     var player: AVAudioPlayer = AVAudioPlayer()
@@ -48,6 +49,7 @@ class InvestorBearGameOneViewController: UIViewController {
              yesButton.layer.cornerRadius = 20
              noButton.layer.cornerRadius = 20
         audioPlayerView.layer.cornerRadius = 20
+        investorBearImage.layer.cornerRadius = 50
          }
          
          func animateStatusBar(){

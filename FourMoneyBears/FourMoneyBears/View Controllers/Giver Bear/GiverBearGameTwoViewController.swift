@@ -37,6 +37,7 @@ class GiverBearGameTwoViewController: UIViewController {
     @IBOutlet var noButton: UIButton!
     @IBOutlet var userHealthLabel: UILabel!
     @IBOutlet var audioPlayerView: UIView!
+    @IBOutlet var giverBearImage: UIImageView!
     
     var player: AVAudioPlayer = AVAudioPlayer()
     
@@ -48,6 +49,7 @@ class GiverBearGameTwoViewController: UIViewController {
                  yesButton.layer.cornerRadius = 20
                  noButton.layer.cornerRadius = 20
             audioPlayerView.layer.cornerRadius = 20
+            giverBearImage.layer.cornerRadius = 50
                  
              }
              

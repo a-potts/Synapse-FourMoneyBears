@@ -33,10 +33,13 @@ class UserProfileViewController: UIViewController {
         super.viewDidLoad()
         updateViews()
         macawChart.contentMode = .scaleAspectFit
-        macawChart.layer.borderWidth = 2
-        macawChart.layer.borderColor = UIColor.gray.cgColor
         macawChart.layer.cornerRadius = 20
         MacawChartView.playAnimations()
+        
+        
+        macawChart.layer.shadowOffset = CGSize(width: 2, height: 2)
+        macawChart.layer.shadowRadius = 2
+        macawChart.layer.shadowOpacity = 1.0
         
         rankView.layer.cornerRadius = 20
         healthView.layer.cornerRadius = 20

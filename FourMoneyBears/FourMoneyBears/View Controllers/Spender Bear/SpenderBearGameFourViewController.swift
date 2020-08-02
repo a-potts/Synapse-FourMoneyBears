@@ -21,6 +21,7 @@ class SpenderBearGameFourViewController: UIViewController {
     @IBOutlet var yesButton: UIButton!
     @IBOutlet var noButton: UIButton!
    
+    @IBOutlet var spenderBearImage: UIImageView!
     @IBOutlet var audioPlayerView: UIView!
     @IBOutlet var userHealthLabel: UILabel!
     
@@ -98,6 +99,7 @@ class SpenderBearGameFourViewController: UIViewController {
         yesButton.layer.cornerRadius = 20
         noButton.layer.cornerRadius = 20
         audioPlayerView.layer.cornerRadius = 20
+        spenderBearImage.layer.cornerRadius = 50
         
     }
     

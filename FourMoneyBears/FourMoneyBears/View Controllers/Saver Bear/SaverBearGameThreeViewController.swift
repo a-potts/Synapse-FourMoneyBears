@@ -33,6 +33,7 @@ class SaverBearGameThreeViewController: UIViewController {
     @IBOutlet var orangeStatus: UIView!
     @IBOutlet var statusBar: UIView!
   
+    @IBOutlet var saverBearImage: UIImageView!
     @IBOutlet var audioPlayerView: UIView!
     @IBOutlet var yesButton: UIButton!
     @IBOutlet var noButton: UIButton!
@@ -48,6 +49,7 @@ class SaverBearGameThreeViewController: UIViewController {
           yesButton.layer.cornerRadius = 20
           noButton.layer.cornerRadius = 20
         audioPlayerView.layer.cornerRadius = 20
+        saverBearImage.layer.cornerRadius = 50
           
       }
       
