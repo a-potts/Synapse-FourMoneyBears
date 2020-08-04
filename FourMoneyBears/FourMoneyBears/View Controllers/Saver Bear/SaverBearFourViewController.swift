@@ -132,7 +132,7 @@ class SaverBearFourViewController: UIViewController {
 //            let alertView = SCLAlertView(appearance: appearance)
             //alertView.showCustom("Congrats!", subTitle: "You won!", color: UIColor.white, icon: UIImage(systemName: "flame.fill")!)
             
-            let alertViewResponder: SCLAlertViewResponder = SCLAlertView().showCustom("Good job, You won!", subTitle: "Reward: 10xp", color: UIColor.white, icon: UIImage(named: "Crown-fill.png")!)
+            let alertViewResponder: SCLAlertViewResponder = SCLAlertView().showCustom("Good job, you won!", subTitle: "Reward: 10xp", color: UIColor.white, icon: UIImage(named: "Crown-fill.png")!)
             
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 4){

@@ -139,7 +139,7 @@ class SpenderBearGameFourViewController: UIViewController {
     }
     
     @IBAction func noTapped(_ sender: Any) {
-        let alertViewResponder: SCLAlertViewResponder = SCLAlertView().showCustom("Good job, You won!", subTitle: "Reward: 10xp", color: UIColor.white, icon: UIImage(named: "Crown-fill.png")!)
+        let alertViewResponder: SCLAlertViewResponder = SCLAlertView().showCustom("Good job, you won!", subTitle: "Reward: 10xp", color: UIColor.white, icon: UIImage(named: "Crown-fill.png")!)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 4){
             alertViewResponder.close()

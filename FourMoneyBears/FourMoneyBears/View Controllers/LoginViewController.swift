@@ -46,13 +46,13 @@ class LoginViewController: UIViewController {
    }
     
     func animateLogin() {
-        UIView.animate(withDuration: 0.5, animations: {               //45 degree rotation. USE RADIANS
+        UIView.animate(withDuration: 0.2, animations: {               //45 degree rotation. USE RADIANS
             self.loginButton.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 0.1).concatenating(CGAffineTransform(scaleX: 0.8, y: 0.8))
                 
             }) { (_) in //Is finished
                 
                 
-                UIView.animate(withDuration: 0.3, animations: {
+                UIView.animate(withDuration: 0.01, animations: {
                     self.loginButton.transform = .identity
                 })
                 
