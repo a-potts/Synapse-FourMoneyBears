@@ -63,6 +63,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qU9-yn-xWY">
                                         <rect key="frame" x="8" y="14" width="358" height="34"/>
                                         <color key="backgroundColor" red="0.26274509800000001" green="0.74509803919999995" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="Glt-MD-ORr"/>
                                             <constraint firstAttribute="width" constant="358" id="to1-58-d7B"/>
@@ -73,6 +74,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EaI-iT-x6Z">
                                         <rect key="frame" x="8" y="68" width="358" height="34"/>
                                         <color key="backgroundColor" red="0.26274509800000001" green="0.74509803919999995" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="358" id="Kmv-io-tcy"/>
                                             <constraint firstAttribute="height" constant="34" id="NFh-Yb-Hmy"/>
@@ -85,6 +87,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="etB-iS-cEt">
                                         <rect key="frame" x="8" y="123" width="358" height="34"/>
                                         <color key="backgroundColor" red="0.26274509800000001" green="0.74509803919999995" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="34" id="5lf-xz-4GY"/>
                                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="358" id="Ybc-xc-deY"/>
@@ -99,6 +102,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Age..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tCD-Za-3hw">
                                         <rect key="frame" x="8" y="179" width="358" height="34"/>
                                         <color key="backgroundColor" red="0.26274509800000001" green="0.74509803919999995" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="358" id="JdB-yg-tlf"/>
                                             <constraint firstAttribute="width" constant="358" id="M1i-7O-Woy"/>
@@ -125,6 +129,7 @@
                                             <constraint firstAttribute="width" constant="54" id="FyD-xy-Its"/>
                                             <constraint firstAttribute="height" constant="37" id="X4x-0a-wSa"/>
                                         </constraints>
+                                        <color key="tintColor" red="0.91898973790000005" green="0.55848900170000004" blue="0.5670935305" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" image="camera.fill" catalog="system"/>
                                         <connections>
                                             <action selector="cameraButtonTapped:" destination="a6l-YL-mmf" eventType="touchUpInside" id="XHj-ih-dme"/>
@@ -230,6 +235,7 @@
                     <navigationItem key="navigationItem" id="jas-VP-jVT"/>
                     <connections>
                         <outlet property="ageText" destination="tCD-Za-3hw" id="hHx-66-9H5"/>
+                        <outlet property="cameraButton" destination="caH-lh-3ID" id="CWq-R7-d1U"/>
                         <outlet property="credView" destination="gir-Rr-KkH" id="aPF-Ff-e2V"/>
                         <outlet property="emailText" destination="EaI-iT-x6Z" id="25q-jm-nMK"/>
                         <outlet property="passwordText" destination="etB-iS-cEt" id="KTD-oR-Fsn"/>
@@ -538,9 +544,10 @@
                                             <constraint firstAttribute="width" constant="358" id="lEw-Fd-Jb7"/>
                                         </constraints>
                                     </view>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sOT-RE-3tX">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sOT-RE-3tX">
                                         <rect key="frame" x="9" y="21" width="341" height="34"/>
                                         <color key="backgroundColor" red="0.26274509800000001" green="0.74509803919999995" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="GAa-sO-olF"/>
                                             <constraint firstAttribute="width" constant="341" id="TXg-6b-FFd"/>
@@ -551,6 +558,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password.." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m2z-Rj-RfJ">
                                         <rect key="frame" x="9" y="89" width="341" height="34"/>
                                         <color key="backgroundColor" red="0.26274509800000001" green="0.74509803919999995" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="Ob0-BJ-GhL"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="341" id="dUl-Ci-udF"/>

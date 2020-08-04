@@ -26,6 +26,7 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
     @IBOutlet var ageText: UITextField!
     @IBOutlet var userImage: UIImageView!
     @IBOutlet var registerButton: UIButton!
+    @IBOutlet var cameraButton: UIButton!
     
     
     func setUpViews(){
@@ -186,6 +187,9 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
                    picker.delegate = self
                    picker.sourceType = .photoLibrary
                    present(picker, animated: true)
+        
+        
+                   
      }
     
     
@@ -233,6 +237,7 @@ extension RegisterViewController {
             UIGraphicsPopContext()
             CVPixelBufferUnlockBaseAddress(pixelBuffer!, CVPixelBufferLockFlags(rawValue: 0))
             userImage.image = newImage
+        cameraButton.isHidden = true
     
              
         }
