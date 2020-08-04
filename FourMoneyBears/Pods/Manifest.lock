@@ -1,5 +1,4 @@
 PODS:
-  - EMTNeumorphicView (1.0.4)
   - Firebase/Analytics (6.29.0):
     - Firebase/Core
   - Firebase/Auth (6.29.0):
@@ -91,7 +90,6 @@ PODS:
   - SWXMLHash (5.0.1)
 
 DEPENDENCIES:
-  - EMTNeumorphicView
   - Firebase/Analytics
   - Firebase/Auth
   - Firebase/Database
@@ -101,7 +99,6 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
-    - EMTNeumorphicView
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuth
@@ -122,7 +119,6 @@ SPEC REPOS:
     - SWXMLHash
 
 SPEC CHECKSUMS:
-  EMTNeumorphicView: cb5e92953e43b1872ab47fefd451a9ce0c16fc77
   Firebase: 57957c8d6eb3d8b80a560b1dc58be24724b89ff2
   FirebaseAnalytics: aa522dce9fd93002ba1554467d23ce7092323000
   FirebaseAuth: a818d73466d51db897d3bf3c0f3baa3dae7fd4c0
@@ -142,6 +138,6 @@ SPEC CHECKSUMS:
   SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
   SWXMLHash: 9cc0c2e4807926c74377724aa8722ee5707a0485
 
-PODFILE CHECKSUM: 5f7da9eb4e4f451be4bb8cbc645dfd4f875f73a5
+PODFILE CHECKSUM: 9a37fa5596491feba6287b7315333694f4b61cd5
 
 COCOAPODS: 1.9.0

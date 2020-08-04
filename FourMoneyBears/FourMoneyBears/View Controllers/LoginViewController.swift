@@ -8,7 +8,6 @@
 
 import UIKit
 import Firebase
-import EMTNeumorphicView
 import SCLAlertView
 
 class LoginViewController: UIViewController {
@@ -17,7 +16,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
 
         setUpViews()
-        neumorhpicButton()
+        
       
     
         
@@ -48,7 +47,7 @@ class LoginViewController: UIViewController {
     
     func animateLogin() {
         UIView.animate(withDuration: 0.5, animations: {               //45 degree rotation. USE RADIANS
-                self.loginButton.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 0.1).concatenating(CGAffineTransform(scaleX: 1.2, y: 1.2))
+            self.loginButton.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 0.1).concatenating(CGAffineTransform(scaleX: 0.8, y: 0.8))
                 
             }) { (_) in //Is finished
                 
@@ -61,27 +60,27 @@ class LoginViewController: UIViewController {
             }
     }
     
-    // MARK: - FIXME: 
-    func neumorhpicButton() {
-        //let button = EMTNeumorphicButton(type: .custom)
-        let button = EMTNeumorphicButton(type: loginButton.buttonType)
-        //loginButton.addSubview(button)
-           button.setImage(UIImage(named: "heart-outline"), for: .normal)
-           button.setImage(UIImage(named: "heart-solid"), for: .selected)
-           button.contentVerticalAlignment = .fill
-           button.contentHorizontalAlignment = .fill
-           button.imageEdgeInsets = UIEdgeInsets(top: 126, left: 124, bottom: 122, right: 124)
-           button.addTarget(self, action: #selector(tapped(_:)), for: .touchUpInside)
-           button.translatesAutoresizingMaskIntoConstraints = false
-           
-           button.neumorphicLayer?.elementBackgroundColor = view.backgroundColor?.cgColor as! CGColor
-        
-        
-    }
-    @objc func tapped(_ button: EMTNeumorphicButton) {
-        // isSelected property changes neumorphicLayer?.depthType automatically
-        button.isSelected = !button.isSelected
-    }
+//    // MARK: - FIXME:
+//    func neumorhpicButton() {
+//        //let button = EMTNeumorphicButton(type: .custom)
+//        let button = EMTNeumorphicButton(type: loginButton.buttonType)
+//        //loginButton.addSubview(button)
+//           button.setImage(UIImage(named: "heart-outline"), for: .normal)
+//           button.setImage(UIImage(named: "heart-solid"), for: .selected)
+//           button.contentVerticalAlignment = .fill
+//           button.contentHorizontalAlignment = .fill
+//           button.imageEdgeInsets = UIEdgeInsets(top: 126, left: 124, bottom: 122, right: 124)
+//           button.addTarget(self, action: #selector(tapped(_:)), for: .touchUpInside)
+//           button.translatesAutoresizingMaskIntoConstraints = false
+//
+//           button.neumorphicLayer?.elementBackgroundColor = view.backgroundColor?.cgColor as! CGColor
+//
+//
+//    }
+//    @objc func tapped(_ button: EMTNeumorphicButton) {
+//        // isSelected property changes neumorphicLayer?.depthType automatically
+//        button.isSelected = !button.isSelected
+//    }
     
     func handleLogIn() {
          

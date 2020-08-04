@@ -334,11 +334,11 @@
                                 <color key="textColor" red="0.39174923299999997" green="0.16361555459999999" blue="0.056376084690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="When spending your money, you should only spend 20% of every dollar you ear &amp; save the rest" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kWn-sf-mPI">
-                                <rect key="frame" x="0.0" y="102" width="414" height="122"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="When spending your money, you should only spend 20% of every dollar you earn &amp; save the rest" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kWn-sf-mPI">
+                                <rect key="frame" x="27" y="102" width="360" height="122"/>
                                 <color key="backgroundColor" red="0.94163507219999998" green="0.91545259950000002" blue="0.7167791724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="kWn-sf-mPI" secondAttribute="height" multiplier="207:61" id="eC1-IH-v8h"/>
+                                    <constraint firstAttribute="width" secondItem="kWn-sf-mPI" secondAttribute="height" multiplier="180:61" id="hT8-WB-cyW"/>
                                 </constraints>
                                 <color key="textColor" red="0.39174923299999997" green="0.16361555459999999" blue="0.056376084690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
@@ -349,22 +349,22 @@
                         <constraints>
                             <constraint firstItem="dcu-gR-5DG" firstAttribute="leading" secondItem="LlF-yX-2SZ" secondAttribute="leading" constant="44" id="02s-fq-SGa"/>
                             <constraint firstItem="tG3-8i-4Fq" firstAttribute="top" secondItem="LlF-yX-2SZ" secondAttribute="top" constant="300" id="4Lr-Kq-WwT"/>
-                            <constraint firstItem="kWn-sf-mPI" firstAttribute="leading" secondItem="LlF-yX-2SZ" secondAttribute="leading" id="5y2-Ep-Vuo"/>
                             <constraint firstItem="5lg-J8-gil" firstAttribute="top" secondItem="tG3-8i-4Fq" secondAttribute="bottom" constant="42" id="6bq-Ci-SGS"/>
                             <constraint firstItem="LlF-yX-2SZ" firstAttribute="trailing" secondItem="tG3-8i-4Fq" secondAttribute="trailing" constant="26" id="6zH-fE-qnI"/>
                             <constraint firstItem="pOz-mJ-2Ch" firstAttribute="leading" secondItem="LlF-yX-2SZ" secondAttribute="leading" constant="106" id="8g9-e1-dyY"/>
                             <constraint firstItem="LlF-yX-2SZ" firstAttribute="trailing" secondItem="pOz-mJ-2Ch" secondAttribute="trailing" constant="105" id="IzN-Pn-J5G"/>
+                            <constraint firstItem="kWn-sf-mPI" firstAttribute="leading" secondItem="LlF-yX-2SZ" secondAttribute="leading" constant="27" id="JhT-5W-ddh"/>
                             <constraint firstItem="CtP-g9-99c" firstAttribute="leading" secondItem="LlF-yX-2SZ" secondAttribute="leading" constant="61" id="K6f-bC-RtI"/>
                             <constraint firstItem="XkI-QB-i4h" firstAttribute="bottom" secondItem="LlF-yX-2SZ" secondAttribute="bottom" id="Mhz-b8-dMR"/>
                             <constraint firstItem="LlF-yX-2SZ" firstAttribute="trailing" secondItem="NLz-uS-Kfb" secondAttribute="trailing" constant="99" id="P8r-hl-BjI"/>
-                            <constraint firstItem="kWn-sf-mPI" firstAttribute="trailing" secondItem="LlF-yX-2SZ" secondAttribute="trailing" id="RKQ-MJ-xaG"/>
                             <constraint firstItem="CtP-g9-99c" firstAttribute="top" secondItem="ODt-eA-Drp" secondAttribute="bottom" constant="12" id="ULs-kE-HIK"/>
                             <constraint firstItem="ODt-eA-Drp" firstAttribute="leading" secondItem="LlF-yX-2SZ" secondAttribute="leading" constant="54" id="VkA-KR-Ndo"/>
                             <constraint firstItem="dcu-gR-5DG" firstAttribute="top" secondItem="ODt-eA-Drp" secondAttribute="bottom" constant="49" id="X6k-8s-Iym"/>
-                            <constraint firstItem="kWn-sf-mPI" firstAttribute="top" secondItem="pOz-mJ-2Ch" secondAttribute="bottom" constant="8" id="Ytk-oK-bec"/>
                             <constraint firstItem="XkI-QB-i4h" firstAttribute="leading" secondItem="LlF-yX-2SZ" secondAttribute="leading" constant="54" id="cJI-Dv-Rqd"/>
+                            <constraint firstItem="LlF-yX-2SZ" firstAttribute="trailing" secondItem="kWn-sf-mPI" secondAttribute="trailing" constant="27" id="lqt-vS-mfs"/>
                             <constraint firstItem="LlF-yX-2SZ" firstAttribute="trailing" secondItem="XkI-QB-i4h" secondAttribute="trailing" constant="54" id="o3S-NA-CIG"/>
                             <constraint firstItem="NLz-uS-Kfb" firstAttribute="top" secondItem="tG3-8i-4Fq" secondAttribute="bottom" constant="8" id="qNf-VF-CKx"/>
+                            <constraint firstItem="kWn-sf-mPI" firstAttribute="top" secondItem="pOz-mJ-2Ch" secondAttribute="bottom" constant="8" id="tSP-oa-2na"/>
                             <constraint firstItem="ODt-eA-Drp" firstAttribute="top" secondItem="LlF-yX-2SZ" secondAttribute="top" constant="300" id="w0i-tF-ja9"/>
                             <constraint firstItem="pOz-mJ-2Ch" firstAttribute="top" secondItem="LlF-yX-2SZ" secondAttribute="top" constant="11" id="xSf-Kf-7Rk"/>
                             <constraint firstItem="LlF-yX-2SZ" firstAttribute="trailing" secondItem="5lg-J8-gil" secondAttribute="trailing" constant="80" id="yDZ-34-efI"/>
@@ -1174,11 +1174,11 @@
                                 </constraints>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="I want to play with my friends, but I decided to save every dollar I earn instead of 80%" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fcI-gb-Rws">
-                                <rect key="frame" x="33" y="215" width="245" height="108"/>
+                                <rect key="frame" x="33" y="215" width="245" height="91"/>
                                 <color key="backgroundColor" red="0.39174923299999997" green="0.16361555459999999" blue="0.056376084690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="108" id="ihy-DG-Rgm"/>
-                                    <constraint firstAttribute="width" constant="245" id="qu2-7N-nZ9"/>
+                                    <constraint firstAttribute="height" constant="91" id="DV0-cJ-DZS"/>
+                                    <constraint firstAttribute="width" constant="245" id="q6s-pv-YIA"/>
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
@@ -1205,17 +1205,17 @@
                         <constraints>
                             <constraint firstItem="OHw-Mu-9KU" firstAttribute="top" secondItem="6L3-o7-1L2" secondAttribute="top" id="1uw-AX-ycZ"/>
                             <constraint firstItem="OHw-Mu-9KU" firstAttribute="leading" secondItem="fhN-un-Kj7" secondAttribute="leading" id="6r7-dx-mO0"/>
-                            <constraint firstItem="GUv-Ea-umu" firstAttribute="top" secondItem="fcI-gb-Rws" secondAttribute="bottom" constant="22" id="7za-b0-NR8"/>
                             <constraint firstItem="hVV-lL-25R" firstAttribute="top" secondItem="fhN-un-Kj7" secondAttribute="top" constant="58" id="AKZ-tG-iLk"/>
                             <constraint firstItem="QFS-gF-mAx" firstAttribute="trailing" secondItem="fhN-un-Kj7" secondAttribute="trailing" id="Gdb-Yh-oxV"/>
-                            <constraint firstItem="fcI-gb-Rws" firstAttribute="top" secondItem="OHw-Mu-9KU" secondAttribute="bottom" constant="41" id="KPi-T3-Axh"/>
+                            <constraint firstItem="fhN-un-Kj7" firstAttribute="trailing" secondItem="fcI-gb-Rws" secondAttribute="trailing" constant="136" id="IbB-Ee-TnG"/>
                             <constraint firstItem="QFS-gF-mAx" firstAttribute="leading" secondItem="fhN-un-Kj7" secondAttribute="leading" id="LvP-dM-gEV"/>
                             <constraint firstAttribute="bottom" secondItem="QFS-gF-mAx" secondAttribute="bottom" id="Ois-y3-PTl"/>
                             <constraint firstItem="RLO-tz-frr" firstAttribute="leading" secondItem="fhN-un-Kj7" secondAttribute="leading" constant="95" id="PWh-Ld-PnM"/>
-                            <constraint firstItem="RLO-tz-frr" firstAttribute="top" secondItem="fcI-gb-Rws" secondAttribute="bottom" constant="70" id="SI1-Xk-kYL"/>
                             <constraint firstItem="hVV-lL-25R" firstAttribute="leading" secondItem="6L3-o7-1L2" secondAttribute="leading" constant="-208" id="TZo-nV-hze"/>
                             <constraint firstAttribute="trailing" secondItem="hVV-lL-25R" secondAttribute="trailing" constant="-209" id="gWk-ee-5EO"/>
-                            <constraint firstItem="fcI-gb-Rws" firstAttribute="leading" secondItem="fhN-un-Kj7" secondAttribute="leading" constant="33" id="nPC-HO-KyN"/>
+                            <constraint firstItem="fcI-gb-Rws" firstAttribute="top" secondItem="OHw-Mu-9KU" secondAttribute="bottom" constant="41" id="icw-gU-sdO"/>
+                            <constraint firstItem="GUv-Ea-umu" firstAttribute="top" secondItem="fcI-gb-Rws" secondAttribute="bottom" constant="39" id="krQ-EK-tq9"/>
+                            <constraint firstItem="RLO-tz-frr" firstAttribute="top" secondItem="fcI-gb-Rws" secondAttribute="bottom" constant="87" id="nWw-4l-Jlg"/>
                             <constraint firstItem="GUv-Ea-umu" firstAttribute="leading" secondItem="fhN-un-Kj7" secondAttribute="leading" constant="55" id="qbS-q0-8iL"/>
                             <constraint firstItem="OHw-Mu-9KU" firstAttribute="trailing" secondItem="fhN-un-Kj7" secondAttribute="trailing" id="x0w-Lo-pZn"/>
                         </constraints>
@@ -1231,7 +1231,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qpT-8c-ULQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2794" y="231"/>
+            <point key="canvasLocation" x="2792.753623188406" y="230.35714285714283"/>
         </scene>
         <!--Saver Bear Story Prep Three View Controller-->
         <scene sceneID="rIp-df-JIg">
@@ -1251,11 +1251,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="240"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Yes you can! By doing that, you are following Saver Bears rule of saving 80%" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YPd-ci-FFH">
-                                        <rect key="frame" x="166" y="172" width="240" height="100"/>
+                                        <rect key="frame" x="166" y="172" width="240" height="90"/>
                                         <color key="backgroundColor" red="0.39174923299999997" green="0.16361555459999999" blue="0.056376084690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="240" id="owR-Vj-VFw"/>
-                                            <constraint firstAttribute="height" constant="100" id="zhf-49-WLS"/>
+                                            <constraint firstAttribute="width" constant="240" id="5TK-ow-96A"/>
+                                            <constraint firstAttribute="height" constant="90" id="hoG-yM-ShU"/>
                                         </constraints>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
@@ -1264,8 +1264,8 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.94163507219999998" green="0.91545259950000002" blue="0.7167791724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="YPd-ci-FFH" secondAttribute="trailing" constant="8" id="Kjd-M4-ft6"/>
-                                    <constraint firstItem="YPd-ci-FFH" firstAttribute="top" secondItem="ncN-nn-Brr" secondAttribute="top" constant="172" id="ojU-Kw-wTu"/>
+                                    <constraint firstItem="YPd-ci-FFH" firstAttribute="top" secondItem="ncN-nn-Brr" secondAttribute="top" constant="172" id="9hz-kY-pqA"/>
+                                    <constraint firstAttribute="trailing" secondItem="YPd-ci-FFH" secondAttribute="trailing" constant="8" id="Ja8-Hy-dVd"/>
                                     <constraint firstAttribute="width" secondItem="ncN-nn-Brr" secondAttribute="height" multiplier="69:40" id="y8i-w8-Ie2"/>
                                 </constraints>
                             </view>
@@ -1953,7 +1953,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="The money in your savings account can help with unexpected costs we encounter in life!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xh4-yH-lfg">
-                                <rect key="frame" x="0.0" y="105" width="414" height="122"/>
+                                <rect key="frame" x="27" y="105" width="360" height="106"/>
                                 <color key="backgroundColor" red="0.94163507219999998" green="0.91545259950000002" blue="0.7167791724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="xh4-yH-lfg" secondAttribute="height" multiplier="207:61" id="SGT-4t-HjJ"/>
@@ -1966,8 +1966,8 @@
                         <color key="backgroundColor" red="0.94163507219999998" green="0.91545259950000002" blue="0.7167791724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="fax-r2-OQ2" firstAttribute="top" secondItem="MSJ-cW-pSm" secondAttribute="bottom" constant="17" id="0B9-TB-dhE"/>
-                            <constraint firstItem="xh4-yH-lfg" firstAttribute="trailing" secondItem="l33-HL-bpR" secondAttribute="trailing" id="3zY-er-dou"/>
-                            <constraint firstItem="xh4-yH-lfg" firstAttribute="leading" secondItem="l33-HL-bpR" secondAttribute="leading" id="9bR-fl-WZZ"/>
+                            <constraint firstItem="xh4-yH-lfg" firstAttribute="trailing" secondItem="l33-HL-bpR" secondAttribute="trailing" constant="-27" id="3zY-er-dou"/>
+                            <constraint firstItem="xh4-yH-lfg" firstAttribute="leading" secondItem="l33-HL-bpR" secondAttribute="leading" constant="27" id="9bR-fl-WZZ"/>
                             <constraint firstItem="jXv-nz-VlI" firstAttribute="top" secondItem="l33-HL-bpR" secondAttribute="top" constant="14" id="AHq-0q-LcC"/>
                             <constraint firstItem="xh4-yH-lfg" firstAttribute="width" secondItem="xh4-yH-lfg" secondAttribute="height" multiplier="207:61" id="Cix-Up-1Kj"/>
                             <constraint firstItem="MSJ-cW-pSm" firstAttribute="top" secondItem="rEK-Hl-7Jc" secondAttribute="bottom" constant="8" id="Cqb-j2-bKY"/>
@@ -5122,11 +5122,11 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Thank you! You still have money left over because you were smart!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ovj-1p-3nK">
-                                <rect key="frame" x="87" y="679" width="240" height="93"/>
+                                <rect key="frame" x="87" y="679" width="240" height="87"/>
                                 <color key="backgroundColor" red="0.39174923299999997" green="0.16361555459999999" blue="0.056376084690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="CK6-Js-vYU"/>
-                                    <constraint firstAttribute="height" constant="93" id="TbJ-YU-r31"/>
+                                    <constraint firstAttribute="height" constant="87" id="8tZ-Ha-isX"/>
+                                    <constraint firstAttribute="width" constant="240" id="gzf-Rx-nfl"/>
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
@@ -5186,16 +5186,16 @@
                         <constraints>
                             <constraint firstItem="qLP-SG-z3q" firstAttribute="top" secondItem="8u0-O2-Bq1" secondAttribute="bottom" constant="20" id="4O0-se-2oP"/>
                             <constraint firstItem="iyS-7s-1Tb" firstAttribute="top" secondItem="ZQk-0V-8XJ" secondAttribute="top" constant="100" id="67c-J0-YoU"/>
-                            <constraint firstItem="ZQk-0V-8XJ" firstAttribute="trailing" secondItem="Ovj-1p-3nK" secondAttribute="trailing" constant="87" id="7B7-Uc-adt"/>
-                            <constraint firstItem="Ovj-1p-3nK" firstAttribute="top" secondItem="m4s-dC-jo3" secondAttribute="bottom" constant="8" id="BHa-4e-qL5"/>
-                            <constraint firstItem="0wR-yz-82B" firstAttribute="top" secondItem="Ovj-1p-3nK" secondAttribute="bottom" constant="32" id="BZU-tp-UU6"/>
                             <constraint firstItem="0wR-yz-82B" firstAttribute="leading" secondItem="ZQk-0V-8XJ" secondAttribute="leading" constant="54" id="C2B-c7-RD9"/>
                             <constraint firstItem="ZQk-0V-8XJ" firstAttribute="trailing" secondItem="0wR-yz-82B" secondAttribute="trailing" constant="54" id="G75-bf-dtF"/>
+                            <constraint firstItem="Ovj-1p-3nK" firstAttribute="top" secondItem="j26-2s-UW5" secondAttribute="bottom" constant="48" id="M8b-ep-eLI"/>
                             <constraint firstAttribute="trailing" secondItem="ZnR-I3-ksy" secondAttribute="trailing" constant="-62" id="Vh1-0X-hKe"/>
-                            <constraint firstItem="Ovj-1p-3nK" firstAttribute="top" secondItem="j26-2s-UW5" secondAttribute="bottom" constant="48" id="YkG-tA-GVG"/>
+                            <constraint firstItem="Ovj-1p-3nK" firstAttribute="top" secondItem="m4s-dC-jo3" secondAttribute="bottom" constant="8" id="YWi-HF-e8z"/>
                             <constraint firstItem="0wR-yz-82B" firstAttribute="bottom" secondItem="ZQk-0V-8XJ" secondAttribute="bottom" id="bP1-se-vse"/>
                             <constraint firstItem="ZQk-0V-8XJ" firstAttribute="bottom" secondItem="3Sz-xs-eHK" secondAttribute="bottom" constant="220" id="bQh-Ry-yk3"/>
                             <constraint firstItem="3Sz-xs-eHK" firstAttribute="leading" secondItem="ZQk-0V-8XJ" secondAttribute="leading" constant="20" id="cM4-V3-jrA"/>
+                            <constraint firstItem="0wR-yz-82B" firstAttribute="top" secondItem="Ovj-1p-3nK" secondAttribute="bottom" constant="38" id="e3i-dQ-WL9"/>
+                            <constraint firstItem="ZQk-0V-8XJ" firstAttribute="trailing" secondItem="Ovj-1p-3nK" secondAttribute="trailing" constant="87" id="heb-jG-vFk"/>
                             <constraint firstItem="ZnR-I3-ksy" firstAttribute="top" secondItem="ZQk-0V-8XJ" secondAttribute="top" constant="201" id="iF0-fU-8p8"/>
                             <constraint firstItem="ZQk-0V-8XJ" firstAttribute="trailing" secondItem="m4s-dC-jo3" secondAttribute="trailing" constant="87" id="mnO-Q7-CQA"/>
                             <constraint firstItem="ZQk-0V-8XJ" firstAttribute="trailing" secondItem="j26-2s-UW5" secondAttribute="trailing" constant="123" id="oOr-5V-0dF"/>
@@ -5221,7 +5221,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="46D-CA-DNX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3648" y="1677"/>
+            <point key="canvasLocation" x="3647.826086956522" y="1676.7857142857142"/>
         </scene>
         <!--Giver Bear Game One View Controller-->
         <scene sceneID="O8P-fp-wZ6">
@@ -6883,11 +6883,11 @@
                                 <rect key="frame" x="0.0" y="672" width="414" height="224"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="We look for companies with promising futures!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="GhU-x3-eiu">
-                                        <rect key="frame" x="17" y="0.0" width="240" height="86"/>
+                                        <rect key="frame" x="17" y="0.0" width="240" height="67"/>
                                         <color key="backgroundColor" red="0.39174923299999997" green="0.16361555459999999" blue="0.056376084690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="240" id="HZX-uI-9hq"/>
-                                            <constraint firstAttribute="height" constant="86" id="wzJ-dj-jup"/>
+                                            <constraint firstAttribute="width" constant="240" id="UMz-ev-9md"/>
+                                            <constraint firstAttribute="height" constant="67" id="Vhv-Kq-KDb"/>
                                         </constraints>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
@@ -6913,10 +6913,10 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.94163507219999998" green="0.91545259950000002" blue="0.7167791724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="GhU-x3-eiu" firstAttribute="leading" secondItem="uI0-y2-QgD" secondAttribute="leading" constant="17" id="COM-Oa-onK"/>
                                     <constraint firstAttribute="width" secondItem="uI0-y2-QgD" secondAttribute="height" multiplier="207:112" id="G4O-E7-d5m"/>
+                                    <constraint firstItem="GhU-x3-eiu" firstAttribute="top" secondItem="uI0-y2-QgD" secondAttribute="top" id="NRV-ma-ggT"/>
+                                    <constraint firstItem="GhU-x3-eiu" firstAttribute="leading" secondItem="uI0-y2-QgD" secondAttribute="leading" constant="17" id="Vs8-oX-Kr3"/>
                                     <constraint firstItem="lDb-Z3-qXs" firstAttribute="leading" secondItem="uI0-y2-QgD" secondAttribute="leading" constant="54" id="itt-5p-ifF"/>
-                                    <constraint firstItem="GhU-x3-eiu" firstAttribute="top" secondItem="uI0-y2-QgD" secondAttribute="top" id="kKd-nD-3HZ"/>
                                     <constraint firstAttribute="bottom" secondItem="lDb-Z3-qXs" secondAttribute="bottom" constant="42" id="yuo-oQ-ArY"/>
                                     <constraint firstAttribute="trailing" secondItem="lDb-Z3-qXs" secondAttribute="trailing" constant="54" id="ziB-nC-cKB"/>
                                 </constraints>
@@ -6925,11 +6925,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="240"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="We are researching what stocks are best to invest in!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hDt-uy-0mV">
-                                        <rect key="frame" x="166" y="172" width="240" height="100"/>
+                                        <rect key="frame" x="156" y="188" width="240" height="70"/>
                                         <color key="backgroundColor" red="0.39174923299999997" green="0.16361555459999999" blue="0.056376084690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="240" id="CaH-PV-fKH"/>
-                                            <constraint firstAttribute="height" constant="100" id="eIG-ko-Oam"/>
+                                            <constraint firstAttribute="width" constant="240" id="wgI-7s-U3s"/>
+                                            <constraint firstAttribute="height" constant="70" id="yH9-K9-IcV"/>
                                         </constraints>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
@@ -6938,9 +6938,9 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.94163507219999998" green="0.91545259950000002" blue="0.7167791724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="hDt-uy-0mV" secondAttribute="trailing" constant="8" id="E6H-U2-88P"/>
-                                    <constraint firstItem="hDt-uy-0mV" firstAttribute="top" secondItem="nKW-wE-sWp" secondAttribute="top" constant="172" id="FRq-fS-mrr"/>
                                     <constraint firstAttribute="width" secondItem="nKW-wE-sWp" secondAttribute="height" multiplier="69:40" id="MjE-Po-Ajj"/>
+                                    <constraint firstAttribute="trailing" secondItem="hDt-uy-0mV" secondAttribute="trailing" constant="18" id="NQT-CI-Gq6"/>
+                                    <constraint firstItem="hDt-uy-0mV" firstAttribute="top" secondItem="nKW-wE-sWp" secondAttribute="top" constant="188" id="u9B-ci-Wic"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HqF-cq-bcG">

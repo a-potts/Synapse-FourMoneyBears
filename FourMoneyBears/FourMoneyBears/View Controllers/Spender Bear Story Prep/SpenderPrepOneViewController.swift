@@ -13,9 +13,7 @@ class SpenderPrepOneViewController: UIViewController {
     
     
     @IBOutlet var seeExampleButton: UIButton!
-    
     @IBOutlet var hintText: UITextView!
-    
     @IBOutlet var mamaBearText: UITextView!
     @IBOutlet var kidBearText: UITextView!
     @IBOutlet var mamaBearBubble1: UIView!
@@ -27,7 +25,7 @@ class SpenderPrepOneViewController: UIViewController {
         super.viewDidLoad()
 
         setUpMiscViews()
-        animateText()
+       // animateText()
         animateTextBear()
         setUpBubbleViews()
     }

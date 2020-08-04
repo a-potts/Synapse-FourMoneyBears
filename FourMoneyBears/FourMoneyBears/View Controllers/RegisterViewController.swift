@@ -124,7 +124,7 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
     
     func animateRegister() {
            UIView.animate(withDuration: 0.5, animations: {               //45 degree rotation. USE RADIANS
-                   self.registerButton.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 0.1).concatenating(CGAffineTransform(scaleX: 1.2, y: 1.2))
+            self.registerButton.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 0.1).concatenating(CGAffineTransform(scaleX: 0.8, y: 0.8))
                    
                }) { (_) in //Is finished
                    
