@@ -69,7 +69,9 @@ class SpenderBearGameThreeViewController: UIViewController {
                        let health = Int(user.health ?? "") ?? 0
                        
                        if health - 1 == 0 {
+                        
                         let values = ["health": "\(health - 1)"]
+                        self.userHealthLabel.text = "\(0)"
                         // print("Health HERE: \(values)")
                         guard let uid = Auth.auth().currentUser?.uid else { return }
                         self.createCopyForUserHealth(uid: uid,values: values as [String : AnyObject])
@@ -82,7 +84,7 @@ class SpenderBearGameThreeViewController: UIViewController {
                        
                        let newHealth = health - 1
                        
-                       
+                       self.userHealthLabel.text = "\(newHealth)"
                        
                        print("NEW HEALTH::: \(newHealth)")
                        
