@@ -77,7 +77,17 @@ class SpenderBearViewController: UIViewController {
                     let health = Int(user.health ?? "") ?? 0
                     
                     if health - 1 == 0 {
-                        SCLAlertView().showError("Out of Health", subTitle: "wait 24 hours")
+                        
+                        let values = ["health": "\(health - 1)"]
+                        // print("Health HERE: \(values)")
+                        guard let uid = Auth.auth().currentUser?.uid else { return }
+                        self.createCopyForUserHealth(uid: uid,values: values as [String : AnyObject])
+                        
+                        SCLAlertView().showError("Out of Health", subTitle: "You must wait 24 hours for more Health")
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                            self.performSegue(withIdentifier: "unwindSegue", sender: nil)
+                        }
+                        
                     } else if health > 0 {
                     
                     let newHealth = health - 1

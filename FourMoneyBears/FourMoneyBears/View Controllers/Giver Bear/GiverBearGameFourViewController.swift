@@ -24,15 +24,94 @@ class GiverBearGameFourViewController: UIViewController {
         override func viewDidLoad() {
             super.viewDidLoad()
             updateAnswerViews()
-            let uid = Auth.auth().currentUser?.uid
-            
-            Database.database().reference().child("users").child(uid!).observeSingleEvent(of: .value, with: { (snapshot) in
+            fetchUser()
+        }
+    
+    func fetchUser(){
+           var users = [Users]()
+           let uid = Auth.auth().currentUser?.uid
+           
+           Database.database().reference().child("users").child(uid!).observeSingleEvent(of: .value, with: { (snapshot) in
+               
+               if let dictionary = snapshot.value as? [String: AnyObject] {
+                   self.userHealthLabel.text = dictionary["health"] as? String
+                   let user = Users()
+                                 
+                   user.setValuesForKeys(dictionary)
+                   users.append(user)
+                   
+               }
+               
+               
+           }, withCancel: nil)
+       }
+       
+       
+       func decHealthUser(){
+           var users = [Users]()
+           let uid = Auth.auth().currentUser?.uid
+           
+           Database.database().reference().child("users").child(uid!).observeSingleEvent(of: .value, with: { (snapshot) in
+               
+               if let dictionary = snapshot.value as? [String: AnyObject] {
+                   self.userHealthLabel.text = dictionary["health"] as? String
+                   let user = Users()
+                                 
+                   user.setValuesForKeys(dictionary)
+                   users.append(user)
+                   
+                   for user in users {
+                       let health = Int(user.health ?? "") ?? 0
+                       
+                       if health - 1 == 0 {
+                           
+                           let values = ["health": "\(health - 1)"]
+                           // print("Health HERE: \(values)")
+                           guard let uid = Auth.auth().currentUser?.uid else { return }
+                           self.createCopyForUserHealth(uid: uid,values: values as [String : AnyObject])
+                           
+                           SCLAlertView().showError("Out of Health", subTitle: "You must wait 24 hours for more Health")
+                           DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                               self.performSegue(withIdentifier: "unwindSegue", sender: nil)
+                           }
+                           
+                       } else if health > 0 {
+                       
+                       let newHealth = health - 1
+                       
+                       
+                       
+                       print("NEW HEALTH::: \(newHealth)")
+                       
+                       let values = ["health": "\(newHealth)"]
+                            // print("Health HERE: \(values)")
+                       guard let uid = Auth.auth().currentUser?.uid else { return }
+                       self.createCopyForUserHealth(uid: uid,values: values as [String : AnyObject])
+                       }
+                   }
+               }
+               
+               
+           }, withCancel: nil)
+       }
+       
+
+        
+        func createCopyForUserHealth(uid: String, values: [String: AnyObject]) {
+            var ref: DatabaseReference!
                 
-                if let dictionary = snapshot.value as? [String: AnyObject] {
-                    self.userHealthLabel.text = dictionary["health"] as? String
-                }
-                print(snapshot)
-            }, withCancel: nil)
+                ref = Database.database().reference(fromURL: "https://fourbears-63cd1.firebaseio.com/")
+                
+                let userRef = ref.child("users").child(uid)
+                
+               
+                
+                userRef.updateChildValues(values) { (error, refer) in
+                    if let error = error {
+                        print("ERROR CHILD values: \(error)")
+                        return
+                    }
+             }
         }
         
     
@@ -120,7 +199,7 @@ class GiverBearGameFourViewController: UIViewController {
         
         
         @IBAction func answerView1Tapped(_ sender: Any) {
-            
+          decHealthUser()
            SCLAlertView().showError("Wrong Answer", subTitle: "Try Again!")
         
         }
@@ -184,11 +263,13 @@ class GiverBearGameFourViewController: UIViewController {
         
         
         @IBAction func answerView3Tapped(_ sender: Any) {
+            decHealthUser()
             SCLAlertView().showError("Wrong Answer", subTitle: "Try Again!")
         }
         
         
         @IBAction func answerView4Tapped(_ sender: Any) {
+            decHealthUser()
             SCLAlertView().showError("Wrong Answer", subTitle: "Try Again!")
         }
         
