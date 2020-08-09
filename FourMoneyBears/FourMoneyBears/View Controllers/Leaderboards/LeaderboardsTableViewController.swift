@@ -12,6 +12,7 @@ import Firebase
 class LeaderboardsTableViewController: UITableViewController {
     
     var users = [Users]()
+    var lesserArray = [Users]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,8 +55,30 @@ class LeaderboardsTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         
         //print("User Counter: \(users.count)")
+        
+        // I need to iterate through the users, during iteration,
+        // check if users rank is less than 5
+        // if so then append to lesser array
+        // if not appens to regular array?
+        
+        var lessThan = [Users]()
+        var moreThan = [Users]()
+        
+        for user in users {
+            let rank = Int(user.rank ?? "") ?? 0
+            print(rank)
+            if rank < 5 {
+                lessThan.append(user)
+                print("Less than 5:\(rank)")
+            } else if rank >= 10 {
+                moreThan.append(user)
+                print("More than 5:\(rank)")
+            }
+        }
+        
+        
 
-        return users.count
+        return moreThan.count
     }
 
     
