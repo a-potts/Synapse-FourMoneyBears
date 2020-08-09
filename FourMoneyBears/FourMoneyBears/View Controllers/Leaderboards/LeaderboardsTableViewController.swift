@@ -66,18 +66,15 @@ class LeaderboardsTableViewController: UITableViewController {
         
         for user in users {
             let rank = Int(user.rank ?? "") ?? 0
-            print(rank)
             if rank < 5 {
                 lessThan.append(user)
-                print("Less than 5:\(rank)")
             } else if rank >= 10 {
                 moreThan.append(user)
-                print("More than 5:\(rank)")
             }
+            
         }
         
         
-
         return moreThan.count
     }
 

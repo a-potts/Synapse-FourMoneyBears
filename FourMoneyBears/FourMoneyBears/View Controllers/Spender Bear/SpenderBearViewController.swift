@@ -27,16 +27,11 @@ class SpenderBearViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-            updateAnswerViews()
-        let uid = Auth.auth().currentUser?.uid
         
-        Database.database().reference().child("users").child(uid!).observeSingleEvent(of: .value, with: { (snapshot) in
-            
-            if let dictionary = snapshot.value as? [String: AnyObject] {
-                self.userHealthLabel.text = dictionary["health"] as? String
-            }
-            print(snapshot)
-        }, withCancel: nil)
+        
+        updateAnswerViews()
+        fetchUser()
+        
     }
     
     //MARK: - TODO: Decrement the Users Health by 1
@@ -44,31 +39,66 @@ class SpenderBearViewController: UIViewController {
     // Step 2. Decrement Health
     // Step 3. Put new value back
     
-    func updateHealthSnapShot(){
+    
+    func fetchUser(){
+        var users = [Users]()
         let uid = Auth.auth().currentUser?.uid
-              
-               Database.database().reference().child("users").child(uid!).observeSingleEvent(of: .value, with: { (snapshot) in
-                   
-                   if let dictionary = snapshot.value as? [String: AnyObject] {
-                       self.userHealthLabel.text = dictionary["health"] as? String
-                   }
-                   print(snapshot)
-               }, withCancel: nil)
+        
+        Database.database().reference().child("users").child(uid!).observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            if let dictionary = snapshot.value as? [String: AnyObject] {
+                self.userHealthLabel.text = dictionary["health"] as? String
+                let user = Users()
+                              
+                user.setValuesForKeys(dictionary)
+                users.append(user)
+                
+            }
+            
+            
+        }, withCancel: nil)
     }
     
-     func updateHealthData(){
-         guard let uid = Auth.auth().currentUser?.uid else { return }
-         
-         var userHealth = 3
+    
+    func decHealthUser(){
+        var users = [Users]()
+        let uid = Auth.auth().currentUser?.uid
         
-        let fetchHealth = Database.database().reference().child("users").child(uid).child("health")
-        print(fetchHealth)
-       
-         
-         let values = ["health": "\(userHealth)"]
-         
-         self.createCopyForUserHealth(uid: uid,values: values as [String : AnyObject])
-     }
+        Database.database().reference().child("users").child(uid!).observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            if let dictionary = snapshot.value as? [String: AnyObject] {
+                self.userHealthLabel.text = dictionary["health"] as? String
+                let user = Users()
+                              
+                user.setValuesForKeys(dictionary)
+                users.append(user)
+                
+                for user in users {
+                    let health = Int(user.health ?? "") ?? 0
+                    
+                    if health - 1 == 0 {
+                        SCLAlertView().showError("Out of Health", subTitle: "wait 24 hours")
+                    } else if health > 0 {
+                    
+                    let newHealth = health - 1
+                    
+                    
+                    
+                    print("NEW HEALTH::: \(newHealth)")
+                    
+                    let values = ["health": "\(newHealth)"]
+                         // print("Health HERE: \(values)")
+                    guard let uid = Auth.auth().currentUser?.uid else { return }
+                    self.createCopyForUserHealth(uid: uid,values: values as [String : AnyObject])
+                    }
+                }
+            }
+            
+            
+        }, withCancel: nil)
+    }
+    
+
      
      func createCopyForUserHealth(uid: String, values: [String: AnyObject]) {
          var ref: DatabaseReference!
@@ -194,17 +224,19 @@ class SpenderBearViewController: UIViewController {
     
     @IBAction func answerView2Tapped(_ sender: Any) {
         SCLAlertView().showError("Wrong Answer", subTitle: "Try Again!")
-       // updateHealthData()
+        decHealthUser()
     }
     
     
     @IBAction func answerView3Tapped(_ sender: Any) {
         SCLAlertView().showError("Wrong Answer", subTitle: "Try Again!")
+        decHealthUser()
     }
     
     
     @IBAction func answerView4Tapped(_ sender: Any) {
         SCLAlertView().showError("Wrong Answer", subTitle: "Try Again!")
+        decHealthUser()
     }
     
     
