@@ -54,6 +54,7 @@ class GameSelectionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        fetchUser()
         
             //Check Bear Locks
         checkSaverBearLocks()
@@ -77,6 +78,46 @@ class GameSelectionViewController: UIViewController {
         }, withCancel: nil)
         
        setUpViews()
+    }
+    
+    func fetchUser(){
+        var users = [Users]()
+        let uid = Auth.auth().currentUser?.uid
+        
+        Database.database().reference().child("users").child(uid!).observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            if let dictionary = snapshot.value as? [String: AnyObject] {
+                self.userHealthLabel.text = dictionary["health"] as? String
+                let user = Users()
+                              
+                user.setValuesForKeys(dictionary)
+                users.append(user)
+                
+            }
+            
+            for user in users {
+                let health = Int(user.health ?? "") ?? 0
+                if health == 0 {
+                  
+                    self.spenderBear.layer.opacity = 0.5
+                    self.spenderBearButton.isHidden = true
+                    
+                    self.saverBearLock.isHidden = false
+                    self.saverBear.layer.opacity = 0.5
+                    self.saverBearButton.isHidden = true
+                    
+                    self.investorBearLock.isHidden = false
+                    self.investorBear.layer.opacity = 0.5
+                    self.investorBearButton.isHidden = true
+                    
+                    self.giverBearLock.isHidden = false
+                    self.giverBear.layer.opacity = 0.5
+                    self.giverBearButton.isHidden = true
+                }
+            }
+            
+            
+        }, withCancel: nil)
     }
     
     
