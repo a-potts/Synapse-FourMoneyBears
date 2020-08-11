@@ -135,6 +135,8 @@ class GiverBearGameTwoViewController: UIViewController {
                        
                        self.userHealthLabel.text = "\(newHealth)"
                        
+                       SCLAlertView().showError("Wrong Answer", subTitle: "Try Again!")
+                        
                        print("NEW HEALTH::: \(newHealth)")
                        
                        let values = ["health": "\(newHealth)"]
@@ -215,7 +217,6 @@ class GiverBearGameTwoViewController: UIViewController {
            
            @IBAction func noTapped(_ sender: Any) {
                decHealthUser()
-               SCLAlertView().showError("Wrong Answer", subTitle: "Try Again!")
            }
            
            

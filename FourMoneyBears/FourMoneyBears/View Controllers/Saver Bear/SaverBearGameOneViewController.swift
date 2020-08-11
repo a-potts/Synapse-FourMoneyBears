@@ -134,6 +134,8 @@ class SaverBearGameOneViewController: UIViewController {
                        
                        self.userHealthLabel.text = "\(newHealth)"
                        
+                       SCLAlertView().showError("Wrong Answer", subTitle: "Try Again!")
+                        
                        print("NEW HEALTH::: \(newHealth)")
                        
                        let values = ["health": "\(newHealth)"]
@@ -211,7 +213,6 @@ class SaverBearGameOneViewController: UIViewController {
                      animateStatusBar()
             } else {
                 decHealthUser()
-                SCLAlertView().showError("Wrong Answer", subTitle: "Try Again!")
             }
     }
     

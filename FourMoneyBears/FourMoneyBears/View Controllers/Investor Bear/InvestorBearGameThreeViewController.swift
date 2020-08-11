@@ -128,6 +128,8 @@ class InvestorBearGameThreeViewController: UIViewController {
                        
                        self.userHealthLabel.text = "\(newHealth)"
                        
+                       SCLAlertView().showError("Wrong Answer", subTitle: "Try Again!")
+                        
                        print("NEW HEALTH::: \(newHealth)")
                        
                        let values = ["health": "\(newHealth)"]
@@ -200,16 +202,13 @@ class InvestorBearGameThreeViewController: UIViewController {
         
         @IBAction func answerViewOneTapped(_ sender: Any) {
             decHealthUser()
-            SCLAlertView().showError("Wrong Answer", subTitle: "Try Again!")
         }
         @IBAction func answerViewThreeTapped(_ sender: Any) {
             decHealthUser()
-            SCLAlertView().showError("Wrong Answer", subTitle: "Try Again!")
         }
         
         @IBAction func answerViewFourTapped(_ sender: Any) {
             decHealthUser()
-           SCLAlertView().showError("Wrong Answer", subTitle: "Try Again!")
         }
         
         

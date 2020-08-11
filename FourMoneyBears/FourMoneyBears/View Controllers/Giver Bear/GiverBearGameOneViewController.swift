@@ -129,6 +129,8 @@ class GiverBearGameOneViewController: UIViewController {
                        
                        self.userHealthLabel.text = "\(newHealth)"
                        
+                       SCLAlertView().showError("Wrong Answer", subTitle: "Try Again!")
+                        
                        print("NEW HEALTH::: \(newHealth)")
                        
                        let values = ["health": "\(newHealth)"]
@@ -191,14 +193,12 @@ class GiverBearGameOneViewController: UIViewController {
           
     @IBAction func answerViewTwoTapped(_ sender: Any) {
         decHealthUser()
-        SCLAlertView().showError("Wrong Answer", subTitle: "Try Again!")
 
           }
           
           
           @IBAction func answerViewOneTapped(_ sender: Any) {
               decHealthUser()
-              SCLAlertView().showError("Wrong Answer", subTitle: "Try Again!")
           }
           @IBAction func answerViewThreeTapped(_ sender: Any) {
             SCLAlertView().showSuccess("Good Job!", subTitle: "Next")
@@ -210,7 +210,6 @@ class GiverBearGameOneViewController: UIViewController {
           
           @IBAction func answerViewFourTapped(_ sender: Any) {
              decHealthUser()
-             SCLAlertView().showError("Wrong Answer", subTitle: "Try Again!")
           }
           
           

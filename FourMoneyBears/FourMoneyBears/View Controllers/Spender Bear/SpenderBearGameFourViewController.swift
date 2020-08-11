@@ -137,7 +137,9 @@ class SpenderBearGameFourViewController: UIViewController {
                        let newHealth = health - 1
                        
                        self.userHealthLabel.text = "\(newHealth)"
-                       
+                        
+                       SCLAlertView().showError("Wrong Answer", subTitle: "Try Again!")
+                        
                        print("NEW HEALTH::: \(newHealth)")
                        
                        let values = ["health": "\(newHealth)"]
@@ -262,7 +264,6 @@ class SpenderBearGameFourViewController: UIViewController {
     
     @IBAction func yesTapped(_ sender: Any) {
        decHealthUser()
-       SCLAlertView().showError("Wrong Answer", subTitle: "Try Again!")
     }
     
     @IBAction func noTapped(_ sender: Any) {

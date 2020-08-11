@@ -76,7 +76,7 @@ class LeaderboardsTableViewController: UITableViewController {
         }
         
         
-        return moreThan.count
+        return users.count
     }
 
     

@@ -127,6 +127,8 @@ class SaverBearFourViewController: UIViewController {
                        
                        self.userHealthLabel.text = "\(newHealth)"
                        
+                       SCLAlertView().showError("Wrong Answer", subTitle: "Try Again!")
+                        
                        print("NEW HEALTH::: \(newHealth)")
                        
                        let values = ["health": "\(newHealth)"]
@@ -316,20 +318,17 @@ class SaverBearFourViewController: UIViewController {
         
         @IBAction func answerView2Tapped(_ sender: Any) {
             decHealthUser()
-            SCLAlertView().showError("Wrong Answer", subTitle: "Try Again!")
            
         }
         
         
         @IBAction func answerView3Tapped(_ sender: Any) {
             decHealthUser()
-            SCLAlertView().showError("Wrong Answer", subTitle: "Try Again!")
         }
         
         
         @IBAction func answerView4Tapped(_ sender: Any) {
             decHealthUser()
-            SCLAlertView().showError("Wrong Answer", subTitle: "Try Again!")
         }
         
         

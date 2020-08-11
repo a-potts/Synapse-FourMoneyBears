@@ -123,6 +123,8 @@ class InvestorBearGameOneViewController: UIViewController {
                        
                        self.userHealthLabel.text = "\(newHealth)"
                        
+                       SCLAlertView().showError("Wrong Answer", subTitle: "Try Again!")
+                        
                        print("NEW HEALTH::: \(newHealth)")
                        
                        let values = ["health": "\(newHealth)"]
@@ -211,7 +213,6 @@ class InvestorBearGameOneViewController: UIViewController {
        
        @IBAction func noTapped(_ sender: Any) {
            decHealthUser()  
-           SCLAlertView().showError("Wrong Answer", subTitle: "Try Again!")
        }
        
        

@@ -103,9 +103,9 @@ class SpenderBearViewController: UIViewController {
         }, withCancel: nil)
     }
     
-    
+   
     func decHealthUser(){
-        var users = [Users]()
+         var users = [Users]()
         let uid = Auth.auth().currentUser?.uid
         
         Database.database().reference().child("users").child(uid!).observeSingleEvent(of: .value, with: { (snapshot) in
@@ -141,6 +141,8 @@ class SpenderBearViewController: UIViewController {
                     let newHealth = health - 1
                     
                     self.userHealthLabel.text = "\(newHealth)"
+                    
+                    SCLAlertView().showError("Wrong Answer", subTitle: "Try Again!")
                     
                     print("NEW HEALTH::: \(newHealth)")
                     
@@ -281,19 +283,19 @@ class SpenderBearViewController: UIViewController {
       }
     
     @IBAction func answerView2Tapped(_ sender: Any) {
-        SCLAlertView().showError("Wrong Answer", subTitle: "Try Again!")
         decHealthUser()
+        
+        
+        
     }
     
     
     @IBAction func answerView3Tapped(_ sender: Any) {
-        SCLAlertView().showError("Wrong Answer", subTitle: "Try Again!")
         decHealthUser()
     }
     
     
     @IBAction func answerView4Tapped(_ sender: Any) {
-        SCLAlertView().showError("Wrong Answer", subTitle: "Try Again!")
         decHealthUser()
     }
     
