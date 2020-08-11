@@ -30,7 +30,7 @@ class GiverBearGameFourViewController: UIViewController {
     //MARK: - Health Timer
     func healthTimer(){
     let duration: TimeInterval = 100 * 60
-        let timer = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: false, block: { timer in
+        let timer = Timer.scheduledTimer(withTimeInterval: duration, repeats: false, block: { timer in
              
            self.addHealthUser()
         
