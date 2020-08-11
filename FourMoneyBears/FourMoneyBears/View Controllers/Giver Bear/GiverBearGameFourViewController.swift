@@ -288,7 +288,7 @@ class GiverBearGameFourViewController: UIViewController {
         }
         
         @IBAction func answerView2Tapped(_ sender: Any) {
-            let alertViewResponder: SCLAlertViewResponder = SCLAlertView().showCustom("Good job, you won!", subTitle: "Reward: 10xp", color: UIColor.white, icon: UIImage(named: "Crown-fill.png")!)
+            let alertViewResponder: SCLAlertViewResponder = SCLAlertView().showCustom("Good job, you won!", subTitle: "Reward: 10 Crowns", color: UIColor.white, icon: UIImage(named: "Crown-fill.png")!)
             
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 4){

@@ -233,7 +233,7 @@ class InvestorBearGameFourViewController: UIViewController {
         
         @IBAction func checkAnswerTapped(_ sender: Any) {
             if choiceViewFour.frame.intersects(answerView.frame){
-                let alertViewResponder: SCLAlertViewResponder = SCLAlertView().showCustom("Good job, you won!", subTitle: "Reward: 10xp", color: UIColor.white, icon: UIImage(named: "Crown-fill.png")!)
+                let alertViewResponder: SCLAlertViewResponder = SCLAlertView().showCustom("Good job, you won!", subTitle: "Reward: 10 Crowns", color: UIColor.white, icon: UIImage(named: "Crown-fill.png")!)
                 
                 
                 DispatchQueue.main.asyncAfter(deadline: .now() + 4){
