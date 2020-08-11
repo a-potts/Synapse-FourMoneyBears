@@ -80,6 +80,69 @@ class GameSelectionViewController: UIViewController {
        setUpViews()
     }
     
+    
+    //MARK: - Health Timer
+    func healthTimer(){
+    let duration: TimeInterval = 100 * 60
+        let timer = Timer.scheduledTimer(withTimeInterval: 20.0, repeats: false, block: { timer in
+             
+           self.addHealthUser()
+        
+           print("FIRE!!!")
+        })
+    }
+    
+    func addHealthUser(){
+        var users = [Users]()
+        let uid = Auth.auth().currentUser?.uid
+        
+        Database.database().reference().child("users").child(uid!).observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            if let dictionary = snapshot.value as? [String: AnyObject] {
+                self.userHealthLabel.text = dictionary["health"] as? String
+                let user = Users()
+                              
+                user.setValuesForKeys(dictionary)
+                users.append(user)
+                
+                for user in users {
+                    let health = Int(user.health ?? "") ?? 0
+                    
+                    if health == 0 {
+                        
+                        let values = ["health": "\(health + 3)"]
+                        // print("Health HERE: \(values)")
+                        guard let uid = Auth.auth().currentUser?.uid else { return }
+                        self.createCopyForUserHealth(uid: uid,values: values as [String : AnyObject])
+                        
+                        
+                    }
+                }
+            }
+            
+            
+        }, withCancel: nil)
+    }
+    
+    
+    func createCopyForUserHealth(uid: String, values: [String: AnyObject]) {
+        var ref: DatabaseReference!
+            
+            ref = Database.database().reference(fromURL: "https://fourbears-63cd1.firebaseio.com/")
+            
+            let userRef = ref.child("users").child(uid)
+            
+           
+            
+            userRef.updateChildValues(values) { (error, refer) in
+                if let error = error {
+                    print("ERROR CHILD values: \(error)")
+                    return
+                }
+         }
+    }
+
+    
     func fetchUser(){
         var users = [Users]()
         let uid = Auth.auth().currentUser?.uid
@@ -98,21 +161,25 @@ class GameSelectionViewController: UIViewController {
             for user in users {
                 let health = Int(user.health ?? "") ?? 0
                 if health == 0 {
-                  
-                    self.spenderBear.layer.opacity = 0.5
+                    self.healthTimer()
+                    
                     self.spenderBearButton.isHidden = true
                     
-                    self.saverBearLock.isHidden = false
-                    self.saverBear.layer.opacity = 0.5
                     self.saverBearButton.isHidden = true
-                    
-                    self.investorBearLock.isHidden = false
-                    self.investorBear.layer.opacity = 0.5
+                
                     self.investorBearButton.isHidden = true
-                    
-                    self.giverBearLock.isHidden = false
-                    self.giverBear.layer.opacity = 0.5
+                
                     self.giverBearButton.isHidden = true
+                    
+                } else if health > 0 {
+                  
+                    self.spenderBearButton.isHidden = false
+                    
+                    self.saverBearButton.isHidden = false
+                    
+                    self.investorBearButton.isHidden = false
+                
+                    self.giverBearButton.isHidden = false
                 }
             }
             
@@ -227,6 +294,7 @@ class GameSelectionViewController: UIViewController {
         checkInvestorBearLock()
         checkGiverBearLock()
         finalLockCheck()
+        fetchUser()
     }
     
     

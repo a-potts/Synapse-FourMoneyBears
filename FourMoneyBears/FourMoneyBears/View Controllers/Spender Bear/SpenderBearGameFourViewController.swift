@@ -38,6 +38,49 @@ class SpenderBearGameFourViewController: UIViewController {
         audioPlayer()
     }
     
+    //MARK: - Health Timer
+    func healthTimer(){
+    let duration: TimeInterval = 100 * 60
+        let timer = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: false, block: { timer in
+             
+           self.addHealthUser()
+        
+           print("FIRE!!!")
+        })
+    }
+    
+    func addHealthUser(){
+        var users = [Users]()
+        let uid = Auth.auth().currentUser?.uid
+        
+        Database.database().reference().child("users").child(uid!).observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            if let dictionary = snapshot.value as? [String: AnyObject] {
+                self.userHealthLabel.text = dictionary["health"] as? String
+                let user = Users()
+                              
+                user.setValuesForKeys(dictionary)
+                users.append(user)
+                
+                for user in users {
+                    let health = Int(user.health ?? "") ?? 0
+                    
+                    if health == 0 {
+                        
+                        let values = ["health": "\(health + 3)"]
+                        // print("Health HERE: \(values)")
+                        guard let uid = Auth.auth().currentUser?.uid else { return }
+                        self.createCopyForUserHealth(uid: uid,values: values as [String : AnyObject])
+                        
+                        
+                    }
+                }
+            }
+            
+            
+        }, withCancel: nil)
+    }
+    
     
     func fetchUser(){
            var users = [Users]()
@@ -81,6 +124,9 @@ class SpenderBearGameFourViewController: UIViewController {
                         // print("Health HERE: \(values)")
                         guard let uid = Auth.auth().currentUser?.uid else { return }
                         self.createCopyForUserHealth(uid: uid,values: values as [String : AnyObject])
+                        
+                        self.healthTimer()
+                        
                         SCLAlertView().showError("Out of Health", subTitle: "You must wait 24 hours for more Health")
                         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                             self.performSegue(withIdentifier: "unwindSegue", sender: nil)
