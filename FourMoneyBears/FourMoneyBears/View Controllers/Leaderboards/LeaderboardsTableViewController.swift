@@ -66,9 +66,10 @@ class LeaderboardsTableViewController: UITableViewController {
         
         for user in users {
             let rank = Int(user.rank ?? "") ?? 0
+            print("RANK HERE: \(rank)")
             if rank < 5 {
                 lessThan.append(user)
-            } else if rank >= 10 {
+            } else if rank > 6 {
                 moreThan.append(user)
             }
             

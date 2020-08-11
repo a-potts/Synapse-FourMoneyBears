@@ -116,14 +116,26 @@ class GameSelectionViewController: UIViewController {
                     let health = Int(user.health ?? "") ?? 0
                     
                     if health == 0 {
+                        self.userHealthLabel.text = "\(health + 3)"
+                        
+                        self.fetchUser()
                         
                         let values = ["health": "\(health + 3)"]
+    
                         // print("Health HERE: \(values)")
                         guard let uid = Auth.auth().currentUser?.uid else { return }
                         self.createCopyForUserHealth(uid: uid,values: values as [String : AnyObject])
                         
                         
                     }
+                    
+                    self.spenderBearButton.isHidden = false
+                    
+                    self.saverBearButton.isHidden = false
+                    
+                    self.investorBearButton.isHidden = false
+                    
+                    self.giverBearButton.isHidden = false
                 }
             }
             
