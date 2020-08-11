@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import SCLAlertView
 
 class GameSelectionViewController: UIViewController {
 
@@ -84,9 +85,15 @@ class GameSelectionViewController: UIViewController {
     //MARK: - Health Timer
     func healthTimer(){
         let duration: TimeInterval = 100 * 60
-        let timer = Timer.scheduledTimer(withTimeInterval: duration, repeats: false, block: { timer in
+        let timer = Timer.scheduledTimer(withTimeInterval: 60, repeats: false, block: { timer in
              
            self.addHealthUser()
+            
+            let alertViewResponder: SCLAlertViewResponder = SCLAlertView().showCustom("You have regained health!", subTitle: "Game Restrictions Lifted", color: UIColor.white, icon: UIImage(systemName:"heart.fill")!)
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 4){
+                alertViewResponder.close()
+            }
         
            print("FIRE!!!")
         })

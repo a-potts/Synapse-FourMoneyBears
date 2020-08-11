@@ -36,8 +36,8 @@ class SaverBearGameOneViewController: UIViewController {
     
     //MARK: - Health Timer
     func healthTimer(){
-    let duration: TimeInterval = 100 * 60
-        let timer = Timer.scheduledTimer(withTimeInterval: duration, repeats: false, block: { timer in
+    let duration: TimeInterval = 60 * 60
+        let timer = Timer.scheduledTimer(withTimeInterval: 60, repeats: false, block: { timer in
              
            self.addHealthUser()
         
