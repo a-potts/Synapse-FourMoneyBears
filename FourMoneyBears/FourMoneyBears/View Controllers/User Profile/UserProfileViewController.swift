@@ -14,10 +14,12 @@ class UserProfileViewController: UIViewController {
     
     
     @IBOutlet var usersImage: UIImageView!
+    @IBOutlet var imageViewCircle: UIView!
     @IBOutlet var usersName: UILabel!
     @IBOutlet var userRankLabel: UILabel!
     @IBOutlet var userStreakLabel: UILabel!
     @IBOutlet var usersHealthLabel: UILabel!
+    @IBOutlet var usersEmail: UILabel!
     @IBOutlet var macawChart: MacawChartView!
     @IBOutlet var rankView: UIView!
     @IBOutlet var healthView: UIView!
@@ -57,6 +59,9 @@ class UserProfileViewController: UIViewController {
         streakView.layer.shadowRadius = 3
         streakView.layer.shadowOpacity = 1.0
         
+        imageViewCircle.layer.cornerRadius = imageViewCircle.frame.height / 2
+        imageViewCircle.layer.masksToBounds = false
+        imageViewCircle.clipsToBounds = true
         
 
 
@@ -78,6 +83,7 @@ class UserProfileViewController: UIViewController {
                       self.userStreakLabel.text = dictionary["streak"] as? String
                       self.usersHealthLabel.text = dictionary["health"] as? String
                     self.usersName.text = dictionary["name"] as? String
+                    self.usersEmail.text = dictionary["email"] as? String
                     let profileImageURL = dictionary["profileImageURL"] as? String
                     self.usersImage.loadImageViewUsingCacheWithUrlString(urlString: profileImageURL!)
                     self.usersImage.layer.cornerRadius = self.usersImage.frame.height / 2
