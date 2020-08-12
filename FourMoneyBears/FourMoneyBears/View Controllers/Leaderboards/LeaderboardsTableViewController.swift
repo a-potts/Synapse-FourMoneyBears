@@ -12,7 +12,6 @@ import Firebase
 class LeaderboardsTableViewController: UITableViewController {
     
     var users = [Users]()
-    var lesserArray = [Users]()
     var moreThan = [Users]()
 
     override func viewDidLoad() {

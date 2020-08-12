@@ -8,19 +8,23 @@
 
 import Foundation
 import Macaw
+import Firebase
 
 
 class MacawChartView: MacawView {
     
+    // This needs to be changed to last five days which equals the users rank over five days
+    static let lastFiveShows = userData()
     
-    static let lastFiveShows = createDummyData()
-    static let maxValue = 500000
+    // This needs to be changed to 50 for totoal 50 crowns can be earned a day
+    static let maxValue = 50
+    
     static let maxValueLineHeight = 180
     static let lineWidth: Double = 275
     
     // Conver into number that fits into coordiante system
     static let dataDivisor = Double(maxValue/maxValueLineHeight)
-    static let adjustedData: [Double] = lastFiveShows.map({ $0.viewCount / dataDivisor})
+    static let adjustedData: [Double] = lastFiveShows.map({ Double($0.crowns) / dataDivisor})
     static var animations: [Animation] = [] // Macaw object
     
     required init?(coder aDecoder: NSCoder){
@@ -37,7 +41,7 @@ class MacawChartView: MacawView {
     }
     
     private static func addYaxisItem() -> [Node]{
-        let maxLines = 6 // max numbers of Y axis going up
+        let maxLines = 5 // max numbers of Y axis going up
         let lineInterval = Int(maxValue/maxLines)
         let yAxisHeight: Double = 200
         let lineSpacing: Double = 30
@@ -67,8 +71,9 @@ class MacawChartView: MacawView {
         var newNodes: [Node] = []
         
         for i in 1...adjustedData.count {
-            let x = (Double(i) * 50)
-            let valueText = Text(text: lastFiveShows[i - 1].showNumber, align: .max, baseline: .mid, place: .move(dx: x, dy: chartBaseY + 15) )
+            let x = (Double(i) * 50) // spacing in between lines
+            // i - 1 = 0
+            let valueText = Text(text: lastFiveShows[i - 1].day, align: .max, baseline: .mid, place: .move(dx: x, dy: chartBaseY + 15) )
             valueText.fill = Color.white
             newNodes.append(valueText)
         }
@@ -104,7 +109,79 @@ class MacawChartView: MacawView {
     
     
     
-    // Return array of dummy data
+  
+    
+    var users = [Users]()
+    // I'll want to fetch the user
+    func fetchUser(){
+            let uid = Auth.auth().currentUser?.uid
+            
+            Database.database().reference().child("users").child(uid!).observeSingleEvent(of: .value, with: { (snapshot) in
+                
+                if let dictionary = snapshot.value as? [String: AnyObject] {
+                    //self.userHealthLabel.text = dictionary["rank"] as? String
+                    let user = Users()
+                                  
+                    user.setValuesForKeys(dictionary)
+                    self.users.append(user)
+                    print("USER:: \(user)")
+                    
+                }
+                
+                
+            }, withCancel: nil)
+        }
+    
+    
+    // This needs to be changed to the User(name: "Billy", Crowns: 30)
+    // Array of Users Ranks for Mon, Tue, Wed, Thur, Fri
+    
+    // private static func userData() -> [User]
+        // for user in users { let mon = User(name: "M", rank: Int(user.rank ?? "") ?? 0) }
+    struct UserData {
+              let day: String
+              let crowns: Int
+          }
+    private static func userData() -> [UserData] {
+        
+        var users = [Users]()
+        var userPlace = Users()
+        var dataStorage = [UserData]()
+        
+        let uid = Auth.auth().currentUser?.uid
+        
+        Database.database().reference().child("users").child(uid!).observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            if let dictionary = snapshot.value as? [String: AnyObject] {
+                //self.userHealthLabel.text = dictionary["rank"] as? String
+                let user = Users()
+                
+                user.setValuesForKeys(dictionary)
+               // users.append(user)
+                userPlace = user
+        
+                
+            }
+            
+            
+        }, withCancel: nil)
+        
+        
+        
+            let mon = UserData(day: "M", crowns: Int(userPlace.rank ?? "") ?? 0)
+            
+            let tue = UserData(day: "T", crowns: Int(userPlace.rank ?? "") ?? 0)
+            
+            let wed = UserData(day: "W", crowns: Int(userPlace.rank ?? "") ?? 0)
+            
+            let thur = UserData(day: "T", crowns: Int(userPlace.rank ?? "") ?? 0)
+            
+            return [mon, tue, wed, thur]
+        
+
+        
+    }
+    
     private static func createDummyData() -> [DummyData] {
         let one = DummyData(showNumber: "M", viewCount: 123456)
         let two = DummyData(showNumber: "T", viewCount: 234567)
