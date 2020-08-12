@@ -5507,6 +5507,12 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HPL-En-rfI">
+                                <rect key="frame" x="20" y="190.5" width="45" height="26"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crowns This Week" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e35-0U-7IJ">
                                 <rect key="frame" x="20" y="280" width="224" height="35.5"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="27"/>
@@ -5652,18 +5658,28 @@
                                     <constraint firstAttribute="trailing" secondItem="fx1-6J-M5H" secondAttribute="trailing" constant="5" id="jjW-tr-T2S"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DDH-RL-znF">
+                                <rect key="frame" x="71" y="190.5" width="25" height="26"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.092640288170000001" green="0.28576111789999997" blue="0.27454957369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="UEV-Yl-Dih" firstAttribute="top" secondItem="RN6-fv-B26" secondAttribute="bottom" constant="56" id="6K9-Sa-haf"/>
                             <constraint firstItem="e35-0U-7IJ" firstAttribute="top" secondItem="z7h-3M-GHQ" secondAttribute="bottom" constant="20" id="9oI-da-v28"/>
+                            <constraint firstItem="DDH-RL-znF" firstAttribute="leading" secondItem="HPL-En-rfI" secondAttribute="trailing" constant="6" id="9wr-IS-Vy1"/>
                             <constraint firstItem="pzC-Dn-LKA" firstAttribute="leading" secondItem="WUZ-vw-hTY" secondAttribute="leading" constant="20" id="EO6-Fn-c2j"/>
                             <constraint firstItem="cfp-Kc-qgB" firstAttribute="leading" secondItem="WUZ-vw-hTY" secondAttribute="leading" constant="20" id="FXY-KM-Dli"/>
                             <constraint firstItem="w0j-Gc-RwW" firstAttribute="top" secondItem="lPZ-tV-mnQ" secondAttribute="bottom" constant="8" id="Gsf-Sm-ig9"/>
                             <constraint firstItem="het-aJ-x7u" firstAttribute="leading" secondItem="WUZ-vw-hTY" secondAttribute="leading" constant="20" id="Gt4-ba-9WQ"/>
+                            <constraint firstItem="DDH-RL-znF" firstAttribute="top" secondItem="pzC-Dn-LKA" secondAttribute="bottom" constant="2" id="J0T-7h-nfe"/>
                             <constraint firstItem="WUZ-vw-hTY" firstAttribute="trailing" secondItem="lPZ-tV-mnQ" secondAttribute="trailing" constant="20" id="Kpx-uc-Gek"/>
                             <constraint firstItem="z7h-3M-GHQ" firstAttribute="leading" secondItem="Yqt-zL-2Zn" secondAttribute="leading" id="MGB-pf-7Kt"/>
                             <constraint firstItem="UEV-Yl-Dih" firstAttribute="leading" secondItem="WUZ-vw-hTY" secondAttribute="leading" constant="20" id="QP5-7f-Kih"/>
+                            <constraint firstItem="HPL-En-rfI" firstAttribute="leading" secondItem="WUZ-vw-hTY" secondAttribute="leading" constant="20" id="Ugl-ho-2Dj"/>
+                            <constraint firstItem="HPL-En-rfI" firstAttribute="top" secondItem="pzC-Dn-LKA" secondAttribute="bottom" constant="2" id="XB4-1n-XVq"/>
                             <constraint firstItem="pzC-Dn-LKA" firstAttribute="top" secondItem="cfp-Kc-qgB" secondAttribute="bottom" constant="2" id="XRc-Ci-3FF"/>
                             <constraint firstItem="z7h-3M-GHQ" firstAttribute="top" secondItem="XtZ-Qa-h6h" secondAttribute="bottom" constant="35" id="XrC-Db-fCo"/>
                             <constraint firstAttribute="trailing" secondItem="z7h-3M-GHQ" secondAttribute="trailing" id="YcO-hs-etr"/>
@@ -5691,6 +5707,7 @@
                         <outlet property="streakView" destination="w0j-Gc-RwW" id="AIk-h9-o8V"/>
                         <outlet property="userRankLabel" destination="wrF-Zg-27i" id="3rM-u5-F4V"/>
                         <outlet property="userStreakLabel" destination="PPu-jf-x96" id="XXw-m9-fUX"/>
+                        <outlet property="usersAge" destination="DDH-RL-znF" id="QoW-wH-FLQ"/>
                         <outlet property="usersEmail" destination="pzC-Dn-LKA" id="bCk-Ex-hrc"/>
                         <outlet property="usersHealthLabel" destination="xFe-rD-YBd" id="SXR-DJ-aY0"/>
                         <outlet property="usersImage" destination="fx1-6J-M5H" id="ghJ-MI-s3D"/>

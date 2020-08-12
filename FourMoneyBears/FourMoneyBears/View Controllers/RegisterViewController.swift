@@ -106,8 +106,10 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
                             
                             var userStreak = 0
                             
+                            var age = self.ageText.text
+                            
                             let values = ["name": name, "email": email, "profileImageURL": profileImageUrl, "rank": "\(userRank)",
-                                "health": "\(userHealth)", "streak": "\(userStreak)"]
+                                "health": "\(userHealth)", "streak": "\(userStreak)", "age": age]
                             
                             self.registerUserIntoDatabaseWithUID(uid: uid, values: values as [String : AnyObject])
                         }

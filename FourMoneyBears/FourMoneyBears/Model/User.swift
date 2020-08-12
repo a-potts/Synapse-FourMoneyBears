@@ -17,6 +17,7 @@ import Foundation
     @objc var rank: String?
     @objc var health: String?
     @objc var streak: String?
+    @objc var age: String?
     
     
     

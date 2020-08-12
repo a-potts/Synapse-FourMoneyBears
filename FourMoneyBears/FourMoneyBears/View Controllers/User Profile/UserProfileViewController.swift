@@ -16,6 +16,7 @@ class UserProfileViewController: UIViewController {
     @IBOutlet var usersImage: UIImageView!
     @IBOutlet var imageViewCircle: UIView!
     @IBOutlet var usersName: UILabel!
+    @IBOutlet var usersAge: UILabel!
     @IBOutlet var userRankLabel: UILabel!
     @IBOutlet var userStreakLabel: UILabel!
     @IBOutlet var usersHealthLabel: UILabel!
@@ -84,6 +85,7 @@ class UserProfileViewController: UIViewController {
                       self.usersHealthLabel.text = dictionary["health"] as? String
                     self.usersName.text = dictionary["name"] as? String
                     self.usersEmail.text = dictionary["email"] as? String
+                    self.usersAge.text = dictionary["age"] as? String
                     let profileImageURL = dictionary["profileImageURL"] as? String
                     self.usersImage.loadImageViewUsingCacheWithUrlString(urlString: profileImageURL!)
                     self.usersImage.layer.cornerRadius = self.usersImage.frame.height / 2
