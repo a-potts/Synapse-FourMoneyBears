@@ -1702,9 +1702,11 @@
                         <outlet property="userHealthLabel" destination="74p-PO-7xg" id="XpJ-uj-m5A"/>
                         <outlet property="whiteStatus" destination="bae-jn-iv9" id="aLH-hy-TJL"/>
                         <segue destination="NJU-1l-ki6" kind="show" identifier="CorrectAnswerSegue" id="0aT-2X-SyB"/>
+                        <segue destination="Yh4-ss-1o9" kind="unwind" identifier="unwindSegue" unwindAction="unwind:" id="FD7-90-f2i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M1o-27-Sm8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Yh4-ss-1o9" userLabel="Exit" sceneMemberID="exit"/>
                 <panGestureRecognizer minimumNumberOfTouches="1" id="efV-WJ-sRq">
                     <connections>
                         <action selector="panView:" destination="SbP-xv-kmp" id="DmS-ml-Uv9"/>
