@@ -14,9 +14,89 @@
             filePath = "FourMoneyBears/View Controllers/User Profile/MacawChartView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "145"
-            endingLineNumber = "145"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
             landmarkName = "userData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F61AFB2A-1B0C-484D-8282-A34D9D7A306B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FourMoneyBears/View Controllers/User Profile/MacawChartView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "createBars()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "57D69A2C-6534-456A-9C60-26D75CEB3EE6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FourMoneyBears/View Controllers/User Profile/MacawChartView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "createBars()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "57D69A2C-6534-456A-9C60-26D75CEB3EE6 - 580e8e40f702027e"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Int, Macaw.Group) -&gt; Macaw.Animation in static FourMoneyBears.MacawChartView.(createBars in _E6557D0FE1D38C4991A36F947D4DEFB0)() -&gt; Macaw.Group"
+                  moduleName = "FourMoneyBears"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apotts/Desktop/Synapse-FourMoneyBears/FourMoneyBears/FourMoneyBears/View%20Controllers/User%20Profile/MacawChartView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "97"
+                  endingLineNumber = "97"
+                  offsetFromSymbolStart = "58">
+               </Location>
+               <Location
+                  uuid = "57D69A2C-6534-456A-9C60-26D75CEB3EE6 - e067040e518d3f29"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Double) -&gt; Swift.Array&lt;Macaw.Node&gt; in closure #2 (Swift.Int, Macaw.Group) -&gt; Macaw.Animation in static FourMoneyBears.MacawChartView.(createBars in _E6557D0FE1D38C4991A36F947D4DEFB0)() -&gt; Macaw.Group"
+                  moduleName = "FourMoneyBears"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apotts/Desktop/Synapse-FourMoneyBears/FourMoneyBears/FourMoneyBears/View%20Controllers/User%20Profile/MacawChartView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "98"
+                  endingLineNumber = "98"
+                  offsetFromSymbolStart = "75">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F3B35826-049B-4B36-AAD3-8D21E360809A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FourMoneyBears/View Controllers/User Profile/MacawChartView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "createBars()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -17,14 +17,14 @@ class MacawChartView: MacawView {
     static let lastFiveShows = userData()
     
     // This needs to be changed to 50 for totoal 50 crowns can be earned a day
-    static let maxValue = 50
+    static let maxValue = 500
     
     static let maxValueLineHeight = 180
-    static let lineWidth: Double = 275
+    static let lineWidth: Double = 375
     
     // Conver into number that fits into coordiante system
     static let dataDivisor = Double(maxValue/maxValueLineHeight)
-    static let adjustedData: [Double] = lastFiveShows.map({ Double($0.crowns) / dataDivisor})
+    static let adjustedData: [Double] = lastFiveShows.map({ $0.crowns / dataDivisor})
     static var animations: [Animation] = [] // Macaw object
     
     required init?(coder aDecoder: NSCoder){
@@ -88,6 +88,7 @@ class MacawChartView: MacawView {
         
         let fill = LinearGradient(degree: 90, from: Color(val: 0xff4704), to: Color(val: 0xff4705).with(a: 0.33))
         
+        print("Adj Data: \(adjustedData)")
         let items = adjustedData.map {_ in Group()}
         
         // Creating array of animations
@@ -140,7 +141,7 @@ class MacawChartView: MacawView {
         // for user in users { let mon = User(name: "M", rank: Int(user.rank ?? "") ?? 0) }
     struct UserData {
               let day: String
-              let crowns: Int
+              let crowns: Double
           }
     private static func userData() -> [UserData] {
         
@@ -167,16 +168,23 @@ class MacawChartView: MacawView {
         }, withCancel: nil)
         
         
+        let sun = UserData(day: "S", crowns: Double(userPlace.rank ?? "") ?? 300)
         
-            let mon = UserData(day: "M", crowns: Int(userPlace.rank ?? "") ?? 0)
+        let mon = UserData(day: "M", crowns: Double(userPlace.rank ?? "") ?? 100)
             
-            let tue = UserData(day: "T", crowns: Int(userPlace.rank ?? "") ?? 0)
+        let tue = UserData(day: "T", crowns: Double(userPlace.rank ?? "") ?? 300)
             
-            let wed = UserData(day: "W", crowns: Int(userPlace.rank ?? "") ?? 0)
+        let wed = UserData(day: "W", crowns: Double(userPlace.rank ?? "") ?? 200)
             
-            let thur = UserData(day: "T", crowns: Int(userPlace.rank ?? "") ?? 0)
+        let thur = UserData(day: "T", crowns: Double(userPlace.rank ?? "") ?? 300)
+        
+        let fri = UserData(day: "F", crowns: Double(userPlace.rank ?? "") ?? 100)
+        
+        let sat = UserData(day: "S", crowns: Double(userPlace.rank ?? "") ?? 200)
+        
             
-            return [mon, tue, wed, thur]
+            print("Collection::\([mon, tue, wed, thur])")
+            return [sun, mon, tue, wed, thur, fri, sat]
         
 
         
