@@ -12,14 +12,15 @@ import SCLAlertView
 
 class RegisterViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    //MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
  
         setUpViews()
     }
     
+    //MARK: - Interface Outlets
     @IBOutlet var credView: UIView!
-    
     @IBOutlet var usernameText: UITextField!
     @IBOutlet var emailText: UITextField!
     @IBOutlet var passwordText: UITextField!
@@ -28,11 +29,10 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
     @IBOutlet var registerButton: UIButton!
     @IBOutlet var cameraButton: UIButton!
     
-    
+    //MARK: - Set Up Views
     func setUpViews(){
         credView.layer.cornerRadius = 15
         registerButton.layer.cornerRadius = 15
-        
         registerButton.layer.shadowColor = UIColor.black.cgColor
         registerButton.layer.shadowOffset = CGSize(width: 5, height: 5)
         registerButton.layer.shadowRadius = 5
@@ -55,7 +55,7 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
         }
     }
     
-    
+    //MARK: - Set Up Register For User
     func handleRegister() {
         
         guard let email = emailText.text, let password = passwordText.text, let name = usernameText.text else { return }
@@ -69,15 +69,11 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
             //MARK: Verification Email Test
             self.sendVerificationMail()
             
-            
             guard let uid = user?.user.uid else { return }
             
             let imageName = NSUUID().uuidString
             
-            
             let storageRef = Storage.storage().reference().child("\(imageName).png")
-            
-            
             
             if let uploadData = self.userImage.image?.pngData() {
                 
@@ -86,11 +82,7 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
                         print("Error uploading image data: \(error)")
                         return
                     }
-                    
-                    
-                   
-                    
-                    
+                
                     storageRef.downloadURL { (url, error) in
                         if let error = error {
                             print("Error downloading URL: \(error)")
@@ -116,8 +108,6 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
                         }
                         
                     }
-                        
-                    // print(metadata)
                 
                 }
                 
@@ -126,23 +116,22 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
         }
     }
     
+    //MARK: - Set Up Register Animation
     func animateRegister() {
            UIView.animate(withDuration: 0.2, animations: {               //45 degree rotation. USE RADIANS
             self.registerButton.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 0.1).concatenating(CGAffineTransform(scaleX: 0.8, y: 0.8))
                    
                }) { (_) in //Is finished
                    
-                   
                    UIView.animate(withDuration: 0.01, animations: {
                        self.registerButton.transform = .identity
                    })
-                   
                    
                }
        }
     
     
-    
+    //MARK: - Register User Into Database
     private func registerUserIntoDatabaseWithUID(uid: String, values: [String: AnyObject]) {
         // Successfully Registered Value
         var ref: DatabaseReference!
@@ -150,8 +139,6 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
         ref = Database.database().reference(fromURL: "https://fourbears-63cd1.firebaseio.com/")
         
         let userRef = ref.child("users").child(uid)
-        
-       
         
         userRef.updateChildValues(values) { (error, refer) in
             if let error = error {
@@ -162,23 +149,13 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
                  DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
                      self.performSegue(withIdentifier: "RegisterSegue", sender: self)
                  }
-           // self.performSegue(withIdentifier: "RegisterSegue", sender: self)
             print("Saved user successfully into firebase db")
         }
     }
     
-    func showAlert(){
-               
-           let alert = UIAlertController(title: "Your Account has been created!", message: "Plase Sign In", preferredStyle: .alert)
-           alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-               present(alert, animated: true)
-               
-           }
     
     
-    //MARK: - Actions
-    
-    
+    //MARK: - Interface Actions
     @IBAction func registerTapped(_ sender: Any) {
         animateRegister()
         handleRegister()
@@ -190,9 +167,6 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
                    picker.delegate = self
                    picker.sourceType = .photoLibrary
                    present(picker, animated: true)
-        
-        
-                   
      }
     
     
@@ -202,7 +176,7 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
     
 }
 
-
+//MARK: - Register Helper
 extension RegisterViewController {
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)

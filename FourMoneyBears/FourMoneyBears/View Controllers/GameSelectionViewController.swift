@@ -12,55 +12,44 @@ import SCLAlertView
 
 class GameSelectionViewController: UIViewController {
 
+    //MARK: - Interface Outlets
     @IBOutlet var basicsView: UIView!
-    
     // Four Money Bears
     @IBOutlet var spenderBear: UIImageView!
     @IBOutlet var saverBear: UIImageView!
     @IBOutlet var investorBear: UIImageView!
     @IBOutlet var giverBear: UIImageView!
-    
     //User Attributes
     @IBOutlet var userRankLabel: UILabel!
     @IBOutlet var userRankImage: UIImageView!
     @IBOutlet var userHealthLabel: UILabel!
     @IBOutlet var streakLabel: UILabel!
-    
     // Bear Check Marks if Game Completed
     @IBOutlet var spenderBearCheckMark: UIImageView!
     @IBOutlet var saverBearCheckMark: UIImageView!
     @IBOutlet var investorBearCheckMark: UIImageView!
     @IBOutlet var giverBearCheckMark: UIImageView!
-    
     // Bear Buttons To Hide
     @IBOutlet var spenderBearButton: UIButton!
-    
     @IBOutlet var saverBearButton: UIButton!
     @IBOutlet var investorBearButton: UIButton!
     @IBOutlet var giverBearButton: UIButton!
-    
     //Bear Locks
     @IBOutlet var saverBearLock: UIImageView!
-    
     @IBOutlet var giverBearLock: UIImageView!
     @IBOutlet var investorBearLock: UIImageView!
-    
     // Custom Tab Bar
-    
     @IBOutlet var usersProfileButton: UIButton!
-    
     @IBOutlet var leaderboardButton: UIButton!
     
     
-    
+    //MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchUser()
-        
-            //Check Bear Locks
         checkSaverBearLocks()
          
-    // Bear Check Marks Notifications
+       // Bear Check Marks Notifications
         NotificationCenter.default.addObserver(self, selector: #selector(onDidReceiveData(_:)), name: .didReceiveData, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(onDidReceiveDataSaver(_:)), name: .onDidReceiveDataSaver, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(onDidReceiveDataGiver(_:)), name: .onDidReceiveDataGiver, object: nil)
@@ -94,11 +83,10 @@ class GameSelectionViewController: UIViewController {
             DispatchQueue.main.asyncAfter(deadline: .now() + 4){
                 alertViewResponder.close()
             }
-        
-           print("FIRE!!!")
         })
     }
     
+    //MARK: - Add Health To User
     func addHealthUser(){
         var users = [Users]()
         let uid = Auth.auth().currentUser?.uid
@@ -121,29 +109,21 @@ class GameSelectionViewController: UIViewController {
                         self.fetchUser()
                         
                         let values = ["health": "\(health + 3)"]
-    
-                        // print("Health HERE: \(values)")
                         guard let uid = Auth.auth().currentUser?.uid else { return }
                         self.createCopyForUserHealth(uid: uid,values: values as [String : AnyObject])
-                        
-                        
                     }
                     
                     self.spenderBearButton.isHidden = false
-                    
                     self.saverBearButton.isHidden = false
-                    
                     self.investorBearButton.isHidden = false
-                    
                     self.giverBearButton.isHidden = false
                 }
             }
             
-            
         }, withCancel: nil)
     }
     
-    
+    //MARK: - Create Values For User
     func createCopyForUserHealth(uid: String, values: [String: AnyObject]) {
         var ref: DatabaseReference!
             
@@ -151,17 +131,15 @@ class GameSelectionViewController: UIViewController {
             
             let userRef = ref.child("users").child(uid)
             
-           
-            
             userRef.updateChildValues(values) { (error, refer) in
                 if let error = error {
                     print("ERROR CHILD values: \(error)")
                     return
                 }
-         }
+          }
     }
 
-    
+    //MARK: - Fetch User From Database
     func fetchUser(){
         var users = [Users]()
         let uid = Auth.auth().currentUser?.uid
@@ -202,12 +180,11 @@ class GameSelectionViewController: UIViewController {
                 }
             }
             
-            
         }, withCancel: nil)
     }
     
     
-    
+    //MARK: - Set Up Bear Locks
     func checkSaverBearLocks() {
         if spenderBearCheckMark.isHidden == true {
             saverBearLock.isHidden = false
@@ -236,12 +213,12 @@ class GameSelectionViewController: UIViewController {
         }
     }
     
+    //MARK: - Check Bear Locks
     func checkInvestorBearLock(){
         if saverBearCheckMark.isHidden == false {
             investorBearLock.isHidden = true
             investorBear.layer.opacity = 1
             investorBearButton.isHidden = false
-            
             saverBearButton.isHidden = true
             saverBear.layer.opacity = 0.5
         }
@@ -295,7 +272,7 @@ class GameSelectionViewController: UIViewController {
     
    
     
-    //MARK: - View Will Appear needed to Refresh Current Users State
+    //MARK: - View Life Cycle - Will Appear To Refresh Current Users State
     override func viewWillAppear(_ animated: Bool) {
           let uid = Auth.auth().currentUser?.uid
              
@@ -317,21 +294,8 @@ class GameSelectionViewController: UIViewController {
     }
     
     
-    //MARK: - Rank Set Up -
-    // Step 1. We need to fetch the Current User. (CHECK)
-    // Step 2. Fetch Current User Rank (CHECK)
-    // Step 3. Diplay Rank in Rank Label (CHECK)
-    // Step 4. On the last Game, after winning, Rank += 10
-//    private var authUser : User? {
-//           return Auth.auth().currentUser
-//       }
-    
-      
-    
-    
-    
-    
-    
+
+    //MARK: - Set Up Views
     func setUpViews() {
         basicsView.contentMode = .scaleAspectFill
         basicsView.layer.cornerRadius = basicsView.frame.height / 2
@@ -339,7 +303,6 @@ class GameSelectionViewController: UIViewController {
         basicsView.clipsToBounds = true
         basicsView.layer.borderWidth = 1
         basicsView.layer.borderColor = UIColor.black.cgColor
-        
         
         //Bears
         spenderBear.contentMode = .scaleAspectFill
@@ -369,9 +332,6 @@ class GameSelectionViewController: UIViewController {
         giverBear.clipsToBounds = true
         giverBear.layer.borderWidth = 1
         giverBear.layer.borderColor = UIColor.black.cgColor
-        
-        
-        
         
     }
     
@@ -483,9 +443,6 @@ class GameSelectionViewController: UIViewController {
                          self.performSegue(withIdentifier: "GiverBearSegue", sender: nil)
                      }
     }
-    
-    
-    
     
 // MARK: - Log Out Function (FIXME: Create Hamburger Menu to Hide)
 //    @IBAction func logoutTapped(_ sender: Any) {

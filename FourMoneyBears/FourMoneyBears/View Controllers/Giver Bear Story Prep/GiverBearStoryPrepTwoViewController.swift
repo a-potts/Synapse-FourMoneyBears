@@ -10,14 +10,14 @@ import UIKit
 
 class GiverBearStoryPrepTwoViewController: UIViewController {
 
-    
+    //MARK: - Interfce Outlets
     @IBOutlet var seeExampleButton: UIButton!
     @IBOutlet var giverrBearText: UITextView!
     @IBOutlet var textBubbleOne: UIView!
     @IBOutlet var textBubbleTwo: UIView!
     
     
-    
+    //MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         animateText()
@@ -29,6 +29,7 @@ class GiverBearStoryPrepTwoViewController: UIViewController {
         
     }
     
+    //MARK: - Set Up Views
     func setUpMiscViews(){
         seeExampleButton.layer.cornerRadius = 20
         giverrBearText.layer.cornerRadius = 20
@@ -38,6 +39,7 @@ class GiverBearStoryPrepTwoViewController: UIViewController {
         
     }
     
+    //MARK: - Set Up Text Animation
     func animateText() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.9) {
             self.textBubbleOne.isHidden = false
@@ -51,20 +53,16 @@ class GiverBearStoryPrepTwoViewController: UIViewController {
         
     }
     
+    //MARK: - Set Up Bubble Views
     func setUpBubbleViews(){
         self.textBubbleOne.layer.cornerRadius = self.textBubbleOne.frame.height / 2
         self.textBubbleOne.layer.masksToBounds = false
         self.textBubbleOne.clipsToBounds = true
-        
-        
         self.textBubbleTwo.layer.cornerRadius = self.textBubbleTwo.frame.height / 2
         self.textBubbleTwo.layer.masksToBounds = false
         self.textBubbleTwo.clipsToBounds = true
         
     }
-    
-    
-    
     
 }
 

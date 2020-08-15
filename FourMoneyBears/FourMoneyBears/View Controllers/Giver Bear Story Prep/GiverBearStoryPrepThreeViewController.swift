@@ -10,6 +10,7 @@ import UIKit
 
 class GiverBearStoryPrepThreeViewController: UIViewController {
 
+    //MARK: - Interface Outlets
     @IBOutlet var mamaBearText: UITextView!
     @IBOutlet var kidBearText: UITextView!
     @IBOutlet var seeNextExampleButton: UIButton!
@@ -19,18 +20,16 @@ class GiverBearStoryPrepThreeViewController: UIViewController {
     @IBOutlet var kidBearBubble2: UIView!
     
     
-    
+    //MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpMiscViews()
         mamaBearText.isHidden = true
         kidBearText.isHidden = true
-        
         mamaBearBubble1.isHidden = true
         mamaBearBubble2.isHidden = true
         kidBearBubble1.isHidden = true
         kidBearBubble2.isHidden = true
-        
         
         setUpBubbleViews()
         animateText()

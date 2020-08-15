@@ -12,28 +12,25 @@ import SCLAlertView
 
 class LoginViewController: UIViewController {
 
+    //MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setUpViews()
-        
-      
-    
-        
     }
     
+    //MARK: - Interface Outlets
     @IBOutlet var usernameText: UITextField!
     @IBOutlet var passwordText: UITextField! // FIXME: EMAIL TEXT FIELD
     @IBOutlet var loginButton: UIButton!
     @IBOutlet var credentialView: UIView!
     
  
-    
+    //MARK: - Set Up Views
     func setUpViews(){
         loginButton.layer.cornerRadius = 15
         credentialView.layer.cornerRadius = 15
         passwordText.isSecureTextEntry = true
-        
         loginButton.layer.shadowColor = UIColor.black.cgColor
         loginButton.layer.shadowOffset = CGSize(width: 5, height: 5)
         loginButton.layer.shadowRadius = 5
@@ -41,10 +38,12 @@ class LoginViewController: UIViewController {
         
     }
     
+   
    @IBAction func unwind( _ seg: UIStoryboardSegue) {
        
    }
     
+    //MARK: - Set Up Login Animation
     func animateLogin() {
         UIView.animate(withDuration: 0.2, animations: {               //45 degree rotation. USE RADIANS
             self.loginButton.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 0.1).concatenating(CGAffineTransform(scaleX: 0.8, y: 0.8))
@@ -55,33 +54,11 @@ class LoginViewController: UIViewController {
                 UIView.animate(withDuration: 0.01, animations: {
                     self.loginButton.transform = .identity
                 })
-                
-                
+                                
             }
     }
-    
-//    // MARK: - FIXME:
-//    func neumorhpicButton() {
-//        //let button = EMTNeumorphicButton(type: .custom)
-//        let button = EMTNeumorphicButton(type: loginButton.buttonType)
-//        //loginButton.addSubview(button)
-//           button.setImage(UIImage(named: "heart-outline"), for: .normal)
-//           button.setImage(UIImage(named: "heart-solid"), for: .selected)
-//           button.contentVerticalAlignment = .fill
-//           button.contentHorizontalAlignment = .fill
-//           button.imageEdgeInsets = UIEdgeInsets(top: 126, left: 124, bottom: 122, right: 124)
-//           button.addTarget(self, action: #selector(tapped(_:)), for: .touchUpInside)
-//           button.translatesAutoresizingMaskIntoConstraints = false
-//
-//           button.neumorphicLayer?.elementBackgroundColor = view.backgroundColor?.cgColor as! CGColor
-//
-//
-//    }
-//    @objc func tapped(_ button: EMTNeumorphicButton) {
-//        // isSelected property changes neumorphicLayer?.depthType automatically
-//        button.isSelected = !button.isSelected
-//    }
-    
+
+    //MARK: - Set Up User Log In
     func handleLogIn() {
          
          guard let email = usernameText.text, let password = passwordText.text else { return }
@@ -99,6 +76,7 @@ class LoginViewController: UIViewController {
          
      }
     
+    //MARK: - Alert
     func showAlert(){
             
         SCLAlertView().showError("Wrong Email or Password", subTitle: "Try Again!")
@@ -106,7 +84,7 @@ class LoginViewController: UIViewController {
         }
     
     
-    
+    //MARK: - Interface Actions
     @IBAction func noAccountButtonTapped(_ sender: Any) {
     }
     
