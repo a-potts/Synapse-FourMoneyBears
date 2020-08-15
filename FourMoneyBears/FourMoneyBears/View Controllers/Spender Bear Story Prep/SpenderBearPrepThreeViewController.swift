@@ -10,12 +10,10 @@ import UIKit
 
 class SpenderBearPrepThreeViewController: UIViewController {
 
-        
-        
+        //MARK: - Interface Outlets
         @IBOutlet var blueBearText: UITextView!
         @IBOutlet var spenderBearText: UITextView!
         @IBOutlet var readyButton: UIButton!
-        
         @IBOutlet var blueBearBubble1: UIView!
         @IBOutlet var blueBearBubble2: UIView!
         @IBOutlet var spenderBubble1: UIView!
@@ -23,23 +21,22 @@ class SpenderBearPrepThreeViewController: UIViewController {
         
         
         
-        
+        //MARK: - View Life Cycle
         override func viewDidLoad() {
             super.viewDidLoad()
-           setUpMiscViews()
+            setUpMiscViews()
             blueBearText.isHidden = true
             spenderBearText.isHidden = true
-            
             blueBearBubble1.isHidden = true
             blueBearBubble2.isHidden = true
             spenderBubble1.isHidden = true
             spenderBubble2.isHidden = true
-            
-            
             setUpBubbleViews()
             animateText()
         }
         
+    
+        //MARK: - Set Up Views
         func setUpMiscViews(){
             blueBearText.layer.cornerRadius = 20
             spenderBearText.layer.cornerRadius = 20
@@ -50,6 +47,7 @@ class SpenderBearPrepThreeViewController: UIViewController {
             readyButton.layer.shadowOpacity = 1.0
         }
 
+        //MARK: - Set Up Bubble Views
         func setUpBubbleViews(){
             self.blueBearBubble1.layer.cornerRadius = self.blueBearBubble1.frame.height / 2
             self.blueBearBubble1.layer.masksToBounds = false
@@ -67,11 +65,10 @@ class SpenderBearPrepThreeViewController: UIViewController {
             self.spenderBubble2.layer.masksToBounds = false
             self.spenderBubble2.clipsToBounds = true
             
-            
         }
         
         
-        
+        //MARK: - Set Up Text Bubble Animations
         func animateText() {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.9) {
                 self.blueBearBubble1.isHidden = false

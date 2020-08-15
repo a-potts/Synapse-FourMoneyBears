@@ -5502,15 +5502,15 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email@email.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pzC-Dn-LKA">
-                                <rect key="frame" x="20" y="162.5" width="159.5" height="26"/>
+                                <rect key="frame" x="20" y="165.5" width="159.5" height="26"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HPL-En-rfI">
-                                <rect key="frame" x="20" y="190.5" width="45" height="26"/>
+                                <rect key="frame" x="20" y="196.5" width="45" height="26"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crowns This Week" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e35-0U-7IJ">
@@ -5659,9 +5659,9 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DDH-RL-znF">
-                                <rect key="frame" x="71" y="190.5" width="25" height="26"/>
+                                <rect key="frame" x="71" y="196.5" width="25" height="26"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -5674,13 +5674,13 @@
                             <constraint firstItem="cfp-Kc-qgB" firstAttribute="leading" secondItem="WUZ-vw-hTY" secondAttribute="leading" constant="20" id="FXY-KM-Dli"/>
                             <constraint firstItem="w0j-Gc-RwW" firstAttribute="top" secondItem="lPZ-tV-mnQ" secondAttribute="bottom" constant="8" id="Gsf-Sm-ig9"/>
                             <constraint firstItem="het-aJ-x7u" firstAttribute="leading" secondItem="WUZ-vw-hTY" secondAttribute="leading" constant="20" id="Gt4-ba-9WQ"/>
-                            <constraint firstItem="DDH-RL-znF" firstAttribute="top" secondItem="pzC-Dn-LKA" secondAttribute="bottom" constant="2" id="J0T-7h-nfe"/>
+                            <constraint firstItem="DDH-RL-znF" firstAttribute="top" secondItem="pzC-Dn-LKA" secondAttribute="bottom" constant="5" id="J0T-7h-nfe"/>
                             <constraint firstItem="WUZ-vw-hTY" firstAttribute="trailing" secondItem="lPZ-tV-mnQ" secondAttribute="trailing" constant="20" id="Kpx-uc-Gek"/>
                             <constraint firstItem="z7h-3M-GHQ" firstAttribute="leading" secondItem="Yqt-zL-2Zn" secondAttribute="leading" id="MGB-pf-7Kt"/>
                             <constraint firstItem="UEV-Yl-Dih" firstAttribute="leading" secondItem="WUZ-vw-hTY" secondAttribute="leading" constant="20" id="QP5-7f-Kih"/>
                             <constraint firstItem="HPL-En-rfI" firstAttribute="leading" secondItem="WUZ-vw-hTY" secondAttribute="leading" constant="20" id="Ugl-ho-2Dj"/>
-                            <constraint firstItem="HPL-En-rfI" firstAttribute="top" secondItem="pzC-Dn-LKA" secondAttribute="bottom" constant="2" id="XB4-1n-XVq"/>
-                            <constraint firstItem="pzC-Dn-LKA" firstAttribute="top" secondItem="cfp-Kc-qgB" secondAttribute="bottom" constant="2" id="XRc-Ci-3FF"/>
+                            <constraint firstItem="HPL-En-rfI" firstAttribute="top" secondItem="pzC-Dn-LKA" secondAttribute="bottom" constant="5" id="XB4-1n-XVq"/>
+                            <constraint firstItem="pzC-Dn-LKA" firstAttribute="top" secondItem="cfp-Kc-qgB" secondAttribute="bottom" constant="5" id="XRc-Ci-3FF"/>
                             <constraint firstItem="z7h-3M-GHQ" firstAttribute="top" secondItem="XtZ-Qa-h6h" secondAttribute="bottom" constant="35" id="XrC-Db-fCo"/>
                             <constraint firstAttribute="trailing" secondItem="z7h-3M-GHQ" secondAttribute="trailing" id="YcO-hs-etr"/>
                             <constraint firstItem="BO0-FJ-5Sv" firstAttribute="leading" secondItem="WUZ-vw-hTY" secondAttribute="leading" constant="20" id="ZJY-6o-KKz"/>

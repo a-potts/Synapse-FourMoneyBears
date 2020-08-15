@@ -10,15 +10,12 @@ import Foundation
 
  class Users: NSObject {
     
-    
-   @objc var name: String?
-   @objc var email: String?
-   @objc var profileImageURL: String?
+    @objc var name: String?
+    @objc var email: String?
+    @objc var profileImageURL: String?
     @objc var rank: String?
     @objc var health: String?
     @objc var streak: String?
     @objc var age: String?
-    
-    
     
 }

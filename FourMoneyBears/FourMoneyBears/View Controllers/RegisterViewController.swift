@@ -63,6 +63,7 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
         Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
             if let error = error {
                 print("Error: \(error)")
+                SCLAlertView().showError("Make sure your Password is 6 characters long & that you are using a correct Email.", subTitle: "")
                 return
             }
             //MARK: Verification Email Test

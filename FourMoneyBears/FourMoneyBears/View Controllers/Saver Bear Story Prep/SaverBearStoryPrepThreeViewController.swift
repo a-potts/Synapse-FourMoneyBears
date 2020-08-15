@@ -10,34 +10,31 @@ import UIKit
 
 class SaverBearStoryPrepThreeViewController: UIViewController {
 
+    //MARK: - Interface Outlets
     @IBOutlet var mamaBearText: UITextView!
     @IBOutlet var kidBearText: UITextView!
     @IBOutlet var seeNextExampleButton: UIButton!
-    
     @IBOutlet var mamaBearBubble1: UIView!
     @IBOutlet var mamaBearBubble2: UIView!
     @IBOutlet var kidBearBubble1: UIView!
     @IBOutlet var kidBearBubble2: UIView!
     
     
-    
-    
+    //MARK: View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpMiscViews()
         mamaBearText.isHidden = true
         kidBearText.isHidden = true
-        
         mamaBearBubble1.isHidden = true
         mamaBearBubble2.isHidden = true
         kidBearBubble1.isHidden = true
         kidBearBubble2.isHidden = true
-        
-        
         setUpBubbleViews()
         animateText()
     }
     
+    //MARK: - Set Up Views
     func setUpMiscViews(){
         mamaBearText.layer.cornerRadius = 20
         kidBearText.layer.cornerRadius = 20
@@ -48,6 +45,8 @@ class SaverBearStoryPrepThreeViewController: UIViewController {
         seeNextExampleButton.layer.shadowOpacity = 1.0
     }
     
+    
+    //MARK: - Set Up Text Bubble Views
     func setUpBubbleViews(){
         self.mamaBearBubble1.layer.cornerRadius = self.mamaBearBubble1.frame.height / 2
         self.mamaBearBubble1.layer.masksToBounds = false
@@ -69,7 +68,7 @@ class SaverBearStoryPrepThreeViewController: UIViewController {
     }
     
     
-    
+    //MARK: - Set Up Text Bubble Animations
     func animateText() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.9) {
             self.kidBearBubble1.isHidden = false

@@ -10,8 +10,7 @@ import UIKit
 
 class SpenderPrepOneViewController: UIViewController {
 
-    
-    
+    //MARK: - Interface Outlets
     @IBOutlet var seeExampleButton: UIButton!
     @IBOutlet var hintText: UITextView!
     @IBOutlet var mamaBearText: UITextView!
@@ -21,18 +20,19 @@ class SpenderPrepOneViewController: UIViewController {
     @IBOutlet var kidBearBubble1: UIView!
     @IBOutlet var kidBearBubble2: UIView!
     
+    //MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setUpMiscViews()
-       // animateText()
         animateTextBear()
         setUpBubbleViews()
     }
     
+    //MARK: - Set Up Views
     func setUpMiscViews() {
         mamaBearText.layer.cornerRadius = 20
-               kidBearText.layer.cornerRadius = 20
+        kidBearText.layer.cornerRadius = 20
         seeExampleButton.layer.cornerRadius = 20
         seeExampleButton.layer.shadowColor = UIColor.black.cgColor
         seeExampleButton.layer.shadowOffset = CGSize(width: 5, height: 5)
@@ -40,6 +40,7 @@ class SpenderPrepOneViewController: UIViewController {
         seeExampleButton.layer.shadowOpacity = 1.0
     }
     
+    //MARK: - Set Up Bubble Views
     func setUpBubbleViews(){
           self.mamaBearBubble1.layer.cornerRadius = self.mamaBearBubble1.frame.height / 2
           self.mamaBearBubble1.layer.masksToBounds = false
@@ -60,7 +61,7 @@ class SpenderPrepOneViewController: UIViewController {
           
       }
     
-    
+    //MARK: - Set Up Text Bubble Animations
     func animateTextBear() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.9) {
             self.mamaBearBubble1.isHidden = false
@@ -82,21 +83,17 @@ class SpenderPrepOneViewController: UIViewController {
         }
     }
 
-
+    //MARK: - Animate Text
     func animateText() {
-        UIView.animate(withDuration:0.5, animations: {               //45 degree rotation. USE RADIANS
+        UIView.animate(withDuration:0.5, animations: {       
             self.hintText.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 0.1).concatenating(CGAffineTransform(scaleX: 1.2, y: 1.2))
             
         }) { (_) in //Is finished
             
-            
             UIView.animate(withDuration: 0.3, animations: {
                 self.hintText.transform = .identity
             })
-            
-            
         }
     }
-
 
 }

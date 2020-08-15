@@ -110,44 +110,18 @@ class MacawChartView: MacawView {
     
     
     
-  
-    
-    var users = [Users]()
-    // I'll want to fetch the user
-    func fetchUser(){
-            let uid = Auth.auth().currentUser?.uid
-            
-            Database.database().reference().child("users").child(uid!).observeSingleEvent(of: .value, with: { (snapshot) in
-                
-                if let dictionary = snapshot.value as? [String: AnyObject] {
-                    //self.userHealthLabel.text = dictionary["rank"] as? String
-                    let user = Users()
-                                  
-                    user.setValuesForKeys(dictionary)
-                    self.users.append(user)
-                    print("USER:: \(user)")
-                    
-                }
-                
-                
-            }, withCancel: nil)
-        }
-    
-    
-    // This needs to be changed to the User(name: "Billy", Crowns: 30)
-    // Array of Users Ranks for Mon, Tue, Wed, Thur, Fri
-    
     // private static func userData() -> [User]
         // for user in users { let mon = User(name: "M", rank: Int(user.rank ?? "") ?? 0) }
     struct UserData {
               let day: String
               let crowns: Double
           }
+    
     private static func userData() -> [UserData] {
         
-        var users = [Users]()
-        var userPlace = Users()
-        var dataStorage = [UserData]()
+        let userPlace = Users()
+        
+        var rank = 0.0
         
         let uid = Auth.auth().currentUser?.uid
         
@@ -155,40 +129,48 @@ class MacawChartView: MacawView {
             
             if let dictionary = snapshot.value as? [String: AnyObject] {
                 //self.userHealthLabel.text = dictionary["rank"] as? String
-                let user = Users()
-                
-                user.setValuesForKeys(dictionary)
-               // users.append(user)
-                userPlace = user
-        
-                
+            
+                userPlace.setValuesForKeys(dictionary)
+               
             }
             
             
+            rank = Double(userPlace.rank ?? "") ?? 0
+            print("RANK!!! \(rank)")
+            
+            let sun = UserData(day: "S", crowns: rank)
+            let mon = UserData(day: "M", crowns: rank)
+            let tue = UserData(day: "T", crowns: rank)
+            let wed = UserData(day: "W", crowns: rank)
+            let thur = UserData(day: "T", crowns: rank)
+            let fri = UserData(day: "F", crowns: rank)
+            let sat = UserData(day: "S", crowns: rank)
+            
+                
+           print("Collection2::\([sun,mon, tue, wed, thur, fri, sat])")
+        
+            
+            print(snapshot)
         }, withCancel: nil)
         
         
-        let sun = UserData(day: "S", crowns: Double(userPlace.rank ?? "") ?? 300)
-        
-        let mon = UserData(day: "M", crowns: Double(userPlace.rank ?? "") ?? 100)
-            
-        let tue = UserData(day: "T", crowns: Double(userPlace.rank ?? "") ?? 300)
-            
-        let wed = UserData(day: "W", crowns: Double(userPlace.rank ?? "") ?? 200)
-            
-        let thur = UserData(day: "T", crowns: Double(userPlace.rank ?? "") ?? 300)
-        
-        let fri = UserData(day: "F", crowns: Double(userPlace.rank ?? "") ?? 100)
-        
-        let sat = UserData(day: "S", crowns: Double(userPlace.rank ?? "") ?? 200)
+        print("RANK2!!!! \(rank)")
+              
+        let sun = UserData(day: "S", crowns: 100)
+        let mon = UserData(day: "M", crowns: rank)
+        let tue = UserData(day: "T", crowns: rank)
+        let wed = UserData(day: "W", crowns: rank)
+        let thur = UserData(day: "T", crowns: rank)
+        let fri = UserData(day: "F", crowns: rank)
+        let sat = UserData(day: "S", crowns: rank)
         
             
-            print("Collection::\([mon, tue, wed, thur])")
-            return [sun, mon, tue, wed, thur, fri, sat]
-        
-
+        print("Collection::\([sun,mon, tue, wed, thur, fri, sat])")
+        return [sun, mon, tue, wed, thur, fri, sat]
         
     }
+    
+    
     
     private static func createDummyData() -> [DummyData] {
         let one = DummyData(showNumber: "M", viewCount: 123456)

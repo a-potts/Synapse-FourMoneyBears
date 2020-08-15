@@ -80,9 +80,9 @@ class UserProfileViewController: UIViewController {
             
                   
                   if let dictionary = snapshot.value as? [String: AnyObject] {
-                      self.userRankLabel.text = dictionary["rank"] as? String
-                      self.userStreakLabel.text = dictionary["streak"] as? String
-                      self.usersHealthLabel.text = dictionary["health"] as? String
+                    self.userRankLabel.text = dictionary["rank"] as? String
+                    self.userStreakLabel.text = dictionary["streak"] as? String
+                    self.usersHealthLabel.text = dictionary["health"] as? String
                     self.usersName.text = dictionary["name"] as? String
                     self.usersEmail.text = dictionary["email"] as? String
                     self.usersAge.text = dictionary["age"] as? String

@@ -13,12 +13,10 @@ class GiverBearStoryPrepThreeViewController: UIViewController {
     @IBOutlet var mamaBearText: UITextView!
     @IBOutlet var kidBearText: UITextView!
     @IBOutlet var seeNextExampleButton: UIButton!
-    
     @IBOutlet var mamaBearBubble1: UIView!
     @IBOutlet var mamaBearBubble2: UIView!
     @IBOutlet var kidBearBubble1: UIView!
     @IBOutlet var kidBearBubble2: UIView!
-    
     
     
     
@@ -38,6 +36,7 @@ class GiverBearStoryPrepThreeViewController: UIViewController {
         animateText()
     }
     
+    //MARK: Set Up for Views
     func setUpMiscViews(){
         mamaBearText.layer.cornerRadius = 20
         kidBearText.layer.cornerRadius = 20
@@ -48,6 +47,8 @@ class GiverBearStoryPrepThreeViewController: UIViewController {
         seeNextExampleButton.layer.shadowOpacity = 1.0
     }
     
+    
+    //MARK: Set Up Text Bubbles
     func setUpBubbleViews(){
         self.mamaBearBubble1.layer.cornerRadius = self.mamaBearBubble1.frame.height / 2
         self.mamaBearBubble1.layer.masksToBounds = false
@@ -69,7 +70,7 @@ class GiverBearStoryPrepThreeViewController: UIViewController {
     }
     
     
-    
+    //MARK: - Animate Text Bubbles
     func animateText() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.9) {
             self.kidBearBubble1.isHidden = false
@@ -89,6 +90,6 @@ class GiverBearStoryPrepThreeViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             self.mamaBearText.isHidden = false
         }
-    }
+     }
     
 }

@@ -10,14 +10,14 @@ import UIKit
 
 class InvestorBearStoryPrepOneViewController: UIViewController {
 
-    
+    //MARK: - Interface Outlets
     @IBOutlet var seeExampleButton: UIButton!
     @IBOutlet var investorBearText: UITextView!
     @IBOutlet var textBubbleOne: UIView!
     @IBOutlet var textBubbleTwo: UIView!
     
     
-    
+    //MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         animateText()
@@ -29,6 +29,7 @@ class InvestorBearStoryPrepOneViewController: UIViewController {
         
     }
     
+    //MARK: - Set Up Views
     func setUpMiscViews(){
         seeExampleButton.layer.cornerRadius = 20
         investorBearText.layer.cornerRadius = 20
@@ -38,6 +39,7 @@ class InvestorBearStoryPrepOneViewController: UIViewController {
         
     }
     
+    //MARK:- Set Up Text Bubble Animations
     func animateText() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.9) {
             self.textBubbleOne.isHidden = false
@@ -51,12 +53,11 @@ class InvestorBearStoryPrepOneViewController: UIViewController {
         
     }
     
+    //MARK: - Set Up Bubble Views
     func setUpBubbleViews(){
         self.textBubbleOne.layer.cornerRadius = self.textBubbleOne.frame.height / 2
         self.textBubbleOne.layer.masksToBounds = false
         self.textBubbleOne.clipsToBounds = true
-        
-        
         self.textBubbleTwo.layer.cornerRadius = self.textBubbleTwo.frame.height / 2
         self.textBubbleTwo.layer.masksToBounds = false
         self.textBubbleTwo.clipsToBounds = true

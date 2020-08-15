@@ -75,7 +75,7 @@ class GameSelectionViewController: UIViewController {
                 self.streakLabel.text = dictionary["streak"] as? String
                 self.userHealthLabel.text = dictionary["health"] as? String
             }
-            print(snapshot)
+            
         }, withCancel: nil)
         
        setUpViews()
@@ -306,7 +306,7 @@ class GameSelectionViewController: UIViewController {
                       self.streakLabel.text = dictionary["streak"] as? String
                       self.userHealthLabel.text = dictionary["health"] as? String
                   }
-                  print(snapshot)
+                 
               }, withCancel: nil)
         
         checkSaverBearLocks()
