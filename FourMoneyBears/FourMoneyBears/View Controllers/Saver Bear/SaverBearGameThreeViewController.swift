@@ -13,13 +13,12 @@ import AVFoundation
 
 class SaverBearGameThreeViewController: UIViewController {
 
+    //MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpMiscViews()
         fetchUser()
-        
         audioPlayer()
-
     }
     
     //MARK: - Health Timer
@@ -28,11 +27,10 @@ class SaverBearGameThreeViewController: UIViewController {
         let timer = Timer.scheduledTimer(withTimeInterval: 60, repeats: false, block: { timer in
              
            self.addHealthUser()
-        
-           print("FIRE!!!")
         })
     }
     
+    //MARK: - Add Health To User
     func addHealthUser(){
         var users = [Users]()
         let uid = Auth.auth().currentUser?.uid
@@ -52,19 +50,16 @@ class SaverBearGameThreeViewController: UIViewController {
                     if health == 0 {
                         
                         let values = ["health": "\(health + 3)"]
-                        // print("Health HERE: \(values)")
                         guard let uid = Auth.auth().currentUser?.uid else { return }
                         self.createCopyForUserHealth(uid: uid,values: values as [String : AnyObject])
-                        
                         
                     }
                 }
             }
-            
-            
         }, withCancel: nil)
     }
     
+    //MARK: - Fetch User From Database
     func fetchUser(){
            var users = [Users]()
            let uid = Auth.auth().currentUser?.uid
@@ -80,11 +75,10 @@ class SaverBearGameThreeViewController: UIViewController {
                    
                }
                
-               
            }, withCancel: nil)
        }
        
-       
+       //MARK: - Decrement User Health
        func decHealthUser(){
            var users = [Users]()
            let uid = Auth.auth().currentUser?.uid
@@ -105,7 +99,6 @@ class SaverBearGameThreeViewController: UIViewController {
                            
                            let values = ["health": "\(health - 1)"]
                            self.userHealthLabel.text = "\(0)"
-                           // print("Health HERE: \(values)")
                            guard let uid = Auth.auth().currentUser?.uid else { return }
                            self.createCopyForUserHealth(uid: uid,values: values as [String : AnyObject])
                         
@@ -125,28 +118,24 @@ class SaverBearGameThreeViewController: UIViewController {
                        print("NEW HEALTH::: \(newHealth)")
                        
                        let values = ["health": "\(newHealth)"]
-                            // print("Health HERE: \(values)")
                        guard let uid = Auth.auth().currentUser?.uid else { return }
                        self.createCopyForUserHealth(uid: uid,values: values as [String : AnyObject])
                        }
                    }
                }
                
-               
            }, withCancel: nil)
        }
        
 
-        
+        //MARK: - Create Values For User
         func createCopyForUserHealth(uid: String, values: [String: AnyObject]) {
             var ref: DatabaseReference!
                 
                 ref = Database.database().reference(fromURL: "https://fourbears-63cd1.firebaseio.com/")
                 
                 let userRef = ref.child("users").child(uid)
-                
-               
-                
+            
                 userRef.updateChildValues(values) { (error, refer) in
                     if let error = error {
                         print("ERROR CHILD values: \(error)")
@@ -155,39 +144,38 @@ class SaverBearGameThreeViewController: UIViewController {
              }
         }
     
+    //MARK: - Interface Outlets
     @IBOutlet var orangeStatus: UIView!
     @IBOutlet var statusBar: UIView!
-  
     @IBOutlet var saverBearImage: UIImageView!
     @IBOutlet var audioPlayerView: UIView!
     @IBOutlet var yesButton: UIButton!
     @IBOutlet var noButton: UIButton!
-
     @IBOutlet var userHealthLabel: UILabel!
     
-    
+    //MARK: - Property
     var player: AVAudioPlayer = AVAudioPlayer()
     
+    //MARK: - Set Up Views
     func setUpMiscViews() {
-          statusBar.layer.cornerRadius = 9
-          orangeStatus.layer.cornerRadius = 9
-          yesButton.layer.cornerRadius = 20
-          noButton.layer.cornerRadius = 20
+        statusBar.layer.cornerRadius = 9
+        orangeStatus.layer.cornerRadius = 9
+        yesButton.layer.cornerRadius = 20
+        noButton.layer.cornerRadius = 20
         audioPlayerView.layer.cornerRadius = 20
         saverBearImage.layer.cornerRadius = 50
           
       }
       
+      //MARK: - Set Up Status Bar Animation
       func animateStatusBar(){
             UIView.animate(withDuration: 2, animations: {
-                 // self.orangeStatus.frame.origin.x -= 70
                 self.orangeStatus.translatesAutoresizingMaskIntoConstraints = false
                 self.orangeStatus.layer.frame.size.width += 73
-                
-               
               })
         }
     
+    //MARK: - Set Up Aduio Player
     func audioPlayer(){
           
           do {
@@ -199,10 +187,10 @@ class SaverBearGameThreeViewController: UIViewController {
           
       }
     
+    //MARK: - Interface Actions
     @IBAction func playButtonTapped(_ sender: Any) {
         player.play()
     }
-    
     
     @IBAction func yesTapped(_ sender: Any) {
         SCLAlertView().showSuccess("Good Job!", subTitle: "Next")
@@ -215,10 +203,6 @@ class SaverBearGameThreeViewController: UIViewController {
     @IBAction func noTapped(_ sender: Any) {
         decHealthUser()
     }
-    
-    
-
-   
     
     @IBAction func xTapped(_ sender: Any) {
         self.performSegue(withIdentifier: "unwindSegue", sender: nil)

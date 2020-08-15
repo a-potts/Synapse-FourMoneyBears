@@ -12,19 +12,20 @@ import Firebase
 
 class SaverBearFourViewController: UIViewController {
 
+    //MARK: - Interface Outlets
     @IBOutlet var answerView1: UIView!
     @IBOutlet var answerView2: UIView!
     @IBOutlet var answerView3: UIView!
     @IBOutlet var answerView4: UIView!
     @IBOutlet var statusBar: UIView!
     @IBOutlet var orangeStatus: UIView!
-    
     @IBOutlet var userHealthLabel: UILabel!
     
+    //MARK: - View Life Cycle
     override func viewDidLoad() {
-            super.viewDidLoad()
-                updateAnswerViews()
-                fetchUser()
+        super.viewDidLoad()
+            updateAnswerViews()
+            fetchUser()
         }
     
     //MARK: - Health Timer
@@ -33,11 +34,10 @@ class SaverBearFourViewController: UIViewController {
         let timer = Timer.scheduledTimer(withTimeInterval: 60, repeats: false, block: { timer in
              
            self.addHealthUser()
-        
-           print("FIRE!!!")
         })
     }
     
+    //MARK: - Add Health To User
     func addHealthUser(){
         var users = [Users]()
         let uid = Auth.auth().currentUser?.uid
@@ -57,19 +57,16 @@ class SaverBearFourViewController: UIViewController {
                     if health == 0 {
                         
                         let values = ["health": "\(health + 3)"]
-                        // print("Health HERE: \(values)")
                         guard let uid = Auth.auth().currentUser?.uid else { return }
                         self.createCopyForUserHealth(uid: uid,values: values as [String : AnyObject])
-                        
-                        
+                
                     }
                 }
             }
-            
-            
         }, withCancel: nil)
     }
     
+    //MARK: - Fetch User From Database
     func fetchUser(){
            var users = [Users]()
            let uid = Auth.auth().currentUser?.uid
@@ -84,12 +81,10 @@ class SaverBearFourViewController: UIViewController {
                    users.append(user)
                    
                }
-               
-               
            }, withCancel: nil)
        }
        
-       
+       //MARK: - Decrement Users Health
        func decHealthUser(){
            var users = [Users]()
            let uid = Auth.auth().currentUser?.uid
@@ -110,7 +105,6 @@ class SaverBearFourViewController: UIViewController {
                            
                            let values = ["health": "\(health - 1)"]
                            self.userHealthLabel.text = "\(0)"
-                           // print("Health HERE: \(values)")
                            guard let uid = Auth.auth().currentUser?.uid else { return }
                            self.createCopyForUserHealth(uid: uid,values: values as [String : AnyObject])
                             
@@ -132,27 +126,22 @@ class SaverBearFourViewController: UIViewController {
                        print("NEW HEALTH::: \(newHealth)")
                        
                        let values = ["health": "\(newHealth)"]
-                            // print("Health HERE: \(values)")
                        guard let uid = Auth.auth().currentUser?.uid else { return }
                        self.createCopyForUserHealth(uid: uid,values: values as [String : AnyObject])
                        }
                    }
                }
-               
-               
            }, withCancel: nil)
        }
        
 
-        
+        //MARK: - Create Values For User
         func createCopyForUserHealth(uid: String, values: [String: AnyObject]) {
             var ref: DatabaseReference!
                 
                 ref = Database.database().reference(fromURL: "https://fourbears-63cd1.firebaseio.com/")
                 
                 let userRef = ref.child("users").child(uid)
-                
-               
                 
                 userRef.updateChildValues(values) { (error, refer) in
                     if let error = error {
@@ -162,7 +151,7 @@ class SaverBearFourViewController: UIViewController {
              }
         }
         
-    //MARK:- Update Users Rank by 10
+    //MARK:- Update Users Rank
     func updateData(){
          guard let uid = Auth.auth().currentUser?.uid else { return }
          

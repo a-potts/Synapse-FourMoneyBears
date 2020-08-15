@@ -11,7 +11,6 @@
 		450B789124CBFEFA00206827 /* SpenderBearPrepTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450B789024CBFEFA00206827 /* SpenderBearPrepTwoViewController.swift */; };
 		450B789324CBFF2200206827 /* SpenderBearPrepThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450B789224CBFF2200206827 /* SpenderBearPrepThreeViewController.swift */; };
 		450B789524CCB8F200206827 /* MacawChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450B789424CCB8F200206827 /* MacawChartView.swift */; };
-		450B789724CCB94C00206827 /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450B789624CCB94C00206827 /* DummyData.swift */; };
 		450B789A24D3AFA800206827 /* SaverBearPrepOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450B789924D3AFA800206827 /* SaverBearPrepOneViewController.swift */; };
 		450B789C24D3B42B00206827 /* SaverBearPrepTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450B789B24D3B42B00206827 /* SaverBearPrepTwoViewController.swift */; };
 		450B789E24D3B8AF00206827 /* SaverBearStoryPrepThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450B789D24D3B8AF00206827 /* SaverBearStoryPrepThreeViewController.swift */; };
@@ -62,7 +61,6 @@
 		450B789024CBFEFA00206827 /* SpenderBearPrepTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpenderBearPrepTwoViewController.swift; sourceTree = "<group>"; };
 		450B789224CBFF2200206827 /* SpenderBearPrepThreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpenderBearPrepThreeViewController.swift; sourceTree = "<group>"; };
 		450B789424CCB8F200206827 /* MacawChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacawChartView.swift; sourceTree = "<group>"; };
-		450B789624CCB94C00206827 /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
 		450B789924D3AFA800206827 /* SaverBearPrepOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaverBearPrepOneViewController.swift; sourceTree = "<group>"; };
 		450B789B24D3B42B00206827 /* SaverBearPrepTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaverBearPrepTwoViewController.swift; sourceTree = "<group>"; };
 		450B789D24D3B8AF00206827 /* SaverBearStoryPrepThreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaverBearStoryPrepThreeViewController.swift; sourceTree = "<group>"; };
@@ -273,7 +271,6 @@
 			children = (
 				45D0E26224C37A7500405671 /* UserProfileViewController.swift */,
 				450B789424CCB8F200206827 /* MacawChartView.swift */,
-				450B789624CCB94C00206827 /* DummyData.swift */,
 			);
 			path = "User Profile";
 			sourceTree = "<group>";
@@ -451,7 +448,6 @@
 				4547DD75249FDDE800DEBBF8 /* SpenderBearGameOneViewController.swift in Sources */,
 				450B78A324D3C7C100206827 /* InvestorBearStoryPrepTwoViewController.swift in Sources */,
 				45799DFD24BB786A0042440E /* GiverBearGameTwoViewController.swift in Sources */,
-				450B789724CCB94C00206827 /* DummyData.swift in Sources */,
 				450CA098243EB53800EEA40F /* GameSelectionViewController.swift in Sources */,
 				45D0E26624C37A9900405671 /* LeaderboardsTableViewController.swift in Sources */,
 				45799DF624B96AD00042440E /* InvestorBearGameThreeViewController.swift in Sources */,

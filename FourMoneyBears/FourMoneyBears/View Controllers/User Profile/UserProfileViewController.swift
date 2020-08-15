@@ -12,7 +12,7 @@ import Macaw
 
 class UserProfileViewController: UIViewController {
     
-    
+    //MARK: - Interface Outlets
     @IBOutlet var usersImage: UIImageView!
     @IBOutlet var imageViewCircle: UIView!
     @IBOutlet var usersName: UILabel!
@@ -26,20 +26,25 @@ class UserProfileViewController: UIViewController {
     @IBOutlet var healthView: UIView!
     @IBOutlet var streakView: UIView!
     
+    //MARK: - User Property Observer
      var users: Users? {
            didSet {
                updateViews()
            }
        }
     
+    //MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         updateViews()
         macawChart.contentMode = .scaleAspectFit
         macawChart.layer.cornerRadius = 20
         MacawChartView.playAnimations()
-        
-        
+        setUpMiscViews()
+    }
+    
+    //MARK: - Set Up Views
+    func setUpMiscViews() {
         macawChart.layer.shadowOffset = CGSize(width: 2, height: 2)
         macawChart.layer.shadowRadius = 2
         macawChart.layer.shadowOpacity = 1.0
@@ -63,15 +68,10 @@ class UserProfileViewController: UIViewController {
         imageViewCircle.layer.cornerRadius = imageViewCircle.frame.height / 2
         imageViewCircle.layer.masksToBounds = false
         imageViewCircle.clipsToBounds = true
-        
-
-
-        
-        
-          
     }
     
     
+    //MARK: - Update Views with Database Values
     func updateViews(){
         let uid = Auth.auth().currentUser?.uid
 
@@ -94,37 +94,12 @@ class UserProfileViewController: UIViewController {
                   }
                   print(snapshot)
               }, withCancel: nil)
-        
-      
-                    
-//        usersImage.loadImageViewUsingCacheWithUrlString(urlString: profileImageURL)
-                    
-                    //            let url = URL(string: profileImageUrl)
-                    //
-                    //            URLSession.shared.dataTask(with: url!) { (data, response, error) in
-                    //
-                    //                if let error = error {
-                    //                    print("Error getting image: \(error)")
-                    //                    return
-                    //                }
-                    //
-                    //                DispatchQueue.main.async {
-                    //                     cell.imageView?.image = UIImage(data: data!)
-                    //                }
-                    //
-                    //
-                    //            }.resume()
-                    
-                
     }
     
     
-    
+    //MARK: - Exit Game
     @IBAction func xTapped(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
     
-   //MARK: -  Macaw Graph
-    
-
 }

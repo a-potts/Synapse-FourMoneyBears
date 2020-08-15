@@ -12,21 +12,23 @@ import Firebase
 
 class InvestorBearGameThreeViewController: UIViewController {
 
-  @IBOutlet var orangeStatus: UIView!
-        @IBOutlet var statusBar: UIView!
-        @IBOutlet var choiceViewOne: UIView!
-        @IBOutlet var choiceViewTwo: UIView!
-        @IBOutlet var choiceViewThree: UIView!
-        @IBOutlet var choiceViewFour: UIView!
+    //MARK: - Interface Actions
+    @IBOutlet var orangeStatus: UIView!
+    @IBOutlet var statusBar: UIView!
+    @IBOutlet var choiceViewOne: UIView!
+    @IBOutlet var choiceViewTwo: UIView!
+    @IBOutlet var choiceViewThree: UIView!
+    @IBOutlet var choiceViewFour: UIView!
     @IBOutlet var userHealthLabel: UILabel!
     
-        override func viewDidLoad() {
-            super.viewDidLoad()
-
-            setUpMiscViews()
-            setUpAnswerViews()
-            fetchUser()
-        }
+    //MARK: - View Life Cycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setUpMiscViews()
+        setUpAnswerViews()
+        fetchUser()
+    }
     
     //MARK: - Health Timer
     func healthTimer(){
@@ -34,11 +36,10 @@ class InvestorBearGameThreeViewController: UIViewController {
         let timer = Timer.scheduledTimer(withTimeInterval: 60, repeats: false, block: { timer in
              
            self.addHealthUser()
-        
-           print("FIRE!!!")
         })
     }
     
+    //MARK: - Add Health To User
     func addHealthUser(){
         var users = [Users]()
         let uid = Auth.auth().currentUser?.uid
@@ -58,7 +59,6 @@ class InvestorBearGameThreeViewController: UIViewController {
                     if health == 0 {
                         
                         let values = ["health": "\(health + 3)"]
-                        // print("Health HERE: \(values)")
                         guard let uid = Auth.auth().currentUser?.uid else { return }
                         self.createCopyForUserHealth(uid: uid,values: values as [String : AnyObject])
                         
@@ -66,11 +66,10 @@ class InvestorBearGameThreeViewController: UIViewController {
                     }
                 }
             }
-            
-            
         }, withCancel: nil)
     }
     
+    //MARK: - Fetch User From Database
     func fetchUser(){
            var users = [Users]()
            let uid = Auth.auth().currentUser?.uid
@@ -83,14 +82,11 @@ class InvestorBearGameThreeViewController: UIViewController {
                                  
                    user.setValuesForKeys(dictionary)
                    users.append(user)
-                   
                }
-               
-               
            }, withCancel: nil)
        }
        
-       
+       //MARK: - Decrement Users Health
        func decHealthUser(){
            var users = [Users]()
            let uid = Auth.auth().currentUser?.uid
@@ -111,7 +107,6 @@ class InvestorBearGameThreeViewController: UIViewController {
                            
                            let values = ["health": "\(health - 1)"]
                            self.userHealthLabel.text = "\(0)"
-                           // print("Health HERE: \(values)")
                            guard let uid = Auth.auth().currentUser?.uid else { return }
                            self.createCopyForUserHealth(uid: uid,values: values as [String : AnyObject])
                         
@@ -139,13 +134,11 @@ class InvestorBearGameThreeViewController: UIViewController {
                        }
                    }
                }
-               
-               
            }, withCancel: nil)
        }
        
 
-        
+        //MARK: - Create Values For User
         func createCopyForUserHealth(uid: String, values: [String: AnyObject]) {
             var ref: DatabaseReference!
                 
@@ -153,65 +146,61 @@ class InvestorBearGameThreeViewController: UIViewController {
                 
                 let userRef = ref.child("users").child(uid)
                 
-               
-                
                 userRef.updateChildValues(values) { (error, refer) in
                     if let error = error {
                         print("ERROR CHILD values: \(error)")
                         return
-                    }
+                 }
              }
         }
         
-        func setUpMiscViews(){
-               
-               statusBar.layer.cornerRadius = 9
-               orangeStatus.layer.cornerRadius = 9
-           }
-           
-           func setUpAnswerViews(){
-               choiceViewOne.layer.cornerRadius = 15
-               choiceViewTwo.layer.cornerRadius = 15
-               choiceViewThree.layer.cornerRadius = 15
-               choiceViewFour.layer.cornerRadius = 15
-           }
+        //MARK: - Set Up Views
+    func setUpMiscViews(){
         
-        func animateStatusBar(){
-            UIView.animate(withDuration: 2, animations: {
-                 // self.orangeStatus.frame.origin.x -= 70
-                self.orangeStatus.translatesAutoresizingMaskIntoConstraints = false
-                self.orangeStatus.layer.frame.size.width += 73
-                
-               
-              })
-        }
-        
-        @IBAction func xTapped(_ sender: Any) {
-            self.performSegue(withIdentifier: "unwindSegue", sender: nil)
-        }
-        
-        @IBAction func answerViewTwoTapped(_ sender: Any) {
-             SCLAlertView().showSuccess("Good Job!", subTitle: "Next")
-                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                    self.performSegue(withIdentifier: "correctAnswerThreeSegue", sender: self)
-                }
-             animateStatusBar()
-
-        }
-        
-        
-        @IBAction func answerViewOneTapped(_ sender: Any) {
-            decHealthUser()
-        }
-        @IBAction func answerViewThreeTapped(_ sender: Any) {
-            decHealthUser()
-        }
-        
-        @IBAction func answerViewFourTapped(_ sender: Any) {
-            decHealthUser()
-        }
-        
-        
-     
-
+        statusBar.layer.cornerRadius = 9
+        orangeStatus.layer.cornerRadius = 9
     }
+    
+    //MARK: - Set Up Answer Views
+    func setUpAnswerViews(){
+        choiceViewOne.layer.cornerRadius = 15
+        choiceViewTwo.layer.cornerRadius = 15
+        choiceViewThree.layer.cornerRadius = 15
+        choiceViewFour.layer.cornerRadius = 15
+    }
+        
+    //MARK: - Set Up Status Bar Animation
+    func animateStatusBar(){
+        UIView.animate(withDuration: 2, animations: {
+            self.orangeStatus.translatesAutoresizingMaskIntoConstraints = false
+            self.orangeStatus.layer.frame.size.width += 73
+        })
+    }
+        
+    //MARK: - Interface Actions
+    @IBAction func xTapped(_ sender: Any) {
+        self.performSegue(withIdentifier: "unwindSegue", sender: nil)
+    }
+    
+    @IBAction func answerViewTwoTapped(_ sender: Any) {
+        SCLAlertView().showSuccess("Good Job!", subTitle: "Next")
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            self.performSegue(withIdentifier: "correctAnswerThreeSegue", sender: self)
+        }
+        animateStatusBar()
+        
+    }
+    
+    @IBAction func answerViewOneTapped(_ sender: Any) {
+        decHealthUser()
+    }
+    @IBAction func answerViewThreeTapped(_ sender: Any) {
+        decHealthUser()
+    }
+    
+    @IBAction func answerViewFourTapped(_ sender: Any) {
+        decHealthUser()
+    }
+        
+        
+}

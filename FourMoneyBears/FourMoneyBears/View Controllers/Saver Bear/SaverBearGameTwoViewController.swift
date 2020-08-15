@@ -12,15 +12,16 @@ import Firebase
 
 class SaverBearGameTwoViewController: UIViewController {
     
+    //MARK: - Interface Outlets
     @IBOutlet var orangeStatus: UIView!
     @IBOutlet var statusBar: UIView!
-  
     @IBOutlet var choiceViewOne: UIView!
     @IBOutlet var choiceViewTwo: UIView!
     @IBOutlet var choiceViewThree: UIView!
     @IBOutlet var choiceViewFour: UIView!
     @IBOutlet var userHealthLabel: UILabel!
     
+    //MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -35,11 +36,10 @@ class SaverBearGameTwoViewController: UIViewController {
         let timer = Timer.scheduledTimer(withTimeInterval: 60, repeats: false, block: { timer in
              
            self.addHealthUser()
-        
-           print("FIRE!!!")
         })
     }
     
+    //MARK: - Add Health To User
     func addHealthUser(){
         var users = [Users]()
         let uid = Auth.auth().currentUser?.uid
@@ -59,19 +59,16 @@ class SaverBearGameTwoViewController: UIViewController {
                     if health == 0 {
                         
                         let values = ["health": "\(health + 3)"]
-                        // print("Health HERE: \(values)")
                         guard let uid = Auth.auth().currentUser?.uid else { return }
                         self.createCopyForUserHealth(uid: uid,values: values as [String : AnyObject])
-                        
                         
                     }
                 }
             }
-            
-            
         }, withCancel: nil)
     }
     
+    //MARK: - Add Health To User
     func fetchUser(){
            var users = [Users]()
            let uid = Auth.auth().currentUser?.uid
@@ -84,14 +81,12 @@ class SaverBearGameTwoViewController: UIViewController {
                                  
                    user.setValuesForKeys(dictionary)
                    users.append(user)
-                   
                }
-               
                
            }, withCancel: nil)
        }
        
-       
+       //MARK: - Decrement Users Health
        func decHealthUser(){
            var users = [Users]()
            let uid = Auth.auth().currentUser?.uid
@@ -112,7 +107,6 @@ class SaverBearGameTwoViewController: UIViewController {
                            
                            let values = ["health": "\(health - 1)"]
                            self.userHealthLabel.text = "\(0)"
-                           // print("Health HERE: \(values)")
                            guard let uid = Auth.auth().currentUser?.uid else { return }
                            self.createCopyForUserHealth(uid: uid,values: values as [String : AnyObject])
                            
@@ -134,7 +128,6 @@ class SaverBearGameTwoViewController: UIViewController {
                        print("NEW HEALTH::: \(newHealth)")
                        
                        let values = ["health": "\(newHealth)"]
-                            // print("Health HERE: \(values)")
                        guard let uid = Auth.auth().currentUser?.uid else { return }
                        self.createCopyForUserHealth(uid: uid,values: values as [String : AnyObject])
                        }
@@ -146,15 +139,13 @@ class SaverBearGameTwoViewController: UIViewController {
        }
        
 
-        
+        //MARK: - Create Values For User
         func createCopyForUserHealth(uid: String, values: [String: AnyObject]) {
             var ref: DatabaseReference!
                 
                 ref = Database.database().reference(fromURL: "https://fourbears-63cd1.firebaseio.com/")
                 
                 let userRef = ref.child("users").child(uid)
-                
-               
                 
                 userRef.updateChildValues(values) { (error, refer) in
                     if let error = error {
@@ -164,29 +155,30 @@ class SaverBearGameTwoViewController: UIViewController {
              }
         }
     
+    //MARK: - Set Up Views
     func setUpMiscViews(){
            
            statusBar.layer.cornerRadius = 9
            orangeStatus.layer.cornerRadius = 9
        }
        
-       func setUpAnswerViews(){
+     //MARK: - Set Up Answer Views
+     func setUpAnswerViews(){
            choiceViewOne.layer.cornerRadius = 15
            choiceViewTwo.layer.cornerRadius = 15
            choiceViewThree.layer.cornerRadius = 15
            choiceViewFour.layer.cornerRadius = 15
        }
     
+    //MARK: - Set Up Status Bar Animation
     func animateStatusBar(){
         UIView.animate(withDuration: 2, animations: {
-             // self.orangeStatus.frame.origin.x -= 70
             self.orangeStatus.translatesAutoresizingMaskIntoConstraints = false
             self.orangeStatus.layer.frame.size.width += 67
-            
-           
           })
     }
     
+    //MARK: - Interface Actions
     @IBAction func xTapped(_ sender: Any) {
         self.performSegue(withIdentifier: "unwindSegue", sender: nil)
     }
@@ -211,7 +203,5 @@ class SaverBearGameTwoViewController: UIViewController {
                   animateStatusBar()
     }
     
-    
- 
 
 }

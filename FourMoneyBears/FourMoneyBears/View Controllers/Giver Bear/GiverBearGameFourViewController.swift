@@ -12,7 +12,7 @@ import Firebase
 
 class GiverBearGameFourViewController: UIViewController {
 
-    
+    //MARK: - Interface Outlets
     @IBOutlet var answerView1: UIView!
     @IBOutlet var answerView2: UIView!
     @IBOutlet var answerView3: UIView!
@@ -21,11 +21,12 @@ class GiverBearGameFourViewController: UIViewController {
     @IBOutlet var orangeStatus: UIView!
     @IBOutlet var userHealthLabel: UILabel!
     
-        override func viewDidLoad() {
-            super.viewDidLoad()
-            updateAnswerViews()
-            fetchUser()
-        }
+    //MARK: - View Life Cycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        updateAnswerViews()
+        fetchUser()
+    }
     
     //MARK: - Health Timer
     func healthTimer(){
@@ -33,11 +34,10 @@ class GiverBearGameFourViewController: UIViewController {
         let timer = Timer.scheduledTimer(withTimeInterval: 60, repeats: false, block: { timer in
              
            self.addHealthUser()
-        
-           print("FIRE!!!")
         })
     }
     
+    //MARK: - Add Health To User
     func addHealthUser(){
         var users = [Users]()
         let uid = Auth.auth().currentUser?.uid
@@ -57,19 +57,17 @@ class GiverBearGameFourViewController: UIViewController {
                     if health == 0 {
                         
                         let values = ["health": "\(health + 3)"]
-                        // print("Health HERE: \(values)")
                         guard let uid = Auth.auth().currentUser?.uid else { return }
                         self.createCopyForUserHealth(uid: uid,values: values as [String : AnyObject])
-                        
                         
                     }
                 }
             }
-            
-            
+        
         }, withCancel: nil)
     }
     
+    //MARK: - Fetch User From Database
     func fetchUser(){
            var users = [Users]()
            let uid = Auth.auth().currentUser?.uid
@@ -82,14 +80,12 @@ class GiverBearGameFourViewController: UIViewController {
                                  
                    user.setValuesForKeys(dictionary)
                    users.append(user)
-                   
                }
-               
                
            }, withCancel: nil)
        }
        
-       
+       //MARK: - Decrement Users Health
        func decHealthUser(){
            var users = [Users]()
            let uid = Auth.auth().currentUser?.uid
@@ -110,7 +106,6 @@ class GiverBearGameFourViewController: UIViewController {
                            
                            let values = ["health": "\(health - 1)"]
                            self.userHealthLabel.text = "\(0)"
-                           // print("Health HERE: \(values)")
                            guard let uid = Auth.auth().currentUser?.uid else { return }
                            self.createCopyForUserHealth(uid: uid,values: values as [String : AnyObject])
                            
@@ -132,7 +127,6 @@ class GiverBearGameFourViewController: UIViewController {
                        print("NEW HEALTH::: \(newHealth)")
                        
                        let values = ["health": "\(newHealth)"]
-                            // print("Health HERE: \(values)")
                        guard let uid = Auth.auth().currentUser?.uid else { return }
                        self.createCopyForUserHealth(uid: uid,values: values as [String : AnyObject])
                        }
@@ -144,7 +138,7 @@ class GiverBearGameFourViewController: UIViewController {
        }
        
 
-        
+        //MARK: - Create Values For User
         func createCopyForUserHealth(uid: String, values: [String: AnyObject]) {
             var ref: DatabaseReference!
                 
@@ -152,19 +146,17 @@ class GiverBearGameFourViewController: UIViewController {
                 
                 let userRef = ref.child("users").child(uid)
                 
-               
-                
                 userRef.updateChildValues(values) { (error, refer) in
                     if let error = error {
                         print("ERROR CHILD values: \(error)")
                         return
                     }
-             }
+              }
         }
         
     
     
-    //MARK:- Update Users Rank by 10
+    //MARK:- Update Users Rank
     func updateData(){
          guard let uid = Auth.auth().currentUser?.uid else { return }
          
@@ -174,25 +166,25 @@ class GiverBearGameFourViewController: UIViewController {
          
          self.createCopyForUserRank(uid: uid,values: values as [String : AnyObject])
      }
-     
-     func createCopyForUserRank(uid: String, values: [String: AnyObject]) {
-         var ref: DatabaseReference!
-             
-             ref = Database.database().reference(fromURL: "https://fourbears-63cd1.firebaseio.com/")
-             
-             let userRef = ref.child("users").child(uid)
-             
+         
+    func createCopyForUserRank(uid: String, values: [String: AnyObject]) {
+        var ref: DatabaseReference!
             
-             
-             userRef.updateChildValues(values) { (error, refer) in
-                 if let error = error {
-                     print("ERROR CHILD values: \(error)")
-                     return
-                 }
-          }
-     }
-    
+            ref = Database.database().reference(fromURL: "https://fourbears-63cd1.firebaseio.com/")
+            
+            let userRef = ref.child("users").child(uid)
+            
+           
+            
+            userRef.updateChildValues(values) { (error, refer) in
+                if let error = error {
+                    print("ERROR CHILD values: \(error)")
+                    return
+                }
+         }
+    }
         
+        //MARK: - Set Up Answer Views
         func updateAnswerViews() {
             
             // View Corner Radius
@@ -214,80 +206,31 @@ class GiverBearGameFourViewController: UIViewController {
             statusBar.layer.cornerRadius = 9
             orangeStatus.layer.cornerRadius = 9
             
-            
         }
         
         
-        // MARK: - Navigation
-        
-        // In a storyboard-based application, you will often want to do a little preparation before navigation
-        //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //        if segue.identifier == "CorrectAnswerOneSegue" {
-        //            if let detailVC = segue.destination as? SpenderBearGameOneViewController {
-        //
-        //            }
-        //        }
-        //    }
-        
+        //MARK: - Exit Game
         @IBAction func xTapped(_ sender: Any) {
             
             self.performSegue(withIdentifier: "unwindSegue", sender: nil)
             
         }
         
+        //MARK: - Set Up Status Bar Animation
         func animateStatusBar(){
             UIView.animate(withDuration: 2, animations: {
-                // self.orangeStatus.frame.origin.x -= 70
                 self.orangeStatus.translatesAutoresizingMaskIntoConstraints = false
                 self.orangeStatus.layer.frame.size.width += 15
-                
-                
             })
         }
         
-        
+        //MARK: - Interface Actions
         @IBAction func answerView1Tapped(_ sender: Any) {
           decHealthUser()
         
         }
         
-        
-        //MARK: - ALERT
-        func showCorrectAlert(){
-            
-            
-            
-            let alert = UIAlertController(title: "That's Correct!", message: "You should only spend 20 percent of your savings.", preferredStyle: .alert)
-            
-            alert.addAction(UIAlertAction(title: "Yay", style: .default, handler: { (action) in
-                self.performSegue(withIdentifier: "CorrectAnswerTwoSegue", sender: self)
-            }))
-            
-            present(alert, animated: true)
-            
-            let subview = (alert.view.subviews.first?.subviews.first?.subviews.first!)! as UIView
-            subview.layer.cornerRadius = 1
-            subview.backgroundColor = UIColor.green
-            
-            
-            
-        }
-        
-        
-        func showWrongAlert(){
-            
-            
-            
-            let alert = UIAlertController(title: "That's Inorrect!", message: "You should only spend 20 percent of your savings.", preferredStyle: .alert)
-            
-            alert.addAction(UIAlertAction(title: "Next", style: .destructive, handler: nil))
-            present(alert, animated: true)
-            let subview = (alert.view.subviews.first?.subviews.first?.subviews.first!)! as UIView
-            subview.layer.cornerRadius = 1
-            subview.backgroundColor = UIColor.red
-            
-        }
-        
+                
         @IBAction func answerView2Tapped(_ sender: Any) {
             let alertViewResponder: SCLAlertViewResponder = SCLAlertView().showCustom("Good job, you won!", subTitle: "Reward: 10 Crowns", color: UIColor.white, icon: UIImage(named: "Crown-fill.png")!)
             
@@ -301,11 +244,8 @@ class GiverBearGameFourViewController: UIViewController {
                 self.updateData()
                 NotificationCenter.default.post(name: .onDidReceiveDataGiver, object: nil)
                                    
-                
             }
             animateStatusBar()
-                   
-            
         }
         
         

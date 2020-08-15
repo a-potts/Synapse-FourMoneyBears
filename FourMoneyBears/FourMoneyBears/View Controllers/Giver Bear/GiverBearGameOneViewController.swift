@@ -12,22 +12,23 @@ import Firebase
 
 class GiverBearGameOneViewController: UIViewController {
 
+    //MARK: - Interface Outlets
     @IBOutlet var orangeStatus: UIView!
-          @IBOutlet var statusBar: UIView!
-          @IBOutlet var choiceViewOne: UIView!
-          @IBOutlet var choiceViewTwo: UIView!
-          @IBOutlet var choiceViewThree: UIView!
-          @IBOutlet var choiceViewFour: UIView!
-    
+    @IBOutlet var statusBar: UIView!
+    @IBOutlet var choiceViewOne: UIView!
+    @IBOutlet var choiceViewTwo: UIView!
+    @IBOutlet var choiceViewThree: UIView!
+    @IBOutlet var choiceViewFour: UIView!
     @IBOutlet var userHealthLabel: UILabel!
     
-          override func viewDidLoad() {
-              super.viewDidLoad()
+    //MARK: - View Life Cycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
 
-              setUpMiscViews()
-              setUpAnswerViews()
-              fetchUser()
-          }
+        setUpMiscViews()
+        setUpAnswerViews()
+        fetchUser()
+    }
     
     //MARK: - Health Timer
     func healthTimer(){
@@ -35,11 +36,10 @@ class GiverBearGameOneViewController: UIViewController {
         let timer = Timer.scheduledTimer(withTimeInterval: 60, repeats: false, block: { timer in
              
            self.addHealthUser()
-        
-           print("FIRE!!!")
         })
     }
     
+    //MARK: - Add Health To User
     func addHealthUser(){
         var users = [Users]()
         let uid = Auth.auth().currentUser?.uid
@@ -62,16 +62,14 @@ class GiverBearGameOneViewController: UIViewController {
                         // print("Health HERE: \(values)")
                         guard let uid = Auth.auth().currentUser?.uid else { return }
                         self.createCopyForUserHealth(uid: uid,values: values as [String : AnyObject])
-                        
-                        
                     }
                 }
             }
-            
-            
+
         }, withCancel: nil)
     }
     
+    //MARK: - Fetch User From Database
     func fetchUser(){
            var users = [Users]()
            let uid = Auth.auth().currentUser?.uid
@@ -87,11 +85,10 @@ class GiverBearGameOneViewController: UIViewController {
                    
                }
                
-               
            }, withCancel: nil)
        }
        
-       
+       //MARK: - Decrement Users Health
        func decHealthUser(){
            var users = [Users]()
            let uid = Auth.auth().currentUser?.uid
@@ -112,7 +109,6 @@ class GiverBearGameOneViewController: UIViewController {
                            
                            let values = ["health": "\(health - 1)"]
                            self.userHealthLabel.text = "\(0)"
-                           // print("Health HERE: \(values)")
                            guard let uid = Auth.auth().currentUser?.uid else { return }
                            self.createCopyForUserHealth(uid: uid,values: values as [String : AnyObject])
                            
@@ -146,7 +142,7 @@ class GiverBearGameOneViewController: UIViewController {
        }
        
 
-        
+        //MARK: - Create Values For User
         func createCopyForUserHealth(uid: String, values: [String: AnyObject]) {
             var ref: DatabaseReference!
                 
@@ -154,66 +150,63 @@ class GiverBearGameOneViewController: UIViewController {
                 
                 let userRef = ref.child("users").child(uid)
                 
-               
-                
                 userRef.updateChildValues(values) { (error, refer) in
                     if let error = error {
                         print("ERROR CHILD values: \(error)")
                         return
                     }
-             }
+              }
         }
           
-          func setUpMiscViews(){
-               
-                 statusBar.layer.cornerRadius = 9
-                 orangeStatus.layer.cornerRadius = 9
-             }
-             
-             func setUpAnswerViews(){
-                 choiceViewOne.layer.cornerRadius = 15
-                 choiceViewTwo.layer.cornerRadius = 15
-                 choiceViewThree.layer.cornerRadius = 15
-                 choiceViewFour.layer.cornerRadius = 15
-             }
-          
-          func animateStatusBar(){
-              UIView.animate(withDuration: 2, animations: {
-                   // self.orangeStatus.frame.origin.x -= 70
-                  self.orangeStatus.translatesAutoresizingMaskIntoConstraints = false
-                  self.orangeStatus.layer.frame.size.width += 46
-                  
-                 
-                })
-          }
-          
-          @IBAction func xTapped(_ sender: Any) {
-              self.performSegue(withIdentifier: "unwindSegue", sender: nil)
-          }
-          
+    //MARK: - Set Up Views
+    func setUpMiscViews(){
+
+        statusBar.layer.cornerRadius = 9
+        orangeStatus.layer.cornerRadius = 9
+    }
+    
+    //MARK: - Set Up Answer Views
+    func setUpAnswerViews(){
+        choiceViewOne.layer.cornerRadius = 15
+        choiceViewTwo.layer.cornerRadius = 15
+        choiceViewThree.layer.cornerRadius = 15
+        choiceViewFour.layer.cornerRadius = 15
+    }
+    
+    //MARK: - Set Up Status Bar Animation
+    func animateStatusBar(){
+        UIView.animate(withDuration: 2, animations: {
+            self.orangeStatus.translatesAutoresizingMaskIntoConstraints = false
+            self.orangeStatus.layer.frame.size.width += 46
+        })
+    }
+    
+    //MARK: - Exit Game
+    @IBAction func xTapped(_ sender: Any) {
+        self.performSegue(withIdentifier: "unwindSegue", sender: nil)
+    }
+    
+    //MARK: - Interface Answer Actions
     @IBAction func answerViewTwoTapped(_ sender: Any) {
         decHealthUser()
-
-          }
+        
+    }
+    
+    @IBAction func answerViewOneTapped(_ sender: Any) {
+        decHealthUser()
+    }
+    
+    @IBAction func answerViewThreeTapped(_ sender: Any) {
+        SCLAlertView().showSuccess("Good Job!", subTitle: "Next")
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            self.performSegue(withIdentifier: "correctAnswerOneSegue", sender: self)
+        }
+        animateStatusBar()
+    }
+    
+    @IBAction func answerViewFourTapped(_ sender: Any) {
+        decHealthUser()
+    }
           
-          
-          @IBAction func answerViewOneTapped(_ sender: Any) {
-              decHealthUser()
-          }
-          @IBAction func answerViewThreeTapped(_ sender: Any) {
-            SCLAlertView().showSuccess("Good Job!", subTitle: "Next")
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                self.performSegue(withIdentifier: "correctAnswerOneSegue", sender: self)
-            }
-            animateStatusBar()
-          }
-          
-          @IBAction func answerViewFourTapped(_ sender: Any) {
-             decHealthUser()
-          }
-          
-          
-       
-
-      }
+ }
 

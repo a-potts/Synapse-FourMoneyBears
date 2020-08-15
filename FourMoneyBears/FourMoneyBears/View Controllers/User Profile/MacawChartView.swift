@@ -170,18 +170,6 @@ class MacawChartView: MacawView {
         
     }
     
-    
-    
-    private static func createDummyData() -> [DummyData] {
-        let one = DummyData(showNumber: "M", viewCount: 123456)
-        let two = DummyData(showNumber: "T", viewCount: 234567)
-        let three = DummyData(showNumber: "W", viewCount: 345678)
-        let four = DummyData(showNumber: "T", viewCount: 456789)
-        let five = DummyData(showNumber: "F", viewCount: 123457)
-        
-        return [one, two, three, four, five]
-        
-    }
 }
 
 

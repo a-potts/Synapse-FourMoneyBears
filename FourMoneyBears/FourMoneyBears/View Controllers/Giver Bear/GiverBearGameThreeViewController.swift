@@ -12,7 +12,7 @@ import Firebase
 
 class GiverBearGameThreeViewController: UIViewController {
 
-      //Outlets
+    //MARK: - Interface Outlets
     @IBOutlet var orangeStatus: UIView!
     @IBOutlet var answerView: UIView!
     @IBOutlet var choiceViewOne: UIView!
@@ -22,17 +22,15 @@ class GiverBearGameThreeViewController: UIViewController {
     @IBOutlet var choiceViewFive: UIView!
     @IBOutlet var checkAnswerButton: UIButton!
     @IBOutlet var userHealthLabel: UILabel!
-    
     @IBOutlet var whiteStatus: UIView!
     
-    //MARK: - Life Cycle
+    //MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setUpMiscViews()
         setUpAnswerViews()
         fetchUser()
-
          }
     
     //MARK: - Health Timer
@@ -41,11 +39,10 @@ class GiverBearGameThreeViewController: UIViewController {
         let timer = Timer.scheduledTimer(withTimeInterval: 60, repeats: false, block: { timer in
              
            self.addHealthUser()
-        
-           print("FIRE!!!")
         })
     }
     
+    //MARK: - Add Health To User
     func addHealthUser(){
         var users = [Users]()
         let uid = Auth.auth().currentUser?.uid
@@ -65,19 +62,17 @@ class GiverBearGameThreeViewController: UIViewController {
                     if health == 0 {
                         
                         let values = ["health": "\(health + 3)"]
-                        // print("Health HERE: \(values)")
                         guard let uid = Auth.auth().currentUser?.uid else { return }
                         self.createCopyForUserHealth(uid: uid,values: values as [String : AnyObject])
-                        
                         
                     }
                 }
             }
-            
-            
+        
         }, withCancel: nil)
     }
     
+    //MARK: - Fetch User From Database
     func fetchUser(){
            var users = [Users]()
            let uid = Auth.auth().currentUser?.uid
@@ -90,14 +85,12 @@ class GiverBearGameThreeViewController: UIViewController {
                                  
                    user.setValuesForKeys(dictionary)
                    users.append(user)
-                   
                }
-               
                
            }, withCancel: nil)
        }
        
-       
+       //MARK: - Decrement User Health
        func decHealthUser(){
            var users = [Users]()
            let uid = Auth.auth().currentUser?.uid
@@ -118,7 +111,6 @@ class GiverBearGameThreeViewController: UIViewController {
                            
                            let values = ["health": "\(health - 1)"]
                            self.userHealthLabel.text = "\(0)"
-                           // print("Health HERE: \(values)")
                            guard let uid = Auth.auth().currentUser?.uid else { return }
                            self.createCopyForUserHealth(uid: uid,values: values as [String : AnyObject])
                         
@@ -140,27 +132,23 @@ class GiverBearGameThreeViewController: UIViewController {
                        print("NEW HEALTH::: \(newHealth)")
                        
                        let values = ["health": "\(newHealth)"]
-                            // print("Health HERE: \(values)")
                        guard let uid = Auth.auth().currentUser?.uid else { return }
                        self.createCopyForUserHealth(uid: uid,values: values as [String : AnyObject])
                        }
                    }
                }
                
-               
            }, withCancel: nil)
        }
        
 
-        
+        //MARK: - Create Values For User
         func createCopyForUserHealth(uid: String, values: [String: AnyObject]) {
             var ref: DatabaseReference!
                 
                 ref = Database.database().reference(fromURL: "https://fourbears-63cd1.firebaseio.com/")
                 
                 let userRef = ref.child("users").child(uid)
-                
-               
                 
                 userRef.updateChildValues(values) { (error, refer) in
                     if let error = error {
@@ -170,6 +158,7 @@ class GiverBearGameThreeViewController: UIViewController {
              }
         }
          
+         //MARK: - Set Up Views
          func setUpMiscViews(){
              orangeStatus.layer.cornerRadius = 9
              whiteStatus.layer.cornerRadius = 9
@@ -177,6 +166,7 @@ class GiverBearGameThreeViewController: UIViewController {
              
          }
          
+         //MARK: - Set Up Answer Views
          func setUpAnswerViews(){
              answerView.layer.cornerRadius = 5
              choiceViewOne.layer.cornerRadius = 5
@@ -186,25 +176,23 @@ class GiverBearGameThreeViewController: UIViewController {
              choiceViewFive.layer.cornerRadius = 5
          }
          
+        //MARK: - Set Up Status Bar Animation
          func animateStatusBar(){
                UIView.animate(withDuration: 2, animations: {
                     // self.orangeStatus.frame.origin.x -= 70
                    self.orangeStatus.translatesAutoresizingMaskIntoConstraints = false
                    self.orangeStatus.layer.frame.size.width += 73
                    
-                  
                  })
            }
          
-         
-
-      //Actions
-         
+   
+         //MARK: - Exit Game
          @IBAction func xTapped(_ sender: Any) {
              self.performSegue(withIdentifier: "unwindSegue", sender: nil)
          }
          
-         
+         //MARK: - Interface Actions
          @IBAction func checkAnswerTapped(_ sender: Any) {
              if choiceViewFive.frame.intersects(answerView.frame){
                 SCLAlertView().showSuccess("Good Job!", subTitle: "Next")
@@ -225,22 +213,6 @@ class GiverBearGameThreeViewController: UIViewController {
                          y: viewToDrag.center.y + translation.y)
                      sender.setTranslation(CGPoint(x: 0, y: 0), in: viewToDrag)
                      
-         //            switch sender.state {
-         //            case .began, .changed:
-         //                choiceViewOne.center = CGPoint(x: choiceViewOne.center.x + translation.x, y: choiceViewOne.center.y + translation.y)
-         //                sender.setTranslation(CGPoint.zero, in: view)
-         //                break
-         //            case .ended:
-         //                if choiceViewOne.frame.intersects(answerView.frame) {
-         //
-         //                    UIView.animate(withDuration: 0.3) {
-         //
-         //                    }
-         //                }
-         //
-         //            default:
-         //                break
-         //            }
                  }
              }
          
