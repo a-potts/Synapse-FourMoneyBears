@@ -12,11 +12,8 @@ import Firebase
 
 class SpenderBearViewController: UIViewController {
 
-    
-    
+    //MARK: - Interface Outlets
     @IBOutlet var userHeartLife: UIButton!
-    
-    
     @IBOutlet var answerView1: UIView!
     @IBOutlet var answerView2: UIView!
     @IBOutlet var answerView3: UIView!
@@ -25,19 +22,15 @@ class SpenderBearViewController: UIViewController {
     @IBOutlet var orangeStatus: UIView!
     @IBOutlet var userHealthLabel: UILabel!
     
+    //MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+
         updateAnswerViews()
         fetchUser()
         
     }
-    
-    //MARK: - TODO: Decrement the Users Health by 1
-    // Step 1. Fetch Health
-    // Step 2. Decrement Health
-    // Step 3. Put new value back
+  
     
     //MARK: - Health Timer
     func healthTimer(){
@@ -45,11 +38,10 @@ class SpenderBearViewController: UIViewController {
         let timer = Timer.scheduledTimer(withTimeInterval: 60, repeats: false, block: { timer in
              
            self.addHealthUser()
-        
-           print("FIRE!!!")
         })
     }
     
+    //MARK: - Add Health To User
     func addHealthUser(){
         var users = [Users]()
         let uid = Auth.auth().currentUser?.uid
@@ -69,7 +61,6 @@ class SpenderBearViewController: UIViewController {
                     if health == 0 {
                         
                         let values = ["health": "\(health + 3)"]
-                        // print("Health HERE: \(values)")
                         guard let uid = Auth.auth().currentUser?.uid else { return }
                         self.createCopyForUserHealth(uid: uid,values: values as [String : AnyObject])
                         
@@ -77,13 +68,11 @@ class SpenderBearViewController: UIViewController {
                     }
                 }
             }
-            
-            
         }, withCancel: nil)
     }
 
    
-    
+    //MARK: - Fetch User From Database
     func fetchUser(){
         var users = [Users]()
         let uid = Auth.auth().currentUser?.uid
@@ -96,14 +85,11 @@ class SpenderBearViewController: UIViewController {
                               
                 user.setValuesForKeys(dictionary)
                 users.append(user)
-                
             }
-            
-            
         }, withCancel: nil)
     }
     
-   
+    //MARK: - Decrement Users Health
     func decHealthUser(){
          var users = [Users]()
         let uid = Auth.auth().currentUser?.uid
@@ -124,7 +110,6 @@ class SpenderBearViewController: UIViewController {
                         
                         let values = ["health": "\(health - 1)"]
                         self.userHealthLabel.text = "\(0)"
-                        // print("Health HERE: \(values)")
                         guard let uid = Auth.auth().currentUser?.uid else { return }
                         self.createCopyForUserHealth(uid: uid,values: values as [String : AnyObject])
                         
@@ -147,19 +132,16 @@ class SpenderBearViewController: UIViewController {
                     print("NEW HEALTH::: \(newHealth)")
                     
                     let values = ["health": "\(newHealth)"]
-                         // print("Health HERE: \(values)")
                     guard let uid = Auth.auth().currentUser?.uid else { return }
                     self.createCopyForUserHealth(uid: uid,values: values as [String : AnyObject])
                     }
                 }
             }
-            
-            
         }, withCancel: nil)
     }
 
 
-     
+     //MARK: - Create Values For User
      func createCopyForUserHealth(uid: String, values: [String: AnyObject]) {
          var ref: DatabaseReference!
              
@@ -177,6 +159,7 @@ class SpenderBearViewController: UIViewController {
           }
      }
     
+    //MARK: - Set Up Answer Views
     func updateAnswerViews() {
         
         // View Corner Radius
@@ -202,17 +185,8 @@ class SpenderBearViewController: UIViewController {
     }
 
     
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "CorrectAnswerOneSegue" {
-//            if let detailVC = segue.destination as? SpenderBearGameOneViewController {
-//
-//            }
-//        }
-//    }
-    
+   
+    //MARK: - Interface Actions
     @IBAction func xTapped(_ sender: Any) {
         
         self.performSegue(withIdentifier: "unwindSegue", sender: nil)
@@ -221,71 +195,25 @@ class SpenderBearViewController: UIViewController {
     
     func animateStatusBar(){
         UIView.animate(withDuration: 2, animations: {
-             // self.orangeStatus.frame.origin.x -= 70
             self.orangeStatus.translatesAutoresizingMaskIntoConstraints = false
             self.orangeStatus.layer.frame.size.width += 46
-            
-           
           })
     }
     
     
     @IBAction func answerView1Tapped(_ sender: Any) {
-        // Presnet Alert - correct
-        //showCorrectAlert()
-       //showCorrectAlert()
+      
         SCLAlertView().showSuccess("Good Job!", subTitle: "Next")
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             self.performSegue(withIdentifier: "CorrectAnswerOneSegue", sender: self)
         }
         animateStatusBar()
         
-        
-        
-        
-        
     }
     
-    //MARK: - ALERT
-       func showCorrectAlert(){
-           
-           
-           
-       let alert = UIAlertController(title: "That's Correct!", message: "You should only spend 20 percent of your savings.", preferredStyle: .alert)
-        
-        alert.addAction(UIAlertAction(title: "Yay", style: .default, handler: { (action) in
-            self.performSegue(withIdentifier: "CorrectAnswerOneSegue", sender: self)
-        }))
-        
-        present(alert, animated: true)
-        
-        let subview = (alert.view.subviews.first?.subviews.first?.subviews.first!)! as UIView
-        subview.layer.cornerRadius = 1
-        subview.backgroundColor = UIColor.green
-        
-        
-           
-       }
-    
-    
-    func showWrongAlert(){
-          
-          
-          
-      let alert = UIAlertController(title: "That's Inorrect!", message: "You should only spend 20 percent of your savings.", preferredStyle: .alert)
-        
-       alert.addAction(UIAlertAction(title: "Next", style: .destructive, handler: nil))
-          present(alert, animated: true)
-       let subview = (alert.view.subviews.first?.subviews.first?.subviews.first!)! as UIView
-       subview.layer.cornerRadius = 1
-       subview.backgroundColor = UIColor.red
-          
-      }
     
     @IBAction func answerView2Tapped(_ sender: Any) {
         decHealthUser()
-        
-        
         
     }
     
