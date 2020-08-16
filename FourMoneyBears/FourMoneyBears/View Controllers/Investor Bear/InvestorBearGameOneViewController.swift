@@ -182,7 +182,7 @@ class InvestorBearGameOneViewController: UIViewController {
     //MARK: - Audio Player
     func audioPlayer(){
             do {
-                let audioPath = Bundle.main.path(forResource: "sniper", ofType: "mp3")
+                let audioPath = Bundle.main.path(forResource: "InvestorBear", ofType: "mp3")
                 try player = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
             } catch {
                 
