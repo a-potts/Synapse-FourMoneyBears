@@ -185,9 +185,8 @@ class InvestorBearGameOneViewController: UIViewController {
                 let audioPath = Bundle.main.path(forResource: "InvestorBear", ofType: "mp3")
                 try player = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
             } catch {
-                
+               
             }
-            
         }
       
       //MARK: - Interface Actions
